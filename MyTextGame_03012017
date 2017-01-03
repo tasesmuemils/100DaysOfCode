@@ -1,0 +1,289 @@
+#! python2
+# MyTextGame.py - my first text game (after "Learn Python The Hard Way" example)
+# As this is my first project, i will comment everythin as max as possible
+# Main goal: Get till the end and not die
+# Scenario: User wakes up in abandoned hospital, all alone..at least he thinks so.
+# He needs to get out of there but first doors are blocked.
+# Getting threw first door he needs to decide go to left or right.
+# Right - Dead
+# Left - task
+# After task, two doors - black and white. Behind black one - freedom.
+
+#________________Structure of program______________
+#* Map
+#  - next_scene
+#  - opening_scene
+#* Engine
+#  - play
+#* Scene
+#  - enter
+#  * Death
+#  * Recovery Room
+#  * Right Hallway
+#  * Left Hallway
+#  * Black door
+#  * White Door
+
+#_______________Let`s Begin__________________
+import sys, os, random, time
+
+
+
+# Game main clases - Scene, Engine, Map
+class Scene(object):
+
+    def enter(self):
+        print("Take a subclass and enter() it!")
+        exit(1)
+
+class Engine(object):
+
+    def __init__(self, scene_map):
+        self.scene_map = scene_map
+
+    def play(self):
+        current_scene = self.scene_map.opening_scene()
+        last_scene = self.scene_map.next_scene('finished')
+
+        while current_scene != last_scene:
+            next_scene_name = current_scene.enter()
+            current_scene = self.scene_map.next_scene(next_scene_name)
+
+        current_scene.enter()
+
+class Death(Scene):
+
+    def enter(self):
+        for i in range(4):
+            print "**" * 10, "YOU DIED", "**" * 10
+            time.sleep(1)
+        exit(1)
+
+class RecoveryRoom(Scene):
+
+    def enter(self):
+        print("You open your eyes. You realize that you are not in your room.")
+        print("You are in hospital, like in recovery room. Your stomach hurts a little bit.")
+        print("Room is a complete mess. Windows are broken, furniture also.")
+        print("Maybe this is a bad dream...? You have to choose now:")
+        print("Go to SLEEP again or JUMP OUT of the bad?")
+
+        first_action = raw_input(">> ")
+
+        if first_action == "SLEEP" or first_action == "sleep":
+            print("You go back to sleep and don't even bother to leave the room")
+            return ("death")
+        elif first_action == "JUMP OUT" or first_action == "jump out":
+            print("You jump out of the bad. All you have is a hospital dressing gown.")
+            print("There is a door on your left, but they are locked.")
+            print("You check the room and you find fire extinguisher under the bad.")
+            print("You can use it to break a lock. But first you check the shelf next to your bad.")
+            print("There are aspirine and syringe. As you dont have pockets you can take only one item:")
+            print("ASPIRINE or SYRINGE?")
+
+            second_action = raw_input(">> ")
+
+            if second_action == "ASPIRINE" or second_action == "aspirine":
+                print("Ok, Great! Aspirine might be usefull! Now use fire extinguisher to break door handle.")
+                return 'hallway'
+            elif second_action == "SYRINGE" or second_action == "syringe":
+                print("Ok, Great! Syringe might be usefull! Now use fire extinguisher to break door handle.")
+                return 'hallway'
+            else:
+                print ("Use uppercase letters!!!")
+                return 'recovery_room'
+
+        else:
+            print ("Use uppercase letters!!!")
+            return 'recovery_room'
+
+class Hallway(Scene):
+
+    def enter(self):
+        print("You have entered the hallway. You have checked your stomach.")
+        print("You look around the hallway you just walked into. It seems like you're in a perfectly normal hospital.")
+        print("But a feeling in your gut tells you that it might not be what it seems.")
+        print("You walk further into the hallway. There is a sign on the wall with two arrows, one pointing left, the other pointing right.")
+        print("Do you want to go LEFT or RIGHT? You can CHECK the hallway too.")
+
+        third_action = raw_input(">> ")
+
+        if third_action == "LEFT" or third_action == "left":
+            return 'left_hallway'
+        elif third_action == "RIGHT" or third_action == "right":
+            return 'right_hallway'
+        elif third_action == "CHECK" or third_action == "check":
+            print "You will check the hallway. You find a half open door."
+            print "You decide to go through the door. You find yourself in a room with beds with cribs next to them."
+            print "A birthing room. You hear some crying sound coming from the end of the room."
+            print "You go further. Behind curtains you see a baby boy, covered in blood"
+            print "and a dead nurse next to him. He turn to you and asks: \"Whats your name?\""
+            print "Do you want to tell hin your name(Y or N)? "
+            print(">> ")
+            time.sleep(10)
+            print("He says:\'What ever. You look tasty.....\'")
+            return 'death'
+        else:
+            print("Use uppercase letters!!!")
+            return 'hallway'
+
+class RightHallway(Scene):
+
+    def enter(self):
+        print "You walk to the end of the hallway. Ther is a door. You open them,"
+        print "as it seems to be the safer option."
+        print "But as soon as you step through the door, you fall down an elevator shaft for about 4 floors."
+        print "You hit the top of the elevator at the bottom and everything goes black..."
+        return 'death'
+
+
+class LeftHallway(Scene):
+
+    def enter(self):
+        print "You choose to go to the left."
+        print "You hear some weird noise. Suddenly human type thing with red eyes jumps out from broom closet."
+        print "He runs towards you and he will attack you."
+        print "You can use item you got in your pocekt."
+        print "What you have in your pocekt? ASPIRINE or SYRINGE?"
+
+        action = raw_input(">> ")
+
+        if action == "ASPIRINE" or action == "aspirine":
+            print "Aspirine will not help you on this."
+            print "He bites of your hand and you pass out."
+            return 'death'
+        elif action == "SYRINGE" or action == "syringe":
+            print "You take out syringe from your pocekt and stab the monster in his neck."
+            print "He starts to screem and fell on his knees."
+            print "He lay down and passes out. Great! You killed him! Your safe!"
+            print "Let`s move forward!"
+            return 'white_door'
+        else:
+            print "Use upper case letters!!!"
+            return 'left_hallway'
+
+class WhiteDoor(Scene):
+
+    def enter(self):
+        print "You open first doors you can find. I`ts very dark in here."
+        print "You are thinking to go back but doors suddenly closes."
+        print "You hear somebody laughing. The lights turns on."
+        print "You can see a some kind of doctor behind the window, which is build in the wall."
+        print "He asks \"Do you want to live? I will give you a choice, just like my other experiments.\""
+        time.sleep(3)
+        print "........"
+        print "Now you understand whats happening here. Those monsters was this crazy doctors experiments."
+        print "You say \"Yes, i want to live!!!\""
+        print "He says: OK! Lets play a simple game. You see a keybord no the ground."
+        print "All you have to do is to guess number I`m thinking from 1 to 10."
+        print "Sounds impossible, but i will give you 10 guesses."
+
+        number = "%d" % (random.randint(1, 10))
+        guess = raw_input(">> ")
+        guesses = 0
+
+        while guess != number and guesses < 10:
+                print "Try again!"
+                guesses += 1
+                guess = raw_input(">> ")
+                if guesses == 7:
+                    print "It`s so hard and you cant figure it out!"
+                    print "You look around the room and you catch sight of the mirror behind doctor."
+                    print "You can see number from doctors computer screen. It`s %s !!!" % number
+
+
+        if guess == number:
+            print "'HOW!!!!': Doctor is angry!!!"
+            print "The doors are open now and you run threw them!"
+            return 'black_door'
+        else:
+            print "Dctor sucks out all oxygen of the room and you pass out."
+            return 'death'
+
+
+class BlackDoor(Scene):
+
+    def enter(self):
+        print "You get out of there! I`ts a completly white room with blood all over the walls."
+        print "There are two doors. One of them are red, the other one - black."
+        print "Suddenly you here crazy doctors voice \"I will kill you! No body is getting out of my castle!!\""
+        print "You have to choose fast. The red door are open, the black doors have code."
+        print "Which one you choose? RED or BLACK door?"
+
+        final = raw_input(">>  ")
+
+        if final == "red" or final == "RED":
+            print "You open the door and you realize you are in the first hallway. I`ts an infinite loop."
+            return 'death'
+        elif final == "BLACK" or final == "black":
+            print "OK! You need the code to unlock the door!"
+            time.sleep(2)
+            print "Doctor will get you soon. Door have 3 digit code! Try something random!"
+            code = "%d%d%d" % (random.randint(1, 9), random.randint(1, 9), random.randint(1, 9))
+            guess = raw_input(">> ")
+            guesses = 0
+
+            while guess != code and guesses < 10:
+                print "Try another combination fast!"
+                guesses += 1
+                guess = raw_input(">> ")
+                if guesses == 3:
+                    print "You can hear that doctor is getting closer!"
+                    print "You turn around and you can see doctors ugly, pale face..."
+                    print "But you saw something on his forehead. There are a number."
+                    print "Looks like a 3 digit number. It`s engraved with knife. The number is......."
+                    print code
+
+            if guess == code:
+                return 'finished'
+
+        else:
+            print "Use uppercase letters and you hav only 2 options!"
+            return 'black_door'
+
+class Finished(Scene):
+
+    def enter(self):
+        print "YAAAAAAAASSSSS! YOU GOT OUT OF THAT HORRIBLE PLACE!!!!"
+        print "Now you can tell everybody about this place."
+        for i in range(4):
+            print "**" * 10, "YOU WON!!!!", "**" * 10
+            time.sleep(1)
+        exit(1)
+
+class Map(object):
+
+    scenes = {
+        'recovery_room' : RecoveryRoom(),
+        'hallway' : Hallway(),
+        'right_hallway' : RightHallway(),
+        'left_hallway' : LeftHallway(),
+        'white_door' : WhiteDoor(),
+        'black_door' : BlackDoor(),
+        'death' : Death(),
+        'finished' : Finished()
+    }
+
+    def __init__(self, start_scene):
+        self.start_scene = start_scene
+
+    def next_scene(self, scene_name):
+        val = Map.scenes.get(scene_name)
+        return val
+
+    def opening_scene(self):
+        return self.next_scene(self.start_scene)
+
+a_map = Map('recovery_room')
+a_game = Engine(a_map)
+print "Whats your name?"
+name = raw_input(">> ")
+print "Hi %s. Do you want to play a game (Yes or No)?" % name
+confirm = raw_input(">> ")
+if confirm == "Yes" or confirm == "yes" or confirm == "Yes":
+    print "Great! Let`s start!"
+    time.sleep(2)
+    a_game.play()
+else:
+    print "Ok! BYE BYE!"
+    exit(1)
