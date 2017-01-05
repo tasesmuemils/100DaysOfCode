@@ -18,3 +18,8 @@ Script is ready for this main function. As I am new to Tkinter module, I will ch
 
 Okay, that is pretty hard! I have problems to figure out how to place buttons, fields for user input with Frame.
 I will try to figure this out tomorrow.
+
+#day 4 05.01.2017
+
+I was wondering if there are something like padding, margin or border like in CSS in Python Tkinter and guess what - there is. :D
+So now every widget is in the right places. Now i need to figure out, how to get user to enter neccesery paths. On CMD it is working great.
