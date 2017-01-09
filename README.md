@@ -23,3 +23,6 @@ I will try to figure this out tomorrow.
 
 I was wondering if there are something like padding, margin or border like in CSS in Python Tkinter and guess what - there is. :D
 So now every widget is in the right places. Now i need to figure out, how to get user to enter neccesery paths. On CMD it is working great.
+
+#day 5 09.01.2017
+Few days I havent done anything. But today I finally figured our Tkinter Entry widget. Now my program is working properly (code attached). I will try to make it look better, but everything else is working fine. One thing is bothering me. I have used stackoverflow help two times (creating my own ticket with my own code), because I just couldnt saw the mistake. But those mistakes was so simple, that I cant even understand how I did no saw that(and I have 4 eyes). Last one was that i called two variables equal. How i did not saw that? Deam...but everything is working and thats all that metter. 
