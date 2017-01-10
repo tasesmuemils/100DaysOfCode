@@ -29,3 +29,4 @@ Few days I havent done anything. But today I finally figured our Tkinter Entry w
 
 #day 6 10.01.20166
 I have added few changes, error message and colors. My first real program is ready. WUUHUUUU! Code is updated.
+As i have finished my text game and my first program, I will continue reading with "Learn Python The Hardway" book.
