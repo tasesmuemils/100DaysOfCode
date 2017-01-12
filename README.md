@@ -27,6 +27,9 @@ So now every widget is in the right places. Now i need to figure out, how to get
 #day 5 09.01.2017
 Few days I havent done anything. But today I finally figured our Tkinter Entry widget. Now my program is working properly (code attached). I will try to make it look better, but everything else is working fine. One thing is bothering me. I have used stackoverflow help two times (creating my own ticket with my own code), because I just couldnt saw the mistake. But those mistakes was so simple, that I cant even understand how I did no saw that(and I have 4 eyes). Last one was that i called two variables equal. How i did not saw that? Deam...but everything is working and thats all that metter. 
 
-#day 6 10.01.20166
+#day 6 10.01.2017
 I have added few changes, error message and colors. My first real program is ready. WUUHUUUU! Code is updated.
 As i have finished my text game and my first program, I will continue reading with "Learn Python The Hardway" book.
+
+# day 7 12.01.2017
+So I am closer to the end of the book. Now I will try to combine Python with HTML/CSS. I have decide to learn JavaScript, but before that I have to end with "Learn Python the Hard way" book. The ending is pretty booring, but when my Python text game will work on web, I will need to creat webpage. As I know few things from HTML and CSS, Javascript will be perfect choice for me.
