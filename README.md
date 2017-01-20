@@ -33,3 +33,6 @@ As i have finished my text game and my first program, I will continue reading wi
 
 # day 7 12.01.2017
 So I am closer to the end of the book. Now I will try to combine Python with HTML/CSS. I have decide to learn JavaScript, but before that I have to end with "Learn Python the Hard way" book. The ending is pretty booring, but when my Python text game will work on web, I will need to creat webpage. As I know few things from HTML and CSS, Javascript will be perfect choice for me.
+
+# day 8 20.01.2017
+I havent shown up in here because I couldnt figure out, what should i do next. So I decided to start with....website :) I will try to build my first webpage. I know little bit of HTML and CSS, so this will work for me. My new goal for my self - JavaScript. After reading some coments, i should check another language which is diffrent from Python. Most suggestions was JavaScript for Web Development. So yeah, wish me luck. Today i have created like a cover for my page (also navigation bar(found cool uderline hover code) and introduction text).
