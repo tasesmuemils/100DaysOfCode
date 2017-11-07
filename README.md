@@ -36,3 +36,7 @@ So I am closer to the end of the book. Now I will try to combine Python with HTM
 
 # day 8 20.01.2017
 I havent shown up in here because I couldnt figure out, what should i do next. So I decided to start with....website :) I will try to build my first webpage. I know little bit of HTML and CSS, so this will work for me. My new goal for my self - JavaScript. After reading some coments, i should check another language which is diffrent from Python. Most suggestions was JavaScript for Web Development. So yeah, wish me luck. Today i have created like a cover for my page (also navigation bar(found cool uderline hover code) and introduction text).
+
+
+# day 9 07.11.2017
+I dont know why I didnt continue with this but I am back. I am reading Jon Duckett book about a month and its been great so far. So in temp_1 folder you can find my first tamplate which I created. Today Im reading HTML5 LAYOUT (thats why I didnt use those tags in my first tamplate).
