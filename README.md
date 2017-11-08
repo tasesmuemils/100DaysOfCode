@@ -40,3 +40,6 @@ I havent shown up in here because I couldnt figure out, what should i do next. S
 
 # day 9 07.11.2017
 I dont know why I didnt continue with this but I am back. I am reading Jon Duckett book about a month and its been great so far. So in temp_1 folder you can find my first tamplate which I created. Today Im reading HTML5 LAYOUT (thats why I didnt use those tags in my first tamplate).
+
+# day 10 08.11.2017
+I have finished HTML/CSS chapters from this awesome books. Still struggle around flow, clear and overflow, but I will get there. I will take my final notes and then I will try to recreate easy tamplate. But at first, I need to find one....
