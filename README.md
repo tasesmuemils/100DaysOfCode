@@ -49,3 +49,6 @@ I have finished HTML/CSS chapters from this awesome book. Still struggle around 
  
 # day 12 12.11.2017
 I think I have figured out float (also positions). I updated tamplate with some colors, shadows, box-radiuss and I think it looks okay. I will try to add soc. icons with hovers tomorrow.
+
+# day 13 13.11.2017
+Finished my 3rd tamplate. There are some issues (hovers, fonts), but I wanted to get more around positioning and float, so I guess I know the basics of those now. Not sure what to do next, but I think I will find 4th tamplate to recreate and after that I will continue with books.
