@@ -43,3 +43,9 @@ I dont know why I didnt continue with this but I am back. I am reading Jon Ducke
 
 # day 10 08.11.2017
 I have finished HTML/CSS chapters from this awesome book. Still struggle around flow, clear and overflow, but I will get there. I will take my final notes and then I will try to recreate easy tamplate. But at first, I need to find one....
+
+# day 11 11.11.2017
+ Fighting with third tamplate today. Trying to get more around float and everything. Few things still have to look up, but hey...you cant remeber everything.
+ 
+# day 12 12.11.2017
+I think I have figured out float (also positions). I updated tamplate with some colors, shadows, box-radiuss and I think it looks okay. I will try to add soc. icons with hovers tomorrow.
