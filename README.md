@@ -52,3 +52,6 @@ I think I have figured out float (also positions). I updated tamplate with some 
 
 # day 13 13.11.2017
 Finished my 3rd tamplate. There are some issues (hovers, fonts), but I wanted to get more around positioning and float, so I guess I know the basics of those now. Not sure what to do next, but I think I will find 4th tamplate to recreate and after that I will continue with books.
+
+# day 13_2 13.11.2017
+So I started my 4th tamplate. Finally used positions in real life and before finishing tamplates structure I realized that I need to creat individual container for left side and for right side, so every text on the right side is centered properly. Well, I will try to do that tomaroow. But in general, very productive day.
