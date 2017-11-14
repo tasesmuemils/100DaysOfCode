@@ -55,3 +55,6 @@ Finished my 3rd tamplate. There are some issues (hovers, fonts), but I wanted to
 
 # day 13_2 13.11.2017
 So I started my 4th tamplate. Finally used positions in real life and before finishing tamplates structure I realized that I need to creat individual container for left side and for right side, so every text on the right side is centered properly. Well, I will try to do that tomaroow. But in general, very productive day.
+
+# day 14 14.11.2017
+Finished my 4th tmplate. Less colors, more getting around with icons and position. One thing is bothering me about footer after float, but I will check that deeper. I have only two chapters left in HTML/CSS book and I hope I will finish at least one one of those tomorrow. Also, I got Adobe Ilustrator on my Linux Ubuntu. I will try to design flat potrait of my self for my portfolio page, but that is for the future.
