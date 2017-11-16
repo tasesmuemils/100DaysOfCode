@@ -58,3 +58,6 @@ So I started my 4th tamplate. Finally used positions in real life and before fin
 
 # day 14 14.11.2017
 Finished my 4th tmplate. Less colors, more getting around with icons and position. One thing is bothering me about footer after float, but I will check that deeper. I have only two chapters left in HTML/CSS book and I hope I will finish at least one one of those tomorrow. Also, I got Adobe Ilustrator on my Linux Ubuntu. I will try to design flat potrait of my self for my portfolio page, but that is for the future.
+
+# day 15 16.11.2017
+Didnt do nothing yesterday and I feel pretty bad about my self. So I finished Jon Duckett HTML/CSS book and now Im reading Jon Duckett JavaScript/jQuery book. Its only begining and I think few next week I will concentrate only on this book. Still everyday I will write down my progress on the book here.
