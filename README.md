@@ -64,3 +64,6 @@ Didnt do nothing yesterday and I feel pretty bad about my self. So I finished Jo
 
 # day 16 17.11.2017
 Finished 1/b chapter "How do computers fit in with the world around them". Excellent explenations with hotel and cars as object examples. Putting down some notes really helps. Cant wait to go further.
+
+# day 17 18.11.2017
+Finished 1/c chapter "How do I write a script for a webpage". Also, working little bit around Terminal basics.
