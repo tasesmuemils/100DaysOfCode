@@ -61,3 +61,6 @@ Finished my 4th tmplate. Less colors, more getting around with icons and positio
 
 # day 15 16.11.2017
 Didnt do nothing yesterday and I feel pretty bad about my self. So I finished Jon Duckett HTML/CSS book and now Im reading Jon Duckett JavaScript/jQuery book. Its only begining and I think few next week I will concentrate only on this book. Still everyday I will write down my progress on the book here.
+
+# day 16 17.11.2017
+Finished 1/b chapter "How do computers fit in with the world around them". Excellent explenations with hotel and cars as object examples. Putting down some notes really helps. Cant wait to go further.
