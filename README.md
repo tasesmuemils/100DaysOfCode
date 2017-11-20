@@ -67,3 +67,6 @@ Finished 1/b chapter "How do computers fit in with the world around them". Excel
 
 # day 17 18.11.2017
 Finished 1/c chapter "How do I write a script for a webpage". Also, working little bit around Terminal basics.
+
+# day 18 19.11.2017
+Finished chapter 2. Basic JavaScript instructions. Created my first JS script, wuhuuu. I misspelled "length" and I thought, this cant brake me, so, I found that "bug". Also, I didnt download offered scripts for the book and I created my own CSS styling. Nothing much, but still using my HTML/CSS skills which I learned from previous book.
