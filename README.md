@@ -70,3 +70,6 @@ Finished 1/c chapter "How do I write a script for a webpage". Also, working litt
 
 # day 18 19.11.2017
 Finished chapter 2. Basic JavaScript instructions. Created my first JS script, wuhuuu. I misspelled "length" and I thought, this cant brake me, so, I found that "bug". Also, I didnt download offered scripts for the book and I created my own CSS styling. Nothing much, but still using my HTML/CSS skills which I learned from previous book.
+
+# day 19 20.11.2017
+Started chapter 3. Functions, methods and objects. Getting around functions (something similar with Python). I understand standart functions, but I hope that book will go deeper on anonymous functions and function expressions. Also, I got email, that I am accepted to the Chingu's Winter Voyage session. Cant wait to start! :)
