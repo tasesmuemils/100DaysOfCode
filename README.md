@@ -73,3 +73,6 @@ Finished chapter 2. Basic JavaScript instructions. Created my first JS script, w
 
 # day 19 20.11.2017
 Started chapter 3. Functions, methods and objects. Getting around functions (something similar with Python). I understand standart functions, but I hope that book will go deeper on anonymous functions and function expressions. Also, I got email, that I am accepted to the Chingu's Winter Voyage session. Cant wait to start! :)
+
+# day 21 23.11.2017
+Learning Git/Github from @RainbowCoder tutorials. At the moment Github branches.
