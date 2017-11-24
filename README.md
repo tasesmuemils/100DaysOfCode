@@ -76,3 +76,6 @@ Started chapter 3. Functions, methods and objects. Getting around functions (som
 
 # day 21 23.11.2017
 Learning Git/Github from @RainbowCoder tutorials. At the moment Github branches.
+
+# day 22 24.11.2017
+Runing threw Github Fork, Pull request and Issues.
