@@ -79,3 +79,6 @@ Learning Git/Github from @RainbowCoder tutorials. At the moment Github branches.
 
 # day 22 24.11.2017
 Runing threw Github Fork, Pull request and Issues.
+
+# day 23 27.11.2017
+This is my first line to file threw terminal with git :)
