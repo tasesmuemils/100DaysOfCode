@@ -81,4 +81,4 @@ Learning Git/Github from @RainbowCoder tutorials. At the moment Github branches.
 Runing threw Github Fork, Pull request and Issues.
 
 # day 23 27.11.2017
-This is my first line to file threw terminal with git :)
+This is my first line in file threw terminal with git :) I finished The Coding Train tutorials on GIT/Github. I think I know the basics now and I can`t wait to work on real projects with others on git/GitHub (waiting email to Voyage 3 session).
