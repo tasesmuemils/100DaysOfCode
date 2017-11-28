@@ -82,3 +82,6 @@ Runing threw Github Fork, Pull request and Issues.
 
 # day 23 27.11.2017
 This is my first line in file threw terminal with git :) I finished The Coding Train tutorials on GIT/Github. I think I know the basics now and I can`t wait to work on real projects with others on git/GitHub (waiting email to Voyage 3 session).
+
+# day 24 28.11.2017
+I came back to Jon Duckets JavaScript book. Still on chapter 3. Functions, methods and objects, but I taking notes down very serously and I realy try to understand the concept of every page. Also, I been added to Chingu Voyage session Slack channel. Lot`s of info, new stuff and new peoples, but everything is great for now :)
