@@ -85,3 +85,7 @@ This is my first line in file threw terminal with git :) I finished The Coding T
 
 # day 24 28.11.2017
 I came back to Jon Duckets JavaScript book. Still on chapter 3. Functions, methods and objects, but I taking notes down very serously and I realy try to understand the concept of every page. Also, I been added to Chingu Voyage session Slack channel. Lot`s of info, new stuff and new peoples, but everything is great for now :)
+
+# day 25 29.11.2017
+Still on chapter 3. Decided to recreate examples with HTML/CSS also, because, as we all know, practical learning is always better.
+On Chingus #slack channel another Latvian reached me. It`s awesome to know that I am not alone :D
