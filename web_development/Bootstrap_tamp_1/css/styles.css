@@ -1,0 +1,27 @@
+* {
+  //border: 1px solid red;
+}
+
+.nav {
+  margin: 0;
+}
+
+.nav h1 {
+  margin: 0px;
+}
+
+.nav a {
+  margin: 0px;
+}
+
+.navbar-brand {
+  margin: 0px;
+}
+
+.navbar {
+  background: #2d3f56;
+}
+
+.nav-item {
+  flex-grow: 2;
+}
