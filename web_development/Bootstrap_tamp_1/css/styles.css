@@ -1,5 +1,9 @@
 * {
-  //border: 1px solid red;
+  /border: 1px solid red;
+}
+
+p {
+  margin: 0px;
 }
 
 .nav {
@@ -24,4 +28,51 @@
 
 .nav-item {
   flex-grow: 2;
+}
+
+.first {
+  height: 600px;
+  min-height: 100%;
+  background-color: #42f4bc;
+}
+
+.intro h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+.intro img {
+  width: 200px;
+}
+
+
+
+.second h2 {
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto;
+  width: 30%;
+}
+
+.card {
+  margin: 40px;
+}
+
+.third h2 {
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto;
+  width: 30%;
+}
+
+.third {
+  background-color: #42f4bc;
+}
+
+.fifth {
+  background: #2d3f56;
+}
+
+.copyright {
+  background-color: #151a21;
 }
