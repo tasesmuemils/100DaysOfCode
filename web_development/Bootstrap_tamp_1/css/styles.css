@@ -4,9 +4,7 @@
 
 html, body {
   height: 100%;
-
 }
-
 
 p {
   margin: 0px;
@@ -41,6 +39,10 @@ p {
   background-color: #42f4bc;
 }
 
+hr {
+  width: 75%;
+}
+
 .intro {
   height: 100%;
   min-height: 100%;
@@ -56,14 +58,17 @@ p {
   width: 200px;
 }
 
-.second {
+.second {}
 
+.card {
+  padding: 0px;
+  border: none;
+  text-align: center;
 }
-
 
 .second h2 {
   text-align: center;
-  padding: 20px 10px;
+  padding: 100px 10px 20px 10px;
   margin: 50px auto 0px auto;
   width: 30%;
 }
@@ -73,28 +78,55 @@ p {
 }
 
 .third {
-  height: 100%;
-  min-height: 100%;
-  width: 100%;
+  padding: 165px 0px 200px 0px;
   background-color: #42f4bc;
+}
+
+.github {
+  padding: 0px;
+  margin: 20px 0px;
 }
 
 
 .third h2 {
   text-align: center;
-  padding: 10px;
-  margin: 10px auto;
+  padding: 10px auto;
+  margin: 5px auto;
   width: 30%;
 }
 
 .four {
-  height: 100%;
-  min-height: 100%;
-  width: 100%;
+  padding: 107px 0px 107px 0px;
+}
+
+.four h2 {
+  text-align: center;
+  padding: 0px;
+  margin: 0px auto 0px auto;
+}
+
+.message-form {
+  margin: 50px 0px 0px 0px;
+}
+
+.form-group {
+  padding: 15px;
 }
 
 .fifth {
   background: #2d3f56;
+  text-align: center;
+  color: white;
+}
+
+
+
+.info {
+  margin: 30px;
+}
+
+.fa {
+  margin: 5px;
 }
 
 .copyright {
