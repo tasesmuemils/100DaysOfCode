@@ -89,3 +89,6 @@ I came back to Jon Duckets JavaScript book. Still on chapter 3. Functions, metho
 # day 25 29.11.2017
 Still on chapter 3. Decided to recreate examples with HTML/CSS also, because, as we all know, practical learning is always better.
 On Chingus #slack channel another Latvian reached me. It`s awesome to know that I am not alone :D
+
+# day 1 02.01.2018
+I will start this challange third time from begining. Lot`s of holidays between previous one and I am pretty mad at myself. I will continue where I left - Jon Duckett Javascript book. Ofcourse, I read something about web development every day, but I think, the real learning begins with my laptop and notebook open. Today I did some freecodecamp challanges and some examples from this amaizing Javascript book about objects. Wish me luck :D  
