@@ -92,3 +92,6 @@ On Chingus #slack channel another Latvian reached me. It`s awesome to know that 
 
 # day 1 02.01.2018
 I will start this challange third time from begining. Lot`s of holidays between previous one and I am pretty mad at myself. I will continue where I left - Jon Duckett Javascript book. Ofcourse, I read something about web development every day, but I think, the real learning begins with my laptop and notebook open. Today I did some freecodecamp challanges and some examples from this amaizing Javascript book about objects. Wish me luck :D  
+
+# day 2 03.01.2018
+Now I know what DOM means. Going further with javascript - keyword "this", arrays are objects, built-in objects!
