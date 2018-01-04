@@ -95,3 +95,6 @@ I will start this challange third time from begining. Lot`s of holidays between 
 
 # day 2 03.01.2018
 Now I know what DOM means. Going further with javascript - keyword "this", arrays are objects, built-in objects!
+
+# day 3 04.01.2018
+40 minutes is still more then nothing. Before soocer game I did few examples with window and document object. I hope I will be able to do more tomorrow.
