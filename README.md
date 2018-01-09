@@ -98,3 +98,6 @@ Now I know what DOM means. Going further with javascript - keyword "this", array
 
 # day 3 04.01.2018
 40 minutes is still more then nothing. Before soocer game I did few examples with window and document object. I hope I will be able to do more tomorrow.
+
+# day 4 09.01.2018
+Wrote down some notes and did some examples with String, Number and Math properties and methods. Tommorrow I hope I will finish 3rd chapter.
