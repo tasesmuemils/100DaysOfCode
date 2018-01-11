@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+body {
+  margin-top: 10%;
+}
+
+h1 {
+  font-style: oblique;
+}
+
+.content {
+  background-color: white;
+  width: 35%;
+  border: 10px black;
+  border-style: double;
+  margin: 20px auto 20px auto;
+  overflow: auto;
+}
+
+.message {
+  margin: 10px;
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+}
+
+td {
+  text-align: left;
+}
+
+a {
+  color: white;
+  padding: 5px;
+  border: 3px groove red;
+  float: right;
+  margin: 10px;
+  text-decoration: none;
+  background-color: darkorange;
+}
+ #hotelName {
+   color: black;
+   margin: 0px auto 0px auto;
+   width: 30%;
+   padding: 10px;
+   border-top: solid 3px lightgrey;
+   border-bottom: solid 3px lightgrey;
+ }
+
+ #hotelName1 {
+   margin: 0px auto 0px auto;
+   width: 30%;
+   padding: 10px;
+   border-top: solid 3px lightgrey;
+   border-bottom: solid 3px lightgrey;
+ }
