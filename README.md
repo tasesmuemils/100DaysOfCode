@@ -104,3 +104,7 @@ Wrote down some notes and did some examples with String, Number and Math propert
 
 #day 5 10.01.2018
 Date object is something, that would be pretty usefull long time ago. Almost done with last excercise od 3rd chapter.
+
+#day 6 11.01.2018
+I understand why I should do that and what it means, but still I think that I never will come up with stuff like those JavaScript examples. I hope it will come to me :)
+ Diging deeper in JavaScript practical examples.
