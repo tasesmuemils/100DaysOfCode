@@ -42,7 +42,17 @@
     monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'];
     //Collect the parts of the data to show on the pager
     day = dayNames[weekFromToday.getDay()];
-    
+    date = weekFromToday.getDate();
+    month = monthNames[weekFromToday.getMonth()];
+    year = weekFromToday.getFullYear();
+    ///create the message
+    expiryMsg = 'Offer expires next ';
+    expiryMsg += day + ' <br />(' + date + ' ' + month + ' ' + year + ')';
+    return expiryMsg;
   }
+
+today = new Date(); //put todays date in variables
+elEnds = document.getElementById('offerEnds'); //Get the offerEnds elemnt
+elEnds.innerHTML = offerExpires(today); //Add expiry date
 
 }())
