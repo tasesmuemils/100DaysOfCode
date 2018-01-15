@@ -111,3 +111,6 @@ I understand why I should do that and what it means, but still I think that I ne
 
 # day 7 12.01.2018
 I finally get over chapter 3 in Johns Duckets Javascript book.
+
+# day 8 15.01.2018
+Chapter 4. Decisions and loops! Let's start!
