@@ -1,0 +1,27 @@
+* {
+  /border:2px solid red;
+}
+
+html, body {
+  background-color: #f4f486;
+}
+
+.container {
+  background-color: #f7ea00;
+}
+
+.col {
+    border: 10px double white;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  padding: 10px 0px;
+  text-align: center;
+}
