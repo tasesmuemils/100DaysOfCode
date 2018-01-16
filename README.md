@@ -114,3 +114,6 @@ I finally get over chapter 3 in Johns Duckets Javascript book.
 
 # day 8 15.01.2018
 Chapter 4. Decisions and loops! Let's start!
+
+# day 9 16.01.2018
+AND, OR, NOT, IF, ELSE..IF. I was very good with these when I was studying Python. Now I know how to use them with JavaScript.
