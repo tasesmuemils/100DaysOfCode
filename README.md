@@ -117,3 +117,6 @@ Chapter 4. Decisions and loops! Let's start!
 
 # day 9 16.01.2018
 AND, OR, NOT, IF, ELSE..IF. I was very good with these when I was studying Python. Now I know how to use them with JavaScript.
+
+# day 10 17.01.2018
+Today I learnd things like SWITCH, TYPE COERCION, WEAK TYPING, TRUTHY and FALSY values, SHORT CIRCUIT values. Also, did few challanges on freecodecamp.
