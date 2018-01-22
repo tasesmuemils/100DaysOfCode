@@ -120,3 +120,6 @@ AND, OR, NOT, IF, ELSE..IF. I was very good with these when I was studying Pytho
 
 # day 10 17.01.2018
 Today I learnd things like SWITCH, TYPE COERCION, WEAK TYPING, TRUTHY and FALSY values, SHORT CIRCUIT values. Also, did few challanges on freecodecamp.
+
+# day 11 22.01.2018
+LOOPS! FOR, WHILE, DO..WHILE. So far, so good!
