@@ -123,3 +123,6 @@ Today I learnd things like SWITCH, TYPE COERCION, WEAK TYPING, TRUTHY and FALSY 
 
 # day 11 22.01.2018
 LOOPS! FOR, WHILE, DO..WHILE. So far, so good!
+
+# day 12 23.01.2018
+Did some #freecodecamp JavaScript challanges.
