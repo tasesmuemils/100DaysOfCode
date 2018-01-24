@@ -126,3 +126,6 @@ LOOPS! FOR, WHILE, DO..WHILE. So far, so good!
 
 # day 12 23.01.2018
 Did some #freecodecamp JavaScript challanges.
+
+# day 13 24.01.2018
+Finished chapter 4. Installed Android studio on my Ubuntu OS, also installed PhoneGab
