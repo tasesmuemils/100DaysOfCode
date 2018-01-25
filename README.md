@@ -129,3 +129,6 @@ Did some #freecodecamp JavaScript challanges.
 
 # day 13 24.01.2018
 Finished chapter 4. Installed Android studio on my Ubuntu OS, also installed PhoneGab
+
+# day 14 25.01.2018
+Introduction to DOM, DOM tree structure. Chapter 5. Very intresting and I like it so far.
