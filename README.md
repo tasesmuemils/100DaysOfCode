@@ -132,3 +132,6 @@ Finished chapter 4. Installed Android studio on my Ubuntu OS, also installed Pho
 
 # day 14 25.01.2018
 Introduction to DOM, DOM tree structure. Chapter 5. Very intresting and I like it so far.
+
+# day 15 26.01.2018
+Did some Javascript #freecodecamp chalanges.
