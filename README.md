@@ -135,3 +135,6 @@ Introduction to DOM, DOM tree structure. Chapter 5. Very intresting and I like i
 
 # day 15 26.01.2018
 Did some Javascript #freecodecamp chalanges.
+
+# day 16 27.01.2018
+DOM: how to access elemnts and change them in HTML file. Very cool and exciting, writing notes and reading this awesome book almost 4 hours!! today!!!
