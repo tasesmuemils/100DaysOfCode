@@ -138,3 +138,6 @@ Did some Javascript #freecodecamp chalanges.
 
 # day 16 27.01.2018
 DOM: how to access elemnts and change them in HTML file. Very cool and exciting, writing notes and reading this awesome book almost 4 hours!! today!!!
+
+# day 17.01.2018
+NodeList and how to select elements from it! Awesome stuff!
