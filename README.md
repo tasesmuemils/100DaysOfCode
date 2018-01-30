@@ -141,3 +141,6 @@ DOM: how to access elemnts and change them in HTML file. Very cool and exciting,
 
 # day 17.01.2018
 NodeList and how to select elements from it! Awesome stuff!
+
+# day 18.01.2018
+Traversing DOM. At the moment I dont like to test this option, because I have to remove whitespaces in HTML page (as I use Chrome), but everything works and that is good.
