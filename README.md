@@ -139,8 +139,11 @@ Did some Javascript #freecodecamp chalanges.
 # day 16 27.01.2018
 DOM: how to access elemnts and change them in HTML file. Very cool and exciting, writing notes and reading this awesome book almost 4 hours!! today!!!
 
-# day 17.01.2018
+# day 17 28.01.2018
 NodeList and how to select elements from it! Awesome stuff!
 
-# day 18.01.2018
+# day 18 29.01.2018
 Traversing DOM. At the moment I dont like to test this option, because I have to remove whitespaces in HTML page (as I use Chrome), but everything works and that is good.
+
+# day 19 30.01.2018
+Lot of info written down about innerHTML, DOM manipulation. Few things was very boring, but they are important, so no escaping from that.

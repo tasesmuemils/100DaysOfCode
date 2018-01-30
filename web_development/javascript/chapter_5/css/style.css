@@ -13,8 +13,9 @@
 }
 
 .complete {
+  background: url('../img/trash_2.png') no-repeat right;
+  background-size: 15% 100%;
   background-color: #afafaf;
-  background-image: url("f1f8");
 }
 
 
