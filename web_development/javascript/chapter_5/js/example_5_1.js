@@ -74,6 +74,7 @@ el.innerHTML = msg;
 
 itemOne.textContent = 'brown bread';  */
 
+/*
 //izvelas pirmo li elementu
 var firstItem = document.getElementById('one');
 
@@ -82,3 +83,103 @@ var itemContent = firstItem.innerHTML;
 
 //Updeito saturu pirmajam elementam lai tas butu links
 firstItem.innerHTML = '<a href=\"http://www.finecooking.com/article/fresh-figs"\>' + itemContent + '</a>';
+*/
+
+/*
+//pievieno elemntu DOM kokam ar DOM manipulation metodi
+//izveido jaunu elementu un pievieno to variablim
+var newEl = document.createElement('li');
+
+//izveido text node un saglaba to variablii
+var newText = document.createTextNode('makarones');
+
+//pievieno jauno text node getElementsByTagName
+newEl.appendChild(newText);
+
+//atrod poziiciju kur pievienot jauno elementu
+var position = document.getElementsByTagName('ul')[0];
+
+//pievieno jauno elementu DOM kokam
+position.appendChild(newEl);
+*/
+
+/*
+//dzest elementu no DOM koka
+//atziimee elemntu kuru nepieciesams dzest
+var removeEl = document.getElementsByTagName('li')[3];
+
+//atzime parent elementu elementam kuru nepieciesams dzest
+var containerEl = removeEl.parentNode;
+
+//dzes elementu
+containerEl.removeChild(removeEl);
+*/
+
+
+/*
+//parbauda vai ir atributs un ieguust taa veertiibu
+//iegust pirmo list items
+var firstItem = document.getElementById('one');
+
+//ja atributam ir vertiba/ ieguust to
+if (firstItem.hasAttribute('class')) {
+  var attr = firstItem.getAttribute('class');
+
+  var el = document.getElementById('scriptResults');
+  el.innerHTML = '<p> Value of attribute: ' + attr + '</p>';
+}
+*/
+
+/*
+//izveidot attributes un mainit to vertiibas
+//iegust pirmo item
+var firstItem = document.getElementById('one');
+//maina class atributa vertibu
+firstItem.className = 'complete';
+
+//iegust 4 list item
+var fourthItem = document.getElementById('four');
+//samaina atributa vertibu
+fourthItem.setAttribute('class', 'cool');
+*/
+
+/*
+//dzest atributus
+//iegust pirmo vertiibu
+var firstItem = document.getElementById('one');
+//ja ir tads atributs tad to dzes
+if (firstItem.hasAttribute('class')) {
+  firstItem.removeAttribute('class');
+}
+*/
+
+//pievieno papildus <li> listes sakuma un beigaas
+var endElement = document.createElement('li');
+var endText= document.createTextNode('potatoe');
+endElement.appendChild(endText);
+
+var list = document.getElementsByTagName('ul')[0];
+list.appendChild(endElement);
+
+var firstElement = document.createElement('li');
+var firstText = document.createTextNode('milk');
+firstElement.appendChild(firstText);
+
+list.insertBefore(firstElement, list.firstChild);
+
+
+
+//maina klases atributu visiem li elementiem
+var listItems = document.querySelectorAll('li');
+
+for (var i = 0; listItems.length > i; i++) {
+  listItems[i].className = 'cool';
+}
+
+
+//
+var heading = document.querySelector('h2');
+var headingText = heading.firstChild.nodeValue;
+var totalItems = listItems.length;
+var newHeading = headingText + totalItems;
+heading.innerText = newHeading;

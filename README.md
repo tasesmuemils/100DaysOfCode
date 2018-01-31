@@ -147,3 +147,6 @@ Traversing DOM. At the moment I dont like to test this option, because I have to
 
 # day 19 30.01.2018
 Lot of info written down about innerHTML, DOM manipulation. Few things was very boring, but they are important, so no escaping from that.
+
+# day 20 31.01.2018
+Chapter 6 "DOM"- done! But I have feeling that I almost dont remeber what was on first pages of that chapter. Maybe someone have good source where you can gain JavaSvript skills by completing tasks (something else then freecodecamp)? 
