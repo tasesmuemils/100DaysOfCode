@@ -154,3 +154,6 @@ Chapter 6 "DOM"- done! But I have feeling that I almost dont remeber what was on
 # day 21 01.02.2018
 So I was looking for some tasks to test my JavaScript skills and I remebered, that I have training projects directory on GitHub. So I tried FizzBuzz task and it worked, I figure it out by my self (the main thing - use module sign &). This feels awesome :)
 https://codepen.io/tasesmuemils/pen/ddYNRy
+
+# day 22 04.02.2018
+Chapter 7 - EVENTS. Interesting stuff!
