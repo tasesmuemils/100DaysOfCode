@@ -157,3 +157,6 @@ https://codepen.io/tasesmuemils/pen/ddYNRy
 
 # day 22 04.02.2018
 Chapter 7 - EVENTS. Interesting stuff!
+
+# day 23 05.02.2018
+Event handlers - 3 diffrent ways.
