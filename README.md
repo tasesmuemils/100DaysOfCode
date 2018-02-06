@@ -160,3 +160,6 @@ Chapter 7 - EVENTS. Interesting stuff!
 
 # day 23 05.02.2018
 Event handlers - 3 diffrent ways.
+
+# day 24 06.02.2018
+Creating HTML/CSS/Bootstrap tamplate 
