@@ -163,3 +163,6 @@ Event handlers - 3 diffrent ways.
 
 # day 24 06.02.2018
 Creating HTML/CSS/Bootstrap tamplate 
+
+# day 25 07.02.2018
+Continuing with this tamplate!
