@@ -20,6 +20,7 @@ h1, p {
 
 * {
   /border: 1px solid red;
+  font-family: 'Roboto', sans-serif;
   padding: 0px;
   margin: 0px;
 }
@@ -57,7 +58,9 @@ h1, p {
   font-size: 25px;
 }
 
-
+.fa-map-marker-alt:hover {
+  background: #c2aa73;
+}
 
 /*HERO*/
 .hero {
@@ -80,6 +83,7 @@ h1, p {
 
 .main p {
   margin-top: 20px;
+  font-size: 20px;
 }
 
 .practice-areas {
@@ -97,7 +101,7 @@ h1, p {
 
 
 .unique p {
-  margin-bottom: 101px;
+  font-size: 20px;
 }
 
 
@@ -111,6 +115,17 @@ h1, p {
   background-repeat: no-repeat;
 }
 
+.about h3 {
+  margin-top: 37px;
+  margin-bottom: 37px;
+  font-size: 30px;
+}
+
+.about p {
+  color: #424343;
+  font-size: 20px;
+  padding-bottom: 52px;
+}
 
 
 
@@ -128,6 +143,11 @@ h1, p {
   margin-top: 40px;
 }
 
+.card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 /*TESTIMONIALS*/
@@ -139,7 +159,18 @@ h1, p {
   background-repeat: no-repeat;
 }
 
+.testimonials h3 {
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 33px;
+  border-bottom: 6px solid #c2aa73;
+}
 
+.testimonials p {
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 33px;
+}
 
 
 /*FOOTER*/
@@ -161,15 +192,47 @@ h1, p {
   border-bottom: 6px solid #c2aa73;
 }
 
-.get_in_touch {
+.footer h4 {
   margin-top: 17px;
   margin-bottom: 37px;
+  font-size: 30px;
+}
+
+.footer p {
+  font-size: 20px;
+  margin-bottom: 80px;
 }
 
 form {
   background-color: white;
+  height: 564px;
 }
 
+.footer form h3 {
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+.footer h3 span {
+  color: #c2aa73;
+}
+
+.form-group {
+  margin: 15px;
+}
+
+.form-control {
+  height: 50px;
+  font-size: 15px;
+}
+
+.form-comment {
+  height: 100px;
+}
+
+.submit-button {
+ background-color: #c2aa73;
+}
 
 
 /*COPYRIGHTS*/
@@ -179,4 +242,24 @@ form {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+
+.copyright p {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.copy-icons {
+  color: white;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-twitter:hover {
+  color: #1dcaff;
 }
