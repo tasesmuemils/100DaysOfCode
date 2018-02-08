@@ -7,20 +7,18 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .container-fluid {
   padding: 0px;
   margin: 0px;
 }
 
 
-h1, p {
-  padding: 0px;
-  margin: 0px;
-}
-
 * {
   /border: 1px solid red;
-  font-family: 'Roboto', sans-serif;
   padding: 0px;
   margin: 0px;
 }
@@ -28,80 +26,95 @@ h1, p {
 /*FIXED SIDEBAR*/
 .sidenav {
   position: fixed;
-  width: 37.5%;
   background-color: white;
   margin: 0;
   height: 100%;
 }
 
 .nav-all {
-  padding: 0px;
+  padding-top: 0px;
 }
 
 .sidenav a{
   display: block;
   font-size: 20px;
   color: grey;
-  font-family: Roboto;
+  padding-top: 5px;
+}
+
+.sidenav a:hover {
+  text-decoration: none;
+  color: #c2aa73;
 }
 
 .logo_pic {
   padding-top: 40px;
-  padding-bottom: 30px;
   border-bottom: 6px solid #c2aa73;
 }
 
 #cell-phone {
   margin-top: 30px;
-  margin-bottom: px;
   color: grey;
   font-size: 25px;
 }
 
-.fa-map-marker-alt:hover {
-  background: #c2aa73;
+.sidenav p {
+  margin: 0px;
+}
+
+.fa-map-marker-alt {
+  color: #c2aa73;
+}
+
+.address {
+  padding: 25px 0px;
+}
+
+.first-icons {
+  color: #c2aa73;
+  margin: 0px 20px;
 }
 
 /*HERO*/
 .hero {
   background-image: url("../img/bg-hero.png");
-  height: 975px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .main {
-  margin-top: 95px;
-  margin-bottom: 100px;
+  padding-top: 95px;
+  padding-bottom: 100px;
 }
 
 .main h1 {
-  padding: 20px;
   font-size: 25px;
+  font-family: "Roboto", sans-serif;
 }
 
 .main p {
-  margin-top: 20px;
+  padding-top: 37px;
   font-size: 20px;
 }
 
 .practice-areas {
   padding-top: 100px;
   padding-bottom: 100px;
-  margin-bottom: 100px;
   border-top: 6px solid #c2aa73;
   border-bottom: 6px solid #c2aa73;
 }
 
 .practice-areas h1 {
-  margin-top: 22px;
+  padding-top: 22px;
   font-size: 20px;
 }
 
-
 .unique p {
+  padding-top: 100px;
+  padding-bottom: 101px;
   font-size: 20px;
+  margin: 0px;
 }
 
 
@@ -109,22 +122,23 @@ h1, p {
 /*ABOUT*/
 .about {
   background-color: white;
-  height: 506px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .about h3 {
-  margin-top: 37px;
-  margin-bottom: 37px;
+  padding-top: 37px;
+  padding-bottom: 37px;
   font-size: 30px;
+  margin: 0px;
 }
 
 .about p {
   color: #424343;
   font-size: 20px;
   padding-bottom: 52px;
+  margin: 0px;
 }
 
 
@@ -132,15 +146,14 @@ h1, p {
 /*BLOG*/
 .blog {
   background-image: url("../img/bg-img-blog.png");
-  width: 100%;
-  height: 525px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .blog-container {
-  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
 .card {
@@ -148,11 +161,15 @@ h1, p {
   margin-right: auto;
 }
 
+.card-block {
+  color: #585858;
+  padding: 14px;
+}
+
 
 
 /*TESTIMONIALS*/
 .testimonials {
-  height: 410px;
   background-color: white;
   background-position: center;
   background-size: cover;
@@ -161,56 +178,97 @@ h1, p {
 
 .testimonials h3 {
   font-size: 30px;
-  margin-top: 40px;
-  margin-bottom: 33px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   border-bottom: 6px solid #c2aa73;
+  margin: 0px;
+}
+
+.fa-angle-left {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  color: white;
+  background-color: rgba(66, 67, 67, 0.15);
+}
+.fa-angle-left:hover {
+  color: #c2aa73;
+}
+
+.fa-angle-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  background-color: #8c8b92;
+}
+.fa-angle-right:hover {
+  color: #c2aa73;
 }
 
 .testimonials p {
+  margin: 0px;
   font-size: 20px;
-  margin-top: 40px;
-  margin-bottom: 33px;
+  padding-top: 33px;
 }
 
+.testimonials h4 {
+  padding-top: 31px;
+  padding-bottom: 10px;
+  margin: 0px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.stars {
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.fa-star {
+  color: #c2aa73;
+}
 
 /*FOOTER*/
 .footer {
   background-image: url("../img/bg-footer.png");
-  height: 564px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .footer-main {
-  margin-top: 79px;
+  padding-top: 79px;
+  padding-bottom: 80px;
 }
 
 .footer-main h3 {
+  font-weight: bold;
   font-size: 50px;
-  margin-bottom: 17px;
+  margin: 0px;
+  padding-bottom: 17px;
   border-bottom: 6px solid #c2aa73;
 }
 
 .footer h4 {
-  margin-top: 17px;
-  margin-bottom: 37px;
+  font-weight: bold;
+  padding-top: 17px;
+  padding-bottom: 37px;
   font-size: 30px;
+  margin: 0px;
 }
 
 .footer p {
   font-size: 20px;
-  margin-bottom: 80px;
 }
 
 form {
   background-color: white;
-  height: 564px;
 }
 
 .footer form h3 {
-  padding-top: 50px;
+  padding-top: 30px;
   font-size: 30px;
+  margin: 0px;
 }
 
 .footer h3 span {
@@ -222,38 +280,41 @@ form {
 }
 
 .form-control {
-  height: 50px;
+
   font-size: 15px;
 }
 
 .form-comment {
-  height: 100px;
+
 }
 
 .submit-button {
  background-color: #c2aa73;
+ padding-bottom: 30px;
 }
 
 
 /*COPYRIGHTS*/
 .copyright {
-  height: 49px;
   background-color: grey;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.copyright-wrapper {
+  padding-top: 10px;
+  margin: 0px;
+}
 
-.copyright p {
-  margin-top: 15px;
+.copyright span {
+  padding: 0px 3px;
   font-size: 15px;
 }
 
-.copy-icons {
+.second-icons {
   color: white;
-  margin-top: 10px;
-  padding: 5px;
+  padding: 0px 5px;
 }
 
 .fa-facebook-f:hover {
