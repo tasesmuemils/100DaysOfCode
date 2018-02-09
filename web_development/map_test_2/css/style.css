@@ -1,3 +1,5 @@
+
+/*PAGE SETUP*/
 html, body {
   background-color: white;
   width: 100%;
@@ -8,7 +10,7 @@ html, body {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container-fluid {
@@ -16,12 +18,13 @@ body {
   margin: 0px;
 }
 
-
 * {
-  /border: 1px solid red;
   padding: 0px;
   margin: 0px;
 }
+/*PAGE SETUP END*/
+
+
 
 /*FIXED SIDEBAR*/
 .sidenav {
@@ -35,7 +38,7 @@ body {
   padding-top: 0px;
 }
 
-.sidenav a{
+.nav-block{
   display: block;
   font-size: 20px;
   color: grey;
@@ -58,6 +61,11 @@ body {
   font-size: 25px;
 }
 
+#cell-phone:hover {
+  text-decoration: none;
+  color: #c2aa73;
+}
+
 .sidenav p {
   margin: 0px;
 }
@@ -74,6 +82,9 @@ body {
   color: #c2aa73;
   margin: 0px 20px;
 }
+/*FIXED SIDEBAREND*/
+
+
 
 /*HERO*/
 .hero {
@@ -90,7 +101,6 @@ body {
 
 .main h1 {
   font-size: 25px;
-  font-family: "Roboto", sans-serif;
 }
 
 .main p {
@@ -116,6 +126,7 @@ body {
   font-size: 20px;
   margin: 0px;
 }
+/*HERO END*/
 
 
 
@@ -140,6 +151,7 @@ body {
   padding-bottom: 52px;
   margin: 0px;
 }
+/*ABOUT END*/
 
 
 
@@ -165,6 +177,7 @@ body {
   color: #585858;
   padding: 14px;
 }
+/*BLOG END*/
 
 
 
@@ -227,6 +240,9 @@ body {
 .fa-star {
   color: #c2aa73;
 }
+/*TESTIMONIALS END*/
+
+
 
 /*FOOTER*/
 .footer {
@@ -292,6 +308,8 @@ form {
  background-color: #c2aa73;
  padding-bottom: 30px;
 }
+/*FOOTER END*/
+
 
 
 /*COPYRIGHTS*/
@@ -324,3 +342,4 @@ form {
 .fa-twitter:hover {
   color: #1dcaff;
 }
+/*COPYRIGHTS END*/
