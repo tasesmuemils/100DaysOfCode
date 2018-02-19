@@ -1,0 +1,78 @@
+* {
+  /border: 1px solid red;
+  font-family: 'Varela Round', sans-serif;
+}
+
+nav a {
+  font-size: 25px;
+}
+
+.logo {
+  font-size: 35px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.header {
+  background-image: url("../images/first_2.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.first-part h1 {
+  font-size: 60px;
+  padding-top: 230px;
+  padding-bottom: 20px;
+}
+
+.first-part h3 {
+  padding-bottom: 220px;
+}
+
+.intro {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.intro h2 {
+  font-size: 40px;
+  padding-bottom: 60px;
+}
+
+.intro p {
+  font-size: 25px;
+}
+
+.profPicWrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.profile-pic {
+  height: 250px;
+  width: 250px;
+}
+
+.projects {
+  background-color: #E27362;
+}
+
+.projects-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.projects h2 {
+  font-size: 40px;
+  padding-bottom: 60px;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #132F3B;
+}
+
+.btn {
+  background-color: #E27362;
+}
