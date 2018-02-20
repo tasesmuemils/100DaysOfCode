@@ -90,6 +90,16 @@ nav a {
   padding-bottom: 20px;
 }
 
+.contact-form {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact-form h1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .btn {
   background-color: #E27362;
 }
