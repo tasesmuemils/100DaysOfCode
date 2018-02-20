@@ -51,6 +51,19 @@ nav a {
 .profile-pic {
   height: 250px;
   width: 250px;
+  border-width: 15px;
+}
+
+.skills {
+  padding-top: 20px;
+}
+
+.progLang {
+  color: #132F3B;
+}
+
+.socIcons {
+  color: #E27362;
 }
 
 .projects {
@@ -73,6 +86,35 @@ nav a {
   background-color: #132F3B;
 }
 
+.card-pad {
+  padding-bottom: 20px;
+}
+
 .btn {
   background-color: #E27362;
+}
+
+.footer {
+  background-color: #132F3B;
+}
+
+.footer-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.fa-twitter-square:hover {
+  color: #00aced;
+}
+
+.fa-instagram:hover {
+  color: #fccc63;
+}
+
+.fa-github-square:hover {
+  color: white;
+}
+
+.fa-linkedin:hover {
+  color: #0077B5;
 }

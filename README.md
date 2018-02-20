@@ -169,3 +169,6 @@ Continuing with this tamplate!
 
 # day 26 19.02.2018
 I`m back and I got a job. Creating my portfolio tamplate where I can count up my other created things. Also, discussing what me and my team can build via Voyage session.
+
+# day 27 20.02.2018
+Almost done with portfolio page.
