@@ -175,3 +175,6 @@ Almost done with portfolio page.
 
 # day 28 21.02.2018
 My portfolio page - DONE...kinda. https://tasesmuemils.github.io/index.html
+
+# day 29 26.02.2018
+Working on card section for #chingu-voyage-4 project
