@@ -181,3 +181,6 @@ Working on card section for #chingu-voyage-4 project
 
 # day 30 27.02.2018
 Finished basic tamplate for our cards section
+
+# day 31 28.02.2018
+Edditing teams site for Voyage 4 project. Also finaly getting around GitHub Branches and Pull requests
