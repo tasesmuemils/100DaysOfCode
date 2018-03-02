@@ -184,3 +184,6 @@ Finished basic tamplate for our cards section
 
 # day 31 28.02.2018
 Edditing teams site for Voyage 4 project. Also finaly getting around GitHub Branches and Pull requests
+
+# day 32 02.03.2018
+Working on cards modals for our Chingu Voyage project.
