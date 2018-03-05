@@ -187,3 +187,6 @@ Edditing teams site for Voyage 4 project. Also finaly getting around GitHub Bran
 
 # day 32 02.03.2018
 Working on cards modals for our Chingu Voyage project.
+
+#day 33 05.02.2018
+Card modals working very well. Will continue tomorrow.
