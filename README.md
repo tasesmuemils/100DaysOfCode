@@ -190,3 +190,6 @@ Working on cards modals for our Chingu Voyage project.
 
 # day 33 05.02.2018
 Card modals working very well. Will continue tomorrow.
+
+# day 34 06.02.2018
+Card design - done. Looks cool and it is like the best thing I have build.
