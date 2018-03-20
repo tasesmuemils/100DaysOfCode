@@ -196,3 +196,6 @@ Card design - done. Looks cool and it is like the best thing I have build.
 
 # day 35 12.02.2018
 I'm stuck. Can't figure out or even find good example how to create star rating system with HTML/CSS/Vanilla JS. I will try something to check tomorrow!
+
+# day 36 20.02.2018
+8 days... but I'm back! I was trying to build tabbed panels..no luck. 
