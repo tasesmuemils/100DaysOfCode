@@ -21,12 +21,14 @@ bgButton.addEventListener('click', changeTextStyle);
 
 
 
-var firstName = document.getElementsByTagName('input');
+var firstName = document.getElementById('name');
+var lastName = document.getElementById('surname')
 function getNameAndUsername() {
   var fName = firstName.getAttribute('value');
+  var fSurname = lastName.getAttribute('value');
   var results = document.getElementById('scriptResults')
-  results.textContent = 'Your name is' + fName;
+  results.textContent = 'Your name is' + ' ' + fName + ' and your last name is ' + fSurname;
 }
 
 var getValues = document.getElementById('getValue');
-getValues.addEventListener('click', getNameAndUsername);
+getValues.addEventListener('mousedown', getNameAndUsername);
