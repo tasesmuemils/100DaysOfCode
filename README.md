@@ -199,3 +199,6 @@ I'm stuck. Can't figure out or even find good example how to create star rating 
 
 # day 36 20.02.2018
 8 days... but I'm back! I was trying to build tabbed panels..no luck. 
+
+# day 37 16.04.2018
+Few edits for our Chingu project
