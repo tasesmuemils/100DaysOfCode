@@ -1,16 +1,9 @@
 * {
-  //border: solid 1px red;
+  border: solid 1px red;
   background-color: #81abd7;
   color: white;
 }
 
-.colorChange {
-  background-color: #91e8e4;
-}
-
-.changeTextLook {
-  text-shadow: 5px;
-  text-decoration: underline;
-  font-size: 30px;
-  color: black;
+.container {
+  padding-bottom: 100px;
 }

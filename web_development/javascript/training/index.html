@@ -21,34 +21,42 @@
           <h2>I will create here examples, so I can gain my JavaScript skill (also CSS, HTML)</h2>
         </div>
       </div>
-      <div class="row">
-        <div id="bgColorChange">
+      <div class="row justify-content-center text-center">
+        <div id="bgColorChange" class="col-lg-4">
           <h4>Change background color for this container</h4>
           <button id="backgroundButton" type="button" class="btn btn-success">Change color</button>
         </div>
-      </div>
-      <div class="row">
-        <div>
+        <div class="col-lg-4">
           <h4 id="textChange">Change text color, size and font style for this santance</h4>
           <button id="textButton" type="button" class="btn btn-success">Change color</button>
         </div>
       </div>
       <div class="row">
+
+      </div>
+      <div class="row justify-content-center text-center">
         <div>
-          <form id="form1">
+          <form>
             <p>First name: <input id="name" type="text" value="Emils"><br></p>
             <p>Last name: <input id="surname" type="text" value="Bisenieks"><br></p>
-            <button id='getValue'>HOLD ME!</button>
+            <button id='getValue' type="button" class="btn btn-success">HOLD ME!</button>
             <p id="scriptResults"></p>
           </form>
         </div>
       </div>
-      <div class="row">
-        <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
-        <button id="ValuesButton">Click here to get  attributes value</button>
-        <h4 id="scriptResultSecond"></h4>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
+        </div>
+        <div class="col-lg-10">
+          <button type="button" id="ValuesButton" class="btn btn-success">Click here to get attributes values from this link</button>
+          <h5 id="scriptResultSecond"></h5>
+        </div>
       </div>
-      <div class="row">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-12">
+          <h4>This is simple table with option to add new line</h4>
+        </div>
         <table id="sampleTable" border="1">
           <tr>
             <td>Row1 cell1</td>
@@ -58,8 +66,53 @@
             <td>Row2 cell1</td>
             <td>Row2 cell2</td>
           </tr>
-        </table><br>
-        <button id='insertRow'>Insert Row</button>
+        </table>
+        <div class="col-lg-12">
+          <button type="button" id='insertRow' class="btn btn-success">Insert Row</button>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-12">
+          <h4>Change content of your choosed cell</h4>
+        </div>
+        <div class="col-lg-4">
+          <table id="myTable2" border="1" class="align-middle">
+            <tr>
+              <td>Row1 cell1</td>
+              <td>Row1 cell2</td>
+              <td>Row1 cell3</td>
+            </tr>
+            <tr>
+              <td>Row2 cell1</td>
+              <td>Row2 cell2</td>
+              <td>Row2 cell3</td>
+            </tr>
+            <tr>
+              <td>Row3 cell1</td>
+              <td>Row3 cell2</td>
+              <td>Row3 cell3</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-lg-4">
+          <form>
+            <fieldset class="form-group">
+              <label for="inputRowNumber">Enter row number</label>
+              <input type="number" class="form-control" id="inputRowNumber">
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="inputCellNumber">Enter cell number</label>
+              <input type="number" class="form-control" id="inputCellNumber">
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="newCellContent">Short, fresh text for the cell</label>
+              <input type="text" class="form-control" id="newCellContent">
+            </fieldset>
+          </form>
+        </div>
+        <div class="col-lg-12">
+          <button id="changeContentOfTheCell" type="button" class="btn btn-success"> Change content of the cell</button>
+        </div>
       </div>
     </div>
   </div>
