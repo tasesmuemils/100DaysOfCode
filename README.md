@@ -202,3 +202,6 @@ I'm stuck. Can't figure out or even find good example how to create star rating 
 
 # day 37 16.04.2018
 Few edits for our Chingu project
+
+# day 38 21.05.2018
+Working on MEME WARS project. Also reached out my VOYAGE-5 teamate #toucans-team-16
