@@ -1,0 +1,65 @@
+* {
+    /border: red 1px solid;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
+    grid-row-gap: 20px;
+    background-color: #ff8a8a;
+    color: white;
+}
+
+.title {
+    grid-column: 1/end;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+.section1 {
+    /*grid-column-start: 5;
+    grid-column-end: 9;*/ /*This the same as line below*/
+    grid-column: 2 / 6;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 5px;
+    margin: 20px 0px;
+    background-color: #ff6464;
+}
+
+#content h2 {
+    text-transform: uppercase;
+}
+
+#cost {
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+#content .fab {
+    margin: 10px 0px;
+}
+
+.section2 {
+    /*grid-column-start: 5;
+    grid-column-end: 9;*/ /*This the same as line below*/
+    grid-column: 8 / 12;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 5px;
+    margin: 20px 0px;
+    background-color: #ff6464;
+}
+
+#title2, #note {
+    font-size: 20px;
+    padding: 15px 0px; 
+}
+
+
