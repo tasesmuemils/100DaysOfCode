@@ -22,6 +22,17 @@ html, body {
     padding: 20px 0px;
 }
 
+.description {
+    font-style: italic;
+    border: 1px white dotted;
+    margin: 0;
+}
+
+#title, #note, #title2, #note2, .message  {
+    font-size: 20px;
+    padding: 15px 0px; 
+}
+
 .section1 {
     /*grid-column-start: 5;
     grid-column-end: 9;*/ /*This the same as line below*/
@@ -57,9 +68,9 @@ html, body {
     background-color: #ff6464;
 }
 
-#title2, #note {
-    font-size: 20px;
-    padding: 15px 0px; 
-}
+
+
+
+
 
 
