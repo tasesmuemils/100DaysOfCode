@@ -68,7 +68,32 @@ html, body {
     background-color: #ff6464;
 }
 
+.example {
+    background-color: black;
+    grid-column: 1/end;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
+    grid-row-gap: 20px;
+}
 
+.example h1 {
+    grid-column: 1/end;
+}
+
+.finalExample {
+    grid-column: 4 / 10;
+    border: solid 3px yellow;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/*Using flexbox option here*/
+.finalExample table {
+    display: flex;
+    justify-content: center;
+}
 
 
 
