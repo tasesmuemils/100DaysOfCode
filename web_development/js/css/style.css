@@ -1,11 +1,8 @@
-* {
-    /border: red 1px solid;
-}
-
 html, body {
     padding: 0;
     margin: 0;
 }
+
 
 .wrapper {
     display: grid;
@@ -21,6 +18,14 @@ html, body {
     margin: 0;
     padding: 20px 0px;
 }
+
+.chapter {
+    grid-column: 1/end;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px;
+}
+
 
 .description {
     font-style: italic;
@@ -95,7 +100,12 @@ html, body {
     justify-content: center;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
 
-
-
-
+a:hover {
+    color: #ff6464;
+    font-size: 30px;
+}
