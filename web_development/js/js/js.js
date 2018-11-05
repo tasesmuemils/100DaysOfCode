@@ -88,3 +88,42 @@ var welcomeMessage = greeting + nameTwo + '!';
 
 var elGreet = document.getElementById("greeting");
 elGreet.textContent = welcomeMessage;
+
+//Final
+var greetingFinal;
+var nameFinal;
+var messageFinal;
+var userSign;
+var signLenght;
+var oneTitleValue;
+var subtotalFinal;
+var shippingFinal;
+var grandTotal;
+
+greetingFinal = 'Howdy ';
+nameFinal = 'Emils,';
+messageFinal = ' please check your order:';
+userSign = 'Montague House';
+signLength = userSign.length;
+oneTitleValue = 5;
+subtotalFinal = signLength * oneTitleValue;
+shippingFinal = 7;
+grandTotal = subtotalFinal + shippingFinal;
+
+var elGreetingFinal = document.getElementById("greetingFinal");
+elGreetingFinal.textContent = greetingFinal + nameFinal + messageFinal;
+
+var elUserSign = document.getElementById("userSign");
+elUserSign.textContent = userSign;
+
+var elTitles = document.getElementById("titles");
+elTitles.textContent = signLength;
+
+var elSubFinal = document.getElementById("subtotalFinal");
+elSubFinal.textContent = '$' + subtotalFinal;
+
+var elShipFinal = document.getElementById("shippingFinal");
+elShipFinal.textContent = '$' + shippingFinal;
+
+var elGrandTotal = document.getElementById("grandTotal");
+elGrandTotal.textContent = '$' + grandTotal;
