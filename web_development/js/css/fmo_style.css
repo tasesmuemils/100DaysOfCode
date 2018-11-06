@@ -29,7 +29,7 @@ html, body {
     margin: 0;
 }
 
-#message  {
+.messages  {
     font-size: 20px;
     padding: 15px 0px; 
 }
@@ -38,6 +38,18 @@ html, body {
     /*grid-column-start: 5;
     grid-column-end: 9;*/ /*This the same as line below*/
     grid-column: 2 / 6;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 5px;
+    margin: 20px 0px;
+    background-color: #ff6464;
+}
+
+
+.section2 {
+    /*grid-column-start: 5;
+    grid-column-end: 9;*/ /*This the same as line below*/
+    grid-column: 8 / 12;
     text-align: center;
     border: solid 3px white;
     border-radius: 5px;
