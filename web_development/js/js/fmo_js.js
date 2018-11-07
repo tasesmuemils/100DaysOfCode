@@ -54,3 +54,14 @@ var elName3 = document.getElementById("hotelName3");
 elName3.textContent = hotel3.name;
 var elRooms3 = document.getElementById("rooms3");
 elRooms3.textContent = hotel3.checkAvailabilty();
+
+//Using the browser object model
+var msg = '<h2>Browser window</h2><p>width:' + window.innerWidth + '</p>';
+msg += '<p>height: ' + window.innerHeight + '</p>';
+msg += '<h2>History</h2><p>item: ' + window.history.length + '</p>';
+msg += '<h2>Screen</h2><p>width: ' + window.screen.width + '</p>';
+msg += '<p>height: ' + window.screen.height + '</p>';
+
+var elMsg = document.getElementById('info');
+elMsg.innerHTML = msg;
+//alert('Current page: ' + window.location); //drops alert message
