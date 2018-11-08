@@ -205,3 +205,16 @@ Few edits for our Chingu project
 
 # day 38 21.05.2018
 Working on MEME WARS project. Also reached out my VOYAGE-5 teamate #toucans-team-16
+
+
+
+
+
+
+
+
+
+
+
+# day 4 09.10.2018
+I'm feeling so good about fact, that reading chapters for 2nd time from this book is making lot more sense the the 1st time.
