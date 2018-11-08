@@ -55,6 +55,47 @@ elName3.textContent = hotel3.name;
 var elRooms3 = document.getElementById("rooms3");
 elRooms3.textContent = hotel3.checkAvailabilty();
 
+//Create and access objects constructor notation
+function Hotel4(name, rooms, booked) {
+    this.name = name;
+    this.rooms = rooms;
+    this.booked = booked;
+    this.checkAvailabilty = function () {
+        return this.rooms - this.booked; //The return statement stops the execution of a function and returns a value from that function.
+    }
+}
+
+var quayHotel = new Hotel4('Quay', 40, 25);
+var parkHotel = new Hotel4('Park', 120, 77);
+
+var details1 = quayHotel.name + ' rooms: ' + quayHotel.checkAvailabilty();
+var elHotel1 = document.getElementById("hotel1");
+elHotel1.textContent = details1;
+
+var details2 = parkHotel.name + ' rooms: ' + parkHotel.checkAvailabilty();
+var elHotel2 = document.getElementById("hotel2");
+elHotel2.textContent = details2;
+
+//Adding and removing properties
+var hotel5 = {
+    name: 'Park',
+    rooms: 120,
+    booked: 77
+}
+
+hotel5.pool = false;
+hotel5.gym = true;
+delete hotel5.booked;
+
+var elName5 = document.getElementById("hotelName5");
+elName5.textContent = hotel5.name;
+
+var elPool = document.getElementById("pool");
+elPool.textContent = 'Pool: ' +  hotel5.pool;
+
+var elGym = document.getElementById("gym");
+elGym.textContent = 'Gym: ' + hotel5.gym;
+
 //Using the browser object model
 var msg = '<h2>Browser window</h2><p>width:' + window.innerWidth + '</p>';
 msg += '<p>height: ' + window.innerHeight + '</p>';
