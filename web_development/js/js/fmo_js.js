@@ -106,3 +106,25 @@ msg += '<p>height: ' + window.screen.height + '</p>';
 var elMsg = document.getElementById('info');
 elMsg.innerHTML = msg;
 //alert('Current page: ' + window.location); //drops alert message
+
+//Using DOM
+var msg2 = '<p><b>Page Title: </b>' + document.title + '<br />';
+msg2 += '<b>Page adress: <b/>' + document.URL + '<br />';
+msg2 += '<b>Last modified: </b>' + document.lastModified + '</p>';
+
+var elFooter = document.getElementById('footer');
+elFooter.innerHTML = msg2;
+
+//Working with string
+var saying = 'Home sweet home ';
+var msg3 = '<h2>Length</h2><p>' + saying.length + '</p>';
+msg3 += '<h2>Uppercase: </h2><p>' + saying.toUpperCase() + '</p>';
+msg3 += '<h2>Lowercase</h2><p>' + saying.toLowerCase() + '</p>';
+msg3 += '<h2>Character index: 12</h2><p>' + saying.charAt(12) + '</p>';
+msg3 += '<h2>First ee: </h2><p>' + saying.indexOf('ee') + '</p>';
+msg3 += '<h2>Last e: </h2><p>' + saying.lastIndexOf('e') + '</p>';
+msg3 += '<h2>Character: index: 8-14</h2><p>' + saying.substring(8, 14) + '</p>';
+msg3 += '<h2>Replace: </h2><p>' + saying.replace('me', 'w') + '</p>';
+
+var elInfo2 = document.getElementById('info2');
+elInfo2.innerHTML = msg3;
