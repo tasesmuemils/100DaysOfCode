@@ -57,3 +57,18 @@ html, body {
     background-color: #ff6464;
 }
 
+.wrapperFinal {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
+    grid-row-gap: 20px;
+    background-color: #fff19f;
+    color: #717171;
+}
+
+.finalSection {
+    grid-column: 5 / 9;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+

@@ -13,7 +13,7 @@ var hotel = {
     name: 'Quay',
     rooms: 40,
     booked: 25,
-    checkAvailabilty: function() {
+    checkAvailabilty: function () {
         return this.rooms - this.booked
     }
 }
@@ -46,7 +46,7 @@ var hotel3 = new Object();
 hotel3.name = 'Jandze';
 hotel3.rooms = 156;
 hotel3.booked = 68;
-hotel3.checkAvailabilty = function()  {
+hotel3.checkAvailabilty = function () {
     return hotel3.rooms - hotel3.booked
 }
 
@@ -91,7 +91,7 @@ var elName5 = document.getElementById("hotelName5");
 elName5.textContent = hotel5.name;
 
 var elPool = document.getElementById("pool");
-elPool.textContent = 'Pool: ' +  hotel5.pool;
+elPool.textContent = 'Pool: ' + hotel5.pool;
 
 var elGym = document.getElementById("gym");
 elGym.textContent = 'Gym: ' + hotel5.gym;
@@ -128,3 +128,88 @@ msg3 += '<h2>Replace: </h2><p>' + saying.replace('me', 'w') + '</p>';
 
 var elInfo2 = document.getElementById('info2');
 elInfo2.innerHTML = msg3;
+
+//Working with decimal numbers
+var originalNumber = 10.23456;
+
+var msg4 = '<h2>Original number</h2><p>' + originalNumber + '</p>';
+msg4 += '<h2>3 decimal places</h2><p>' + originalNumber.toFixed(3) + '</p>';
+msg4 += '<h2>3 digits</h2><p>' + originalNumber.toPrecision(3) + '</p>';
+
+var elDecimal = document.getElementById('info3');
+elDecimal.innerHTML = msg4;
+
+//Math object to create random numbers
+var randomNum = Math.floor((Math.random() * 10) + 1);
+
+var elRandom = document.getElementById('info4');
+elRandom.innerHTML = randomNum;
+
+//Creating a date object
+var today = new Date();
+var year = today.getFullYear();
+
+var elDate = document.getElementById('footer2');
+elDate.innerHTML = '<p>Copytight &copy; ' + year + '</p>';
+
+//Working with dates & times
+var today2 = new Date();
+var year2 = today2.getFullYear();
+var est = new Date('Apr 16, 1996 15:45:55');
+var difference = today2.getTime() - est.getTime();
+difference = (difference / 31556900000);
+
+var elDate2 = document.getElementById('info5');
+elDate2.textContent = Math.floor(difference) + ' years of online travel advice';
+
+
+//FINAL
+
+/*The script is place inside an immediately invoked function
+expression which helps protect the scope of variables*/
+(function () {
+        //PART ONE: CREATE HOTEL OBJECT AND WRITE OUT THE OFFER DETAILS
+        var hotel = {
+            name: 'Jandze',
+            roomRate: 240,
+            discounts: 15,
+            offerPrice: function () {
+                var offerRate = this.roomRate * ((100 - this.discounts) / 100);
+                return offerRate;
+            }
+        };
+        var hotelNameFinal, roomRate, specialRate;
+
+        hotelNameFinal = document.getElementById('hotelNameFinal');
+        roomRate = document.getElementById('hotelRate');
+        specialRate = document.getElementById('specialRate');
+
+        hotelNameFinal.textContent = hotel.name;
+        roomRate.textContent = 'Price $' + hotel.roomRate;
+        specialRate.textContent = 'Price with discount $' + hotel.offerPrice();
+
+        //PART TWO: CALCULATE AND WRITE THE EXPIRY DETAILS FOR THE OFFER
+        var expiryMsg;
+        var today;
+        var elEnds;
+
+        function offerExpires(today) {
+            var weekFromToday, day, date, month, year, dayNames, monthNames;
+            weekFromToday = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+            dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            monthNames = ['January', 'February', 'March', 'April', 'May', 
+            'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            day = dayNames[weekFromToday.getDay()];
+            date = weekFromToday.getDate();
+            month = monthNames[weekFromToday.getMonth()];
+            year = weekFromToday.getFullYear();
+
+            expiryMsg = 'Offer expires next ';
+            expiryMsg += day + ' <br />(' + date + ' ' + month + ' ' + year + ')';
+            return expiryMsg;
+        }
+        today = new Date();
+        elEnds = document.getElementById('offerEnds');
+        elEnds.innerHTML = offerExpires(today);
+    }
+());
