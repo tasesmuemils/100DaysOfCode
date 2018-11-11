@@ -1,0 +1,91 @@
+* {
+    border: red 1px solid;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
+    grid-row-gap: 20px;
+    background-color: #ffae45;
+    color: white;
+}
+
+.title {
+    grid-column: 1/end;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+.description {
+    font-style: italic;
+    border: 1px white dotted;
+    margin: 0;
+}
+
+.messages  {
+    font-size: 20px;
+    padding: 15px 0px; 
+}
+
+.section1 {
+    /*grid-column-start: 5;
+    grid-column-end: 9;*/ /*This the same as line below*/
+    grid-column: 2 / 6;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 5px;
+    margin: 20px 0px;
+    background-color: #ff9100;
+}
+
+
+.section2 {
+    /*grid-column-start: 5;
+    grid-column-end: 9;*/ /*This the same as line below*/
+    grid-column: 8 / 12;
+    text-align: center;
+    border: solid 3px white;
+    border-radius: 5px;
+    margin: 20px 0px;
+    background-color: #ff9100;
+}
+
+.wrapperFinal {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
+    grid-row-gap: 20px;
+    background-color: #fff19f;
+    color: #717171;
+}
+
+.finalSection {
+    grid-column: 5 / 9;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.chapter {
+    grid-column: 1/end;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6464;
+    font-size: 30px;
+}
+
