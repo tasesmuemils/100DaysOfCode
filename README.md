@@ -219,5 +219,8 @@ Working on MEME WARS project. Also reached out my VOYAGE-5 teamate #toucans-team
 # day 4 09.10.2018
 I'm feeling so good about fact, that reading chapters for 2nd time from this book is making lot more sense the the 1st time.
 
-# fay 5 10.10.2018
+# day 5 10.10.2018
 EVERY THING IS AN OBJECT!!!!!
+
+# day 6 11.10.2018
+Decisions and loops!
