@@ -1,0 +1,24 @@
+* {
+  border: solid 1px red;
+}
+
+
+body {
+  background-color: grey;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
+  grid-row-gap: 20px;
+}
+
+.pageTitle {
+  grid-column: 1/end;
+  text-align: center;
+}
+
+.column1 {
+  grid-column: 2 / 6;
+  text-align: center;
+}
