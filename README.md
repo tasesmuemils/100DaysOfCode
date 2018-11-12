@@ -224,3 +224,6 @@ EVERY THING IS AN OBJECT!!!!!
 
 # day 6 11.10.2018
 Decisions and loops!
+
+# day 7 12.10.2018
+Few tasks from JS book. I been wondering to start doing small tasks from w3resources page. I will continue with JS and VS but also I will try to resolve w3resource tasks with Atom.io. I created new files and folders for w3resource, also using Git a lot.
