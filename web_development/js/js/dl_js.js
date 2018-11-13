@@ -43,3 +43,68 @@ var msg2 = 'Resit required: ' + !minPass;
 
 var elMinPass = document.getElementById('answer4');
 elMinPass.textContent = msg2;
+
+//Using IF statments
+var score7 = 75;
+var msg3;
+
+if (score7 >= 50) {
+    msg3 = 'Congratulations! ';
+    msg3 += 'Proceed to the next round.'
+}
+
+var elAnswer5 = document.getElementById('answer5');
+elAnswer5.textContent = msg3;
+                 //IF alternative
+var score8 = 75;
+var msg4 = '';
+
+function congratulate() {
+    msg4 += 'Congratulations! ';
+}
+
+if (score8 >= 50) {
+    congratulate();
+    msg4 += 'Proceed to the next round.'
+}
+
+var elAnswer6 = document.getElementById('answer6');
+elAnswer6.textContent = msg4;
+
+//Using IF...ELSE statments
+var passElse = 75;
+var scoreElse = 50;
+var msg5;
+
+if (scoreElse >= passElse) {
+    msg5 = 'Congratulations, you passed!';
+} else {
+    msg5 = 'Have another go!'
+}
+
+var elAnswer7 = document.getElementById('answer7');
+elAnswer7.textContent = msg5;
+
+//Using SWITCH statments
+var msg6;
+var level = 2;
+
+switch (level) {
+    case 1:
+        msg6 = 'Good luck on the first test';
+        break;
+
+    case 2:
+        msg6 = 'Second of three - keep going!';
+        break;
+    case 3:
+        msg6 = 'Final round, almost there!';
+        break;
+
+    default:
+        msg6 = 'Good luck!';
+        break;
+}
+
+var elAnswer8 = document.getElementById('answer8');
+elAnswer8.textContent = msg6;
