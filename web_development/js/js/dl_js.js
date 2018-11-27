@@ -108,3 +108,68 @@ switch (level) {
 
 var elAnswer8 = document.getElementById('answer8');
 elAnswer8.textContent = msg6;
+
+//Using for loops
+var scores9 = [24, 37, 15]; //array with scores
+var arrayLength9 = scores9.length; //saskaita items iekss array
+var roundNumber9 = 0; //current round
+var msg9 = ''; // Message
+var i; //counter
+
+
+//loop through items in array
+for (var i = 0; i < arrayLength9; i++) {
+  //Arrays are zero based (so 0 is round 1)
+  //Add 1 to the current round
+  roundNumber9 = (i + 1);
+  //Write current message out
+  msg9 += 'Round ' + roundNumber9 + ': ';
+  msg9 += scores9[i] + '<br / >';
+}
+
+// Kapec rounds sakas ar 1 nevis 0? jo roundNumber tike definets pirms messages un
+//gan i, gan roundnumber ir 0, tadelj roundNumber = (i(0) + 1) === 1, rounds sakas no viens
+
+document.getElementById('answer9').innerHTML = msg9;
+
+//Using while loops
+var i10 = 1;
+var msg10 = '';
+
+while (i10 < 11) {
+    msg10 += i10 + ' x 5 = ' + (i10 * 5) + '<br />';
+    i10++;
+}
+
+document.getElementById('answer10').innerHTML = msg10;
+
+//Using do while loops
+var i11 = 1;
+var msg11 = '';
+
+do {
+    msg11 += i + ' x 6 = ' + (i11 * 6) + '<br />';
+}
+while (i < 1);
+
+document.getElementById('answer11').innerHTML = msg11;
+
+////FINAL
+var iFinal = 1;
+var operator = 'addition';
+var msgFinal = '';
+
+if (operator === 'addition') {
+    while (iFinal < 11) {
+        msgFinal += iFinal + ' + 3 = ' + (iFinal + 3) + '<br />';
+        iFinal++;
+    }
+} else {
+    while (iFinal < 11) {
+        msgFinal += iFinal + ' x 3 = ' + (iFinal * 3) + '<br />';
+        iFinal++;
+    }
+}
+
+
+document.getElementById('answerFinal').innerHTML = msgFinal;
