@@ -61,8 +61,8 @@ html, body {
     display: grid;
     grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
     grid-row-gap: 20px;
-    background-color: #fff19f;
-    color: #717171;
+    background-color: #10275a;
+    color: #fcfdff;
 }
 
 .finalSection {
