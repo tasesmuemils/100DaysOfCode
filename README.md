@@ -230,3 +230,6 @@ Few tasks from JS book. I been wondering to start doing small tasks from w3resou
 
 # day 8 13.10.2018
 Re-reading IF statments. Also I started working on w3resource tasks. Question: should I spend time on string formating?
+
+# day 8 28.11.2018
+Working on Chingu project
