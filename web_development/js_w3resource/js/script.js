@@ -57,5 +57,36 @@ messageDate1 += todays2Date + '/' + todays2Month + '/' + todays2Year;
 
 document.getElementById('date2Solution').innerHTML = messageDate1;
 
+//Task 4
+//Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
+var line1 = 5;
+var line2 = 6;
+var line3 = 7;
+var halfP = (line1 + line2 + line3)/2;
+var triangleArea = Math.sqrt(halfP * (halfP - line1) * (halfP - line2) * (halfP - line3));
+
+document.getElementById('triangleSolution').innerHTML = '<p>Area of this triangle will be ' + triangleArea + '</p>';
+
+//Task 5 (no exact problem but still cool)
+//Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one
+//letter from the end of the string and attaching it to the front.
+var basicString = 'w3resource';
+var basicStringLength = basicString.length;
+var reverseString = '';
+
+while (basicStringLength > -1) {
+    var lastChar = basicString.charAt(basicStringLength - 1);
+    reverseString += lastChar;
+    basicStringLength -= 1;
+}
+
+document.getElementById('reverseStringSolution').textContent = reverseString;
+
+//Task6 (LATAR, TOO HARD)
+//Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
+/*var today3 = new Date();
+var today3Time  = (today3.getTime(), 0, 0);
+var today3Days = today3Time + 365 * 24 * 60 * 60 * 1000;*/
+
 
 
