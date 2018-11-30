@@ -82,11 +82,33 @@ while (basicStringLength > -1) {
 
 document.getElementById('reverseStringSolution').textContent = reverseString;
 
-//Task6 (LATAR, TOO HARD)
+//Task 6 (LATAR, TOO HARD)
 //Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
 /*var today3 = new Date();
 var today3Time  = (today3.getTime(), 0, 0);
 var today3Days = today3Time + 365 * 24 * 60 * 60 * 1000;*/
 
+//Task 7
+//Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
+//Maybe check this later
 
+//Task 8
+//Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
+var userNumber = 7;
+var pcNumber = Math.round(Math.random() * 10);
+var msgRandom;
 
+if (pcNumber === userNumber) {
+    msgRandom = 'Good Work!';
+} else {
+    msgRandom = 'Not matched!';
+}
+
+document.getElementById('randNumberSolution').innerHTML = '<p>User input: ' + userNumber + '<br />' + 'PC number: ' + pcNumber + '<br />' + msgRandom;
+
+//Task9
+//Write a JavaScript program to calculate days left until next Christmas.
+/*var today4 = new Date();
+var christmas = new Date("December 24, 2018");
+var christmasDay = christmas.getDay;*/
+//MAYBE LATER
