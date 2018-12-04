@@ -106,9 +106,37 @@ if (pcNumber === userNumber) {
 
 document.getElementById('randNumberSolution').innerHTML = '<p>User input: ' + userNumber + '<br />' + 'PC number: ' + pcNumber + '<br />' + msgRandom;
 
-//Task9
+//Task 9
 //Write a JavaScript program to calculate days left until next Christmas.
 /*var today4 = new Date();
 var christmas = new Date("December 24, 2018");
 var christmasDay = christmas.getDay;*/
 //MAYBE LATER
+
+
+//Task 10
+//Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+//I will finish this when I get around DOM
+
+//Task 11
+/*Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  
+[ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ] 
+Expected Output : 
+60°C is 140 °F
+45°F is 7.222222222222222°C */
+
+var celsius = 60;
+var fahrenheit = 45;
+
+var fahT = celsius * 9 / 5 + 32;
+var celT = (fahrenheit - 32) * 5 / 9;
+
+document.getElementById('degrees').innerHTML = '<p>' + celsius + '&#8451 is ' + fahT + '&#8457<br />';
+document.getElementById('degrees').innerHTML += fahrenheit + '&#8457 is ' + celT + '&#8451</p>';
+
+//Task 12
+//Write a JavaScript program to get the website URL (loading page). 
+
+var loadPage = window.location;
+
+document.getElementById('loadPageURL').textContent = loadPage;
