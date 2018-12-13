@@ -233,3 +233,6 @@ Re-reading IF statments. Also I started working on w3resource tasks. Question: s
 
 # day 8 28.11.2018
 Working on Chingu project
+
+# 13.12.2018
+CHingu project style CSS
