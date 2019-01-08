@@ -52,9 +52,41 @@ var lastItem2 = startItem2.lastChild;
 firstItem2.setAttribute('class', 'complete');
 lastItem2.setAttribute('class', 'cool');
 
+//Accesing and changing a text node
+var itemTwo8 = document.getElementById('two8');
+var elText8 = itemTwo8.firstChild.nodeValue;
+elText8 = elText8.replace('pine nuts', 'kale');
+itemTwo8.firstChild.nodeValue = elText8;
 
+//Accesing text only
+var firstItem9 = document.getElementById('one9');
+var showTextContent = firstItem9.textContent;
+var showeInnerText = firstItem9.innerText;
 
+var msg9 = '<p>textContent result: ' + showTextContent + '</p>';
+msg9 += '<p>innerText result: ' + showeInnerText + '</p>';
 
+var el9 = document.getElementById('scriptResult9');
+el9.innerHTML = msg9;
+
+firstItem9.textContent = 'sourdough bread';
+
+//Update text and markup
+var firstItem10 = document.getElementById('one10');
+var itemContent10 = firstItem10.innerHTML;
+firstItem10.innerHTML = '<a href="https://www.finecooking.com/article/fresh-figs">' + itemContent10 + '</a>';
+
+//adding an element to the DOM tree
+var newEl10 = document.createElement('li');
+var newText10 = document.createTextNode('salami');
+newEl10.appendChild(newText10);
+var position10 = document.getElementsByTagName('ul')[9];
+position10.appendChild(newEl10);
+
+//Removing an elemnt from the DOM tree (I will remove first tables 3 item)
+var removeEl10 = document.getElementsByTagName('li')[2];
+var parentEl10 = removeEl10.parentNode;
+parentEl10.removeChild(removeEl10);
 
 
 
