@@ -88,5 +88,26 @@ var removeEl10 = document.getElementsByTagName('li')[2];
 var parentEl10 = removeEl10.parentNode;
 parentEl10.removeChild(removeEl10);
 
+//Check for an attribute and get its value
+var firstItem1 = document.getElementById('one');
+
+if (firstItem1.hasAttribute('class')) {
+    var attr1 = firstItem1.getAttribute('class');
+    var el1 = document.getElementById('scriptResult1');
+    el1.innerHTML = '<p>The value offirst items class attribuete: ' + attr1 + '</p>';
+}
+
+var secondItem1 = document.getElementById('two');
+secondItem1.className = 'hot';
+//Remove atrribute
+if (secondItem1.hasAttribute('class')) {
+    secondItem1.removeAttribute('class');
+}
+
+var thirdItem1 = document.getElementsByTagName('li')[2];
+thirdItem1.setAttribute('class', 'complete');
+
+
+
 
 
