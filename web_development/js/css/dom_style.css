@@ -1,5 +1,5 @@
 * {
-    border: red 1px solid;
+    /border: red 1px solid;
 }
 
 html, body {
@@ -70,6 +70,7 @@ html, body {
     text-align: center;
     font-size: 25px;
     font-weight: 600;
+    margin: 20px;
 }
 
 .chapter {
@@ -137,6 +138,14 @@ a:hover {
 
 .complete {
     background-color: #1fe348;
+}
+
+.productCountStyle {
+    background: white;
+    color: black;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 10px;
 }
 
 
