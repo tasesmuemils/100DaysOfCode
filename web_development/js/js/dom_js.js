@@ -49,8 +49,8 @@ var startItem2 = document.getElementsByTagName('ul')[6];
 var firstItem2 = startItem2.firstChild;
 var lastItem2 = startItem2.lastChild;
 
-firstItem2.setAttribute('class', 'complete');
-lastItem2.setAttribute('class', 'cool');
+//firstItem2.setAttribute('class', 'complete');
+//lastItem2.setAttribute('class', 'cool');
 
 //Accesing and changing a text node
 var itemTwo8 = document.getElementById('two8');
@@ -106,6 +106,38 @@ if (secondItem1.hasAttribute('class')) {
 
 var thirdItem1 = document.getElementsByTagName('li')[2];
 thirdItem1.setAttribute('class', 'complete');
+
+//final
+var locationF = document.getElementsByTagName('ul')[10];
+//first Item
+var newFirstElF = document.createElement('li');
+var newFirstElTextF = document.createTextNode('kale');
+newFirstElF.appendChild(newFirstElTextF);
+
+locationF.insertBefore(newFirstElF, locationF.firstChild);
+
+//last item
+var lastItemF = document.createElement('li');
+var lastItemTextF = document.createTextNode('cream');
+lastItemF.appendChild(lastItemTextF);
+
+locationF.appendChild(lastItemF);
+
+var listItems = locationF.querySelectorAll('li');
+for (let i = 0; i < listItems.length; i++) {
+    listItems[i].className = 'cool';
+}
+
+var headerLocation = document.getElementById('FINAL');
+var heading = headerLocation.querySelector('h2');
+var headingText = heading.firstChild.nodeValue;
+var productCount = listItems.length;
+var newFinalHeading = headingText + '<span>' + productCount + '</span>';
+heading.innerHTML =  newFinalHeading;
+heading.firstChild.setAttribute = 'class';
+heading.lastChild.className = 'productCountStyle';
+
+
 
 
 
