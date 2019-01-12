@@ -12,3 +12,6 @@ So I finished final excercise...Im still struglle a lot. I have an idea, my ide 
 
 # 11.01.2019 5/100
 Started working round events and event types.
+
+# 12.01.2019 6/100
+Continue working on events (what is event listeners?)
