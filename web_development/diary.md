@@ -15,3 +15,6 @@ Started working round events and event types.
 
 # 12.01.2019 6/100
 Continue working on events (what is event listeners?)
+
+# 13.01.2019 7/100
+Event flows and much more
