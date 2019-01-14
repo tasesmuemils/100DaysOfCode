@@ -72,3 +72,52 @@ if (el.addEventListener) {
         itemDone(e);
     });
 }
+
+//LOAD
+function setup() {
+    var textInput;
+    textInput = document.getElementById('username4');
+    textInput.focus();
+}
+
+window.addEventListener('load', setup, false);
+
+//FOCUS & BLUR
+function checkUsername5() {
+    var username = el5.value;
+    if (username.length < 5) {
+        elMsg5.className = 'warning';
+        elMsg5.textContent = 'Not long enough, yet...'; 
+    } else {
+        elMsg5.textContent = '';
+    }
+}
+
+function tipUsername() {
+    elMsg5.className = 'tip';
+    elMsg5.textContent = 'Username must be at least 5 characters';
+}
+
+var el5 = document.getElementById('username5');
+var elMsg5 = document.getElementById('feedback5');
+
+el5.addEventListener('focus', tipUsername, false);
+el5.addEventListener('blur', checkUsername5, false);
+
+//CLICK
+/*var msg6 = '<div class=\"header\"><a id=\"close\" href="#">close X</a></div>';
+msg6 += '<div><h2>System maintance</h2>';
+msg6 += 'Our servers are being updated between 3 to 4 a.m.';
+msg6 += 'During this time, there may be minor disruptions to service</div>';
+
+var elNote = document.createElement('div');
+elNote.setAttribute('id', 'note');
+elNote.innerHTML = msg6;
+document.body.appendChild(elNote);
+
+function dismissNote() {
+    document.body.removeChild(elNote);
+}
+
+var elClose = document.getElementById('close');
+elClose.addEventListener('click', dismissNote, false);*/

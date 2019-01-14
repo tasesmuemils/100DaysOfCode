@@ -168,6 +168,17 @@ a:hover {
     margin: 0 auto;
 }
 
+#note {
+    background: white;
+    font-size: 50px;
+    text-align: center;
+    border: red 20px solid;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    left: 50px;
+}
+
 
 
 
