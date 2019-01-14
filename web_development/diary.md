@@ -18,3 +18,6 @@ Continue working on events (what is event listeners?)
 
 # 13.01.2019 7/100
 Event flows and much more
+
+# 14.01.2019 8/100
+Different types of events, user interface events
