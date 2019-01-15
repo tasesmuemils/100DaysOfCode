@@ -8,8 +8,8 @@
     <title>Document_DL</title>
 </head>
 
-<body>
-    <div class="wrapper">
+<body id="body">
+    <div class="wrapper" id="screenPosition">
         <h1 class="title">EVENTS</h1>
         <div class="section1">
             <h1>EVENTS</h1>
@@ -92,17 +92,82 @@
         </div>
         <div class="section1">
             <h1>EVENTS</h1>
-            <p class="description">CLICK</p>
-            <div id="task1" class="containerEdit">
-                <form class="formStyle" action="">
-                    <div id="feedback6"></div>
-                    <label for="username6">Create a username:</label>
-                    <input id="username6" type="text" name="un">
-                    <label for="password6">Create a password:</label>
-                    <input type="text" name="psw">
+            <p class="description">DETERMING POSITION</p>
+            <div id="task10" class="containerEdit">
+                <form id="screenPosition" class="formStyle" action="">
+                    <div>
+                        ScreenX: <input type="text" id="sx">
+                        ScreenY: <input type="text" id="sy">
+                        PageX: <input type="text" id="px">
+                        PageY: <input type="text" id="py">
+                        ClientX: <input type="text" id="cx">
+                        ClientY: <input type="text" id="cy">
+                    </div>
                 </form>
             </div>
         </div>
+        <div class="section2">
+            <h1>EVENTS</h1>
+            <p class="description">WHICH KEY WAS PRESSED</p>
+            <div id="task1" class="containerEdit">
+                <form class="formStyle" action="http://example.org/">
+                    <label for="myProfile">MY PROFILE</label>
+                    <textarea name="" id="message" cols="30" rows="10"></textarea>
+                    <h2 id="charactersLeft"></h2>
+                    <h2 id="lastkey"></h2>
+                    <input type="submit" value="next" />
+                </form>
+            </div>
+        </div>
+        <div class="section1">
+            <h1>EVENTS</h1>
+            <p class="description">USING FORM EVENTS</p>
+            <div id="task12" class="containerEdit">
+                <form id="formSignup" action="">
+                    <h2>MEMBERSHIP</h2>
+                    <label>Select a package:</label>
+                    <select id="package">
+                        <option value="annually">1 year 50$</option>
+                        <option value="monthly">Monthly 7$</option>
+                    </select>
+                    <div id="packageHint"></div>
+                    <label for="checkBox">Check to agree to terms & conditions</label>
+                    <input type="checkbox" id="terms">
+                    <div id="termsHint"></div>
+
+                    <input type="submit" value="next">
+                </form>
+            </div>
+        </div>
+        <div class="section3">
+            <h1>Events</h1>
+            <p class="description">USING MUTATION EVENTS</p>
+            <div id="task2" class="containerEdit">
+                <h1 id="header">ListKing</h1>
+                <h2>Buy groceries</h2>
+                <div id="counter2"></div>
+                <ul id="list">
+                  <a href="">ADD LIST ITEM</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapperFinal">
+        <div class="finalSection">
+            <h1>ID</h1>
+            <div id="FINAL" class="containerEdit">
+                <h1 id="header">ListKing</h1>
+                <h2 id="noteNameF"></h2>
+                <form action="http://example.org/">
+                    <label for="noteInput">Enter note name:</label>
+                    <input type="text" id="noteInput">
+                    <div id="buttons">
+                        <a data-state="record" href="">record</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="../js/events_js.js"></script>
 </body>
 
