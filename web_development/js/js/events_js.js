@@ -121,3 +121,167 @@ function dismissNote() {
 
 var elClose = document.getElementById('close');
 elClose.addEventListener('click', dismissNote, false);*/
+
+//DETERMING POSITION
+var sx = document.getElementById('sx');
+var sy = document.getElementById('sy');
+var px = document.getElementById('px');
+var py = document.getElementById('py');
+var cx = document.getElementById('cx');
+var cy = document.getElementById('cy');
+
+function showPosition(event) {
+    sx.value = event.screenX;
+    sy.value = event.screenY;
+    px.value = event.pageX;
+    py.value = event.pageY;
+    cx.value = event.clientX;
+    cy.value = event.clientX;
+}
+
+var elPosition = document.getElementById('body');
+elPosition.addEventListener('mousemove', showPosition, false);
+
+//WHICH KEY WAS PRESSED
+var elKey;
+
+function charCount(e) {
+    var textEntered, charDisplay, counter, lastKey;
+    textEntered = document.getElementById('message').value;
+    charDisplay = document.getElementById('charactersLeft');
+    counter = (180 - (textEntered.length));
+    charDisplay.textContent = counter;
+
+    lastKey = document.getElementById('lastkey');
+    lastKey.textContent = 'Last key in ASCII code:' + e.keyCode;
+}
+
+var elWhichKey = document.getElementById('message');
+elWhichKey.addEventListener('keypress', charCount, false);
+
+//USING FORM EVENTS
+var elForm, elSelectPackage, elPackageHint, elTerms, elTermsHint;
+elForm = document.getElementById('formSignup');
+elSelectPackage = document.getElementById('package');
+elPackageHint = document.getElementById('packageHint');
+elTerms = document.getElementById('terms');
+elTermsHint = document.getElementById('termsHint');
+
+function packageHint() {
+    var package = this.options[this.selectedIndex].value;
+    if (package === 'monthly') {
+        elPackageHint.textContent = 'Save $10 if you pay for 1 year!';
+    } else {
+        elPackageHint.textContent = 'Wise choice';
+    }
+}
+
+function checkTerms(event) {
+    if (!elTerms.checked) {
+        elTermsHint.textContent = 'You must agree with terms.';
+        event.preventDefault();
+    }
+}
+
+elSelectPackage.addEventListener('change', packageHint, false);
+elForm.addEventListener('submit', checkTerms, false);
+
+//USING MUTATION EVENTS
+var elList, addLink, newEl, newText, counter2, listItems;
+
+elList = document.getElementById('list');
+addLink = list.querySelector('a');
+counter2 = document.getElementById('counter2');
+
+function addItem(e) {
+    e.preventDefault();
+    newEl = document.createElement('li');
+    newText = document.createTextNode('New list item');
+    newEl.appendChild(newText);
+    elList.appendChild(newEl);
+}
+
+function updateCount() {
+    listItems = list.getElementsByTagName('li').length;
+    counter2.textContent = listItems;
+}
+
+addLink.addEventListener('click', addItem, false);
+elList.addEventListener('DOMNodeInserted', updateCount, false);
+
+//USING HTML5 EVENTS
+function setup2() {
+    var textInput;
+    textInput = document.getElementById('message');
+    textInput.focus();
+}
+
+window.addEventListener('DOMContentLoaded', setup2, false);
+
+window.addEventListener('beforeunload', function(event) {
+    var message = 'You have changes that have not been saved';
+    (event || window.event).returnValue = message;
+    return message;
+}, false);
+
+//FINAL EXAMPLE
+var noteInput, noteNameF, textEnteredF, targetF;
+
+noteNameF = document.getElementById('noteNameF');
+noteInput = document.getElementById('noteInput');
+
+function writeLabel(e) {
+    if(!e) {
+        e = window.event;
+    }
+    targetF = e.targetF || e.srcElement;
+    textEnteredF = targetF.value;
+    noteNameF.innerText = textEnteredF;
+}
+
+
+
+function recorderControls(e) {
+    if (!e) {
+        e = window.event;
+    }
+    targetF = e.targetF || e.srcElement;
+    if (event.preventDefault) {
+        e.preventDefault();
+    } else {
+        e.returnValue = false;
+    }
+
+    switch (targetF.getAttribute('data-state')) {
+        case 'record':
+            record(targetF);
+            break;
+        case 'stop':
+            stop(targetF);
+            break;
+    }
+};
+
+
+function record(targetF) {
+    targetF.setAttribute('data-state', 'stop');
+    targetF.textContent = 'stop';
+}
+
+function stop(targetF) {
+    targetF.setAttribute('data-state', 'record');
+    targetF.textContent = 'record';
+}
+//
+
+if (document.addEventListener) {
+    document.addEventListener('click', function(e) {
+        recorderControls(e);
+    }, false);
+    noteInput.addEventListener('onclick', writeLabel, false);
+} else {
+    document.attachEvent('onclick', function(e) {
+        recorderControls(e);
+    });
+    noteInput.attachEvent('onkeyup', writeLabel);
+}
