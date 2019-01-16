@@ -272,13 +272,14 @@ function stop(targetF) {
     targetF.setAttribute('data-state', 'record');
     targetF.textContent = 'record';
 }
-//
+
+
 
 if (document.addEventListener) {
     document.addEventListener('click', function(e) {
         recorderControls(e);
     }, false);
-    noteInput.addEventListener('onclick', writeLabel, false);
+    noteInput.addEventListener('input', writeLabel, false);
 } else {
     document.attachEvent('onclick', function(e) {
         recorderControls(e);
