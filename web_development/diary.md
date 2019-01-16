@@ -21,3 +21,6 @@ Event flows and much more
 
 # 14.01.2019 8/100
 Different types of events, user interface events
+
+# 15.01.2019 9/100
+Finished 6. chaptere - events. I was trying to find a bug for a long time on last example (because some things are different in the book), but i did it. So now, I will gain my knowladge doing w3resource excercises.
