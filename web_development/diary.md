@@ -24,3 +24,6 @@ Different types of events, user interface events
 
 # 15.01.2019 9/100
 Finished 6. chaptere - events. I was trying to find a bug for a long time on last example (because some things are different in the book), but i did it. So now, I will gain my knowladge doing w3resource excercises.
+
+# 16.01.2019 10/100
+After finishing chapter 6, I am completeng tasks from w3resource page and they work great. Have to figure out how I can create click on/of event.
