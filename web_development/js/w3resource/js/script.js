@@ -59,3 +59,33 @@ function unStyleBackground() {
 
 thirdTaskbutton.addEventListener('click', changeBackColor, false);
 thirdTaskbutton.addEventListener('dblclick', unStyleBackground, false);
+
+//Task4
+var w3link = document.getElementById('w3r');
+var fourTaskButton = document.getElementById('fourTaskButton');
+var result4 = document.getElementById('result4');
+var msg4 = '';
+
+
+function getLinksAttributes() {
+    var w3href = w3link.href;
+    var w3type = w3link.type;
+    var w3hreflang = w3link.hreflang;
+    var w3rel = w3link.rel;
+    var w3target = w3link.target;
+    msg4 = '<p>Link: ' + w3href +'</p><p>Type: ' + w3type + '</p>';
+    msg4 += '<p>Language: ' + w3hreflang + '</p><p>Rel: ' + w3rel + '</p>';
+    msg4 += '<p>Target: ' + w3target + '</p>';
+    result4.innerHTML = msg4;
+    fourTaskButton.textContent = 'Close';
+}
+
+function clearTask4() {
+    result4.innerHTML = '';
+    fourTaskButton.textContent = 'Check';
+}
+
+fourTaskButton.addEventListener('click', getLinksAttributes, false);
+fourTaskButton.addEventListener('dblclick', clearTask4, false);
+
+//Task 5
