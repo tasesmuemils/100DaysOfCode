@@ -27,3 +27,6 @@ Finished 6. chaptere - events. I was trying to find a bug for a long time on las
 
 # 16.01.2019 10/100
 After finishing chapter 6, I am completeng tasks from w3resource page and they work great. Have to figure out how I can create click on/of event.
+
+# 16.01.2019 11/100
+Im doing tasks like this for example: Write a JavaScript function to get the value of the href, hreflang, rel, target, and type attributes of the specified link. 
