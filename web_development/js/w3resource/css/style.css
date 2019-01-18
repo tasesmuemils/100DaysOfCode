@@ -12,6 +12,7 @@
     text-align: center;
     grid-template-columns: repeat(12, 1fr);
     grid-row-gap: 20px;
+    grid-template-rows: auto;
     background: rgba(141,232,213,1);
 }
 
@@ -21,8 +22,10 @@
 }
 
 .section1 {
+    display: grid;
     grid-column: 3/6; 
     background-color: #00e3b2;
+    grid-row: auto;
 }
 
 .section2 {
@@ -74,3 +77,8 @@
     background-color: white;
 }
 
+/*Task 5*/
+#fiffifthTask table {
+    display: grid;
+    grid-template-rows: auto;
+}
