@@ -36,7 +36,7 @@ function clear2values() {
         name2.value = '';
         surname2.value = '';
         show2Name.textContent = '';
-        show2Surname.textContent ='';
+        show2Surname.textContent = '';
     }
 }
 
@@ -73,7 +73,7 @@ function getLinksAttributes() {
     var w3hreflang = w3link.hreflang;
     var w3rel = w3link.rel;
     var w3target = w3link.target;
-    msg4 = '<p>Link: ' + w3href +'</p><p>Type: ' + w3type + '</p>';
+    msg4 = '<p>Link: ' + w3href + '</p><p>Type: ' + w3type + '</p>';
     msg4 += '<p>Language: ' + w3hreflang + '</p><p>Rel: ' + w3rel + '</p>';
     msg4 += '<p>Target: ' + w3target + '</p>';
     result4.innerHTML = msg4;
@@ -89,3 +89,44 @@ fourTaskButton.addEventListener('click', getLinksAttributes, false);
 fourTaskButton.addEventListener('dblclick', clearTask4, false);
 
 //Task 5
+//This was befor I knew there is TABLE object in JS
+var table5 = document.getElementById('table5');
+var fifthTaskbutton = document.getElementById('fifthTaskbutton');
+var clear5 = document.getElementById('clear5');
+var tables5body = table5.childNodes[1];
+
+function addRows5() {
+    var table5row = document.createElement('tr');
+    for (var i = 0; i < 2; i++) {
+        var table5cell = document.createElement('td');
+        table5cell.textContent = 'Extra Row';
+        table5row.appendChild(table5cell);
+        tables5body.appendChild(table5row);
+    }
+}
+
+function clearExtraRow() {
+    var lastEl = tables5body.lastChild;
+    tables5body.removeChild(lastEl);
+}
+
+fifthTaskbutton.addEventListener('click', addRows5, false);
+clear5.addEventListener('click', clearExtraRow, false);
+
+//Task 6
+var dropdown6 = document.getElementById('colorSelect');
+var selectedIndex6 = dropdown6.selectedIndex;
+var selectedItem = dropdown6.querySelector('option');
+var taskButton6 = document.getElementById('taskButton6');
+
+function removeItemSelect() {
+    if (dropdown6.) {
+        
+    }
+    dropdown6.removeChild('selectedItem');
+}
+
+taskButton6.addEventListener('click', removeItemSelect, false);
+
+
+
