@@ -33,3 +33,8 @@ Im doing tasks like this for example: Write a JavaScript function to get the val
 
 # 17.01.2019 12/100
 Every time, when I have to use loops, I have to think about t more but in the end I manage to create a functions which adds and removes table rows. Also, I did it with DOM functions, before I realized that there is a TABLE object in JS. Next tasks, where tables will be included I will create wit TABLE object.
+
+# 18.01.2019 13/100
+I am struggling with this one(Write a JavaScript program to remove items from a dropdown list) because JS not allows me to select selected item, but I will figure this out today!!!
+Next: Write a JavaScript program to count and display the items of a dropdown list, in an alert window. 
+
