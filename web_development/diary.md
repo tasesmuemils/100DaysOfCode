@@ -28,13 +28,16 @@ Finished 6. chaptere - events. I was trying to find a bug for a long time on las
 # 16.01.2019 10/100
 After finishing chapter 6, I am completeng tasks from w3resource page and they work great. Have to figure out how I can create click on/of event.
 
-# 16.01.2019 11/100
+# 17.01.2019 11/100
 Im doing tasks like this for example: Write a JavaScript function to get the value of the href, hreflang, rel, target, and type attributes of the specified link. 
 
 # 17.01.2019 12/100
 Every time, when I have to use loops, I have to think about t more but in the end I manage to create a functions which adds and removes table rows. Also, I did it with DOM functions, before I realized that there is a TABLE object in JS. Next tasks, where tables will be included I will create wit TABLE object.
 
-# 18.01.2019 13/100
+# 19.01.2019 13/100
 I am struggling with this one(Write a JavaScript program to remove items from a dropdown list) because JS not allows me to select selected item, but I will figure this out today!!!
 Next: Write a JavaScript program to count and display the items of a dropdown list, in an alert window. 
 
+# 20.01.2019 14/100
+I did this: Write a JavaScript program to calculate the volume of a sphere
+And started this one:Write a JavaScript program to display a random image (clicking on a button).
