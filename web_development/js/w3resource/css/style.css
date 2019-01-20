@@ -1,6 +1,6 @@
 
 /*Basic structure*/
-* {
+* { border: solid 1px red;
     padding: 0;
     margin: 0;
     font-family: 'Oswald', sans-serif;
@@ -84,4 +84,22 @@
 /*Task 5*/
 #table5 td {
     border: outset #04aa86 2px;
+}
+
+/*Task 8*/
+#form8 {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 10px;
+}
+
+#form8 input {
+    width: 200px;
+    margin: 0 auto;
+}
+
+/*Task 9*/
+#task9 img {
+    object-fit: cover;
+    width: 100%;
 }

@@ -138,3 +138,29 @@ function alertCount() {
 
 taskButton7.addEventListener('click', alertCount, false);
 
+//Task 8 
+var enteredValue8 = document.getElementById('radiuss8');
+var result8 = document.getElementById('result8');
+var taskButton8 = document.getElementById('taskButton8');
+
+
+function sphereVolume() {
+    var value= enteredValue8.value;
+    var formula = 4/3 * Math.PI * Math.pow(value, 3);
+    result8.value = formula;
+
+}
+
+taskButton8.addEventListener('click', sphereVolume, false);
+
+//Task9
+var randomImage9 = document.getElementById('randomImage9');
+var array9 = ['http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg',
+ 'http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg',
+'http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg'];
+
+
+var imageRandom = Math.floor(Math.random() * 3) + 1;
+var srcChange = randomImage9.src[imageRandom];
+
+
