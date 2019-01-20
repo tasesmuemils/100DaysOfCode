@@ -115,18 +115,26 @@ clear5.addEventListener('click', clearExtraRow, false);
 
 //Task 6
 var dropdown6 = document.getElementById('colorSelect');
-var selectedIndex6 = dropdown6.selectedIndex;
-var selectedItem = dropdown6.querySelector('option');
 var taskButton6 = document.getElementById('taskButton6');
 
-function removeItemSelect() {
-    if (dropdown6.) {
-        
-    }
-    dropdown6.removeChild('selectedItem');
+function removeOptions() {
+    dropdown6.remove(dropdown6.selectedIndex);
 }
 
-taskButton6.addEventListener('click', removeItemSelect, false);
+taskButton6.addEventListener('click', removeOptions, false);
+//Task 7
+var dropdown7 = document.getElementById('countItems');
+var dropdown7Opt = dropdown7.querySelectorAll('option');
+var taskButton7 = document.getElementById('taskButton7');
 
+function alertCount() {
+    var array7 = [];
+    for (let i = 0; i < dropdown7Opt.length; i++) {
+        const color = dropdown7Opt[i].textContent;
+        array7.push(color);
+    }
+    alert('Color count: ' + dropdown7Opt.length + '\nColor list: ' + array7.toString());
+}
 
+taskButton7.addEventListener('click', alertCount, false);
 

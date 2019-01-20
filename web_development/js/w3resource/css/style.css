@@ -1,7 +1,6 @@
 
 /*Basic structure*/
 * {
-    border: 1px red solid;
     padding: 0;
     margin: 0;
     font-family: 'Oswald', sans-serif;
@@ -26,11 +25,15 @@
     grid-column: 3/6; 
     background-color: #00e3b2;
     grid-row: auto;
+    border: outset #04aa86 2px;
+    box-shadow: 0px 14px 30px -8px rgba(0,0,0,1);
 }
 
 .section2 {
     grid-column: 8/11;
     background-color: #00e3b2;
+    border: outset #04aa86 2px;
+    box-shadow: 0px 14px 30px -8px rgba(0,0,0,1);
 }
 
 .green {
@@ -55,6 +58,8 @@
     margin: 5px;
 }
 
+
+
 /*Task 1*/
 .textOneEdit {
     font-size: 30px;
@@ -67,7 +72,6 @@
 /*Task 2*/
 .taskForm {
     display: grid;
-    border: blue solid 2px;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 10px;
 }
@@ -78,7 +82,6 @@
 }
 
 /*Task 5*/
-#fiffifthTask table {
-    display: grid;
-    grid-template-rows: auto;
+#table5 td {
+    border: outset #04aa86 2px;
 }
