@@ -41,3 +41,9 @@ Next: Write a JavaScript program to count and display the items of a dropdown li
 # 20.01.2019 14/100
 I did this: Write a JavaScript program to calculate the volume of a sphere
 And started this one:Write a JavaScript program to display a random image (clicking on a button).
+
+# 21.01.2019 15/100
+I am done with w3school DOM excercises. Now I have to figure out what to do next:
+1. Continue with JS excercises
+2. Try to build webpage and insert JS for something (navbar, moduls or something else)
+3. Start chapter 7 of Jon Ducektt book - jQuery
