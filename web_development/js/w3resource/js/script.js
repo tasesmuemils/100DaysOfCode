@@ -167,12 +167,36 @@ function changeImage() {
         var imageRandom = Math.floor(Math.random() * array9.length);
         if (i === imageRandom) {
             randomImage9.src = array9[i];
-            array9.splice(i);
         }
     }
 }
 
+//random number can be  === i more then one time each time (for example: 3,2,2,1,1,1,2)
+
 taskButton9.addEventListener('click', changeImage, false);
+
+//Task 10
+var result10h = document.getElementById('ph');
+var result10w = document.getElementById('pw');
+var el10 = document.getElementById('body');
+
+
+
+function winSize() {
+    var winH = window.innerHeight;
+    var winW = window.innerWidth;
+    result10h.value = winH;
+    result10w.value = winW;
+}
+
+winSize();
+window.addEventListener('resize', winSize, false);
+
+
+
+
+
+
 
 
 
