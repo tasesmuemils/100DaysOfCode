@@ -47,3 +47,6 @@ I am done with w3school DOM excercises. Now I have to figure out what to do next
 1. Continue with JS excercises
 2. Try to build webpage and insert JS for something (navbar, moduls or something else)
 3. Start chapter 7 of Jon Ducektt book - jQuery
+
+# 22.01.2019 16/100
+I will try 2. option. Someone on Twitter suggested also the same option. So last year I was looking for job and ScandiWeb send me tasks, which I have to do to apply. PHP. As I didnt know nothing about PHP, I didnt do it. Now I decided that I will create something similar with Vanilla JS. Game review site or something like that! So far I have created objects on array and the appear on the page (for me it is amazing, as I figure out ways how to do it).
