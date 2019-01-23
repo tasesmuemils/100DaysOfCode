@@ -22,7 +22,32 @@
             <p>Search and dropdown</p>
             <button type="button" id="formButton">ADD NEW GAME</button>
         </div>
-        <div id="formModal"></div>
+        <div id="formModal">
+            <span id="closeModal">X</span>
+            <div id="formWrapper">
+                <form action="" id="formContent">
+                    <h1>Product Add</h1>
+                    <label for="productID">Product ID: </label>
+                    <input type="number" name="productID" id="productID">
+                    <label for="consoleType">Choose console type: </label>
+                    <select name="consoleType" id="consoleType">
+                        <option value="multiple">Multiple consoles</option>
+                        <option value="playStation">PlayStation</option>
+                        <option value="xbox">Xbox</option>
+                        <option value="nintendo">Nintendo</option>
+                    </select>
+                    <label for="productName">Name: </label>
+                    <input type="text" name="productName" id="productName">
+                    <label for="productImg">Product image (only url): </label>
+                    <input type="text" name="productImg" id="productImg">
+                    <label for="productPrice">Price:</label>
+                    <input type="text" name="productPrice" id="productPrice">
+                    <label for="productDescription">Description: </label>
+                    <textarea name="productDescription" id="productDescription" cols="20" rows="10"></textarea>
+                    <button type="button" id="addGameButton">ADD GAME</button>
+                </form>
+            </div>
+        </div>
         <div id="contentProducts">
             <!-- Here goes tamplate from JS(using TEMPLATE STRINGS)-->
         </div>
