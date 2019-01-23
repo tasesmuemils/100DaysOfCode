@@ -53,3 +53,6 @@ I will try 2. option. Someone on Twitter suggested also the same option. So last
 
 # 23.01.2019 17/100
 I have created basic objects in array. Also, I rember that in one Chingu session some developers sad that better would be to use Template Strings. What the hell is that?!?! Long story, short - now Im using it (very simple to understand the concept) and Im deeling litlle bit proud of myself, just because I figure out those things by my self!
+
+# 24.01.2019 18/100
+I have to say - I am very proud of myself. I looked few things up (array.push() and valueAsNumber), but everything else I did by myself. Even found a bug, which gave me result after only second click. GREAT DAY!!!!!
