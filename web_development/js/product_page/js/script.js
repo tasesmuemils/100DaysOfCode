@@ -4,48 +4,57 @@ const games = [{
         id: 1,
         src: 'https://static-cdn.jtvnw.net/ttv-boxart/FIFA%2019.jpg',
         title: 'Fifa 19sdasd',
+        consoleType: 'Multiple consoles',
         price: '60$'
+        
     },
     {
         id: 2,
-        src: 'https://assets1.ignimgs.com/2016/10/18/red-dead-redemption-2-buttonjpg-f9ad35.jpg',
+        src: 'https://www.1a.lv/images/products/001784/1305074_xl.jpg',
         title: 'Red Dead Redemption 2',
+        consoleType: 'Multiple consoles',
         price: '65$'
     },
     {
         id: 3,
         src: 'https://i.ytimg.com/vi/a3o_ZKWi-OU/maxresdefault.jpg',
         title: 'Mario Kart 8',
+        consoleType: 'Nintendo',
         price: '50$'
     },
     {
         id: 4,
         src: 'https://cdn.europosters.eu/image/750/posters/gears-of-war-armour-i30747.jpg',
         title: 'Gears of War',
+        consoleType: 'Xbox',
         price: '30$'
     },
     {
         id: 5,
         src: 'https://cdn-static.denofgeek.com/sites/denofgeek/files/styles/article_width/public/2018/08/spiderman_hostile_takeover_mmpb_cvr_1.2.pdf-1.jpg?itok=qoYrvGvR',
         title: 'Spider-Man',
+        consoleType: 'PlayStation',
         price: '70$'
     },
     {
         id: 6,
         src: 'https://images-na.ssl-images-amazon.com/images/I/81KcrDGGMxL.jpg',
         title: 'Halo 5',
+        consoleType: 'Xbox',
         price: '35$'
     },
     {
         id: 7,
         src: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Super_Smash_Bros._Ultimate.jpg/220px-Super_Smash_Bros._Ultimate.jpg',
         title: 'Smash Bros',
+        consoleType: 'Nintendo',
         price: '60$'
     },
     {
         id: 8,
         src: 'https://media.playstation.com/is/image/SCEA/god-of-war-box-art-01-ps4-us-27mar18?$native_nt$',
         title: 'Gods of War',
+        consoleType: 'PlayStation',
         price: '80$'
     }
 ];
@@ -56,11 +65,11 @@ var cardTitle = document.getElementsByClassName('cardTitle');
 var cardPrice = document.getElementsByClassName('cardPrice');
 
 (function () {
-    for (var i = 0; i < games.length; i++) {
-        cardImage[i].src = games[i].src;
-        cardTitle[i].textContent = games[i].title;
-        cardPrice[i].textContent = games[i].price;
-    }; 
+for (var i = 0; i < games.length; i++) {
+    cardImage[i].src = games[i].src;
+    cardTitle[i].textContent = games[i].title;
+    cardPrice[i].textContent = games[i].price;
+}; 
 }());
 */
 
@@ -71,12 +80,15 @@ var cardPrice = document.getElementsByClassName('cardPrice');
 
 var contentProducts = document.getElementById('contentProducts');
 
+
+
 function gamesInPage() {
-    for (let i = 0; i < games.length; i++) {
+    for (var i = 0; i < games.length; i++) {
         var card = document.createElement('div');
         var template = `<img class="cardImage" src="${games[i].src}" alt="">
-                    <h3 class="cardTitle">${games[i].title}</h3>
-                    <p class="cardPrice">${games[i].price}</p>`;
+                <h3 class="cardTitle">${games[i].title}</h3>
+                <h4>${games[i].consoleType}</h4>
+                <p class="cardPrice">${games[i].price}</p>`;
         card.className = 'card';
         card.innerHTML = template;
         contentProducts.appendChild(card);
@@ -90,6 +102,8 @@ var formButton = document.getElementById('formButton'); //open modal
 var formModal = document.getElementById('formModal');
 var closeModalButton = document.getElementById('closeModal'); //close modal
 
+
+//Modal open and close functions
 function showModal() {
     formModal.style.display = 'grid';
 }
@@ -100,6 +114,7 @@ function closeModal() {
 }
 closeModalButton.addEventListener('click', closeModal, false);
 
+//Add game/product
 var productID = document.getElementById('productID');
 var consoleType = document.getElementById('consoleType');
 var productName = document.getElementById('productName');
@@ -116,25 +131,23 @@ function addNewGame() {
         id: productID.valueAsNumber,
         src: productImg.value,
         title: productName.value,
+        consoleType: consoleType.value,
         price: productPrice.value
     };
     games.push(newGame);
-    
-    (function() {
+
+    (function () {
         var card = document.createElement('div');
         var template = `<img class="cardImage" src="${games[productIDIndex].src}" alt="">
-                    <h3 class="cardTitle">${games[productIDIndex].title}</h3>
-                    <p class="cardPrice">${games[productIDIndex].price}</p>`;
+                <h3 class="cardTitle">${games[productIDIndex].title}</h3>
+                <h4>${games[productIDIndex].consoleType}</h4>
+                <p class="cardPrice">${games[productIDIndex].price}</p>`;
         card.className = 'card';
         card.innerHTML = template;
         contentProducts.appendChild(card);
     }());
+    productID.valueAsNumber = games.length + 1;
     formModal.style.display = 'none';
 }
 
-
-
-
 addGameButton.addEventListener('click', addNewGame, false);
-
-
