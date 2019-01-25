@@ -3,21 +3,21 @@
 const games = [{
         id: 1,
         src: 'https://static-cdn.jtvnw.net/ttv-boxart/FIFA%2019.jpg',
-        title: 'Fifa 19sdasd',
+        title: 'Fifa 19',
         consoleType: 'Multiple consoles',
         price: '60$'
         
     },
     {
         id: 2,
-        src: 'https://www.1a.lv/images/products/001784/1305074_xl.jpg',
-        title: 'Red Dead Redemption 2',
+        src: 'https://vignette.wikia.nocookie.net/reddeadredemption/images/b/b8/Red_Dead_Redemption_2_Cover_Art.jpg/revision/latest?cb=20180117115846',
+        title: 'Red Dead 2',
         consoleType: 'Multiple consoles',
         price: '65$'
     },
     {
         id: 3,
-        src: 'https://i.ytimg.com/vi/a3o_ZKWi-OU/maxresdefault.jpg',
+        src: 'https://i.neoseeker.com/boxshots/R2FtZXMvTmludGVuZG9fU3dpdGNoL1JhY2luZy9HZW5lcmFs/mario-kart-8-deluxe_frontcover_large_39tWu4yJuK9EeYs.jpg',
         title: 'Mario Kart 8',
         consoleType: 'Nintendo',
         price: '50$'
@@ -45,7 +45,7 @@ const games = [{
     },
     {
         id: 7,
-        src: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Super_Smash_Bros._Ultimate.jpg/220px-Super_Smash_Bros._Ultimate.jpg',
+        src: 'https://cdn.cdkeys.com/500x706/media/catalog/product/s/u/super-smash-bros-u_base_1_3.jpg',
         title: 'Smash Bros',
         consoleType: 'Nintendo',
         price: '60$'
@@ -86,9 +86,11 @@ function gamesInPage() {
     for (var i = 0; i < games.length; i++) {
         var card = document.createElement('div');
         var template = `<img class="cardImage" src="${games[i].src}" alt="">
-                <h3 class="cardTitle">${games[i].title}</h3>
-                <h4>${games[i].consoleType}</h4>
-                <p class="cardPrice">${games[i].price}</p>`;
+                        <div class='cards-text'>
+                            <h3 class="cardTitle">${games[i].title}</h3>
+                            <h4>${games[i].consoleType}</h4>
+                            <p class="cardPrice">${games[i].price}</p>
+                        </div>`;
         card.className = 'card';
         card.innerHTML = template;
         contentProducts.appendChild(card);
