@@ -1,15 +1,13 @@
 /*
 I will collect somet things to create them later!
 
-https://codepen.io/Gelsot/pen/xpGYyd
-
+https://codepen.io/andytran/pen/BNjymy
 */
 
+/*MAIN SETTINGS*/
 * {
     padding: 0;
     margin: 0;
-    border: 1px red solid;
-    font-family: 'VT323', monospace;
 }
 
 body {
@@ -19,16 +17,24 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100vh;
+    font-family: 'VT323', monospace;
+    grid-template-areas:
+        "mainTitle mainTitle mainTitle mainTitle"
+        "contentHeader contentHeader contentHeader contentHeader"
+        "contentProducts contentProducts contentProducts contentProducts";
 }
 
+
+/*MAIN TITLE*/
 #mainTitle {
     display: grid;
     grid-column: 1/end;
     justify-self: center;
     align-self: center;
     color: #f4f4f4;
+    grid-area: mainTitle;
 }
 
 #mainTitle h1 {
@@ -43,44 +49,89 @@ body {
     letter-spacing: 10px;
 }
 
+
+/*HEADER*/
 #contentHeader {
     margin: 0px 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-column: 1/end;
+    grid-area: contentHeader;
 }
 
 #contentHeader h1,
 p {
+    padding: 0px 20px;
     font-size: 30px;
-    letter-spacing: 10px;
     justify-self: left;
-    align-self: top;
     font-family: 'Muli', sans-serif;
     color: #f4f4f4;
 }
 
+#contentHeader p {
+    justify-self: right;
+}
+
+#formButton {
+    width: 50%;
+    justify-self: center;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #FBAB7E;
+    color: white;
+    font-weight: 700;
+    font-family: 'Muli', sans-serif;
+    box-shadow: 0 7px 5px -5px black;
+}
+
+
+/*CONTENT*/
 #contentProducts {
-    margin: 0px 20px;
+    margin: 20px;
+    padding: 10px;
     grid-column: 1/end;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 150px;
+    grid-gap: 100px;
+    grid-area: contentProducts;
 }
 
 .card {
     margin: 0;
     padding: 0;
+    font-family: 'Muli', sans-serif;
+    box-shadow: 0 7px 5px -5px black;
 }
 
 .card img {
     object-fit: cover;
+    vertical-align: middle;
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
-/* The Modal (background) */
+
+.cards-text {
+    padding: 10px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.cards-text h3 {
+    font-size: 30px;
+    padding: 10px 0px;
+}
+
+.cards-text p {
+    padding: 5px 0px;
+    font-size: 15px;
+    color: black;
+}
+
+
+
+/* THE MODAL(background) */
 #formModal {
     display: none;
     /* Hidden by default */
@@ -127,4 +178,158 @@ select {
 #formContent button {
     grid-column: 1/end;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    /*CONTENT*/
+    #contentProducts {
+        margin: 20px;
+        padding: 10px;
+        grid-column: 1/end;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 100px;
+        grid-area: contentProducts;
+    }
+
+    .card img {
+        object-fit: cover;
+        vertical-align: middle;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+
+    /*CONTENT*/
+    #contentProducts {
+        margin: 20px;
+        padding: 10px;
+        grid-column: 1/end;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 50px;
+        grid-area: contentProducts;
+    }
+
+    .card {
+        justify-self: center;
+        width: 80%;
+    }
+
+    #formButton {
+        width: 70%;
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100vh;
+        font-family: 'VT323', monospace;
+        grid-template-areas:
+            "mainTitle mainTitle mainTitle mainTitle"
+            "contentHeader contentHeader contentHeader contentHeader"
+            "contentProducts contentProducts contentProducts contentProducts";
+    }
+
+    #mainTitle h1 {
+        font-size: 70px;
+    }
+
+    #mainTitle h3 {
+        font-size: 20px;
+    }
+
+    #contentHeader h1,
+    p {
+        font-size: 20px;
+    }
+
+    #contentHeader p {
+        justify-self: right;
+    }
+
+    #formButton {
+        width: 80%;
+        font-size: 10px;
+    }
+
+    /*CONTENT*/
+    #contentProducts {
+        margin: 20px;
+        padding: 10px;
+        grid-column: 1/end;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 50px;
+        grid-area: contentProducts;
+    }
+
+    .card {
+        justify-self: center;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 635px) {
+
+    /*CONTENT*/
+    #contentProducts {
+        margin: 20px 10px;
+        padding: 10px;
+        grid-column: 1/end;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 100px;
+        grid-area: contentProducts;
+    }
+
+    #mainTitle h1 {
+        font-size: 60px;
+    }
+
+    #mainTitle h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /*HEADER*/
+    #contentHeader {
+        margin: 0px 10px;
+    }
+
+    #contentHeader h1,
+    p {
+        padding: 0px 10px;
+        font-size: 20px;
+        justify-self: center;
+    }
+
+    #formButton {
+        width: 80%;
+        justify-self: center;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+
+    .card {
+        justify-self: center;
+        width: 70%;
+    }
+
+    .card img {
+        height: 280px;
+    }
+
 }
