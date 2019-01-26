@@ -57,5 +57,9 @@ I have created basic objects in array. Also, I rember that in one Chingu session
 # 24.01.2019 18/100
 I have to say - I am very proud of myself. I looked few things up (array.push() and valueAsNumber), but everything else I did by myself. Even found a bug, which gave me result after only second click. GREAT DAY!!!!!
 
+
 # 25.01.2019 19/100
 I forget how CSS styling hard was. I wanted to create cool card design but what I wanted includes SASS and tranformation and animations - all, that I havent learned at all. So I jumped to responsice CSS GRID and it works! Cards look okay, everything else looks great too! Next I wil style form (which is for adding new content to the page)!! Productive day!
+
+# 26.01.2019 20/100
+Read some blogs about CSS animations
