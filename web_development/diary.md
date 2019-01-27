@@ -63,3 +63,6 @@ I forget how CSS styling hard was. I wanted to create cool card design but what 
 
 # 26.01.2019 20/100
 Read some blogs about CSS animations
+
+# 27.01.2019 21/100
+I created responsive form and add some styling to it. And it looks great!!! I will try to film it (how it works) and the upload on Twitter!
