@@ -140,7 +140,7 @@ p {
     z-index: 1;
     /* Sit on top */
     /* Location of the box */
-    left: 20%;
+    left: 25%;
     top: 20%;
     width: 50%;
     /* Full width */
@@ -153,9 +153,18 @@ p {
     color: white;
 }
 
+#closeModal {
+    padding: 10px;
+}
+
+#closeModal i {
+    color: #FBAB7E;
+}
+
 /*Modal content*/
 #formWrapper {
     padding: 20px;
+    font-family: 'Muli', sans-serif;
 }
 
 #formContent {
@@ -165,6 +174,12 @@ p {
     color: white;
 }
 
+#formContent h1 {
+    grid-column: 1/end;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
 #formContent label {
     grid-column: 1/2;
 }
@@ -172,12 +187,23 @@ p {
 #formContent input,
 select {
     grid: 2/3;
-    width: 50%;
+    width: 80%;
+    border-radius: 5px;
 }
 
 #formContent button {
     grid-column: 1/end;
-    margin: 0 auto;
+    margin: 5px auto;
+    padding: 10px;
+    width: 30%;
+    justify-self: center;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #FBAB7E;
+    color: white;
+    font-weight: 700;
+    font-family: 'Muli', sans-serif;
+    box-shadow: 0 7px 5px -5px black;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -200,6 +226,7 @@ select {
         width: 100%;
         height: 400px;
     }
+
 }
 
 @media only screen and (max-width: 1120px) {
@@ -219,6 +246,11 @@ select {
     .card {
         justify-self: center;
         width: 80%;
+    }
+
+    #formModal {
+        width: 70%;
+        left: 15%;
     }
 
     #formButton {
@@ -279,6 +311,17 @@ select {
         width: 100%;
     }
 
+    #formModal {
+        width: 100%;
+        left: 0;
+    }
+
+    #formContent input,
+    select {
+        grid: 2/3;
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-width: 635px) {
@@ -331,5 +374,25 @@ select {
     .card img {
         height: 280px;
     }
+
+    #formContent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        color: white;
+    }
+
+    #formContent label,
+    input,
+    select {
+        grid-column: 1/end;
+        width: 100%;
+    }
+
+    #formContent button {
+        grid-column: 1/end;
+        margin: 0 auto;
+    }
+
 
 }

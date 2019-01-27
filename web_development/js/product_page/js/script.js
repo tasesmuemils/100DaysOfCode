@@ -17,7 +17,7 @@ const games = [{
     },
     {
         id: 3,
-        src: 'https://i.neoseeker.com/boxshots/R2FtZXMvTmludGVuZG9fU3dpdGNoL1JhY2luZy9HZW5lcmFs/mario-kart-8-deluxe_frontcover_large_39tWu4yJuK9EeYs.jpg',
+        src: 'https://cdn.europosters.eu/image/1300/posters/mario-kart-8-deluxe-i50037.jpg',
         title: 'Mario Kart 8',
         consoleType: 'Nintendo',
         price: '50$'
@@ -141,9 +141,11 @@ function addNewGame() {
     (function () {
         var card = document.createElement('div');
         var template = `<img class="cardImage" src="${games[productIDIndex].src}" alt="">
-                <h3 class="cardTitle">${games[productIDIndex].title}</h3>
-                <h4>${games[productIDIndex].consoleType}</h4>
-                <p class="cardPrice">${games[productIDIndex].price}</p>`;
+                        <div class=cards-text>
+                            <h3 class="cardTitle">${games[productIDIndex].title}</h3>
+                            <h4>${games[productIDIndex].consoleType}</h4>
+                            <p class="cardPrice">${games[productIDIndex].price}</p>
+                        </div>`;
         card.className = 'card';
         card.innerHTML = template;
         contentProducts.appendChild(card);
