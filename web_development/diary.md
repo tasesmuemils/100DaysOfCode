@@ -72,3 +72,6 @@ I created a footer and published my training project in GitHub pages. I will pos
 
 # 29.01.2019 23/100
 TO DO LIST. ADD ITEMS - done. DELETE ITEMS - done. EDIT ITEMS - not done yet.
+
+# 30.01.2019 24/100
+TO DO LIST EDIT section.
