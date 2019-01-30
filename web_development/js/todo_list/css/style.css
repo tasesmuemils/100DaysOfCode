@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+    text-align: center;
+}
+
+.grid-container h1 {
+    grid-column: 1/end;
+}
+
+.listContainer {
+    justify-self: center;
+    grid-column: 2/3;
+}
+
+.listContainer ul {
+    list-style: none;
+}
+
+#toDo {
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr;
+}
+

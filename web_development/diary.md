@@ -63,3 +63,12 @@ I forget how CSS styling hard was. I wanted to create cool card design but what 
 
 # 26.01.2019 20/100
 Read some blogs about CSS animations
+
+# 27.01.2019 21/100
+I created responsive form and add some styling to it. And it looks great!!! I will try to film it (how it works) and the upload on Twitter!
+
+# 28.01.2019 22/100
+I created a footer and published my training project in GitHub pages. I will post it on Twitter, maybe I get some feedback.
+
+# 29.01.2019 23/100
+TO DO LIST. ADD ITEMS - done. DELETE ITEMS - done. EDIT ITEMS - not done yet.
