@@ -5,15 +5,22 @@
     3. Edit ITEM */
 
 var firstInput = document.getElementById('firstInput');
-var inputArray = [];
 var toDoList = document.getElementById('toDo');
+var inputArray = [];
 
 function addItem() {
     inputArray.unshift(firstInput.value);
     firstInput.value = '';
     var toDoItem = document.createElement('li');
-    toDoItem.textContent = inputArray[0];
-    toDoList.appendChild(toDoItem);
+    var toDoEdit = document.createElement('INPUT');
+    toDoEdit.value = inputArray[0];
+    //toDoItem.textContent = inputArray[0];
+    if (toDoList.childElementCount = 0) {
+        toDoList.appendChild(toDoItem);
+    } else {
+        toDoList.insertBefore(toDoItem, toDoList.firstChild);
+    }
+    toDoItem.appendChild(toDoEdit);
     var deleteItem = document.createElement('button');
     deleteItem.textContent = 'Delete';
     deleteItem.type = 'button';
@@ -25,38 +32,32 @@ function addItem() {
 
     function deleteToDoItem() {
         for (let i = 0; i < inputArray.length; i++) {
-            if (inputArray[i] === toDoItem.firstChild.textContent) {
+            if (inputArray[i] === toDoEdit.value) {
                 inputArray.splice(i, 1);
             }
         }
         toDoList.removeChild(toDoItem);
     }
 
+    
     var clickState = 0;
 
     function editToDoItem() {
-        var toDoEdit = document.createElement('INPUT');
         if (clickState === 0) {
             editItem.textContent = 'Close Edit';
             toDoEdit.type = 'text'
-            toDoEdit.value = toDoItem.firstChild.textContent;
-            toDoEdit.appendChild(toDoItem.firstChild);
-            toDoItem.insertBefore(toDoEdit, toDoItem.firstChild);
+            toDoEdit.focus();
             clickState = 1;
         } else {
-            editItem.textContent = 'Edit';
-            for (let i = -1; i < inputArray.length; i++) {
-                if (inputArray[i] !== toDoEdit.value) {
-                    inputArray[i] === toDoEdit.value;
-                }
+            for (let i = 0; i < inputArray.length; i++) {
+                inputArray[i] = toDoEdit.value;
             }
+            editItem.textContent = 'Edit';
             clickState = 0;
         }
-
     }
     deleteItem.addEventListener('click', deleteToDoItem, false);
     editItem.addEventListener('click', editToDoItem, false);
-
 }
 
 

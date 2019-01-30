@@ -29,3 +29,8 @@
     grid-template-columns: 1fr;
 }
 
+#toDo input {
+    background: none;
+    background-color: none;
+}
+
