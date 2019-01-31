@@ -75,3 +75,6 @@ TO DO LIST. ADD ITEMS - done. DELETE ITEMS - done. EDIT ITEMS - not done yet.
 
 # 30.01.2019 24/100
 TO DO LIST EDIT section.
+
+# 31.01.2019 25/100
+It worked yesterday visualy, but today it works how I wanted at the begining! WOOOHOOO. I know, it not much, but Im very proud of myself. TO-DO list done!
