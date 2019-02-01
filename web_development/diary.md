@@ -78,3 +78,6 @@ TO DO LIST EDIT section.
 
 # 31.01.2019 25/100
 It worked yesterday visualy, but today it works how I wanted at the begining! WOOOHOOO. I know, it not much, but Im very proud of myself. TO-DO list done!
+
+# 01.02.2019 26/100
+After games covers site and to-do list (Vanilla JS), I finally decided to continue with JS&jQ book chapter 7. - jQuery!
