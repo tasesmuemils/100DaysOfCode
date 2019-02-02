@@ -81,3 +81,5 @@ It worked yesterday visualy, but today it works how I wanted at the begining! WO
 
 # 01.02.2019 26/100
 After games covers site and to-do list (Vanilla JS), I finally decided to continue with JS&jQ book chapter 7. - jQuery!
+
+# 02.02.2019 27/100
