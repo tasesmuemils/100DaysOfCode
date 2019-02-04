@@ -83,5 +83,10 @@ It worked yesterday visualy, but today it works how I wanted at the begining! WO
 After games covers site and to-do list (Vanilla JS), I finally decided to continue with JS&jQ book chapter 7. - jQuery!
 
 # 02.02.2019 27/100
+Watch some jQuery videos
 
 # 03.02.2019 28/100
+Read some blogs on Medium and watched few jQuery videos
+
+# 04.02.2019 29/100
+Lot of jQuery today - WORKING WITH ATTRIBUTES, CHANGING CSS RULES, USING .EACH(), EVENTS, EVENT OBJECT.
