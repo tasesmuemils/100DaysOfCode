@@ -175,7 +175,7 @@ $(function () {
 });
 
 //WORKING WITH FORMS
-$(function () { 
+$(function () {
     var $newItemButton = $('#newItemButton');
     var $newItemForm = $('#newItemForm');
     var $textInput = $('input:text');
@@ -183,28 +183,130 @@ $(function () {
     $newItemButton.show();
     $newItemForm.hide();
 
-    $('#showForm').on('click', function () { 
+    $('#showForm').on('click', function () {
         $newItemButton.hide();
         $newItemForm.show();
-     });
+    });
 
-    $newItemForm.on('submit', function (e) { 
+    $newItemForm.on('submit', function (e) {
         e.preventDefault();
         var newText = $('input:text').val();
         $('#task16 li:last').after('<li>' + newText + '</li>');
         $newItemForm.hide();
         $newItemButton.show();
         $textInput.val('');
-     });
- });
+    });
+});
 
- //CUT, COPY, PASTE
- $(function () { 
-     var $p = $('#task17 p');
-     var $cloneQuote = $p.clone();
-     $p.remove();
-     $cloneQuote.insertAfter('#task17 h2');
+//CUT, COPY, PASTE
+$(function () {
+    var $p = $('#task17 p');
+    var $cloneQuote = $p.clone();
+    $p.remove();
+    $cloneQuote.insertAfter('#task17 h2');
 
-     var $moveItem = $('#task17 #one').detach();
-     $moveItem.appendTo('#task17 ul');
-  })
+    var $moveItem = $('#task17 #one').detach();
+    $moveItem.appendTo('#task17 ul');
+})
+
+//CHANGING DIMENSIONS
+$(function () {
+    var listHeight = $('#task17').height();
+    $('#task18 ul').append('<p>Height: ' + listHeight + 'px</p>');
+    $('#task18 li').width('50%');
+    $('#task18 li#one').width(125);
+    $('#task18 li#two').width('75%');
+});
+
+//Determing position of items on the page
+//This didnt work for me
+$(function () {
+    var $window = $(window);
+    var $slideAd = $('#slideAd');
+    var endZone = $('#footer').offset().top - $window.height() - 500;
+
+    $window.on('scroll', function () {
+
+        if (endZone < $window.scrollTop()) {
+            $slideAd.animate({
+                'right': '0px'
+            }, 250);
+        } else {
+            $slideAd.stop(true).animate({
+                'right': '-360px'
+            }, 250);
+        }
+
+    });
+
+});
+
+
+/* THIS IS THE FINAL EXAMPLE
+OF CHAPTER 7 - jQuery!!!
+Tasks for this example:
+ | Users can add new item
+ | When click on item, it changes to "complete" and move item to bottom
+ | Onece itesm is marked as "Complete", second click remove item*/
+
+
+
+$(function () {
+
+    //Declare variables
+    var $li = $('#final li');
+    var $list = $('#final ul');
+    var item = '';
+    var $newItemForm = $('#newItemFormF');
+    var $newItemButton = $('#newItemButtonF');
+
+    //FIRST ANIMATION
+    $newItemForm.hide();
+    $li.hide().each(function (index) {
+        $(this).delay(500 * index).fadeIn(1100);
+    })
+
+    //COUNTER
+    function updateCount() {
+        var count = $('#final li[class!=complete]').length; 
+        $('#counter').text(count);
+    };
+    updateCount();
+
+    //DeLETE ITEM
+    $list.on('click', 'li', function () {
+        var $this = $(this);
+        var complete = $this.hasClass('complete');
+
+        if (complete === true) {
+            $this.animate({
+                opacity: 0.0,
+                paddingLeft: '+100'
+            }, 1000, 'swing', function () { 
+                $this.remove();
+            })
+        } else {
+            item = $this.text();
+            $this.remove();
+            $list.append('<li class="complete">' + item + '</li>').hide().fadeIn(500);
+        }
+        updateCount();
+    })
+
+    //SHOW FORM
+    $('#showFormF').on('click', function () {
+        $newItemForm.show();
+        $newItemButton.hide();
+    });
+
+    //ADD NEW ITEM
+    $newItemForm.on('submit', function (e) {
+        e.preventDefault();
+        var newText = $('#final input:text').val();
+        $list.append('<li>' + newText + '</li>');
+        $newItemForm.hide();
+        $newItemButton.show();
+        $('#final input:text').val('');
+        updateCount();
+    })
+})
