@@ -96,3 +96,6 @@ More jQuery - DELEGATING EVENTS, BASIC EFFECTS, USING ANIMATION, TRAVERSING, FIL
 
 # 06.02.2019 31/100
 Chapter 7 jQuery - DONE. Last example was harder then I thought, but I at least finished it. Now, before moving on AJAX and JSON, I will recreate some emplates with HTML, CSS (CSS GRID for responsivnes), JS/jQuery. I have always wanted to understand how I could add scrolling efects, show/hide navigation bars, animate elements.
+
+# 07.02.2019 32/100
+Started new template. I already found new things - dark opacity on background image. Most difficult wil be position of elements which are outside other element borders , but I will try!
