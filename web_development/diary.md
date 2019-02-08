@@ -99,3 +99,6 @@ Chapter 7 jQuery - DONE. Last example was harder then I thought, but I at least 
 
 # 07.02.2019 32/100
 Started new template. I already found new things - dark opacity on background image. Most difficult wil be position of elements which are outside other element borders , but I will try!
+
+# 08.02.2019 33/100
+I finished HTML/CSS styling (still more to go - navbar, responsivnes). But after that JS/jQuery. So far, this is the best looking thing I have crteated.
