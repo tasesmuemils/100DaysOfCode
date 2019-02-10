@@ -102,3 +102,8 @@ Started new template. I already found new things - dark opacity on background im
 
 # 08.02.2019 33/100
 I finished HTML/CSS styling (still more to go - navbar, responsivnes). But after that JS/jQuery. So far, this is the best looking thing I have crteated.
+
+# 10.02.2019 34/100
+Edit CSS responsivnes for template
+
+
