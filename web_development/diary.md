@@ -106,4 +106,6 @@ I finished HTML/CSS styling (still more to go - navbar, responsivnes). But after
 # 10.02.2019 34/100
 Edit CSS responsivnes for template
 
+# 11.02.2019 35/100
+I finished responsive design for template and it looks very cool. Also I took one day off and Im not feeling good about it.
 
