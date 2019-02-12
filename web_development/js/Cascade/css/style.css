@@ -4,19 +4,24 @@
 * {
     padding: 0;
     margin: 0;
-    /border: 1px red solid;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .grid-container {
     display: grid;
+    position: relative;
 }
+
+button:hover {
+    opacity: 0.9;
+}
+
+
 
 
 /*NAVIGATION BAR*/
 #navbar {
     grid-column: 1/end;
-    position: absolute;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -50,17 +55,29 @@
     color: #51CCA8;
 }
 
+#nav-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15%;
+    background: #51CCA8;
+    list-style: none;
+    height: 100%;
+}
+
 
 /*HEADER*/
 header {
     padding: 0;
     margin: 0;
     text-align: center;
-    display: grid;
     background-image: url(../img/banner.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    background-color: #1e2731;
+    display: grid;
+    min-height: 100vh;
+    position: relative;
 }
 
 header:after {
@@ -68,11 +85,17 @@ header:after {
     background-color: #1e2731;
     opacity: 0.85;
     position: absolute;
-    height: 100vh;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
 }
 
+
 .inner-banner {
+    padding: 5%;
+    grid-column: 1/end;
+    position: relative;
     justify-self: center;
     align-self: center;
     color: white;
@@ -102,7 +125,7 @@ header:after {
 }
 
 .inner-banner button {
-    padding: 20px 40px;
+    padding: 20px 60px;
     border: 3px white solid;
     border-radius: 5px;
     background: none;
@@ -695,6 +718,7 @@ footer {
     }
 
     .swr-card {
+        grid-column: 1/end;
         border-radius: 0px;
         padding: 20px 50px;
         grid-area: card;
