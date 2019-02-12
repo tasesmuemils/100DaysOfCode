@@ -109,3 +109,5 @@ Edit CSS responsivnes for template
 # 11.02.2019 35/100
 I finished responsive design for template and it looks very cool. Also I took one day off and Im not feeling good about it.
 
+# 12.02.2019 36/100
+Few edits on responsive design. Also I finally started JS/jQuery side for my project...and it is hard!
