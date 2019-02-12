@@ -7,17 +7,25 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 
 <body>
     <div class="grid-container">
-        <nav id="navbar">
-            <p>CASCADA<span> BY EMILS BISENIEKS</span></p>
-            <a href="">MENU<i class="fas fa-bars"></i></a>
-        </nav>
+
         <header class="banner">
+            <nav id="navbar">
+                <p>CASCADA<span> BY EMILS BISENIEKS</span></p>
+                <a id='nav-button'>MENU<i class="fas fa-bars"></i></a>
+                <ul id="nav-wrapper">
+                    <span>X</span>
+                    <li>HOME</li>
+                    <li>Generic</li>
+                    <li>Elements</li>
+                </ul>
+            </nav>
             <div class="inner-banner">
                 <h1>LOREM<br />IPSUM DOLOR<br />SIT AMET</h1>
                 <p>Dolor sit amet nullam pede semper est, vitae luctus metus libero eu augue.<br />Morbi purus sed
@@ -26,7 +34,7 @@
                 <button>GET STARTED</button>
             </div>
         </header>
-        <section class="section-width-left">
+        <section class="section-width-left" id="first">
             <div class="swl-img">
                 <img src="img/section-width-left_1.jpg" alt="">
             </div>
@@ -157,6 +165,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="js/main.js"></script>
 </body>
 
