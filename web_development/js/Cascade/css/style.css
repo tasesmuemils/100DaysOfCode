@@ -20,16 +20,20 @@ button:hover {
 
 
 /*NAVIGATION BAR*/
-#navbar {
+nav {
     grid-column: 1/end;
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    width: 100%;
     color: white;
     z-index: 1;
+    height: 3.5rem;
+    width: 100%;
+    background-color: transparent;
 }
 
 #navbar p {
+    text-align: left;
     margin: 1%;
     font-size: 15px;
 }
@@ -45,6 +49,7 @@ button:hover {
 }
 
 #navbar a {
+    text-align: right;
     color: #f2f2f2;
     text-decoration: none;
     font-size: 13px;
@@ -59,15 +64,47 @@ button:hover {
     position: fixed;
     top: 0;
     right: 0;
-    width: 15%;
+    width: 13%;
+    padding: 1em;
     background: #51CCA8;
     list-style: none;
     height: 100%;
 }
 
+#closeNavbar {
+    text-align: right;
+}
+
+#nav-wrapper li {
+    padding: 5% 0%;
+    font-size: 15px;
+}
+
+#navOptionMiddle {
+    border-top: #dadada solid 1px;
+    border-bottom: #dadada solid 1px;
+}
+
+#nav-wrapper button {
+    width: 100%;
+    border: solid #dadada 2px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    background: none;
+}
+
+#signUp button{
+    background-color: white;
+    color: #51CCA8;
+    border: none;
+}
+
 
 /*HEADER*/
 header {
+    grid-column: 1/end;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -76,6 +113,7 @@ header {
     background-attachment: fixed;
     background-color: #1e2731;
     display: grid;
+    grid-template-rows: auto;
     min-height: 100vh;
     position: relative;
 }
@@ -93,13 +131,12 @@ header:after {
 
 
 .inner-banner {
-    padding: 5%;
     grid-column: 1/end;
     position: relative;
     justify-self: center;
     align-self: center;
     color: white;
-    z-index: 1;
+    z-index: 10000;
 }
 
 .inner-banner h1 {
