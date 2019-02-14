@@ -12,11 +12,14 @@
     position: relative;
 }
 
-button:hover {
-    opacity: 0.9;
+button {
+    transition: 0.5s;
 }
 
-
+button:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
 
 
 /*NAVIGATION BAR*/
@@ -26,8 +29,8 @@ nav {
     position: fixed;
     justify-content: space-between;
     color: white;
-    z-index: 1;
-    height: 3.5rem;
+    z-index: 2;
+    height: 3.0rem;
     width: 100%;
     background-color: transparent;
 }
@@ -36,19 +39,29 @@ nav {
     text-align: left;
     margin: 1%;
     font-size: 15px;
+    padding: 5px;
 }
 
 #navbar span {
     font-size: 12px;
 }
 
+#nav-button-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
+
 #navbar .fas {
+    grid-column: 2/end;
     background: none;
     color: #f2f2f2;
     padding: 0;
+    border-radius: none;
 }
 
 #navbar a {
+    grid-column: 1/2;
     text-align: right;
     color: #f2f2f2;
     text-decoration: none;
@@ -64,11 +77,12 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    width: 13%;
+    width: 15%;
     padding: 1em;
     background: #51CCA8;
     list-style: none;
     height: 100%;
+    z-index: 7;
 }
 
 #closeNavbar {
@@ -95,10 +109,14 @@ nav {
     background: none;
 }
 
-#signUp button{
+#signUp button {
     background-color: white;
     color: #51CCA8;
     border: none;
+}
+
+#signUp button:hover {
+    opacity: 1;
 }
 
 
@@ -136,7 +154,7 @@ header:after {
     justify-self: center;
     align-self: center;
     color: white;
-    z-index: 10000;
+    z-index: 1;
 }
 
 .inner-banner h1 {
@@ -163,6 +181,7 @@ header:after {
 
 .inner-banner button {
     padding: 20px 60px;
+    margin-bottom: 5%;
     border: 3px white solid;
     border-radius: 5px;
     background: none;
@@ -434,6 +453,7 @@ header:after {
     margin: 5%;
     box-shadow: 0px 0.25rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .gallery-card img {
@@ -443,6 +463,11 @@ header:after {
     vertical-align: middle;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    transition: 0.3s;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.05);
 }
 
 .gallery-card-text {
@@ -655,6 +680,20 @@ footer {
 
 @media only screen and (max-width: 990px) {
 
+    /*NAVIGATION BAR*/
+    nav {
+        padding: 3px 5px 3px 5px;
+        height: 2.0rem;
+    }
+
+    nav p {
+        visibility: hidden;
+    }
+
+    #nav-wrapper {
+        width: 25%;
+    }
+
     /*HEADER*/
     .inner-banner h1 {
         font-size: 3em;
@@ -836,6 +875,16 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+
+    /*NAVIGATION BAR*/
+    nav {
+        padding: 7px 5px 3px 5px;
+        height: 2.0rem;
+    }
+
+    #nav-wrapper {
+        width: 50%;
+    }
 
     /*HEADER*/
     .inner-banner h1 {
