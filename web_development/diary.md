@@ -111,3 +111,12 @@ I finished responsive design for template and it looks very cool. Also I took on
 
 # 12.02.2019 36/100
 Few edits on responsive design. Also I finally started JS/jQuery side for my project...and it is hard!
+
+# 13.02.2019 37/100
+Every time I look I found something that isnt working. Fixing responsive bugs.
+
+# 14.02.2019 38/100
+I DID IT! I figured our jQuery functions for effects. GREAT DAY!
+
+# 15.02.2019 39/100
+Template is done (some things I couldnt figure out but it looks cool). Posting that on twitter!
