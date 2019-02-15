@@ -38,12 +38,15 @@ $(function () {
                 'transition': '0.3s',
                 'background-color': '#fff',
             })
-            $('#navbar p, #navbar a, #navbar i:first').css({
+            $('#navbar p, #nav-button-wrapper i').css({
                 'transition': '0.3s',
                 'color': '#555'
             });
+            $('#nav-button-wrapper:hover').css({
+                'color': '#51CCA8'
+            })
         } else {
-            $('#navbar, #navbar p, #navbar a, #navbar i').css({
+            $('#navbar, #navbar p, #nav-button-wrapper i').css({
                 'background-color': '',
                 'color': ''
             });
@@ -61,6 +64,7 @@ $(function () {
     });
 
     $(window).on('scroll', function () {
+        var limiter = 990;
         for (let i = 0; i < arrayTop.length; i++) {
             if (($(window).scrollTop() + $navbar) >= (arrayTop[i] - ($(window).scrollTop() / 3.5))) {
                 $(arraySectionsH1[i]).animate({
@@ -71,6 +75,9 @@ $(function () {
                     'opacity': 'show',
                     'marginBottom': '0'
                 }, 700);
+            } else if (($(window).width()) <= limiter) {
+                $(arraySectionsH1[i]).stop(false, true);
+                $(arraySectionsCard[i]).stop(false, true);
             }
         }
     })
