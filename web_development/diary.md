@@ -120,3 +120,6 @@ I DID IT! I figured our jQuery functions for effects. GREAT DAY!
 
 # 15.02.2019 39/100
 Template is done (some things I couldnt figure out but it looks cool). Posting that on twitter!
+
+# 16.02.2019 40/100
+AJAX/(HTML/XML/JSON) - lot of new stuff, havent don any coding, just reading and it sounds complicated. Cant wait to start practicing all of this.
