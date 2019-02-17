@@ -123,3 +123,6 @@ Template is done (some things I couldnt figure out but it looks cool). Posting t
 
 # 16.02.2019 40/100
 AJAX/(HTML/XML/JSON) - lot of new stuff, havent done any coding, just theory reading and it sounds complicated and confusing. Cant wait to start practicing all of this with real code.
+
+# 17.02.2019 41/100
+Continue with JSON
