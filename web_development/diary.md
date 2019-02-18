@@ -126,3 +126,6 @@ AJAX/(HTML/XML/JSON) - lot of new stuff, havent done any coding, just theory rea
 
 # 17.02.2019 41/100
 Continue with JSON
+
+# 18.02.2019 42/100
+I struggle with stupid mistakes...but I will continue with this, because JSON and AJAX looks so usefull. Also I consider to jump back in Wes Bos JS30. My first attempt ended as I realy didnt know a thing what he was doing there.
