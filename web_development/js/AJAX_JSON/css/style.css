@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Use repeat if many columns needed*/
+    grid-row-gap: 20px;
+}
+
+#navigation {
+    grid-column: 2/12;
+    text-align: left;
+    margin: 0;
+    padding: 20px 0px;
+    border-bottom: 5px black solid;
+}
+
+#title {
+    grid-column: 2/12;
+}
+
+#content {
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.event {
+    padding: 20px;
+}
+
+#content p {
+    font-weight: 600;
+}
