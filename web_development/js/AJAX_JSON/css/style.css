@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 html, body {
@@ -17,10 +18,25 @@ html, body {
 
 #navigation {
     grid-column: 2/12;
-    text-align: left;
+    display: grid;
     margin: 0;
     padding: 20px 0px;
     border-bottom: 5px black solid;
+}
+
+#nav-options {
+    justify-self: right;
+    
+}
+
+#nav-options * {
+    justify-self: right;
+    color: black;
+    padding: 0px 10px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+
 }
 
 #title {
@@ -30,8 +46,13 @@ html, body {
 #content {
     grid-column: 2/12;
     display: grid;
+    border: red 1px solid;
+}
+
+#container {
+    grid-column: 1/end;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    text-align: center;
 }
 
 .event {
