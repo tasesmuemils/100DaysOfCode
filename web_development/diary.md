@@ -129,3 +129,6 @@ Continue with JSON
 
 # 18.02.2019 42/100
 I struggle with stupid mistakes...but I will continue with this, because JSON and AJAX looks so usefull. Also I consider to jump back in Wes Bos JS30. My first attempt ended as I realy didnt know a thing what he was doing there.
+
+# 19.02.2019 43/100
+Cool stuff with AJAX changing content without relouding whole page. But after that examples use PHP files, so I cant recreate them. But final example dont use PHP, so I will finish reading everything and the I will recreate final example.
