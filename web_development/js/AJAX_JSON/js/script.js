@@ -1,4 +1,4 @@
-var xhr = new XMLHttpRequest(); //Create XMLHttpRequest object
+/*var xhr = new XMLHttpRequest(); //Create XMLHttpRequest object
 
 xhr.onload = function () {
     if (xhr.status === 200) {
@@ -26,4 +26,16 @@ xhr.onload = function () {
 };
 
 xhr.open('GET', 'data/data.json', true);
-xhr.send(null);
+xhr.send(null);*/
+
+$('#nav-options a').on('click', function (e) {
+    e.preventDefault();
+    var url = this.href;
+
+    $('#nav-options a.current').removeClass('current');
+    $(this).addClass('cuurent');
+
+    $('#container').remove();
+    $('#content').load(url + ' #content').hide().fadeIn('slow');
+})
+
