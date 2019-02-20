@@ -132,3 +132,6 @@ I struggle with stupid mistakes...but I will continue with this, because JSON an
 
 # 19.02.2019 43/100
 Cool stuff with AJAX changing content without relouding whole page. But after that examples use PHP files, so I cant recreate them. But final example dont use PHP, so I will finish reading everything and the I will recreate final example.
+
+# 20.02.2019 44/100
+Its very hard when you dont have storage files, it is very hard to complete AJAX/JSON examples. But at least I have read about it, so I know these kind of things exist. I will move to APIS now!
