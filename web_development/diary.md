@@ -135,3 +135,6 @@ Cool stuff with AJAX changing content without relouding whole page. But after th
 
 # 20.02.2019 44/100
 Its very hard when you dont have storage files, it is very hard to complete AJAX/JSON examples. But at least I have read about it, so I know these kind of things exist. I will move to APIS now!
+
+# 21.02.2019 45/100
+I read articles and listen podcasts and all I gear how outdated lot of stuff is. So I think I will jump in Wes Bos JS30, but before that I will run threw freeCodeCamp ES6 course.
