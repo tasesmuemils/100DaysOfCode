@@ -138,3 +138,6 @@ Its very hard when you dont have storage files, it is very hard to complete AJAX
 
 # 21.02.2019 45/100
 I read articles and listen podcasts and all I gear how outdated lot of stuff is. So I think I will jump in Wes Bos JS30, but before that I will run threw freeCodeCamp ES6 course.
+
+# 22.02.2019 46/100
+More ES6
