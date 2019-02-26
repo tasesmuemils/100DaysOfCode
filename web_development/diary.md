@@ -141,3 +141,6 @@ I read articles and listen podcasts and all I gear how outdated lot of stuff is.
 
 # 22.02.2019 46/100
 More ES6
+
+# 26.02.2019 47/100
+Whatching REACT/VUE videos
