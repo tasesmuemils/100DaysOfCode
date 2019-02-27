@@ -144,3 +144,6 @@ More ES6
 
 # 26.02.2019 47/100
 Whatching REACT/VUE videos
+
+# 27.02.2019 48/100
+ES6 from netninja and freeCodeCamp
