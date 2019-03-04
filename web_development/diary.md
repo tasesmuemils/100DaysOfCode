@@ -150,3 +150,7 @@ ES6 from netninja and freeCodeCamp
 
 # 28.02.2019 49/100
 More ES6 from netninja and freeCodeCamp
+
+# 04.03.2019 50/100
+Its very hard to motivate myself of learning something.
+I think I will finish netninja tutorials and jump in 30js right away!
