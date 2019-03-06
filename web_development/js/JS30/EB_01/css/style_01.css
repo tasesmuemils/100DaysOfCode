@@ -40,7 +40,7 @@ html {
     color: hsl(224, 100%, 77%);
 }
 
-.key:hover {
+.playing {
     transform: scale(1.1);
     border-color: hsl(224, 100%, 77%);
     box-shadow: 0 0 10px hsl(224, 100%, 77%);
