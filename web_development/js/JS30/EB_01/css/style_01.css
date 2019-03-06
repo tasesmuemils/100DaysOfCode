@@ -5,8 +5,7 @@
 }
 
 
-body {
-    height: 100vh;
+html {
     display: grid;
     background-image: url("https://images.unsplash.com/uploads/1412282232015a06e258a/4bdd2a58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     background-repeat: no-repeat;
@@ -15,23 +14,35 @@ body {
 }
 
 #wrapper {
+    height: 100vh;
     color: white;
     display: flex;
+    flex: 1;
     justify-content: center;
-    margin: 0rem 15rem;
+    align-items: center;
 }
 
 .key {
     flex: 1 1 0;
     text-align: center;
-    margin: 10px 20px;
-    font-size: 15px;
+    margin: 1rem;
+    font-size: 1rem;
     border: 3px solid white;
-    padding: 10px;
+    padding: 1rem .5rem;
+    transition: all 0.07s;
 }
 
 .key p {
     margin-top: 10px;
     padding: 0px;
     text-transform: uppercase;
+    font-size: .8rem;
+    color: hsl(224, 100%, 77%);
 }
+
+.key:hover {
+    transform: scale(1.1);
+    border-color: hsl(224, 100%, 77%);
+    box-shadow: 0 0 10px hsl(224, 100%, 77%);
+}
+
