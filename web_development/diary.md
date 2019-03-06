@@ -154,3 +154,6 @@ More ES6 from netninja and freeCodeCamp
 # 04.03.2019 50/100
 Its very hard to motivate myself of learning something.
 I think I will finish netninja tutorials and jump in 30js right away!
+
+# 06.03.2019 52/100
+Havent used my own PC. Long time to get everything right....
