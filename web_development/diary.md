@@ -155,5 +155,11 @@ More ES6 from netninja and freeCodeCamp
 Its very hard to motivate myself of learning something.
 I think I will finish netninja tutorials and jump in 30js right away!
 
+# 05.03.2019 51/100
+Setting HTML/CSS up for JS30 first task
+
 # 06.03.2019 52/100
-Havent used my own PC. Long time to get everything right....
+Havent used my own PC. Long time to get everything right....But I almost done with first task.
+
+# 07.03.2019 53/100
+DRUMS - DONE! First task of JS30 finished. Lots of new stuff and my own design looks awesome.
