@@ -19,8 +19,8 @@ body {
 
 /*CONTENT STYLE*/
 .clock {
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
     border: 20px solid white;
     border-radius: 50%;
     margin: 50px auto;
@@ -42,6 +42,7 @@ body {
     top: 50%;
     transform-origin: 100%;
     transform: rotate(90deg);
-    transition: all 0.5s;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.24, 2);
 }
 
