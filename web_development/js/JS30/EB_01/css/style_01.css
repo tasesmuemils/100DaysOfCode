@@ -1,9 +1,9 @@
+/*BASIC STYLE*/
 * {
     padding: 0px;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
-
 
 html {
     display: grid;
@@ -13,6 +13,8 @@ html {
     align-items: center;
 }
 
+
+/*CONTENT STYLE*/
 #wrapper {
     height: 100vh;
     color: white;
