@@ -163,3 +163,12 @@ Havent used my own PC. Long time to get everything right....But I almost done wi
 
 # 07.03.2019 53/100
 DRUMS - DONE! First task of JS30 finished. Lots of new stuff and my own design looks awesome.
+
+# 08.03.2019 54/100
+Clock - DONE!
+
+# 09.03.2019 55/100
+CSS variables - done.
+
+# 11.03.2019 56/100
+Started array method training and read some blogs!
