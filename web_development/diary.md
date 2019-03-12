@@ -172,3 +172,6 @@ CSS variables - done.
 
 # 11.03.2019 56/100
 Started array method training and read some blogs!
+
+# 12.03.2019 57/100
+Finished array chalange, tried some codewars tasks, set Figma designing tool on my home pc.
