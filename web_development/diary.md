@@ -175,3 +175,6 @@ Started array method training and read some blogs!
 
 # 12.03.2019 57/100
 Finished array chalange, tried some codewars tasks, set Figma designing tool on my home pc.
+
+# 13.03.2019 58/100
+Finished Flex Panels Image Gallery 05
