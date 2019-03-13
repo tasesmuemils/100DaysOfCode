@@ -1,0 +1,84 @@
+/*BASE STYLE*/
+* {
+    font-family: 'Inconsolata', monospace;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+html {
+    font-size: 30px;
+}
+
+/*CONTENT STYLE*/
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+    flex: 1;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+}
+
+.panel > * {
+    flex: 1 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.panel > *:first-child {
+    transform: translateY(-100%);
+}
+.panel.open-active >*:first-child { transform: translateY(0);}
+
+.panel > *:last-child {
+    transform: translateY(100%);
+}
+.panel.open-active >*:last-child { transform: translateY(0);}
+
+.panel p {
+    text-transform: uppercase;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+
+.panel1 {
+    background-image: url("https://images.unsplash.com/photo-1419064642531-e575728395f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.panel2 {
+    background-image: url("https://images.unsplash.com/photo-1509722672777-5fedd8f8e432?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80");
+}
+
+.panel3 {
+    background-image: url("https://images.unsplash.com/photo-1441312311734-f44cc0bda31d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+}
+
+.panel4 {
+    background-image: url("https://images.unsplash.com/photo-1430797877645-98aa0693fb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1875&q=80");
+}
+
+.panel5 {
+    background-image: url("https://images.unsplash.com/photo-1518144591331-17a5dd71c477?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80");
+}
+
+.open {
+    flex: 5;
+    font-size: 40px;
+}
