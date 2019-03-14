@@ -60,3 +60,9 @@ body {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(126,155,212,1) 0%, rgba(87,83,247,1) 90% );
     border-radius: 20px;
 }
+
+#button {
+    justify-self: center;
+    width: 20%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(126,155,212,1) 0%, rgba(87,83,247,1) 90% );
+}
