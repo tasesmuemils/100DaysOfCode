@@ -178,3 +178,6 @@ Finished array chalange, tried some codewars tasks, set Figma designing tool on 
 
 # 13.03.2019 58/100
 Finished Flex Panels Image Gallery 05
+
+# 14.03.2019 59/100
+JS30 for next excercise use FETCH API, which is newer then AJAX/JSON vanilla. So I checked one crash course on vanilla AJAX and I will try to build quiz web app (?!) using AJAX and JSON just to really dig in vanilla stuff
