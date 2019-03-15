@@ -1,9 +1,32 @@
 [
     {
-        "question": "Which is the longest river in Latvia?",
-        "answer_A": "Venta",
-        "answer_B": "Daugava",
-        "answer_C": "Venta",
-        "answer_D": "Lielupe"
+        "question": "Batman is the alter-ego for which billionaire playboy?",
+        "answer_A": "Bruce Wayne",
+        "answer_B": "Thomas Wayne",
+        "answer_C": "Bill Gates",
+        "answer_D": "Michael Keaton",
+        "correct" : "Bruce Wayne"
+    },
+    {
+        "question": "Who is the official creator of Batman?",
+        "answer_A": "Tim Burton",
+        "answer_B": "Bruce Wayne",
+        "answer_C": "Bob Kane",
+        "answer_D": "Christopher Nolan",
+        "correct" : "Tim Burton"
+    },
+    {
+        "question": "What year was the film 'Batman' by Tim Burton released? HINT: Jack Nicholson",
+        "answer_A": 1989,
+        "answer_B": 1994,
+        "answer_C": 1985,
+        "answer_D": 2005
+    },
+    {
+        "question": "Who was the mastermind behind Protocol 10 in 'Batman: Arkham City' video game?",
+        "answer_A": "Ra's al Ghul",
+        "answer_B": "Hugo Strange",
+        "answer_C": "Mister Freeze",
+        "answer_D": "The Penguin"
     }
 ]
