@@ -16,12 +16,17 @@
             <h1>Quiz</h1>
             <p id="question"></p>
             <div class="answers">
-                <p id="answerA"></p>
-                <p id="answerB"></p>
-                <p id="answerC"></p>
-                <p id="answerD"></p>
+                <label for="check_A"><span id="answerA"></span><input type="radio" name="answer" id="check_A"></label>
+                <label for="check_B"><span id="answerB"></span><input type="radio" name="answer" id="check_B"></label>
+                <label for="check_C"><span id="answerC"></span><input type="radio" name="answer" id="check_C"></label>
+                <label for="check_D"><span id="answerD"></span><input type="radio" name="answer" id="check_D"></label>
             </div>
-            <button id="button">CLICK!</button>
+            <div class="counterSection">
+                <span id="correct"></span>
+                <button id="button1">CLICK!</button>
+                <button id="button2">LET'S START</button>
+                <span id="incorrect">Incorrect:</span>
+            </div>
         </div>
     </div>
 
