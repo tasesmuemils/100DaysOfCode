@@ -181,3 +181,9 @@ Finished Flex Panels Image Gallery 05
 
 # 14.03.2019 59/100
 JS30 for next excercise use FETCH API, which is newer then AJAX/JSON vanilla. So I checked one crash course on vanilla AJAX and I will try to build quiz web app (?!) using AJAX and JSON just to really dig in vanilla stuff
+
+# 15.03.2019 60/100
+Working on quiz
+
+# 18.03.2019 61/100
+Working on quiz
