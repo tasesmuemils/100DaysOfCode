@@ -4,7 +4,8 @@ button.addEventListener('click', loadQuestion);
 const button2 = document.querySelector('#button2');
 button2.addEventListener('click', function () {
     document.querySelector('.answers').style.display = 'grid';
-    //loadQuestion();
+    loadQuestion();
+    button2.style.display = 'none';
 });
 
 
@@ -20,31 +21,55 @@ const checkC = document.getElementById('check_C');
 const checkD = document.getElementById('check_D');
 const radios = [checkA, checkB, checkC, checkD];
 
-
-
+let eventClickCount = 0;
 let i = 0;
 
 function loadQuestion() {
+    eventClickCount++;
+    console.log('click count', eventClickCount);
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'js/data.json', true);
 
     xhr.onload = function () {
         if (this.status == 200) {
             const dataArray = JSON.parse(this.responseText);
-            question.textContent = dataArray[i].question;
-            answerA.textContent = dataArray[i].answer_A;
-            answerB.textContent = dataArray[i].answer_B;
-            answerC.textContent = dataArray[i].answer_C;
-            answerD.textContent = dataArray[i].answer_D;
-            let correctAnswer = dataArray[i].correct;
-            for (let k = 0; k < radios.length; k++) {
-                if ((radios[k].checked === true) && (radios[k].parentNode.textContent === correctAnswer)) {
-                    console.log('TRUE');
-                } else {
-                    console.log('FALSE');
+
+            var correctAnswer = dataArray[i].correct;
+
+            function quizContent() {
+                if (eventClickCount == 1) {
+                    
+                }
+                question.textContent = dataArray[i].question;
+                answerA.textContent = dataArray[i].answer_A;
+                answerB.textContent = dataArray[i].answer_B;
+                answerC.textContent = dataArray[i].answer_C;
+                answerD.textContent = dataArray[i].answer_D;
+            }
+            quizContent();
+
+
+            function answerCheck() {
+                for (let k = 0; k < radios.length; k++) {
+                    if ((radios[k].checked === true) && (radios[k].parentNode.textContent === correctAnswer)) {
+                        console.log(correctAnswer);
+                    } else if ((radios[k].checked === false) && (radios[k].parentNode.textContent != correctAnswer)) {
+                        //console.log("BREAK")
+                        break;
+                    } else {
+                        //console.log(' ELSE  FALSE');
+                    }
                 }
             }
-            i++;
+            answerCheck();
+
+
+            if (eventClickCount == 1) {
+                i = 0;
+            } else {
+                i++;
+            }
+            console.log(i);
             if (i == dataArray.length) {
                 button.removeEventListener('click', loadQuestion);
             }
