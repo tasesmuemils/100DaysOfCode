@@ -9,24 +9,26 @@
     },
     {
         "question": "Who is the official creator of Batman?",
-        "answer_A": "Tim Burton",
+        "answer_A": "Bob Kane",
         "answer_B": "Bruce Wayne",
-        "answer_C": "Bob Kane",
+        "answer_C": "Tim Burton",
         "answer_D": "Christopher Nolan",
         "correct" : "Tim Burton"
     },
     {
         "question": "What year was the film 'Batman' by Tim Burton released? HINT: Jack Nicholson",
-        "answer_A": 1989,
-        "answer_B": 1994,
+        "answer_A": 1992,
+        "answer_B": 1989,
         "answer_C": 1985,
-        "answer_D": 2005
+        "answer_D": 2005,
+        "correct" : 1989
     },
     {
         "question": "Who was the mastermind behind Protocol 10 in 'Batman: Arkham City' video game?",
         "answer_A": "Ra's al Ghul",
         "answer_B": "Hugo Strange",
         "answer_C": "Mister Freeze",
-        "answer_D": "The Penguin"
+        "answer_D": "The Penguin",
+        "correct" : "Ra's al Ghul"
     }
 ]
