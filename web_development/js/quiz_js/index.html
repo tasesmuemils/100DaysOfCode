@@ -12,22 +12,38 @@
 
 <body>
     <div class="wrapper">
-        <div class="quizSpace">
-            <h1>Quiz</h1>
+
+        <!--QUIZ SPACE-->
+        <div class="quizSpace" id="quizSpace">
+            <h1>BATMAN Quiz</h1>
+            <p id='quizDescription'>Answer 10 questions about Batman and let`s see how much you know!</p>
             <p id="question"></p>
+
+            <!--LABELS and RADIOS-->
             <div class="answers">
                 <label for="check_A"><span id="answerA"></span><input type="radio" name="answer" id="check_A"></label>
                 <label for="check_B"><span id="answerB"></span><input type="radio" name="answer" id="check_B"></label>
                 <label for="check_C"><span id="answerC"></span><input type="radio" name="answer" id="check_C"></label>
                 <label for="check_D"><span id="answerD"></span><input type="radio" name="answer" id="check_D"></label>
             </div>
+
+            <!--COUNTER-->
             <div class="counterSection">
                 <h2 id="errorMessage">Select the answer!!!</h2>
                 <span>Correct: <span id="correct">0</span></span>
                 <button id="button1">NEXT QUESTION</button>
                 <span>Incorrect: <span id="incorrect">0</span></span>
             </div>
+
+            <!--START BUTTON and ERROR MESSAGE-->
             <button id="button2">LET'S START</button>
+            <p id="warning">You have to check something!</p>
+
+            <!--FINAL MESSAGE-->
+            <div id="finish">
+                <h1>Final score:<span id="finalScore"></span>/ 10</h1>
+            </div>
+            
         </div>
     </div>
 
