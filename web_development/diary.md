@@ -190,3 +190,6 @@ Working on quiz
 
 # 19.03.2019 62/100
 JS side works great (there was a problem where my loop didnt work, but I figure it out...by myself!!!!), next - CSS styling and DB update.
+
+# 20.03.2019 63/100
+JS QUIZ - DONE!
