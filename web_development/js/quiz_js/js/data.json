@@ -30,5 +30,54 @@
         "answer_C": "Mister Freeze",
         "answer_D": "The Penguin",
         "correct" : "Ra's al Ghul"
+    },
+    {
+        "question": "What villain does Jim Carrey portray?",
+        "answer_A": "The Joker",
+        "answer_B": "The Riddler",
+        "answer_C": "The Scarecrow",
+        "answer_D": "The Penguin",
+        "correct" : "The Riddler"
+    },
+    {
+        "question": "What happened to Batman's parents?",
+        "answer_A": "Nothing (they are still alive) ",
+        "answer_B": "They work for the joker",
+        "answer_C": "They died",
+        "answer_D": "They went on vacation",
+        "correct" : "They died"
+    },
+    {
+        "question": "Who is Batman's main enemy?",
+        "answer_A": "Riddler",
+        "answer_B": "Joke man",
+        "answer_C": "Harley Quinn",
+        "answer_D": "The Joker",
+        "correct" : "The Joker"
+    },
+    {
+        "question": "In What Vehicle Does The Joker Escape The Bank Robbery in one of the 'Dark Knight' movies?",
+        "answer_A": "An ambulance",
+        "answer_B": "A school bus",
+        "answer_C": "A fire truck",
+        "answer_D": "A tank",
+        "correct" : "A school bus"
+    },
+    {
+        "question": "What super villain once broke Batman's back, leaving him crippled and wheelchair-bound?",
+        "answer_A": "Bane",
+        "answer_B": "Joker",
+        "answer_C": "Killer Croc",
+        "answer_D": "R`as Al Ghul",
+        "correct" : "Bane"
+    },
+    {
+        "question": "What Batman villain lost his beloved wife Nora to a terminal illness?",
+        "answer_A": "Scarecrow",
+        "answer_B": "Two-Face",
+        "answer_C": "Mr. Freeze",
+        "answer_D": "The Penguin",
+        "correct" : "Mr. Freeze"
     }
+
 ]
