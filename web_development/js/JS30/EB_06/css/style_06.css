@@ -13,6 +13,7 @@ body {
 }
 
 .search-form {
+    display: grid;
     max-width: 400px;
     margin-top: 10%;
 }
@@ -30,7 +31,20 @@ body {
 .suggestion {
     display: grid;
     justify-content: center;
-    margin: 10px;
 }
 
+li {
+    background: white;
+    list-style: none;
+    border-bottom: 1px solid #D8D8D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
 
+.hl {
+    background-color: yellow;
+}
