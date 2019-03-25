@@ -193,3 +193,12 @@ JS side works great (there was a problem where my loop didnt work, but I figure 
 
 # 20.03.2019 63/100
 JS QUIZ - DONE!
+
+# 21.03.2019 64/100
+FETCH
+
+# 22.03.2019 65/100
+FETCH API
+
+# 25.03.2019 66/100
+JS30 task 6 - lot of new stuff which I didnt uderstand but I will continue with next tutorial.
