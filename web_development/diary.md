@@ -202,3 +202,6 @@ FETCH API
 
 # 25.03.2019 66/100
 JS30 task 6 - lot of new stuff which I didnt uderstand but I will continue with next tutorial.
+
+# 26.03.2019 67/100
+JS30 task 8 - CANVAS! DONE! Havent done anything with canvas before so this was very cool introduction for it.
