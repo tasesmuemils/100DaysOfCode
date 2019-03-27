@@ -207,4 +207,4 @@ JS30 task 6 - lot of new stuff which I didnt uderstand but I will continue with 
 JS30 task 8 - CANVAS! DONE! Havent done anything with canvas before so this was very cool introduction for it.
 
 # 27.03.2019 68/100
-14 must know dev tools tips - TASK 9
+14 must know dev tools tips - TASK 9. Also did some Figma tutorials!
