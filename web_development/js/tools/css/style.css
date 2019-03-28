@@ -1,0 +1,67 @@
+:root {
+    --horizontal--spacing: 0;
+    --vertical--spacing: 0;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid red;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.content {
+    margin: 1rem;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+#tool {
+    display: flex;
+    justify-content: center;
+}
+
+#tool .optionsColumn {
+    flex: 0 0 30%;
+}
+
+#tool .boxColumn{
+    flex-grow: 2;
+}
+
+.optionContainer {
+    margin: 2rem 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.row input[type="text"] {
+    width: 40px;
+}
+
+.slider {
+    width: 100%;
+}
+
+.boxColumn, .box-shadow-object {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-shadow-object {
+    width: 370px;
+    height: 380px;
+    box-shadow: var(--horizontal--spacing) var(--vertical--spacing) 93px 0px rgba(0,0,0,1);
+}
