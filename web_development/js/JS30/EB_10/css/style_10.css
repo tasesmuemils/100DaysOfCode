@@ -1,0 +1,47 @@
+/*MAIN STYLE*/
+:root {
+    --dark: #4D5061;
+    --light: #EFC69B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*CNTENT STYLE*/
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+}
+
+.wrapper {
+    background-color: var(--light);
+    margin-top: 2rem;
+    box-shadow: 0px 5px 20px 1px rgba(50, 56, 89, 1);
+}
+
+.wrapper h3 {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+}
+
+.inbox,
+.item {
+    padding: 0.5rem;
+    border: 1px solid lightgrey;
+}
+
+.inbox label,
+.item label {
+    padding: 0 1rem;
+}
+
+input:checked+label {
+    text-decoration: line-through;
+}
