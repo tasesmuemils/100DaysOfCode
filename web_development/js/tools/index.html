@@ -22,7 +22,7 @@
                             <div class="row">
                                 <p>Horizontal Length</p>
                                 <div class="textInput">
-                                    <input type="text">
+                                    <input type="text" class="pixelsInput" value="0">
                                     <label>xp</label>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@
                             <div class="row">
                                 <label>Vertical Length</label>
                                 <div class="textInput">
-                                    <input type="text">
+                                    <input type="text" class="pixelsInput" value="0">
                                     <label>xp</label>
                                 </div>
                             </div>
@@ -46,22 +46,22 @@
                             <div class="row">
                                 <label>Blur Radius</label>
                                 <div class="textInput">
-                                    <input type="text">
+                                    <input type="text" class="pixelsInput" value="0">
                                     <label>xp</label>
                                 </div>
                             </div>
-                            <input type="range" class="slider" name="verticalLength" min="-200" max="200" value="0"
+                            <input type="range" class="slider" name="blur--radius" min="0" max="300" value="0"
                                 data-sizing="px">
                         </div>
                         <div id="spread">
                             <div class="row">
                                 <label>Spread Radius</label>
                                 <div class="textInput">
-                                    <input type="text">
+                                    <input type="text" class="pixelsInput" value="0">
                                     <label>xp</label>
                                 </div>
                             </div>
-                            <input type="range" class="slider" name="verticalLength" min="-200" max="200" value="0"
+                            <input type="range" class="slider" name="spread--radius" min="-200" max="200" value="0"
                                 data-sizing="px">
                         </div>
                     </div>
@@ -70,28 +70,29 @@
                         <div id="shadowColor">
                             <div class="row">
                                 <label>Shadow Color</label>
-                                <input type="text">
+                                <input type="text" class="colorInput">
                             </div>
                         </div>
                         <div id="backgroundColor">
                             <div class="row">
                                 <label>Background Color</label>
-                                <input type="text">
+                                <input type="text" class="colorInput">
                             </div>
                         </div>
                         <div id="boxColor">
                             <div class="row">
                                 <label>Box Color</label>
-                                <input type="text">
+                                <input type="text" class="colorInput">
                             </div>
                         </div>
                         <div id="opacity">
                             <div class="row">
                                 <label>Opacity</label>
-                                <input type="text">
+                                <div class="textInput">
+                                    <input type="number" class="pixelsInput" value="1">
+                                </div>
                             </div>
-                            <input type="range" class="slider" name="verticalLength" min="0" max="100" value="100"
-                                data-sizing="px">
+                            <input type="range" class="slider" name="opacity" min="0.00" max="1.00" value="1.00">
                         </div>
                     </div>
                 </div>

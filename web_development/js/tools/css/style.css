@@ -1,6 +1,9 @@
 :root {
     --horizontal--spacing: 0;
     --vertical--spacing: 0;
+    --blur--radius: 0;
+    --spread--radius: 0;
+    --opacity: '1.00';
 }
 
 *, *::before, *::after {
@@ -46,8 +49,12 @@
     padding: 10px 0;
 }
 
-.row input[type="text"] {
+.pixelsInput {
     width: 40px;
+}
+
+.colorInput {
+    width: 60px;    
 }
 
 .slider {
@@ -63,5 +70,5 @@
 .box-shadow-object {
     width: 370px;
     height: 380px;
-    box-shadow: var(--horizontal--spacing) var(--vertical--spacing) 93px 0px rgba(0,0,0,1);
+    box-shadow: var(--horizontal--spacing) var(--vertical--spacing) var(--blur--radius) var(--spread--radius) rgba(0,0,0,var(--opacity));
 }
