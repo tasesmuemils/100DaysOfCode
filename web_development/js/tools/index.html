@@ -26,7 +26,7 @@
                                     <label>xp</label>
                                 </div>
                             </div>
-                            <input type="range" class="slider" name="horizontal--spacing" min="-200" max="200" value="0"
+                            <input type="range" class="slider result" name="horizontal--spacing" min="-200" max="200" value="0"
                                 data-sizing="px">
                         </div>
                         <div id="vertical">
@@ -37,7 +37,7 @@
                                     <label>xp</label>
                                 </div>
                             </div>
-                            <input type="range" class="slider" name="vertical--spacing" min="-200" max="200" value="0"
+                            <input type="range" class="slider result" name="vertical--spacing" min="-200" max="200" value="0"
                                 data-sizing="px">
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                                     <label>xp</label>
                                 </div>
                             </div>
-                            <input type="range" class="slider" name="blur--radius" min="0" max="300" value="0"
+                            <input type="range" class="slider result" name="blur--radius" min="0" max="300" value="0"
                                 data-sizing="px">
                         </div>
                         <div id="spread">
@@ -61,7 +61,7 @@
                                     <label>xp</label>
                                 </div>
                             </div>
-                            <input type="range" class="slider" name="spread--radius" min="-200" max="200" value="0"
+                            <input type="range" class="slider result" name="spread--radius" min="-200" max="200" value="0"
                                 data-sizing="px">
                         </div>
                     </div>
@@ -70,35 +70,46 @@
                         <div id="shadowColor">
                             <div class="row">
                                 <label>Shadow Color</label>
-                                <input type="text" class="colorInput">
+                                <div class="color">
+                                    <input class='result' type="color" name="box--shadow--color" value="#000000">
+                                    <input type="text" class="colorInput" value="#000000">
+                                </div>
                             </div>
                         </div>
                         <div id="backgroundColor">
                             <div class="row">
                                 <label>Background Color</label>
-                                <input type="text" class="colorInput">
+                                <div class="color">
+                                    <input type="color" class='result' name="box--bg--color" value="#ff9c9c">
+                                    <input type="text" class="colorInput" value="#ff9c9c">
+                                </div>
                             </div>
                         </div>
                         <div id="boxColor">
                             <div class="row">
                                 <label>Box Color</label>
-                                <input type="text" class="colorInput">
+                                <div class="color">
+                                    <input type="color" class='result' name="box--color" value="#ffd000">
+                                    <input type="text" class="colorInput" value="#ffd000">
+                                </div>
                             </div>
                         </div>
                         <div id="opacity">
                             <div class="row">
                                 <label>Opacity</label>
                                 <div class="textInput">
-                                    <input type="number" class="pixelsInput" value="1">
+                                    <input type="text" class="pixelsInput" value="1">
                                 </div>
                             </div>
-                            <input type="range" class="slider" name="opacity" min="0.00" max="1.00" value="1.00">
+                            <input type="range" class="slider result" name="opacity" min="0" max="1" step=".01" value="1">
                         </div>
                     </div>
                 </div>
                 <div class="column boxColumn">
                     <div class="box-shadow-object">
-                        <textarea name="cssValues" id="" cols="30" rows="3"></textarea>
+                        <div>
+                            <p id="copyCSScode">box-shadow: 0xp 0px 0px 0px rgba(0,0,0, 1);</p>
+                        </div>
                     </div>
                 </div>
 
