@@ -3,15 +3,19 @@
     --vertical--spacing: 0;
     --blur--radius: 0;
     --spread--radius: 0;
-    --opacity: '1.00';
+    --opacity: 1;
+    --box--shadow--color: 0, 0, 0;
+    --box--bg--color: 255, 156, 156;
+    --box--color: 255, 208, 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    border: 1px solid red;
 }
 
 .wrapper {
@@ -24,6 +28,7 @@
 
 .content h1 {
     text-align: center;
+    padding: 1% 1% 3% 1%;
 }
 
 #tool {
@@ -33,9 +38,10 @@
 
 #tool .optionsColumn {
     flex: 0 0 30%;
+    margin: 20px;
 }
 
-#tool .boxColumn{
+#tool .boxColumn {
     flex-grow: 2;
 }
 
@@ -50,25 +56,39 @@
 }
 
 .pixelsInput {
-    width: 40px;
+    width: 50px;
+    text-align: center;
 }
 
 .colorInput {
-    width: 60px;    
+    width: 70px;
 }
 
 .slider {
     width: 100%;
 }
 
-.boxColumn, .box-shadow-object {
+.boxColumn {
+    background-color: rgb(var(--box--bg--color));
+}
+
+.boxColumn,
+.box-shadow-object {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .box-shadow-object {
-    width: 370px;
-    height: 380px;
-    box-shadow: var(--horizontal--spacing) var(--vertical--spacing) var(--blur--radius) var(--spread--radius) rgba(0,0,0,var(--opacity));
+    width: 430px;
+    height: 430px;
+    box-shadow: var(--horizontal--spacing) var(--vertical--spacing) var(--blur--radius) var(--spread--radius) rgba(var(--box--shadow--color), var(--opacity));
+    background-color: rgb(var(--box--color));
+}
+
+#copyCSScode {
+    font-size: 12px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
