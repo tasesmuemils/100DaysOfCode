@@ -1,3 +1,5 @@
+/*MAIN STYLE*/
+/*Variables*/
 :root {
     --horizontal--spacing: 0;
     --vertical--spacing: 0;
@@ -22,6 +24,7 @@
     margin: 0 auto;
 }
 
+/*CONTENT STYLE*/
 .content {
     margin: 1rem;
 }
