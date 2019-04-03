@@ -208,3 +208,15 @@ JS30 task 8 - CANVAS! DONE! Havent done anything with canvas before so this was 
 
 # 27.03.2019 68/100
 14 must know dev tools tips - TASK 9. Also did some Figma tutorials!
+
+# 28.03.2019 69/100
+Task 10 - Hold shift to check multiple check boxes!
+
+# 29.03.2019 70/100
+Im building Box-Shadow generator
+
+# 01.03.2019 71/100
+Almost done with Box-shadow generetator
+
+# 02.03.2019 72/100
+It is not working like I imaganed, but still works cool and looks great!
