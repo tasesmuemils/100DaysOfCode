@@ -220,3 +220,12 @@ Almost done with Box-shadow generetator
 
 # 02.03.2019 72/100
 It is not working like I imaganed, but still works cool and looks great!
+
+# 03.03.2019 73/100
+Generator available for the world.
+
+# 04.03.2019 74/100
+Figma design stuff and JS30
+
+# 05.03.2019 75/100
+Figma design stuff and JS30
