@@ -229,3 +229,6 @@ Figma design stuff and JS30
 
 # 05.03.2019 75/100
 Figma design stuff and JS30
+
+# 08.03.2019 76/100
+localStorage looks not that hard how I imagined. JS30 task 15 - done.
