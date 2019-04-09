@@ -13,22 +13,30 @@ function notesModal(e) {
 }
 
 function createNoteCard() {
-   
+
     let cardsTitle = modal.firstElementChild.lastElementChild.value;
     let cardsText = modal.lastElementChild.previousElementSibling.lastElementChild.value;
 
-    let noteCard = `
-        <div class='card'>
-            <h1 contenteditable>${cardsTitle}</h1>
-            <p>${cardsText}</p>
-        </div>
-    `;
-    
-    notesArray.push(noteCard);
-    listOfNotes.innerHTML = noteCard;
+    let itemObject = {
+        title: cardsTitle,
+        text: cardsText
+    }
+
+    notesArray.push(itemObject);
+    updateCardsList(notesArray, listOfNotes);
     modal.style.display = 'none';
 }
 
+function updateCardsList(items, itemsList) {
+    itemsList.innerHTML = items.map(function (item) {
+        return `
+        <div class='card'>
+            <h1 contenteditable>${item.title}</h1>
+            <p contenteditable>${item.text}</p>
+        </div>
+        `;  
+    }).join('');
+}
 
 openModalButton.addEventListener('click', notesModal);
 createNote.addEventListener('click', createNoteCard);
