@@ -13,24 +13,29 @@
 <body>
 
     <div class="wrapper">
-        <h1>Create your notes here</h1>
-        <button type="button" class="openModal">Create note</button>
+        <div class="header">
+            <h1>Create your notes here</h1>
+            <button type="button" class="openModal"><span>+</span></button>
+        </div>
+
         <div class="notesList"></div>
+
+        <div class="modal">
+            <div class="title">
+                <label for="tilte">Title: </label>
+                <input type="text">
+            </div>
+            <div class="description">
+                <label for="description">Notes description: </label>
+                <input type="text">
+            </div>
+
+            <input type="submit" class="createNote" value="Create Note">
+        </div>
     </div>
 
 
-    <div class="modal">
-        <div class="title">
-            <label for="tilte">Title: </label>
-            <input type="text">
-        </div>
-        <div class="description">
-            <label for="description">Notes description: </label>
-            <input type="text">
-        </div>
 
-        <input type="submit" class="createNote" value="Create Note">
-    </div>
 
     <script src="js/script.js"></script>
 </body>

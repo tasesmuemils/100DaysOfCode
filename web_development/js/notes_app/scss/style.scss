@@ -1,0 +1,43 @@
+/*BASIC STYLING*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.wrapper .header{
+    flex-grow: 1;
+}
+
+.openModal {
+    width: 5rem;
+    height: 5rem;
+    background-color: #2999ff;
+    color: white;
+    font-size: 3rem;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.openModal:hover, .openModal:hover span {
+    background-color: #5bb1ff;
+    transform: rotate(90deg);
+    text-shadow: 2px 2px #2999ff;
+}
+
+.modal {
+    flex: 0.5;
+    display: none;
+    color: white;
+    background-color: black;
+    
+}

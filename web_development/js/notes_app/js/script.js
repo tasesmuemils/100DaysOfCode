@@ -5,6 +5,8 @@ const createNote = document.querySelector('.createNote');
 const listOfNotes = document.querySelector('.notesList');
 
 //Create an empty array where values will be stored
+//If there are something in local storage (in this case - objects),
+//It will appear on page, if local storage is empty - array is empty 
 const notesArray = JSON.parse(localStorage.getItem('notesArray')) || [];
 
 
@@ -12,6 +14,7 @@ const notesArray = JSON.parse(localStorage.getItem('notesArray')) || [];
 function notesModal(e) {
     e.preventDefault();
     modal.style.display = 'block';
+    openModalButton.firstElementChild.style.transform = 'rotate(10deg)';
     modal.firstElementChild.lastElementChild.value = '';
     modal.lastElementChild.previousElementSibling.lastElementChild.value = '';
 }
@@ -55,4 +58,6 @@ function updateCardsList(items, itemsList) {
 
 openModalButton.addEventListener('click', notesModal);
 createNote.addEventListener('click', createNoteCard);
+
+//Updates page content everytime when refresh happens
 updateCardsList(notesArray, listOfNotes);
