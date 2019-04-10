@@ -1,10 +1,14 @@
+//Capture necessery elements
 const openModalButton = document.querySelector('.openModal');
 const modal = document.querySelector('.modal');
 const createNote = document.querySelector('.createNote');
 const listOfNotes = document.querySelector('.notesList');
-const notesArray = [];
+
+//Create an empty array where values will be stored
+const notesArray = JSON.parse(localStorage.getItem('notesArray')) || [];
 
 
+//Opens modal
 function notesModal(e) {
     e.preventDefault();
     modal.style.display = 'block';
@@ -12,22 +16,33 @@ function notesModal(e) {
     modal.lastElementChild.previousElementSibling.lastElementChild.value = '';
 }
 
-function createNoteCard() {
 
+function createNoteCard(e) {
+    console.log(e);
+    //Store input fields values
     let cardsTitle = modal.firstElementChild.lastElementChild.value;
     let cardsText = modal.lastElementChild.previousElementSibling.lastElementChild.value;
-
+    
+    //Creates an object with stored values
     let itemObject = {
         title: cardsTitle,
         text: cardsText
     }
 
+    //Push object to array
     notesArray.push(itemObject);
     updateCardsList(notesArray, listOfNotes);
+    localStorage.setItem('notesArray', JSON.stringify(notesArray));
+
+    //Hide modal
     modal.style.display = 'none';
 }
 
+
+//Adds content to page (in this case it takes array with objects and elemnt in witch content will apear)
 function updateCardsList(items, itemsList) {
+    //New card content (The map() method calls the provided function once for each element in an array, in order.)
+    //It will take every item form array and create content for page, where array content will apear
     itemsList.innerHTML = items.map(function (item) {
         return `
         <div class='card'>
@@ -35,8 +50,9 @@ function updateCardsList(items, itemsList) {
             <p contenteditable>${item.text}</p>
         </div>
         `;  
-    }).join('');
+    }).join(''); //.join() by default will add ' , ', this will join them togather
 }
 
 openModalButton.addEventListener('click', notesModal);
 createNote.addEventListener('click', createNoteCard);
+updateCardsList(notesArray, listOfNotes);
