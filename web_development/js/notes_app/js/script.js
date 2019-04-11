@@ -4,6 +4,16 @@ const modal = document.querySelector('.modal');
 const createNote = document.querySelector('.createNote');
 const listOfNotes = document.querySelector('.notesList');
 
+//Function to get zeros before date and month if string value consists only form one value
+const todaysDate = new Date();
+if (todaysDate.getMonth().toString().split('').length === 1) {
+    var month = '0' + todaysDate.getMonth();
+} else if (todaysDate.getDate().toString().split('').length === 1) {
+    var date = '0' + todaysDate.getDate();
+};
+
+const dateMsg = todaysDate.getDate() + '.' + month + '.' + todaysDate.getFullYear();
+
 //Create an empty array where values will be stored
 //If there are something in local storage (in this case - objects),
 //It will appear on page, if local storage is empty - array is empty 
@@ -14,7 +24,6 @@ const notesArray = JSON.parse(localStorage.getItem('notesArray')) || [];
 function notesModal(e) {
     e.preventDefault();
     modal.style.display = 'block';
-    openModalButton.firstElementChild.style.transform = 'rotate(10deg)';
     modal.firstElementChild.lastElementChild.value = '';
     modal.lastElementChild.previousElementSibling.lastElementChild.value = '';
 }
@@ -51,6 +60,7 @@ function updateCardsList(items, itemsList) {
         <div class='card'>
             <h1 contenteditable>${item.title}</h1>
             <p contenteditable>${item.text}</p>
+            <p>${dateMsg}</p>
         </div>
         `;  
     }).join(''); //.join() by default will add ' , ', this will join them togather
