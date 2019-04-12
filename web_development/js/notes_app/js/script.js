@@ -23,7 +23,7 @@ const notesArray = JSON.parse(localStorage.getItem('notesArray')) || [];
 //Opens modal
 function notesModal(e) {
     e.preventDefault();
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     modal.firstElementChild.lastElementChild.value = '';
     modal.lastElementChild.previousElementSibling.lastElementChild.value = '';
 }

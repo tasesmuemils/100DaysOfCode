@@ -1,0 +1,72 @@
+/*BASIC STYLING*/
+/*VARIABLES*/
+/*TEST*/
+$buttonColor : #2999ff;
+$buttonHoverColor: #5bb1ff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.wrapper {
+   //min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    .header {
+        width: 100%;
+    }
+    .notesList {
+        width: 100%;
+        display: flex;
+    }
+    .modal {
+        display: none;
+        flex-wrap: wrap;
+    }
+}
+
+
+.openModal {
+    width: 5rem;
+    height: 5rem;
+    background-color: $buttonColor;
+    color: white;
+    font-size: 3rem;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.openModal:focus {
+    outline: 0;
+}
+
+.openModal:hover {
+    background-color: $buttonHoverColor;
+    transform: rotate(90deg);
+    text-shadow: 2px 2px $buttonColor;
+}
+
+.modal {
+    text-align: left;
+    width: 40%;
+    color: white;
+    background-color: black;
+    * {
+        padding: 1rem 0.5rem;
+    }
+}
+
+.card {
+    font-size: 50px;
+    width: 20%;
+    background-color: black;
+    color: white;
+}
