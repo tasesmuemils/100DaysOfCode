@@ -1,34 +1,45 @@
 /*BASIC STYLING*/
 /*VARIABLES*/
-/*TEST*/
 $buttonColor : #2999ff;
 $buttonHoverColor: #5bb1ff;
+$inputBackgroundColor: #f5f5f5;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
     border: 1px solid red;
 }
 
 .wrapper {
-   //min-height: 100vh;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    //flex-direction: column;
     .header {
-        width: 100%;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
     }
     .notesList {
-        width: 100%;
+        flex-basis: 100%;
         display: flex;
     }
     .modal {
         display: none;
         flex-wrap: wrap;
+        flex-basis: 40%;
+        justify-content: center;
+        text-align: left;
+        width: 40%;
+        color: black;
+        background-color: white;
+        //transform: rotate(5deg);
     }
+}
+.headerContent {
+    width: 30%;
 }
 
 
@@ -55,17 +66,33 @@ $buttonHoverColor: #5bb1ff;
 }
 
 .modal {
-    text-align: left;
-    width: 40%;
-    color: white;
-    background-color: black;
     * {
         padding: 1rem 0.5rem;
     }
+    .title, .description {
+        width: 100%;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .title input, .description textarea  {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid black;
+        font-size: 18px;
+        resize: none;
+        transition: all 1s;
+    }
+    .title input:focus, .description textarea:focus {
+        background-color: $inputBackgroundColor;
+        outline: 0;
+        border-radius: 5px;
+        box-shadow: 0px -2px 5px 1px rgba(0,0,0, 0.41);
+    }
 }
 
+
+
 .card {
-    font-size: 50px;
     width: 20%;
     background-color: black;
     color: white;
