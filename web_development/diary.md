@@ -215,23 +215,38 @@ Task 10 - Hold shift to check multiple check boxes!
 # 29.03.2019 70/100
 Im building Box-Shadow generator
 
-# 01.03.2019 71/100
+# 01.04.2019 71/100
 Almost done with Box-shadow generetator
 
-# 02.03.2019 72/100
+# 02.04.2019 72/100
 It is not working like I imaganed, but still works cool and looks great!
 
-# 03.03.2019 73/100
+# 03.04.2019 73/100
 Generator available for the world.
 
-# 04.03.2019 74/100
+# 04.04.2019 74/100
 Figma design stuff and JS30
 
-# 05.03.2019 75/100
+# 05.04.2019 75/100
 Figma design stuff and JS30
 
-# 08.03.2019 76/100
+# 08.04.2019 76/100
 localStorage looks not that hard how I imagined. JS30 task 15 - done.
 
-# 09.03.2019 77/100
+# 09.04.2019 77/100
 JS30 task 16 - done!
+
+# 10.04.2019 78/100
+Notes app and Wes Bos Flex tutorial
+
+# 11.04.2019 79/100
+Notes app and Wes Bos Flex tutorial
+
+# 12.04.2019 80/100
+Notes app and Wes Bos Flex tutorial
+
+# 14.04.2019 81/100
+Notes app and Wes Bos Flex tutorial
+
+# 15.04.2019 82/100
+Notes app and Wes Bos Flex tutorial
