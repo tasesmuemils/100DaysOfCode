@@ -9,7 +9,14 @@ $inputBackgroundColor: #f5f5f5;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    border: 1px solid black;
+}
+
+html {
+    background-color: #EAF5FF;
+}
+
+body {
+    position: relative;
 }
 
 .wrapper {
@@ -17,29 +24,43 @@ $inputBackgroundColor: #f5f5f5;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+
     .header {
         display: flex;
         flex-basis: 100%;
         justify-content: center;
     }
+
     .notesList {
         flex-basis: 100%;
         display: flex;
+        flex-direction: initial;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
     .modal {
         display: none;
+        position: absolute;
         flex-wrap: wrap;
         flex-basis: 40%;
         justify-content: center;
         text-align: left;
+        border-radius: 10px;
         width: 40%;
         color: black;
-        background-color: white;
-        //transform: rotate(5deg);
+        background-color: #CAE6FF;
+        top: 15%;
     }
 }
+
 .headerContent {
-    width: 30%;
+    width: 90%;
+    padding: 1rem;
+    p {
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
 }
 
 
@@ -66,35 +87,110 @@ $inputBackgroundColor: #f5f5f5;
 }
 
 .modal {
+    padding: 1rem;
+    margin-bottom: 1rem;
+
     * {
         padding: 1rem 0.5rem;
     }
-    .title, .description {
+
+    .title,
+    .description {
         width: 100%;
         font-size: 22px;
         font-weight: bold;
     }
-    .title input, .description textarea  {
+
+    .title input,
+    .description textarea {
         width: 100%;
+        background-color: #CAE6FF;
         border: none;
         border-bottom: 2px solid black;
         font-size: 18px;
         resize: none;
         transition: all 1s;
     }
-    .title input:focus, .description textarea:focus {
-        background-color: $inputBackgroundColor;
+
+    .title input:focus,
+    .description textarea:focus {
+        background-color: #EAF5FF;
         outline: 0;
         border-radius: 5px;
-        box-shadow: 0px -2px 5px 1px rgba(0,0,0, 0.41);
+        box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.41);
+    }
+
+    .createNote {
+        background-color: $buttonColor;
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+    .createNote:hover {
+        background-color: $buttonHoverColor;
+        text-shadow: 2px 2px $buttonColor;
     }
 }
 
 
 
 .card {
-    width: 20%;
-    background-color: black;
+    flex-basis: 25%;
+    margin: 20px;
+    background-color: #195C99;
     color: white;
-    padding: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -5px rgba($buttonColor, 0.5);
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    textarea,
+    input {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        background: none;
+        border: none;
+        border-bottom: #258AE6 2px solid;
+        resize: none;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 30px;
+        font-weight: 700;
+        text-shadow: 1px 1px $buttonColor;
+    }
+
+    p {
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-align: end;
+    }
+    
+    button {
+        background-color: $buttonColor;
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+    button:hover {
+        border-radius: 20px;
+        background-color: $buttonHoverColor;
+        text-shadow: 2px 2px $buttonColor;
+    }
 }

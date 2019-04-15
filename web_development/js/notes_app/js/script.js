@@ -24,6 +24,7 @@ const notesArray = JSON.parse(localStorage.getItem('notesArray')) || [];
 //Opens modal
 function notesModal(e) {
     e.preventDefault();
+    ///modal.style.backgroundColor = 'black';
     modal.style.display = 'flex';
     modal.firstElementChild.lastElementChild.value = '';
     modal.lastElementChild.previousElementSibling.lastElementChild.value = '';
@@ -61,7 +62,8 @@ function updateCardsList(items, itemsList) {
         return `
         <div class='card'>
             <h1><input type='text' data-index=${i} class='cardsTitle' value='${item.title}'</h1>
-            <p><textarea type='text' data-index=${i} class='cardsText' value=''>${item.text}</textarea></p>
+            <p><textarea type='text' data-index=${i} class='cardsText' cols="50" rows="3" value=''>${item.text}</textarea></p>
+            <p>${i + 1}</p>
             <p>${dateMsg}</p>
             <button type='button' data-index=${i} class='deleteButton'>DELETE</button>
         </div>
