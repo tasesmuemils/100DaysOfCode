@@ -3,49 +3,73 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+}
 
 html {
-  background-color: #EAF5FF; }
+  background-color: #EAF5FF;
+}
 
 body {
-  position: relative; }
+  position: relative;
+}
 
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  flex-wrap: wrap; }
-  .wrapper .header {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: center; }
-  .wrapper .notesList {
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: initial;
-    flex-wrap: wrap;
-    justify-content: center; }
-  .wrapper .modal {
-    display: none;
-    position: absolute;
-    flex-wrap: wrap;
-    flex-basis: 40%;
-    justify-content: center;
-    text-align: left;
-    border-radius: 10px;
-    width: 40%;
-    color: black;
-    background-color: #CAE6FF;
-    top: 15%; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.wrapper .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .notesList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .modal {
+  width: 100%;
+  min-height: 100%;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: auto;
+}
 
 .headerContent {
   width: 90%;
-  padding: 1rem; }
-  .headerContent p {
-    letter-spacing: 1px;
-    line-height: 30px; }
+  padding: 1rem;
+}
+
+.headerContent p {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
 
 .openModal {
   width: 5rem;
@@ -56,95 +80,189 @@ body {
   border: none;
   border-radius: 50%;
   margin: 5px;
-  transition: all 0.3s; }
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 
 .openModal:focus {
-  outline: 0; }
+  outline: 0;
+}
 
 .openModal:hover {
   background-color: #5bb1ff;
-  transform: rotate(90deg);
-  text-shadow: 2px 2px #2999ff; }
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-shadow: 2px 2px #2999ff;
+}
 
-.modal {
+.modalContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  height: 470px;
+  color: black;
+  background-color: #CAE6FF;
+  top: 15%;
   padding: 1rem;
-  margin-bottom: 1rem; }
-  .modal * {
-    padding: 1rem 0.5rem; }
-  .modal .title,
-  .modal .description {
-    width: 100%;
-    font-size: 22px;
-    font-weight: bold; }
-  .modal .title input,
-  .modal .description textarea {
-    width: 100%;
-    background-color: #CAE6FF;
-    border: none;
-    border-bottom: 2px solid black;
-    font-size: 18px;
-    resize: none;
-    transition: all 1s; }
-  .modal .title input:focus,
-  .modal .description textarea:focus {
-    background-color: #EAF5FF;
-    outline: 0;
-    border-radius: 5px;
-    box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.41); }
-  .modal .createNote {
-    background-color: #2999ff;
-    color: white;
-    font-size: 1.5rem;
-    border: none;
-    margin: 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: all 0.3s; }
-  .modal .createNote:hover {
-    background-color: #5bb1ff;
-    text-shadow: 2px 2px #2999ff; }
+  margin: 1rem 0;
+}
+
+.modalContent #closeModal {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.modalContent #closeModal .closeModalButton {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modalContent #closeModal .closeModalButton:hover {
+  color: #2999ff;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.modalContent * {
+  padding: 1rem 0.5rem;
+}
+
+.modalContent .title,
+.modalContent .description {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.modalContent .title input,
+.modalContent .description textarea {
+  width: 90%;
+  background-color: #CAE6FF;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+  resize: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.modalContent .title input:focus,
+.modalContent .description textarea:focus {
+  background-color: #EAF5FF;
+  outline: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.41);
+          box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.41);
+}
+
+.modalContent .createNote {
+  background-color: #2999ff;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modalContent .createNote:hover {
+  background-color: #5bb1ff;
+  text-shadow: 2px 2px #2999ff;
+}
 
 .card {
-  flex-basis: 25%;
-  margin: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+  margin: 10px;
   background-color: #195C99;
   color: white;
-  padding: 20px;
+  padding: 7px;
   border-radius: 10px;
-  box-shadow: 0 10px 10px -5px rgba(41, 153, 255, 0.5); }
-  .card * {
-    padding: 0;
-    margin: 0; }
-  .card textarea,
-  .card input {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    background: none;
-    border: none;
-    border-bottom: #258AE6 2px solid;
-    resize: none; }
-  .card input {
-    padding: 10px;
-    font-size: 30px;
-    font-weight: 700;
-    text-shadow: 1px 1px #2999ff; }
-  .card p {
-    font-size: 15px;
-    letter-spacing: 2px;
-    text-align: end; }
-  .card button {
-    background-color: #2999ff;
-    color: white;
-    font-size: 1.5rem;
-    border: none;
-    margin: 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: all 0.3s; }
-  .card button:hover {
-    border-radius: 20px;
-    background-color: #5bb1ff;
-    text-shadow: 2px 2px #2999ff; }
+  -webkit-box-shadow: 0 10px 10px -5px rgba(41, 153, 255, 0.5);
+          box-shadow: 0 10px 10px -5px rgba(41, 153, 255, 0.5);
+}
 
+.card * {
+  padding: 0;
+  margin: 0;
+}
+
+.card textarea,
+.card input {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  background: none;
+  border: none;
+  border-bottom: #258AE6 2px solid;
+  resize: none;
+}
+
+.card input {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 1px 1px #2999ff;
+}
+
+.card p {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: end;
+}
+
+.card button {
+  background-color: #2999ff;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card button:hover {
+  border-radius: 20px;
+  background-color: #5bb1ff;
+  text-shadow: 2px 2px #2999ff;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .modalContent {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .modalContent {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
