@@ -1,8 +1,10 @@
 //Capture necessery elements
 const openModalButton = document.querySelector('.openModal');
 const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modalContent');
 const createNote = document.querySelector('.createNote');
 const listOfNotes = document.querySelector('.notesList');
+const closeModalButton = document.querySelector('.closeModalButton');
 
 
 
@@ -26,15 +28,20 @@ function notesModal(e) {
     e.preventDefault();
     ///modal.style.backgroundColor = 'black';
     modal.style.display = 'flex';
-    modal.firstElementChild.lastElementChild.value = '';
-    modal.lastElementChild.previousElementSibling.lastElementChild.value = '';
+    modalContent.firstElementChild.nextElementSibling.lastElementChild.value = '';
+    modalContent.lastElementChild.previousElementSibling.lastElementChild.value = '';
+}
+
+//close modal
+function closeModal() {
+    modal.style.display = 'none';
 }
 
 
 function createNoteCard() {
     //Store input fields values
-    let cardsTitle = modal.firstElementChild.lastElementChild.value;
-    let cardsText = modal.lastElementChild.previousElementSibling.lastElementChild.value;
+    let cardsTitle = modalContent.firstElementChild.nextElementSibling.lastElementChild.value;
+    let cardsText = modalContent.lastElementChild.previousElementSibling.lastElementChild.value;
 
     //Creates an object with stored values
     let itemObject = {
@@ -74,6 +81,7 @@ function updateCardsList(items, itemsList) {
 
 
 openModalButton.addEventListener('click', notesModal);
+closeModalButton.addEventListener('click', closeModal);
 createNote.addEventListener('click', createNoteCard);
 
 //Updates page content everytime when refresh happens
