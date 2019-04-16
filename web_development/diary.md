@@ -250,3 +250,6 @@ Notes app and Wes Bos Flex tutorial
 
 # 15.04.2019 82/100
 Notes app and Wes Bos Flex tutorial
+
+# 16.04.2019 83/100
+I finished my notes app. Looks cool and everything works like it supose to.
