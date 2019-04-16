@@ -4,10 +4,11 @@ $buttonColor : #2999ff;
 $buttonHoverColor: #5bb1ff;
 $inputBackgroundColor: #f5f5f5;
 
+
+/*BASIC STYLE*/
 * {
     margin: 0;
     padding: 0;
-    //box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -19,24 +20,39 @@ body {
     position: relative;
 }
 
+/*FLEX CONTAINERS*/
 .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     min-height: 100vh;
 
     .header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-basis: 100%;
-        justify-content: center;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .notesList {
-        //flex-basis: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .modal {
@@ -45,11 +61,16 @@ body {
         display: none;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.5);
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         overflow: auto;
     }
 }
+/*FLEX CONTAINERS END*/
+/*BASIC STYLE END*/
 
+/*HEADER STYLE*/
 .headerContent {
     width: 90%;
     padding: 1rem;
@@ -70,6 +91,8 @@ body {
     border: none;
     border-radius: 50%;
     margin: 5px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -79,15 +102,27 @@ body {
 
 .openModal:hover {
     background-color: $buttonHoverColor;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
     text-shadow: 2px 2px $buttonColor;
 }
 
+/*HEADER STYLE END*/
+
+
+/*MODAL STYLE*/
 .modalContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-basis: 35%;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-radius: 10px;
     height: 470px;
     color: black;
@@ -98,16 +133,26 @@ body {
 
     #closeModal {
         padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex: 1;
-        justify-content: flex-end;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         .closeModalButton {
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
         .closeModalButton:hover {
             color: $buttonColor;
-            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                    transform: rotate(90deg);
         }
     }
 
@@ -130,6 +175,8 @@ body {
         border-bottom: 2px solid black;
         font-size: 18px;
         resize: none;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
         transition: all 1s;
     }
 
@@ -138,7 +185,8 @@ body {
         background-color: #EAF5FF;
         outline: 0;
         border-radius: 5px;
-        box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.41);
+        -webkit-box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.41);
+                box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.41);
     }
 
     .createNote {
@@ -149,6 +197,8 @@ body {
         margin: 1rem;
         padding: 0.5rem;
         border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
     }
 
@@ -157,15 +207,22 @@ body {
         text-shadow: 2px 2px $buttonColor;
     }
 }
+/*MODAL STYLE END*/
 
+
+/*NOTES STYLING*/
 .card {
-    flex:0 1 20%;
-    margin: 10px;
+    height: 400px;
+    -webkit-box-flex:0;
+        -ms-flex:0 1 20%;
+            flex:0 1 20%;
+    margin: 20px;
     background-color: #195C99;
     color: white;
     padding: 7px;
     border-radius: 10px;
-    box-shadow: 0 10px 10px -5px rgba($buttonColor, 0.5);
+    -webkit-box-shadow: 0 10px 10px -5px rgba($buttonColor, 0.5);
+            box-shadow: 0 10px 10px -5px rgba($buttonColor, 0.5);
 
     * {
         padding: 0;
@@ -176,7 +233,7 @@ body {
     input {
         text-align: center;
         color: white;
-        font-size: 20px;
+        font-size: 1.5rem;
         background: none;
         border: none;
         border-bottom: #258AE6 2px solid;
@@ -185,10 +242,10 @@ body {
 
     input {
         padding: 10px;
-        font-size: 30px;
         font-weight: 700;
         text-shadow: 1px 1px $buttonColor;
     }
+
 
     p {
         font-size: 15px;
@@ -204,6 +261,8 @@ body {
         margin: 1rem;
         padding: 0.5rem;
         border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
     }
 
@@ -213,27 +272,52 @@ body {
         text-shadow: 2px 2px $buttonColor;
     }
 }
+/*NOTES STYLING END*/
 
+
+/*RESPONSIVE DESIGN*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+    .modalContent {
+        -ms-flex-preferred-size: 90%;
+            flex-basis: 90%;
+    }
+    .card {
+        textarea,
+        input {
+            font-size: 1.1rem;
+        }
+    }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
+    .modalContent {
+        -ms-flex-preferred-size: 80%;
+            flex-basis: 80%;
+    }
+   
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
     .modalContent {
-        flex-basis: 70%;
+        -ms-flex-preferred-size: 70%;
+            flex-basis: 70%;
     }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
     .modalContent {
-        flex-basis: 50%;
+        -ms-flex-preferred-size: 45%;
+            flex-basis: 45%;
     }
 } 
+
+@media only screen and (min-width: 1200px) {
+    .modalContent {
+        -ms-flex-preferred-size: 35%;
+            flex-basis: 35%;
+    }
+}

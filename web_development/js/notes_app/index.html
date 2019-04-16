@@ -15,19 +15,22 @@
 <body>
 
     <div class="wrapper">
+
+        <!--HEADER-->
         <div class="header">
             <div class="headerContent">
                 <h1>CREATE YOUR NOTES HERE</h1>
                 <p>You can create a note with title and description</p>
-                <p>You can edit title and description after adding it to your workspace</p>
-                <p>You can delete you created note any time</p>
-                <p>Every card has index (1 = your first created note) and creation date</p>
+                <p>You can edit the title and description after adding it to your workspace</p>
+                <p>You can delete your created note any time</p>
+                <p>Every card has an index (1 = your first created note) and creation date</p>
                 <p>Press "+" to start</p>
                 <button type="button" class="openModal">+</button>
             </div>
         </div>
+        <!--HEADER END-->
 
-
+        <!--MODAL-->
         <div class="modal">
             <div class="modalContent">
                 <div id='closeModal'><i class="closeModalButton far fa-times-circle fa-lg"></i></div>
@@ -38,14 +41,15 @@
                 <div class="description">
                     <label for="description">Notes description: </label>
                     <textarea name="" id="" cols="50" rows="3"></textarea>
-                    <!--input type="text">-->
                 </div>
                 <input type="submit" class="createNote" value="CREATE NOTE">
             </div>
         </div>
+        <!--MODAL END-->
 
-
+        <!--CARDS-->
         <div class="notesList"></div>
+        <!--CARDS END-->
 
     </div>
 
