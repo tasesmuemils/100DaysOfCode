@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Notes App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="sass/style.css">
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     <div class="wrapper">
         <div class="header">
             <div class="headerContent">
-                <h1>Create your notes here</h1>
+                <h1>CREATE YOUR NOTES HERE</h1>
                 <p>You can create a note with title and description</p>
                 <p>You can edit title and description after adding it to your workspace</p>
                 <p>You can delete you created note any time</p>
@@ -25,20 +27,23 @@
             </div>
         </div>
 
-        
 
         <div class="modal">
-            <div class="title">
-                <label for="tilte">Title: </label>
-                <input type="text">
+            <div class="modalContent">
+                <div id='closeModal'><i class="closeModalButton far fa-times-circle fa-lg"></i></div>
+                <div class="title">
+                    <label for="tilte">Title: </label>
+                    <input type="text">
+                </div>
+                <div class="description">
+                    <label for="description">Notes description: </label>
+                    <textarea name="" id="" cols="50" rows="3"></textarea>
+                    <!--input type="text">-->
+                </div>
+                <input type="submit" class="createNote" value="CREATE NOTE">
             </div>
-            <div class="description">
-                <label for="description">Notes description: </label>
-                <textarea name="" id="" cols="50" rows="3"></textarea>
-                <!--input type="text">-->
-            </div>
-            <input type="submit" class="createNote" value="CREATE NOTE">
         </div>
+
 
         <div class="notesList"></div>
 
