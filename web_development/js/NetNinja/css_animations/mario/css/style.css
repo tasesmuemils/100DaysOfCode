@@ -1,15 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background: lightblue;
     text-align: center;
 }
 
-.wrapper {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+.sky {
+    min-height: 300px;
 }
 
-img {
-    /* transform: translate(-200px, 200px); */
-    transform: scale(3);
+.grass {
+    height: 150px;
+    background-color: green;
+    padding: 0px;
+    width: 100%;
+}
+
+.road {
+    position: relative;
+    height: 165px;
+    border-top: 5px solid lightslategray;
+    border-bottom: 5px solid lightslategray;
+    background-color: grey;
+}
+
+.lines {
+    border: 5px  white;
+    border-style: dotted;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+}
+
+.mario {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 30%;
+    animation-name: drive;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-out;
+}
+
+.luigi {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: -20%;
+    animation-name: drive;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
+
+
+/*KEYFRAMES*/
+@keyframes drive {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(800px);
+    }
 }
