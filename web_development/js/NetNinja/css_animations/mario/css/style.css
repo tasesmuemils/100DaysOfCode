@@ -5,18 +5,21 @@
 
 body {
     background: lightblue;
-    text-align: center;
 }
 
 .sky {
     min-height: 300px;
+    position: relative;
 }
 
-.grass {
+.grass, .grass2 {
     height: 150px;
     background-color: green;
-    padding: 0px;
     width: 100%;
+}
+
+.grass2 {
+    height: 300px;
 }
 
 .road {
@@ -32,8 +35,38 @@ body {
     border-style: dotted;
     position: absolute;
     top: 45%;
-    width: 100%;
+    width: 99.1%;
 }
+
+.cloud {
+    left: -10;
+    animation-name: wind;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.cloud2, .cloud3 {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 30%;
+    opacity: 0.5;
+    animation-name: wind;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.cloud3 {
+    width: 150px;
+    height: 100px;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;
+}
+
 
 .mario {
     position: absolute;
@@ -42,9 +75,9 @@ body {
     left: 0;
     top: 30%;
     animation-name: drive;
-    animation-duration: 2s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
-    transition-timing-function: ease-out;
+    animation-timing-function: linear;
 }
 
 .luigi {
@@ -54,18 +87,28 @@ body {
     left: 0;
     top: -20%;
     animation-name: drive;
+    transition-timing-function: linear;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-    transition-timing-function: linear;
+    animation-timing-function: linear;
 }
 
 
 /*KEYFRAMES*/
 @keyframes drive {
     from {
-        transform: translateX(-100px);
+        transform: translateX(-200px);
     }
     to {
-        transform: translateX(800px);
+        transform: translateX(1700px);
+    }
+}
+
+@keyframes wind {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(1700px);
     }
 }
