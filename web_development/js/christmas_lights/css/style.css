@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: yellow solid 1px;
+}
+
+body {
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center; 
+}
+
+.wrapper {
+    flex: 0 0 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.light {
+    border: white 2px dotted;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.light:nth-child(1) {
+    background: blue;
+}
+
+
+@keyframes blue {
+    from {
+        background-color: #a3a2ff;
+    }
+    20% {
+        background-color: #6f6dff;
+    }
+    40% {
+        background-color: #3f3dff;
+    }
+    60% {
+        background-color: #2a28ff;
+    }
+    to {
+        background-color: #0300ff;
+    }
+}
