@@ -4,6 +4,7 @@ $black-background: #000000;
 $white-text: #ffffff;
 
 * {
+    //border: 1px solid red;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -13,46 +14,105 @@ $white-text: #ffffff;
 
 .main-wrapper {
     display: flex;
+    flex-direction: column;
+
 }
+
+.nav-content-wrapper,
+.intro-content-wrapper {
+    flex-basis: 1280px;
+    display: flex;
+    justify-content: center;
+}
+
 
 .navigation-wrapper {
     background-color: #000000;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    .navigation-bar {
+        padding: 1%;
+        display: flex;
+        background-color: $black-background;
+        color: $white-text;
+        justify-content: space-between;
+        flex: 1;
+
+        .logo {
+            align-self: center;
+            img {
+                margin: 0;
+                width: 150px;
+                vertical-align: bottom;
+            }
+        } 
+
+        .navigation-section-items {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation-icons {
+            display: flex;
+        }
+
+        .navigation-items,
+        .navigation-social,
+        .navigation-search {
+            display: flex;
+            align-items: center;
+        }
+
+        .navigation-items li {
+            padding: 10px 15px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .navigation-social {
+            padding-right: 15px;
+            font-size: 15px;
+            li {
+                padding: 2px 7px;
+            }
+        }
+        .navigation-search {
+            font-size: 15px;
+            i {
+                padding: 5px 7px;
+            }
+        }
+    }
 }
 
-.content-wrapper {
-    flex-basis: 1280px;
+.intro-wrapper {
+    min-height: 100vh;
+    width: 100%;
     display: flex;
-}
-
-.navigation-bar {
-    padding: 1%;
-    display: flex;
-    background-color: $black-background;
-    color: $white-text;
-    justify-content: space-between;
-    flex: 1;
-}
-
-.logo img {
-    width: 150px;
-}
-
-.navigation-section-items {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navigation-icons {
-    display: flex;
-}
-
-.navigation-items, .navigation-social, .navigation-search {
-    display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 15% 0% 10% 0%;
+
+    .intro-content {
+        text-align: center;
+        width: 60%;
+
+        p {
+            font-weight: 700;
+            padding: 2%;
+        }
+
+        h1 {
+            padding: 20px;
+            font-size: 65px;
+            line-height: 55px;
+        }
+
+        .intro-arrow {
+            padding: 4% 0px;
+        }
+    }
 }
-
-
