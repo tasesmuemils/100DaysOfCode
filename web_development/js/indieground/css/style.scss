@@ -1,5 +1,58 @@
+/*BASIC SETUP*/
+/*VARIABLES*/
+$black-background: #000000;
+$white-text: #ffffff;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
 }
+
+.main-wrapper {
+    display: flex;
+}
+
+.navigation-wrapper {
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrapper {
+    flex-basis: 1280px;
+    display: flex;
+}
+
+.navigation-bar {
+    padding: 1%;
+    display: flex;
+    background-color: $black-background;
+    color: $white-text;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navigation-section-items {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-icons {
+    display: flex;
+}
+
+.navigation-items, .navigation-social, .navigation-search {
+    display: flex;
+    align-items: center;
+}
+
+
