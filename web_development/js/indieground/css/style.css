@@ -14,7 +14,8 @@
 }
 
 .nav-content-wrapper,
-.intro-content-wrapper {
+.intro-content-wrapper,
+.workspace-content-wrapper {
   flex-basis: 1280px;
   display: flex;
   justify-content: center;
@@ -25,9 +26,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: fixed;
+  z-index: 2;
 }
 .navigation-wrapper .navigation-bar {
-  padding: 1%;
+  padding: 2% 1%;
   display: flex;
   background-color: #000000;
   color: #ffffff;
@@ -39,7 +42,7 @@
 }
 .navigation-wrapper .navigation-bar .logo img {
   margin: 0;
-  width: 150px;
+  width: 130px;
   vertical-align: bottom;
 }
 .navigation-wrapper .navigation-bar .navigation-section-items {
@@ -59,11 +62,12 @@
 .navigation-wrapper .navigation-bar .navigation-items li {
   padding: 10px 15px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 .navigation-wrapper .navigation-bar .navigation-social {
   padding-right: 15px;
-  font-size: 15px;
+  font-size: 12px;
 }
 .navigation-wrapper .navigation-bar .navigation-social li {
   padding: 2px 7px;
@@ -76,7 +80,7 @@
 }
 
 .intro-wrapper {
-  min-height: 100vh;
+  min-height: 81vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -98,6 +102,80 @@
 }
 .intro-wrapper .intro-content .intro-arrow {
   padding: 4% 0px;
+}
+
+.workspace-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/workspace_bg01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000000;
+  color: #ffffff;
+}
+.workspace-wrapper .background-layer {
+  background-color: rgba(58, 58, 58, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.workspace-wrapper .workspace-content {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10% 0 4% 0;
+}
+.workspace-wrapper .workspace-description {
+  flex-basis: 60%;
+}
+.workspace-wrapper .workspace-description p {
+  text-align: center;
+  font-size: 20px;
+  padding: 50px 30px;
+}
+.workspace-wrapper .workspace-cards {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+}
+.workspace-wrapper .workspace-cards .ws-card {
+  background-color: #0f0f0f;
+  flex-basis: 22%;
+  margin: 2% 1%;
+  padding: 2% 0%;
+  border-radius: 5px;
+}
+.workspace-wrapper .workspace-cards .ws-card .ws-card-title {
+  padding: 15px 0px;
+  font-size: 30px;
+  line-height: 27px;
+}
+.workspace-wrapper .workspace-cards .ws-card img {
+  padding: 10% 0%;
+  vertical-align: bottom;
+}
+.workspace-wrapper .workspace-cards .ws-card .ws-card-description {
+  padding: 15px 0px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.workspace-wrapper .workspace-forward {
+  flex-basis: 50%;
+  text-align: center;
+  margin: 5% 0%;
+}
+.workspace-wrapper .workspace-forward p {
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

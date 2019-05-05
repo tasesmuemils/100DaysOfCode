@@ -32,9 +32,11 @@ $white-text: #ffffff;
     width: 100%;
     display: flex;
     justify-content: center;
+    position: fixed;
+    z-index: 2;
 
     .navigation-bar {
-        padding: 1%;
+        padding: 2% 1%;
         display: flex;
         background-color: $black-background;
         color: $white-text;
@@ -95,7 +97,7 @@ $white-text: #ffffff;
 }
 
 .intro-wrapper {
-    min-height: 80vh;
+    min-height: 81vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -134,7 +136,7 @@ $white-text: #ffffff;
     background-size: cover;
     background-attachment: fixed;
      .background-layer{
-        background-color: rgba(122, 122, 122, 0.5);
+        background-color: rgba(58, 58, 58, 0.5);
         position: absolute;
         top: 0;
         left: 0;
@@ -150,7 +152,7 @@ $white-text: #ffffff;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 10% 0;
+        padding: 10% 0 4% 0;
     }
 
     .workspace-description {
@@ -168,11 +170,11 @@ $white-text: #ffffff;
         justify-content: center;
         flex-basis: 100%;
         .ws-card {
-            background-color: $black-background;
-            flex-basis: 20%;
-            margin: 2% 2%;
+            background-color: #0f0f0f;
+            flex-basis: 22%;
+            margin: 2% 1%;
             padding: 2% 0%;
-            border-radius: 10px;
+            border-radius: 5px;
             .ws-card-title {
                 padding: 15px 0px;
                 font-size: 30px;
@@ -195,5 +197,10 @@ $white-text: #ffffff;
         flex-basis: 50%;
         text-align: center;
         margin: 5% 0%;
+        p {
+            font-size: 15px;
+           font-weight: 700;
+           padding-bottom: 20px; 
+        }
     }
 }
