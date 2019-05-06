@@ -81,16 +81,15 @@
 }
 
 .intro-wrapper {
-  min-height: 81vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15% 0% 10% 0%;
 }
 .intro-wrapper .intro-content {
   text-align: center;
   width: 60%;
+  padding: 20% 0% 15% 0%;
 }
 .intro-wrapper .intro-content p {
   font-weight: 700;
@@ -183,40 +182,67 @@
   display: flex;
   justify-content: center;
   background-color: #000000;
-}
-.product-wrapper .product-bg-layer {
-  background-image: url("../img/bg02.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom;
-  will-change: transform;
-  transform: translateY(342.1px) translateZ(0px);
-  height: 314.57px;
-  top: -149.57px;
-  position: absolute;
-  background-attachment: scroll;
+  color: #ffffff;
 }
 .product-wrapper .product-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 7% 0 10% 0;
 }
 .product-wrapper .product-content .product-title {
   text-align: center;
+}
+.product-wrapper .product-content .product-title p {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.product-wrapper .product-content .product-title h3 {
+  font-size: 40px;
 }
 .product-wrapper .product-content .product-cards {
   display: flex;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
+  padding: 3% 0 5% 0;
 }
 .product-wrapper .product-content .product-cards .p-card {
   flex-basis: 22%;
   margin: 2% 1%;
+  background-color: #0f0f0f;
+  border-radius: 5px;
 }
 .product-wrapper .product-content .product-cards .p-card img {
   width: 100%;
   vertical-align: middle;
+}
+.product-wrapper .product-content .product-cards .p-card .p-description {
+  padding: 20px;
+}
+.product-wrapper .product-content .product-cards .p-card .p-description p {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.product-wrapper .product-content .product-cards .p-card .p-description .p-price {
+  color: #999999;
+}
+.product-wrapper .product-content .product-cards .p-card .p-description .p-price-free {
+  color: #31a874;
+  font-size: 16px;
+}
+.product-wrapper .product-content .product-view-button {
+  padding: 7px 35px;
+  border: 3px solid #ffa57c;
+}
+.product-wrapper .product-content .product-view-button a {
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

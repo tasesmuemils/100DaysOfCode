@@ -98,16 +98,16 @@ $white-text: #ffffff;
 }
 
 .intro-wrapper {
-    min-height: 81vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15% 0% 10% 0%;
+    
 
     .intro-content {
         text-align: center;
         width: 60%;
+        padding: 20% 0% 15% 0%;
 
         p {
             font-weight: 700;
@@ -217,30 +217,23 @@ $white-text: #ffffff;
     display: flex;
     justify-content: center;
     background-color: $black-background;
-
-    .product-bg-layer {
-        background-image: url("../img/bg02.png");
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: bottom;
-        will-change: transform;
-        transform: translateY(342.1px) translateZ(0px);
-        height: 314.57px;
-        top: -149.57px;
-        position: absolute;
-        //background-size: 3000px 1000px; 
-        background-attachment: scroll;
-    }
-
-
-
+    color: $white-text;
     .product-content {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 7% 0 10% 0;
 
         .product-title {
             text-align: center;
+            p {
+                font-size: 15px;
+                font-weight: 700;
+                letter-spacing: 2px;
+            }
+            h3 {
+                font-size: 40px;
+            }
         }
 
         .product-cards {
@@ -248,16 +241,45 @@ $white-text: #ffffff;
             flex-wrap: wrap;
             display: flex;
             justify-content: center;
+            padding: 3% 0 5% 0;
 
             .p-card {
                 flex-basis: 22%;
                 margin: 2% 1%;
+                background-color: #0f0f0f;
+                border-radius: 5px;
 
                 img {
                     width: 100%;
                     vertical-align: middle;
                 }
+                .p-description {
+                    padding: 20px;
+                    p {
+                        font-size: 15px;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                    }
+                    .p-price {
+                        color: #999999;
+                    }
+                    .p-price-free {
+                        color: #31a874;
+                        font-size: 16px;
+                    }
+                }
             }
+        }
+        .product-view-button {
+            padding: 7px 35px;
+            border: 3px solid #ffa57c;
+        }
+        .product-view-button a {
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            color: $white-text;
+            letter-spacing: 3px;
         }
     }
 }
