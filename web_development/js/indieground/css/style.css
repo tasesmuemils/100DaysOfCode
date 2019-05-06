@@ -15,7 +15,8 @@
 
 .nav-content-wrapper,
 .intro-content-wrapper,
-.workspace-content-wrapper {
+.workspace-content-wrapper,
+.product-content-wrapper {
   flex-basis: 1280px;
   display: flex;
   justify-content: center;
@@ -176,6 +177,46 @@
   font-size: 15px;
   font-weight: 700;
   padding-bottom: 20px;
+}
+
+.product-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+}
+.product-wrapper .product-bg-layer {
+  background-image: url("../img/bg02.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  will-change: transform;
+  transform: translateY(342.1px) translateZ(0px);
+  height: 314.57px;
+  top: -149.57px;
+  position: absolute;
+  background-attachment: scroll;
+}
+.product-wrapper .product-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product-wrapper .product-content .product-title {
+  text-align: center;
+}
+.product-wrapper .product-content .product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+.product-wrapper .product-content .product-cards .p-card {
+  flex-basis: 22%;
+  margin: 2% 1%;
+}
+.product-wrapper .product-content .product-cards .p-card img {
+  width: 100%;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=style.css.map */
