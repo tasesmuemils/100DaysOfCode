@@ -3,6 +3,7 @@
 $black-background: #000000;
 $white-text: #ffffff;
 
+
 * {
     //border: 1px solid red;
     padding: 0;
@@ -22,7 +23,8 @@ $white-text: #ffffff;
 .intro-content-wrapper,
 .workspace-content-wrapper,
 .product-content-wrapper,
-.purchase-content-wrapper {
+.purchase-content-wrapper,
+.gr_wt_at-content-wrapper {
     flex-basis: 1280px;
     display: flex;
     justify-content: center;
@@ -136,6 +138,8 @@ $white-text: #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-color: $black-background;
+    color: $white-text;
 
     .background-layer_dark {
         background-color: rgba(58, 58, 58, 0.5);
@@ -146,8 +150,7 @@ $white-text: #ffffff;
         height: 100%;
     }
 
-    background-color: $black-background;
-    color: $white-text;
+
 
     .workspace-content {
         z-index: 1;
@@ -294,8 +297,6 @@ $white-text: #ffffff;
     }
 }
 
-//#fe7570
-
 .purchase-wrapper {
     position: relative;
     display: flex;
@@ -305,7 +306,7 @@ $white-text: #ffffff;
     background-attachment: fixed;
 
     .background-layer_light_pink {
-        background: linear-gradient(to bottom, #fe7570 0%,#ffa57c 100%);
+        background: linear-gradient(to bottom, #fe7570 0%, #ffa57c 100%);
         position: absolute;
         top: 0;
         left: 0;
@@ -352,6 +353,92 @@ $white-text: #ffffff;
 
         .purchase-icons {
             padding: 2% 0%;
+        }
+    }
+}
+
+.gr_wt_at-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: $black-background;
+    color: $white-text;
+    background-image: url("../img/gr_wt_at_bg.png");
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    .background-layer_dark {
+        background-color: rgba(58, 58, 58, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .gr_wt_at-content {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .gr-wrapper,
+        .wt-wrapper,
+        .at-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5% 0 5% 0;
+        }
+
+        .gr-wrapper,
+        .wt-wrapper,
+        .at-wrapper {
+
+            .gr-text-content,
+            .wt-text-content,
+            .at-text-content {
+                z-index: 2;
+                padding: 0 3%;
+                flex-basis: 50%;
+
+
+                p {
+                    font-size: 15px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    padding: 2px;
+                }
+
+                h3 {
+                    font-size: 35px;
+                    font-weight: bold;
+                }
+
+                .gr-description,
+                .wt-description,
+                .at-description {
+                    p {
+                        //flex-basis: 70%;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        font-weight: 100;
+                    }
+                }
+            }
+
+            .gr-slider,
+            .wt-slider,
+            .at-slider {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    vertical-align: middle;
+                }
+            }
         }
     }
 }
