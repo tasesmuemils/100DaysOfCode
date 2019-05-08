@@ -5,7 +5,7 @@ $white-text: #ffffff;
 
 
 * {
-    //border: 1px solid red;
+    border: 1px solid red;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -25,7 +25,8 @@ $white-text: #ffffff;
 .product-content-wrapper,
 .purchase-content-wrapper,
 .gr_wt_at-content-wrapper,
-.blog-content-wrapper {
+.blog-content-wrapper,
+.contact-content-wrapper {
     flex-basis: 1280px;
     display: flex;
     justify-content: center;
@@ -517,6 +518,7 @@ $white-text: #ffffff;
 
                 .blog-items-intro {
                     padding: 10px 0;
+
                     p {
                         font-size: 12px;
                         padding: 3px;
@@ -552,6 +554,55 @@ $white-text: #ffffff;
                 color: $white-text;
                 letter-spacing: 5px;
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+.contact-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: $white-text;
+    background-image: url("../img/purchase_bg.gif");
+    background-attachment: fixed;
+
+    .background-layer_light_pink {
+        background: linear-gradient(to bottom, #fe7570 0%, #ffa57c 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.9;
+    }
+
+    .contact-content {
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        //flex-wrap: wrap;
+        padding: 8% 0 10% 0;
+        .contact-section {
+            flex-basis: 50%;
+            .contact-section-title {
+                p {
+                    font-size: 15px;
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                    padding: 2% 4%;
+                }
+
+                h3 {
+                    letter-spacing: 3px;
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
             }
         }
     }
