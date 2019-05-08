@@ -24,7 +24,8 @@ $white-text: #ffffff;
 .workspace-content-wrapper,
 .product-content-wrapper,
 .purchase-content-wrapper,
-.gr_wt_at-content-wrapper {
+.gr_wt_at-content-wrapper,
+.blog-content-wrapper {
     flex-basis: 1280px;
     display: flex;
     justify-content: center;
@@ -239,7 +240,7 @@ $white-text: #ffffff;
             }
 
             h3 {
-                font-size: 40px;
+                font-size: 50px;
             }
         }
 
@@ -283,16 +284,18 @@ $white-text: #ffffff;
         }
 
         .product-view-button {
-            padding: 7px 35px;
-            border: 3px solid #ffa57c;
-        }
+            padding: 2% 0%;
 
-        .product-view-button a {
-            font-size: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            color: $white-text;
-            letter-spacing: 3px;
+            button {
+                background: none;
+                padding: 7px 35px;
+                border: 3px solid #ffa57c;
+                font-size: 12px;
+                font-weight: 700;
+                color: $white-text;
+                letter-spacing: 5px;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -334,7 +337,7 @@ $white-text: #ffffff;
             }
 
             h3 {
-                font-size: 35px;
+                font-size: 50px;
                 font-weight: bold;
             }
         }
@@ -342,7 +345,7 @@ $white-text: #ffffff;
         .purchase-description {
             display: flex;
             justify-content: center;
-            padding: 2% 0%;
+            padding: 1% 0%;
 
             p {
                 flex-basis: 70%;
@@ -383,24 +386,15 @@ $white-text: #ffffff;
         justify-content: center;
         flex-wrap: wrap;
 
-        .gr-wrapper,
-        .wt-wrapper,
-        .at-wrapper {
+        .gr_wt_at-text-img-wrapper {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 5% 0 5% 0;
-        }
+            padding: 6% 0 6% 0;
 
-        .gr-wrapper,
-        .wt-wrapper,
-        .at-wrapper {
-
-            .gr-text-content,
-            .wt-text-content,
-            .at-text-content {
+            .gr_wt_at-text-content {
                 z-index: 2;
                 padding: 0 3%;
                 flex-basis: 50%;
@@ -409,35 +403,155 @@ $white-text: #ffffff;
                 p {
                     font-size: 15px;
                     font-weight: bold;
-                    letter-spacing: 1px;
-                    padding: 2px;
+                    letter-spacing: 3px;
                 }
 
                 h3 {
-                    font-size: 35px;
+                    letter-spacing: 3px;
+                    font-size: 50px;
                     font-weight: bold;
                 }
 
-                .gr-description,
-                .wt-description,
-                .at-description {
+                .gr_wt_at-description {
+                    padding: 2% 0px;
+
                     p {
-                        //flex-basis: 70%;
-                        font-size: 14px;
-                        letter-spacing: 1px;
+                        padding: 2% 2%;
+                        flex-basis: 70%;
+                        font-size: 15px;
+                        letter-spacing: 2px;
                         font-weight: 100;
+                    }
+                }
+
+                .gr_wt_at-button-wrapper {
+                    padding: 2% 0%;
+
+                    button {
+                        background: none;
+                        padding: 7px 35px;
+                        border: 3px solid #ffa57c;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: $white-text;
+                        letter-spacing: 5px;
+                        cursor: pointer;
                     }
                 }
             }
 
-            .gr-slider,
-            .wt-slider,
-            .at-slider {
+            .gr_wt_at-image {
                 img {
                     max-width: 100%;
                     height: auto;
                     vertical-align: middle;
                 }
+            }
+        }
+    }
+}
+
+.blog-wrapper {
+    display: flex;
+    justify-content: center;
+    color: $white-text;
+    background-color: $black-background;
+
+    .blog-content {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 8% 0 10% 0;
+
+        .blog-intro {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .blog-title {
+                p {
+                    font-size: 15px;
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                }
+
+                h3 {
+                    letter-spacing: 3px;
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+            }
+
+            .blog-description {
+                display: flex;
+                justify-content: center;
+                padding: 1% 0%;
+
+                p {
+                    width: 60%;
+                    padding: 1% 2%;
+                    flex-basis: 70%;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .blog-items {
+            display: flex;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            padding: 3% 0 1% 0;
+
+            li {
+                flex-basis: 30%;
+                margin: 1% 1%;
+
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+
+                .blog-items-intro {
+                    padding: 10px 0;
+                    p {
+                        font-size: 12px;
+                        padding: 3px;
+                        letter-spacing: 2px;
+                        font-weight: 700;
+                        color: #898989;
+                    }
+
+                    h3 {
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .blog-items-description {
+                    p {
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                        padding: 3% 5%;
+                    }
+                }
+            }
+        }
+
+        .blog-button {
+            padding: 2% 0%;
+
+            button {
+                background: none;
+                padding: 7px 35px;
+                border: 3px solid #ffa57c;
+                font-size: 12px;
+                font-weight: 700;
+                color: $white-text;
+                letter-spacing: 5px;
+                cursor: pointer;
             }
         }
     }
