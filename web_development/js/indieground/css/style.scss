@@ -5,7 +5,7 @@ $white-text: #ffffff;
 
 
 * {
-    border: 1px solid red;
+    //border: 1px solid red;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -16,28 +16,23 @@ $white-text: #ffffff;
 .main-wrapper {
     display: flex;
     flex-direction: column;
-
 }
 
-.nav-content-wrapper,
-.intro-content-wrapper,
-.workspace-content-wrapper,
-.product-content-wrapper,
-.purchase-content-wrapper,
-.gr_wt_at-content-wrapper,
-.blog-content-wrapper,
-.contact-content-wrapper {
+.section-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $black-background;
+    color: $white-text;
+}
+
+.section-content-wrapper {
     flex-basis: 1280px;
     display: flex;
     justify-content: center;
 }
 
-
-.navigation-wrapper {
-    background-color: $black-background;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.navigation {
     position: fixed;
     z-index: 2;
 
@@ -102,17 +97,13 @@ $white-text: #ffffff;
     }
 }
 
-.intro-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.intro {
     align-items: center;
-
 
     .intro-content {
         text-align: center;
         width: 60%;
-        padding: 20% 0% 15% 0%;
+        padding: 15% 0% 10% 0%;
 
         p {
             font-weight: 700;
@@ -131,17 +122,12 @@ $white-text: #ffffff;
     }
 }
 
-.workspace-wrapper {
-    width: 100%;
+.workspace {
     position: relative;
-    display: flex;
-    justify-content: center;
     background-image: url("../img/workspace_bg01.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: $black-background;
-    color: $white-text;
 
     .background-layer_dark {
         background-color: rgba(58, 58, 58, 0.5);
@@ -151,8 +137,6 @@ $white-text: #ffffff;
         width: 100%;
         height: 100%;
     }
-
-
 
     .workspace-content {
         z-index: 1;
@@ -218,12 +202,7 @@ $white-text: #ffffff;
     }
 }
 
-
-.product-wrapper {
-    display: flex;
-    justify-content: center;
-    background-color: $black-background;
-    color: $white-text;
+.product {
 
     .product-content {
         display: flex;
@@ -301,11 +280,8 @@ $white-text: #ffffff;
     }
 }
 
-.purchase-wrapper {
+.purchase {
     position: relative;
-    display: flex;
-    justify-content: center;
-    color: $white-text;
     background-image: url("../img/purchase_bg.gif");
     background-attachment: fixed;
 
@@ -361,19 +337,15 @@ $white-text: #ffffff;
     }
 }
 
-.gr_wt_at-wrapper {
+.gr-wt-at {
     position: relative;
-    display: flex;
-    justify-content: center;
-    background-color: $black-background;
-    color: $white-text;
     background-image: url("../img/gr_wt_at_bg.png");
     background-attachment: fixed;
     background-position: center top;
     background-repeat: no-repeat;
 
     .background-layer_dark {
-        background-color: rgba(58, 58, 58, 0.3);
+        background-color: rgba(58, 58, 58, 0.302);
         position: absolute;
         top: 0;
         left: 0;
@@ -452,11 +424,7 @@ $white-text: #ffffff;
     }
 }
 
-.blog-wrapper {
-    display: flex;
-    justify-content: center;
-    color: $white-text;
-    background-color: $black-background;
+.blog {
 
     .blog-content {
         text-align: center;
@@ -559,11 +527,8 @@ $white-text: #ffffff;
     }
 }
 
-.contact-wrapper {
+.contact {
     position: relative;
-    display: flex;
-    justify-content: center;
-    color: $white-text;
     background-image: url("../img/purchase_bg.gif");
     background-attachment: fixed;
 
@@ -584,8 +549,10 @@ $white-text: #ffffff;
         justify-content: center;
         //flex-wrap: wrap;
         padding: 8% 0 10% 0;
+
         .contact-section {
             flex-basis: 50%;
+
             .contact-section-title {
                 p {
                     font-size: 15px;
@@ -599,9 +566,69 @@ $white-text: #ffffff;
                     font-size: 50px;
                     font-weight: bold;
                 }
+
                 form {
                     display: flex;
                     flex-wrap: wrap;
+
+                    .contact-section-email {
+                        font-size: 500px;
+                    }
+
+                    label {
+                        font-size: 500px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.useful-links {
+    background-color: #1f1f1f;
+
+    .useful-links-content {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 8% 0 10% 0;
+
+        .useful-links-section {
+            flex-basis: 22%;
+
+            h6 {
+                color: #808080;
+                letter-spacing: 1px;
+                text-align: left;
+                padding: 10px;
+            }
+
+            p {
+                text-align: left;
+                padding-left: 5%;
+            }
+
+            .useful-links-tweet {
+                display: flex;
+                flex-wrap: wrap;
+
+                .tweet-icon-text {
+                    display: flex;
+                    align-items: center;
+                }
+
+                i {
+                    padding: 1px;
+                }
+
+                p {
+                    text-align: left;
+                }
+
+                .tweet-date {
+                    color: #808080;
+                    font-size: 13px;
+                    flex-basis: 100%;
                 }
             }
         }
