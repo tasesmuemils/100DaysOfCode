@@ -32,12 +32,17 @@ $white-text: #ffffff;
     justify-content: center;
 }
 
+.parallaxBg{
+    background-image: url('../img/bg02.png');
+    background-position: 50% 0%;
+}
+
 .navigation {
     position: fixed;
     z-index: 2;
 
     .navigation-bar {
-        padding: 2% 1%;
+        padding: 20px 1%;
         display: flex;
         background-color: $black-background;
         color: $white-text;
@@ -53,7 +58,6 @@ $white-text: #ffffff;
             img {
                 margin: 0;
                 width: 130px;
-                vertical-align: -3px;
             }
         }
 
@@ -193,7 +197,7 @@ $white-text: #ffffff;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 10% 0 4% 0;
+        padding: 6% 0 4% 0;
     }
 
     .workspace-description {
@@ -253,6 +257,8 @@ $white-text: #ffffff;
 }
 
 .product {
+    // background-image: url('../img/bg02.png');
+    // background-position: 50% 0%;
 
     .product-content {
         display: flex;
