@@ -16,6 +16,7 @@ $white-text: #ffffff;
 .main-wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .section-wrapper {
@@ -34,7 +35,8 @@ $white-text: #ffffff;
 
 .parallaxBg{
     background-image: url('../img/bg02.png');
-    background-position: 50% 0%;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 .navigation {
@@ -257,14 +259,14 @@ $white-text: #ffffff;
 }
 
 .product {
-    // background-image: url('../img/bg02.png');
-    // background-position: 50% 0%;
+    
 
     .product-content {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 7% 0 10% 0;
+        z-index: 1;
 
         .product-title {
             text-align: center;
