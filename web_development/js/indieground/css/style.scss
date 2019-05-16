@@ -3,7 +3,6 @@
 $black-background: #000000;
 $white-text: #ffffff;
 
-
 * {
     //border: 1px solid red;
     padding: 0;
@@ -36,7 +35,7 @@ $white-text: #ffffff;
 
 .parallaxBg {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 10%;
     background-image: url('../img/bg02.png');
     background-attachment: scroll;
@@ -50,7 +49,7 @@ $white-text: #ffffff;
     z-index: 2;
 
     .navigation-bar {
-        padding: 20px 1%;
+        padding: 2% 1%;
         display: flex;
         background-color: $black-background;
         color: $white-text;
@@ -800,32 +799,5 @@ $white-text: #ffffff;
 .footer {
     .footer-content {
         z-index: 1;
-    }
-}
-
-
-
-
-/*RESPONSIVE DESIGN*/
-/* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {...} 
-
-// /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 600px) {...} 
-
-// /* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {...} 
-
-// /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-    * {
-        border: 2px solid yellow;
-    }
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    * {
-        border: 1px solid red;
     }
 }
