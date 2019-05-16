@@ -17,6 +17,7 @@ $white-text: #ffffff;
     display: flex;
     flex-direction: column;
     position: relative;
+
 }
 
 .section-wrapper {
@@ -33,10 +34,15 @@ $white-text: #ffffff;
     justify-content: center;
 }
 
-.parallaxBg{
+.parallaxBg {
+    position: absolute;
+    width: 100vw;
+    height: 10%;
     background-image: url('../img/bg02.png');
-    background-position: center top;
+    background-attachment: scroll;
+    background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .navigation {
@@ -186,7 +192,7 @@ $white-text: #ffffff;
     background-attachment: fixed;
 
     .background-layer_dark {
-        background-color: rgba(58, 58, 58, 0.5);
+        background-color: rgba(51, 51, 51, 0.5);
         position: absolute;
         top: 0;
         left: 0;
@@ -206,9 +212,19 @@ $white-text: #ffffff;
         flex-basis: 60%;
 
         p {
+            position: relative;
             text-align: center;
             font-size: 20px;
             padding: 50px 30px;
+        }
+
+        p:after {
+            content: '';
+            display: block;
+            margin: 20px auto;
+            background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+            height: 3px;
+            width: 15%;
         }
     }
 
@@ -219,11 +235,12 @@ $white-text: #ffffff;
         flex-basis: 100%;
 
         .ws-card {
-            background-color: #0f0f0f;
+            background-color: rgba(15, 15, 15, 0.5);
             flex-basis: 22%;
             margin: 2% 1%;
             padding: 2% 0%;
             border-radius: 5px;
+            cursor: pointer;
 
             .ws-card-title {
                 padding: 15px 0px;
@@ -243,6 +260,10 @@ $white-text: #ffffff;
                 letter-spacing: 2px;
             }
         }
+
+        .ws-card:hover {
+            background: linear-gradient(to bottom, #fe7570 0%, #ffa57c 100%);
+        }
     }
 
     .workspace-forward {
@@ -259,8 +280,6 @@ $white-text: #ffffff;
 }
 
 .product {
-    
-
     .product-content {
         display: flex;
         flex-wrap: wrap;
@@ -280,6 +299,15 @@ $white-text: #ffffff;
             h3 {
                 font-size: 50px;
             }
+
+            h3:after {
+                content: '';
+                display: block;
+                margin: 5px auto;
+                background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+                height: 3px;
+                width: 20%;
+            }
         }
 
         .product-cards {
@@ -294,10 +322,17 @@ $white-text: #ffffff;
                 margin: 2% 1%;
                 background-color: #0f0f0f;
                 border-radius: 5px;
+                cursor: pointer;
+                overflow: hidden;
 
                 img {
                     width: 100%;
                     vertical-align: middle;
+                    transition: .5s ease;
+                }
+
+                img:hover {
+                    transform: scale(1.1);
                 }
 
                 .p-description {
@@ -445,6 +480,15 @@ $white-text: #ffffff;
                     font-weight: bold;
                 }
 
+                h3:after {
+                    content: '';
+                    display: block;
+                    margin: 0.5% auto 3% auto;
+                    background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+                    height: 3px;
+                    width: 20%;
+                }
+
                 .gr_wt_at-description {
                     padding: 2% 0px;
 
@@ -492,6 +536,7 @@ $white-text: #ffffff;
         justify-content: center;
         flex-wrap: wrap;
         padding: 8% 0 10% 0;
+        z-index: 1;
 
         .blog-intro {
             display: flex;
@@ -509,6 +554,15 @@ $white-text: #ffffff;
                     letter-spacing: 3px;
                     font-size: 50px;
                     font-weight: bold;
+                }
+
+                h3:after {
+                    content: '';
+                    display: block;
+                    margin: 0.5% auto 3% auto;
+                    background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+                    height: 3px;
+                    width: 20%;
                 }
             }
 
@@ -699,6 +753,7 @@ $white-text: #ffffff;
         display: flex;
         justify-content: center;
         padding: 8% 0 10% 0;
+        z-index: 1;
 
         .useful-links-section {
             flex-basis: 22%;
@@ -739,5 +794,38 @@ $white-text: #ffffff;
                 }
             }
         }
+    }
+}
+
+.footer {
+    .footer-content {
+        z-index: 1;
+    }
+}
+
+
+
+
+/*RESPONSIVE DESIGN*/
+/* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {...} 
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...} 
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...} 
+
+// /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    * {
+        border: 2px solid yellow;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    * {
+        border: 1px solid red;
     }
 }
