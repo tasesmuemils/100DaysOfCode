@@ -148,7 +148,7 @@ $white-text: #ffffff;
     background-image: url("../img/intro_bg.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 
     .background-layer-intro {
         background: linear-gradient(to bottom, rgba(232, 75, 108, 0.6) 0%, #fe7570 100%);
@@ -163,7 +163,6 @@ $white-text: #ffffff;
     .intro-content {
         z-index: 1;
         text-align: center;
-        width: 70%;
         padding: 18% 0% 13% 0%;
 
         p {
@@ -800,4 +799,57 @@ $white-text: #ffffff;
     .footer-content {
         z-index: 1;
     }
+}
+
+@media (max-width: 1050px) {
+  
+    /*NAVIGATION*/
+    .navigation {
+        .navigation-bar {
+            padding: 1% 1%;
+            justify-content: space-between;
+
+            .navigation-section-items {
+                //width: 70%;
+                justify-content: space-around;
+            }
+
+            .navigation-items {
+
+                li {
+                    padding: 10px 8px;
+                    font-size: 11px;
+                }
+            }
+
+            .navigation-social {
+                padding-right: 7px;
+            }
+        }
+    }
+
+    /*NAVIGATION END*/
+
+    /*INTRO*/
+    .intro {
+
+        .intro-content {
+            p {
+                font-weight: 700;
+                padding: 1%;
+            }
+
+            h1 {
+                padding: 10px 0px;
+                font-size: 60px;
+                line-height: 55px;
+            }
+
+            .intro-arrow {
+                padding: 1% 0px;
+            }
+        }
+    }
+
+    /*INTRO END*/
 }
