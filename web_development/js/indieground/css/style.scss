@@ -89,7 +89,7 @@ $white-text: #ffffff;
             li {
                 padding: 10px 15px;
                 font-weight: 700;
-                font-size: 12px;
+                font-size: 13px;
                 letter-spacing: 2px;
                 transition: all 0.3s;
             }
@@ -149,6 +149,7 @@ $white-text: #ffffff;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 90vh;
 
     .background-layer-intro {
         background: linear-gradient(to bottom, rgba(232, 75, 108, 0.6) 0%, #fe7570 100%);
@@ -163,7 +164,7 @@ $white-text: #ffffff;
     .intro-content {
         z-index: 1;
         text-align: center;
-        padding: 18% 0% 13% 0%;
+        padding: 16% 0% 11% 0%;
 
         p {
             font-weight: 700;
@@ -171,13 +172,13 @@ $white-text: #ffffff;
         }
 
         h1 {
-            padding: 20px 0px;
+            padding: 10px 0px;
             font-size: 80px;
             line-height: 65px;
         }
 
         .intro-arrow {
-            padding: 4% 0px;
+            padding: 2% 0px;
         }
     }
 }
@@ -573,7 +574,7 @@ $white-text: #ffffff;
                     width: 60%;
                     padding: 1% 2%;
                     flex-basis: 70%;
-                    font-size: 14px;
+                    font-size: 15px;
                     letter-spacing: 2px;
                     font-weight: 100;
                 }
@@ -614,9 +615,9 @@ $white-text: #ffffff;
 
                 .blog-items-description {
                     p {
-                        font-size: 13px;
+                        font-size: 14px;
                         letter-spacing: 1px;
-                        padding: 3% 5%;
+                        padding: 2% 5%;
                     }
                 }
             }
@@ -750,7 +751,7 @@ $white-text: #ffffff;
         text-align: center;
         display: flex;
         justify-content: center;
-        padding: 8% 0 10% 0;
+        padding: 8% 0 7% 0;
         z-index: 1;
 
         .useful-links-section {
@@ -802,7 +803,7 @@ $white-text: #ffffff;
 }
 
 @media (max-width: 1050px) {
-  
+
     /*NAVIGATION*/
     .navigation {
         .navigation-bar {
@@ -852,4 +853,154 @@ $white-text: #ffffff;
     }
 
     /*INTRO END*/
+
+    /*WORKSPACE*/
+    .workspace {
+
+        .workspace-content {
+            padding: 2% 0%;
+        }
+
+        .workspace-description {
+            flex-basis: 80%;
+
+            p {
+                font-size: 18px;
+                padding: 50px 0px;
+            }
+        }
+
+        .workspace-cards {
+            .ws-card {
+                padding: 2px 0%;
+
+                .ws-card-description {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .workspace-forward {
+            margin: 3% 0%;
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+
+    /*WORKSPACE END*/
+
+    /*PRODUCT*/
+    .product {
+        .product-content {
+            .product-cards {
+                .p-card {
+                    .p-description {
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*PRODUCT END*/
+
+    /*GR-WT-AT*/
+    .gr-wt-at {
+        .gr_wt_at-content {
+            .gr_wt_at-text-img-wrapper {
+                .gr_wt_at-text-content {
+                    padding: 0 3%;
+                    flex-basis: 45%;
+
+                    p {
+                        font-size: 13px;
+                        padding: 2% 0%;
+                    }
+
+                    h3 {
+                        font-size: 40px;
+                        line-height: 40px;
+                        padding: 2% 0%;
+                    }
+
+                    h3:after {
+                        margin: 3% auto 3% auto;
+                        width: 30%;
+                    }
+
+                    .gr_wt_at-description {
+                        padding: 2% 0px;
+
+                        p {
+                            flex-basis: 100%;
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .gr_wt_at-image {
+                    img {
+                        max-width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    /*GR-WT-AT END*/
+
+
+    /*CONTACT*/
+    .contact {
+        .contact-content {
+            .contact-section {
+                flex-basis: 45%;
+
+                .contact-section-title {
+                    p {
+                        font-size: 13px;
+                    }
+
+                    h3 {
+                        font-size: 40px;
+                    }
+                }
+
+                form {
+                    .contact-section-email {
+                        padding: 10px;
+
+                        input {
+                            width: 60%;
+                        }
+
+                        button {
+                            font-size: 13px;
+                            padding: 5px 5px;
+                            width: 25%;
+                        }
+                    }
+
+                    .contact-section-confirm {
+                        label {
+                            font-size: 11px;
+                        }
+                    }
+                }
+
+                .contact-icons {
+                    * {
+                        font-size: 25px;
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*CONTACT END*/
 }
