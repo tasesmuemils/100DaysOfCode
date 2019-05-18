@@ -44,6 +44,7 @@ $white-text: #ffffff;
     background-size: auto;
 }
 
+
 .navigation {
     position: fixed;
     z-index: 2;
@@ -101,6 +102,9 @@ $white-text: #ffffff;
 
             a:hover {
                 color: #fe7570;
+            }
+            .toogle-button {
+                display: none;
             }
         }
 
@@ -522,6 +526,10 @@ $white-text: #ffffff;
                     height: auto;
                     vertical-align: middle;
                 }
+            }
+
+            #img-corusel {
+                display: flex;
             }
         }
     }
@@ -1003,4 +1011,43 @@ $white-text: #ffffff;
     }
 
     /*CONTACT END*/
+}
+
+@media (max-width: 900px) {
+    /*NAVIGATION*/
+    .navigation {
+        .navigation-bar {
+            .navigation-section-items {
+                .navigation-items {
+                    justify-content: end;
+                    a {
+                        display: none;
+                    }
+                    .toogle-button {
+                        display: block;
+                    }
+
+                    .resposive-toogle {
+                        position: relative;
+                        .toogle-button {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                        a {
+                            display: bloc;
+                            text-align: center;
+                        }
+                    }
+                  
+                }
+    
+                .navigation-social, .navigation-search {
+                    display: none;
+                } 
+            }
+
+            
+        }
+    }
 }

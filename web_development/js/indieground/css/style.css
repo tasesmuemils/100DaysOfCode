@@ -88,6 +88,9 @@
 .navigation .navigation-bar .navigation-items a:hover {
   color: #fe7570;
 }
+.navigation .navigation-bar .navigation-items .toogle-button {
+  display: none;
+}
 .navigation .navigation-bar .navigation-social {
   padding-right: 15px;
   font-size: 12px;
@@ -443,6 +446,9 @@
   height: auto;
   vertical-align: middle;
 }
+.gr-wt-at .gr_wt_at-content .gr_wt_at-text-img-wrapper #img-corusel {
+  display: flex;
+}
 
 .blog .blog-content {
   text-align: center;
@@ -790,6 +796,33 @@
   }
 
   /*CONTACT END*/
+}
+@media (max-width: 900px) {
+  /*NAVIGATION*/
+  .navigation .navigation-bar .navigation-section-items .navigation-items {
+    justify-content: end;
+  }
+  .navigation .navigation-bar .navigation-section-items .navigation-items a {
+    display: none;
+  }
+  .navigation .navigation-bar .navigation-section-items .navigation-items .toogle-button {
+    display: block;
+  }
+  .navigation .navigation-bar .navigation-section-items .navigation-items .resposive-toogle {
+    position: relative;
+  }
+  .navigation .navigation-bar .navigation-section-items .navigation-items .resposive-toogle .toogle-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navigation .navigation-bar .navigation-section-items .navigation-items .resposive-toogle a {
+    display: bloc;
+    text-align: center;
+  }
+  .navigation .navigation-bar .navigation-section-items .navigation-social, .navigation .navigation-bar .navigation-section-items .navigation-search {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

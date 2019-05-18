@@ -13,3 +13,25 @@ function parallaxEffect(e) {
 }
 
 window.addEventListener('scroll', parallaxEffect);
+
+
+//Images corusel
+const coruselContainer = document.getElementById('img-corusel');
+const coruselImages = coruselContainer.getElementsByTagName('img');
+
+let counter = 1;
+
+//Toogle navigation button 
+const toogleButton = document.querySelector('.toogle-button');
+
+function toogleMenu(e) {
+    console.log(e);
+    const navigationItems = document.getElementById('nav-items');
+    if (navigationItems.classList.contains('resposive-toogle')) {
+        navigationItems.classList.remove('resposive-toogle');
+    } else {
+        navigationItems.classList.add('resposive-toogle');
+    }
+}
+
+toogleButton.addEventListener('click', toogleMenu);
