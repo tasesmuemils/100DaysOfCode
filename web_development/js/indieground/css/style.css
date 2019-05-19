@@ -42,11 +42,12 @@
 .navigation {
   position: fixed;
   z-index: 2;
+  background-color: #1f1f1f;
 }
 .navigation .navigation-bar {
   padding: 2% 1%;
   display: flex;
-  background-color: #000000;
+  background-color: #1f1f1f;
   color: #ffffff;
   justify-content: space-between;
   flex: 1;
@@ -59,9 +60,13 @@
 .navigation .navigation-bar .logo img {
   margin: 0;
   width: 130px;
+  vertical-align: middle;
+}
+.navigation .navigation-bar .logo #close-toogle {
+  display: none;
 }
 .navigation .navigation-bar .navigation-section-items {
-  width: 70%;
+  width: 73%;
   display: flex;
   justify-content: space-between;
 }
@@ -799,28 +804,83 @@
 }
 @media (max-width: 900px) {
   /*NAVIGATION*/
-  .navigation .navigation-bar .navigation-section-items .navigation-items {
-    justify-content: end;
+  .navigation {
+    position: relative;
+  }
+  .navigation .navigation-bar {
+    padding: 4% 5%;
+  }
+  .navigation .navigation-bar .navigation-section-items {
+    width: 5%;
   }
   .navigation .navigation-bar .navigation-section-items .navigation-items a {
     display: none;
   }
   .navigation .navigation-bar .navigation-section-items .navigation-items .toogle-button {
     display: block;
+    text-align: left;
   }
-  .navigation .navigation-bar .navigation-section-items .navigation-items .resposive-toogle {
-    position: relative;
+  .navigation .navigation-bar .navigation-section-items .navigation-social,
+.navigation .navigation-bar .navigation-section-items .navigation-search {
+    display: none;
   }
-  .navigation .navigation-bar .navigation-section-items .navigation-items .resposive-toogle .toogle-button {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .navigation .resposive-toogle {
+    padding: 2% 1%;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in;
   }
-  .navigation .navigation-bar .navigation-section-items .navigation-items .resposive-toogle a {
-    display: bloc;
+  .navigation .resposive-toogle .logo {
+    flex-basis: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-self: center;
+    padding: 20px 15px;
+    margin: 0px;
+  }
+  .navigation .resposive-toogle .logo img {
+    margin: 0;
+    width: 130px;
+    height: 16px;
+  }
+  .navigation .resposive-toogle .logo #close-toogle {
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .navigation .resposive-toogle .logo #close-toogle:hover {
+    color: #fe7570;
+  }
+  .navigation .resposive-toogle .navigation-section-items {
+    flex-basis: 100%;
+  }
+  .navigation .resposive-toogle .navigation-section-items .navigation-items {
+    padding-top: 10px;
+  }
+  .navigation .resposive-toogle .navigation-section-items .navigation-items li {
+    text-align: left;
+    border-top: #686868 1px solid;
+    padding: 20px 15px;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+  }
+  .navigation .resposive-toogle .navigation-section-items .navigation-items a {
+    flex-basis: 100%;
+    display: block;
     text-align: center;
+    color: #ffffff;
+    text-decoration: none;
   }
-  .navigation .navigation-bar .navigation-section-items .navigation-social, .navigation .navigation-bar .navigation-section-items .navigation-search {
+  .navigation .resposive-toogle .navigation-section-items .navigation-items a:hover {
+    color: #fe7570;
+  }
+  .navigation .resposive-toogle .navigation-section-items .navigation-items .toogle-button {
+    display: none;
+  }
+  .navigation .resposive-toogle .navigation-icons {
     display: none;
   }
 }

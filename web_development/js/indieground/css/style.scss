@@ -48,11 +48,12 @@ $white-text: #ffffff;
 .navigation {
     position: fixed;
     z-index: 2;
+    background-color: #1f1f1f;
 
     .navigation-bar {
         padding: 2% 1%;
         display: flex;
-        background-color: $black-background;
+        background-color: #1f1f1f;
         color: $white-text;
         justify-content: space-between;
         flex: 1;
@@ -66,11 +67,16 @@ $white-text: #ffffff;
             img {
                 margin: 0;
                 width: 130px;
+                vertical-align: middle;
+            }
+
+            #close-toogle {
+                display: none;
             }
         }
 
         .navigation-section-items {
-            width: 70%;
+            width: 73%;
             display: flex;
             justify-content: space-between;
         }
@@ -103,6 +109,7 @@ $white-text: #ffffff;
             a:hover {
                 color: #fe7570;
             }
+
             .toogle-button {
                 display: none;
             }
@@ -1014,40 +1021,105 @@ $white-text: #ffffff;
 }
 
 @media (max-width: 900px) {
+
     /*NAVIGATION*/
     .navigation {
+        position: relative;
         .navigation-bar {
+            padding: 4% 5%;
             .navigation-section-items {
+                width: 5%;
+                
                 .navigation-items {
-                    justify-content: end;
+
                     a {
                         display: none;
                     }
+
                     .toogle-button {
                         display: block;
+                        text-align: left;
                     }
-
-                    .resposive-toogle {
-                        position: relative;
-                        .toogle-button {
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                        }
-                        a {
-                            display: bloc;
-                            text-align: center;
-                        }
-                    }
-                  
                 }
-    
-                .navigation-social, .navigation-search {
+
+                .navigation-social,
+                .navigation-search {
                     display: none;
-                } 
+                }
+            }
+        }
+
+        .resposive-toogle {
+            padding: 2% 1%;
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 100%;
+            flex-wrap: wrap;
+            transition: all 0.3s ease-in;
+
+
+            .logo {
+                flex-basis: 100%;
+                justify-content: space-between;
+                display: flex;
+                align-self: center;
+                padding: 20px 15px;
+                margin: 0px;
+
+
+                img {
+                    margin: 0;
+                    width: 130px;
+                    height: 16px;
+                }
+
+                #close-toogle {
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
+
+                #close-toogle:hover {
+                    color: #fe7570;
+                }
             }
 
-            
+            .navigation-section-items {
+                flex-basis: 100%;
+                
+                .navigation-items {
+                    padding-top: 10px;
+                    li {
+                        text-align: left;
+                        border-top: #686868 1px solid;
+                        padding: 20px 15px;
+                        font-weight: 700;
+                        font-size: 11px;
+                        letter-spacing: 2px;
+                        transition: all 0.3s;
+                    }
+
+                    a {
+                        flex-basis: 100%;
+                        display: block;
+                        text-align: center;
+                        color: $white-text;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: #fe7570;
+                    }
+                    .toogle-button {
+                        display: none;
+                    }
+                }
+
+                
+            }
+
+            .navigation-icons {
+                display: none;
+            }
         }
     }
 }

@@ -23,15 +23,19 @@ let counter = 1;
 
 //Toogle navigation button 
 const toogleButton = document.querySelector('.toogle-button');
+const closeToogle = document.getElementById('close-toogle');
+const navigationItems = document.getElementById('nav-items');
 
 function toogleMenu(e) {
     console.log(e);
-    const navigationItems = document.getElementById('nav-items');
-    if (navigationItems.classList.contains('resposive-toogle')) {
-        navigationItems.classList.remove('resposive-toogle');
-    } else {
-        navigationItems.classList.add('resposive-toogle');
-    }
+    navigationItems.classList.add('resposive-toogle');
+    navigationItems.classList.remove('navigation-bar');
+}
+
+function closeMenu() {
+    navigationItems.classList.add('navigation-bar');
+    navigationItems.classList.remove('resposive-toogle');
 }
 
 toogleButton.addEventListener('click', toogleMenu);
+closeToogle.addEventListener('click', closeMenu);
