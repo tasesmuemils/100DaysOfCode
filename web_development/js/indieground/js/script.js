@@ -16,31 +16,41 @@ window.addEventListener('scroll', parallaxEffect);
 
 
 //Images carousel
+const sliderWrapper = document.getElementById('slider');
 const carouselContainer = document.getElementById('img-carousel');
 const carouselImages = carouselContainer.querySelectorAll('img');
 const carouselImagesCount = carouselImages.length;
+
+const sliderWrapperHeight = carouselImages[carouselImages.length - 1].height + 'px';
+const sliderWrapperWidth = carouselImages[carouselImages.length - 1].width  + 'px';
+
 const carouselContainerWidth = carouselImagesCount * carouselImages[0].width;
 
-const sliderWrapper = document.getElementById('slider');
-const sliderWrapperHeight = carouselImages[carouselImages.length - 1].height;
-const sliderWrapperWidth = carouselImages[carouselImages.length - 1].width;
-sliderWrapper.style.width = sliderWrapperWidth + 'px';
-sliderWrapper.style.height = sliderWrapperHeight + 'px';
+
+
+sliderWrapper.style.width = sliderWrapperWidth;
+sliderWrapper.style.height = sliderWrapperHeight;
 
 carouselContainer.style.width = carouselContainerWidth + 12 + 'px';
-carouselContainer.style.marginLeft = -carouselImages[carouselImages.length - 1].width + 'px';
-carouselContainer.insertBefore(carouselImages[carouselImages.length - 1], carouselContainer.firstChild);
+carouselContainer.style.marginLeft = '-' + sliderWrapperWidth;
+//carouselContainer.insertBefore(carouselContainer.lastChild, carouselContainer.firstChild);
+console.log(carouselImages[carouselImages.length - 1].currentSrc);
 
 let counter = 1;
 
+var inter = setInterval(carouselAnimation, 1000);
+
 function carouselAnimation() {
-    carouselContainer.style.left = (carouselImages[carouselImages.length - 1] * 2);
-    console.log(carouselContainer.style.left);
-    carouselContainer.insertBefore(carouselImages[carouselImages.length - 1], carouselContainer.firstChild);
-    carouselContainer.style.left = '';
+    carouselContainer.classList.add('imgCarouselAnimation');
+    carouselContainer.style.transform = 'translateX(' + '-' + sliderWrapperWidth + ')';
+    console.log(carouselContainer.style.transform, carouselImages[0].currentSrc);
+    // carouselContainer.style.marginLeft = - carouselImages[carouselImages.length - 1].width * 2 + 'px';
+    // console.log(carouselContainer.classList);
+    //carouselContainer.insertBefore(carouselContainer.firstChild, carouselContainer.firstChild);
+
 }
 
-setInterval(carouselAnimation, 1000);
+
 
 
 
