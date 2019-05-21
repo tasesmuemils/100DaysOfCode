@@ -528,11 +528,11 @@ $white-text: #ffffff;
             }
 
             .gr_wt_at-image {
-                * {
-                    padding: 0px;
-                    margin: 0px;
+                overflow: hidden;
+                .imgCarouselAnimation {
+                    transition: 0.5s;
                 }
-                //overflow: hidden;
+                
                 img {
                     max-width: 100%;
                     height: auto;
