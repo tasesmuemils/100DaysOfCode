@@ -18,11 +18,12 @@ window.addEventListener('scroll', parallaxEffect);
 //Images carousel
 const sliderWrapper = document.getElementById('slider');
 const carouselContainer = document.getElementById('img-carousel');
-const carouselImages = carouselContainer.querySelectorAll('img');
+const carouselImagesNodeList = carouselContainer.querySelectorAll('img');
+const carouselImages = Array.from(carouselImagesNodeList);
 const carouselImagesCount = carouselImages.length;
 
 const sliderWrapperHeight = carouselImages[carouselImages.length - 1].height + 'px';
-const sliderWrapperWidth = carouselImages[carouselImages.length - 1].width  + 'px';
+const sliderWrapperWidth = carouselImages[carouselImages.length - 1].width + 'px';
 
 const carouselContainerWidth = carouselImagesCount * carouselImages[0].width;
 
@@ -32,21 +33,32 @@ sliderWrapper.style.width = sliderWrapperWidth;
 sliderWrapper.style.height = sliderWrapperHeight;
 
 carouselContainer.style.width = carouselContainerWidth + 12 + 'px';
-carouselContainer.style.marginLeft = '-' + sliderWrapperWidth;
-//carouselContainer.insertBefore(carouselContainer.lastChild, carouselContainer.firstChild);
-console.log(carouselImages[carouselImages.length - 1].currentSrc);
 
-let counter = 1;
+carouselContainer.insertBefore(carouselContainer.lastElementChild, carouselContainer.firstElementChild);
+carouselContainer.style.marginLeft = -carouselImages[carouselImagesCount - 1].width + 'px';
 
-var inter = setInterval(carouselAnimation, 1000);
+
+window.setInterval(carouselAnimation, 1000);
 
 function carouselAnimation() {
+    
     carouselContainer.classList.add('imgCarouselAnimation');
-    carouselContainer.style.transform = 'translateX(' + '-' + sliderWrapperWidth + ')';
-    console.log(carouselContainer.style.transform, carouselImages[0].currentSrc);
+    //carouselContainer.style.transform = 'translateX(' + '-' + sliderWrapperWidth + ')';
+    carouselContainer.insertBefore(carouselContainer.lastElementChild, carouselContainer.firstElementChild);
+
+    console.log(carouselContainer.style.transform);
+
+    //console.log(intervalCount);
+    // carouselContainer.classList.add('imgCarouselAnimation');
+    // carouselContainer.style.transform = 'translateX(' + '-' + sliderWrapperWidth + ')';
+
+    //console.log(carouselImages);
+
+    //carouselContainer.style.transform = 'translateX(0px)';
+    //carouselContainer.classList.remove('imgCarouselAnimation');
     // carouselContainer.style.marginLeft = - carouselImages[carouselImages.length - 1].width * 2 + 'px';
-    // console.log(carouselContainer.classList);
-    //carouselContainer.insertBefore(carouselContainer.firstChild, carouselContainer.firstChild);
+    //console.log(carouselContainer.style.transform);
+    
 
 }
 

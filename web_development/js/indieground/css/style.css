@@ -446,13 +446,16 @@
   letter-spacing: 5px;
   cursor: pointer;
 }
+.gr-wt-at .gr_wt_at-content .gr_wt_at-text-img-wrapper .gr_wt_at-image {
+  overflow: hidden;
+}
+.gr-wt-at .gr_wt_at-content .gr_wt_at-text-img-wrapper .gr_wt_at-image .imgCarouselAnimation {
+  transition: 0.5s;
+}
 .gr-wt-at .gr_wt_at-content .gr_wt_at-text-img-wrapper .gr_wt_at-image img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-}
-.gr-wt-at .gr_wt_at-content .gr_wt_at-text-img-wrapper #img-corusel {
-  display: flex;
 }
 
 .blog .blog-content {
