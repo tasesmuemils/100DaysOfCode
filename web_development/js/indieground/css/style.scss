@@ -4,7 +4,6 @@ $black-background: #000000;
 $white-text: #ffffff;
 
 * {
-    //border: 1px solid red;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -71,7 +70,7 @@ $white-text: #ffffff;
             }
 
             #close-toogle {
-                display: none;
+                opacity: 0;
             }
         }
 
@@ -470,7 +469,7 @@ $white-text: #ffffff;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 6% 0 6% 0;
+            padding: 8% 0 8% 0;
 
             .gr_wt_at-text-content {
                 z-index: 2;
@@ -530,7 +529,7 @@ $white-text: #ffffff;
             .gr_wt_at-image {
                 overflow: hidden;
                 .imgCarouselAnimation {
-                    transition: 0.5s;
+                    transition: 0.4s ease-in-out;
                 }
                 
                 img {
@@ -1056,7 +1055,7 @@ $white-text: #ffffff;
             justify-content: space-between;
             flex-basis: 100%;
             flex-wrap: wrap;
-            transition: all 0.3s ease-in;
+            
 
 
             .logo {
