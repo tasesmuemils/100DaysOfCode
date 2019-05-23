@@ -47,12 +47,10 @@ for (let i = 0; i < sliderWrapper.length; i++) {
     const carouselImages = Array.from(carouselImagesNodeList);
     const carouselImagesCount = carouselImages.length;
 
-    const sliderWrapperHeight = carouselImages[carouselImagesCount - 1].height + 'px';
     const sliderWrapperWidth = carouselImages[carouselImagesCount - 1].width + 'px';
 
 
     sliderWrapper[i].style.width = sliderWrapperWidth;
-    sliderWrapper[i].style.height = sliderWrapperHeight;    
 
     const carouselContainerWidth = carouselImagesCount * carouselImages[0].width;
     
