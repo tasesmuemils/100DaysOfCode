@@ -50,13 +50,15 @@ for (let i = 0; i < sliderWrapper.length; i++) {
     const sliderWrapperHeight = carouselImages[carouselImagesCount - 1].height + 'px';
     const sliderWrapperWidth = carouselImages[carouselImagesCount - 1].width + 'px';
 
+
     sliderWrapper[i].style.width = sliderWrapperWidth;
-    sliderWrapper[i].style.height = sliderWrapperHeight;
+    sliderWrapper[i].style.height = sliderWrapperHeight;    
 
     const carouselContainerWidth = carouselImagesCount * carouselImages[0].width;
+    
 
     carouselContainer.style.width = carouselContainerWidth + 12 + 'px';
-    carouselContainer.style.marginLeft = -carouselImages[carouselImagesCount - 1].width + 'px';
+    carouselContainer.style.marginLeft = -carouselImages[carouselImagesCount - 1].width;
 
     var animationInterval = setInterval(carouselAnimation, 3000);
 
