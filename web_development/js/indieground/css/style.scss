@@ -43,6 +43,50 @@ $white-text: #ffffff;
     background-size: auto;
 }
 
+.button-hover {
+    position: relative;
+    background: none;
+    padding: 7px 35px;
+    border: 3px solid #ffa57c;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    * {
+        transition: all 0.3s;
+    }
+
+    span {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        color: $white-text;
+        letter-spacing: 5px;
+    }
+
+    i {
+        position: absolute;
+        opacity: 0;
+        margin-top: 4px;
+        left: 30px;
+    }
+}
+
+.button-hover:hover {
+    background-color: #fe7570;
+    border-color: #fe7570;
+
+    i {
+        opacity: 1;
+        color: $white-text;
+    }
+
+    span {
+        transform: translateX(20px);
+    }
+
+}
+
+
 
 .navigation {
     position: fixed;
@@ -199,6 +243,7 @@ $white-text: #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: top center;
 
     .background-layer_dark {
         background-color: rgba(51, 51, 51, 0.5);
@@ -367,17 +412,6 @@ $white-text: #ffffff;
 
         .product-view-button {
             padding: 2% 0%;
-
-            button {
-                background: none;
-                padding: 7px 35px;
-                border: 3px solid #ffa57c;
-                font-size: 12px;
-                font-weight: 700;
-                color: $white-text;
-                letter-spacing: 5px;
-                cursor: pointer;
-            }
         }
     }
 }
@@ -464,8 +498,12 @@ $white-text: #ffffff;
 
 
         .gr_wt_at-text-img-wrapper {
+            *{
+                border: 1px red solid;
+            }
             position: relative;
             display: flex;
+            flex-basis: 90%;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -512,31 +550,32 @@ $white-text: #ffffff;
 
                 .gr_wt_at-button-wrapper {
                     padding: 2% 0%;
-
-                    button {
-                        background: none;
-                        padding: 7px 35px;
-                        border: 3px solid #ffa57c;
-                        font-size: 12px;
-                        font-weight: 700;
-                        color: $white-text;
-                        letter-spacing: 5px;
-                        cursor: pointer;
-                    }
                 }
             }
 
             .gr_wt_at-image {
+                flex-basis: 50%;
                 overflow: hidden;
+                display: flex;
+                box-sizing: border-box;
+                width: 50%;
+                
+                .img-carousel {
+                    display: flex;
+                    flex-basis: 100%;
+                    //height: 50%;
+                    img {
+                        max-width: 100%;
+                        
+                        vertical-align: middle;
+                    }
+                }
+
                 .imgCarouselAnimation {
                     transition: 0.4s ease-in-out;
                 }
+
                 
-                img {
-                    max-width: 100%;
-                    height: auto;
-                    vertical-align: middle;
-                }
             }
         }
     }
@@ -640,17 +679,6 @@ $white-text: #ffffff;
 
         .blog-button {
             padding: 2% 0%;
-
-            button {
-                background: none;
-                padding: 7px 35px;
-                border: 3px solid #ffa57c;
-                font-size: 12px;
-                font-weight: 700;
-                color: $white-text;
-                letter-spacing: 5px;
-                cursor: pointer;
-            }
         }
     }
 }
@@ -913,7 +941,12 @@ $white-text: #ffffff;
                 .p-card {
                     .p-description {
                         p {
-                            text-align: center;
+                            //text-align: center;
+                            font-size: 13px;
+                        }
+
+                        .p-price-free {
+                            font-size: 13px;
                         }
                     }
                 }
@@ -954,12 +987,6 @@ $white-text: #ffffff;
                             flex-basis: 100%;
                             font-size: 13px;
                         }
-                    }
-                }
-
-                .gr_wt_at-image {
-                    img {
-                        max-width: 90%;
                     }
                 }
             }
@@ -1025,11 +1052,13 @@ $white-text: #ffffff;
     /*NAVIGATION*/
     .navigation {
         position: relative;
+
         .navigation-bar {
             padding: 4% 5%;
+
             .navigation-section-items {
                 width: 5%;
-                
+
                 .navigation-items {
 
                     a {
@@ -1055,7 +1084,7 @@ $white-text: #ffffff;
             justify-content: space-between;
             flex-basis: 100%;
             flex-wrap: wrap;
-            
+
 
 
             .logo {
@@ -1085,9 +1114,10 @@ $white-text: #ffffff;
 
             .navigation-section-items {
                 flex-basis: 100%;
-                
+
                 .navigation-items {
                     padding-top: 10px;
+
                     li {
                         text-align: left;
                         border-top: #686868 1px solid;
@@ -1109,12 +1139,13 @@ $white-text: #ffffff;
                     a:hover {
                         color: #fe7570;
                     }
+
                     .toogle-button {
                         display: none;
                     }
                 }
 
-                
+
             }
 
             .navigation-icons {
@@ -1122,4 +1153,48 @@ $white-text: #ffffff;
             }
         }
     }
+
+    /*WORKSPACE*/
+    .workspace {
+        background-size: 300%;
+        background-attachment: unset;
+
+
+
+        .workspace-content {
+            padding: 4% 0 2% 0;
+        }
+
+        .workspace-description {
+            flex-basis: 80%;
+        }
+
+        .workspace-cards {
+            flex-wrap: wrap;
+
+            .ws-card {
+                flex-basis: 45%;
+            }
+        }
+    }
+
+    /*WORKSPACE END*/
+
+    /*PRODUCT*/
+    .product {
+        .product-content {
+            .product-cards {
+                .p-card {
+                    flex-basis: 30%;
+                }
+            }
+        }
+    }
+
+    /*PRODUCT END*/
+
+    /*GR-WT-AT*/
+   
+
+    /*GR-WT-AT END*/
 }
