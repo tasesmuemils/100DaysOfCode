@@ -1,3 +1,10 @@
+//Page louder
+window.addEventListener('load', () => {
+    const preload = document.querySelector('.page-loader');
+    preload.classList.add('loader-finish');
+})
+
+
 //Toogle navigation button 
 const toogleButton = document.querySelector('.toogle-button');
 const closeToogle = document.getElementById('close-toogle');
