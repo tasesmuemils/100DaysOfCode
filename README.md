@@ -238,4 +238,4 @@ Working on Chingu project
 CHingu project style CSS
 
 .,.,
-.jsj.
+.jsj..
