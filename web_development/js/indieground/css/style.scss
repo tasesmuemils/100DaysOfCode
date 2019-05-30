@@ -1000,11 +1000,21 @@ $white-text: #ffffff;
 
 /*USEFUL LINKS END*/
 
+/*FOOTER*/
 .footer {
     .footer-content {
         z-index: 1;
+        text-align: center;
+
+        h3 {
+            font-weight: 100;
+            font-size: 15px;
+            padding: 2px;
+        }
     }
 }
+
+/*FOOTER END*/
 
 @media (max-width: 1050px) {
 
@@ -1015,7 +1025,6 @@ $white-text: #ffffff;
             justify-content: space-between;
 
             .navigation-section-items {
-                //width: 70%;
                 justify-content: space-around;
             }
 
@@ -1102,7 +1111,6 @@ $white-text: #ffffff;
                 .p-card {
                     .p-description {
                         p {
-                            //text-align: center;
                             font-size: 13px;
                         }
 
@@ -1121,15 +1129,12 @@ $white-text: #ffffff;
     .gr-wt-at {
         .gr_wt_at-content {
             .gr_wt_at-text-img-wrapper {
-
-
                 .gr_wt_at-text-content {
-
-                    padding: 0 3%;
+                    padding: 0% 3%;
 
                     p {
                         font-size: 13px;
-                        padding: 2% 0%;
+                        padding: 2% 0% 0% 0%;
                     }
 
                     h3 {
@@ -1139,12 +1144,12 @@ $white-text: #ffffff;
                     }
 
                     h3:after {
-                        margin: 3% auto 3% auto;
+                        margin: 3% auto 2% auto;
                         width: 30%;
                     }
 
                     .gr_wt_at-description {
-                        padding: 2% 0px;
+                        padding: 0% 0px;
 
                         p {
                             flex-basis: 100%;
@@ -1163,7 +1168,7 @@ $white-text: #ffffff;
     .contact {
         .contact-content {
             .contact-section {
-                flex-basis: 45%;
+                flex-basis: 50%;
 
                 .contact-section-title {
                     p {
@@ -1211,6 +1216,7 @@ $white-text: #ffffff;
 }
 
 @media (max-width: 900px) {
+
 
     /*NAVIGATION*/
     .navigation {
@@ -1322,21 +1328,15 @@ $white-text: #ffffff;
         background-size: 300%;
         background-attachment: unset;
 
-
-
         .workspace-content {
             padding: 4% 0 2% 0;
-        }
 
-        .workspace-description {
-            flex-basis: 80%;
-        }
+            .workspace-cards {
+                flex-wrap: wrap;
 
-        .workspace-cards {
-            flex-wrap: wrap;
-
-            .ws-card {
-                flex-basis: 45%;
+                .ws-card {
+                    flex-basis: 45%;
+                }
             }
         }
     }
@@ -1364,25 +1364,7 @@ $white-text: #ffffff;
                     padding: 0 2%;
 
                     p {
-                        font-size: 13px;
-                        margin: 0% 0%;
-                    }
-
-                    h3 {
-                        font-size: 40px;
-                        line-height: 37px;
-                    }
-
-                    h3:after {
-                        width: 30%;
-                    }
-
-                    .gr_wt_at-description {
-                        box-sizing: border-box;
-
-                        p {
-                            font-size: 13px;
-                        }
+                        margin: 0%;
                     }
 
                     .gr_wt_at-button-wrapper {
@@ -1424,7 +1406,7 @@ $white-text: #ffffff;
 
                     p {
 
-                        flex-basis: 60%;
+                        flex-basis: 80%;
                         font-size: 13px;
                     }
                 }
@@ -1459,23 +1441,9 @@ $white-text: #ffffff;
     .contact {
         .contact-content {
             .contact-section {
-                flex-basis: 50%;
-
-                .contact-section-title {
-                    p {
-                        font-size: 13px;
-                    }
-
-                    h3 {
-                        font-size: 40px;
-                    }
-                }
-
                 form {
                     .contact-section-email {
-
                         button {
-                            padding: 5px;
                             width: 30%;
                         }
                     }
@@ -1502,10 +1470,6 @@ $white-text: #ffffff;
         .intro-content {
             padding: 0%;
 
-            p {
-                padding: 1%;
-            }
-
             h1 {
                 padding: 5px 0px;
                 font-size: 50px;
@@ -1523,7 +1487,6 @@ $white-text: #ffffff;
         z-index: 1;
 
         .workspace-content {
-
 
             .workspace-description {
                 flex-basis: 90%;
@@ -1552,14 +1515,7 @@ $white-text: #ffffff;
     /*PRODUCTS*/
     .product {
         .product-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 7% 0 10% 0;
-            z-index: 1;
-
             .product-title {
-                text-align: center;
 
                 p {
                     font-size: 13px;
@@ -1577,7 +1533,6 @@ $white-text: #ffffff;
             .product-cards {
                 .p-card {
                     flex-basis: 40%;
-
                 }
             }
         }
@@ -1620,33 +1575,21 @@ $white-text: #ffffff;
         .gr_wt_at-content {
             .gr_wt_at-text-img-wrapper {
                 flex-wrap: wrap;
-                flex-basis: 100%;
+                flex-basis: 80%;
 
                 .gr_wt_at-text-content {
                     order: 2;
                     flex-basis: 90%;
-
-                    p {
-                        font-size: 13px;
-                        margin: 0%;
-                    }
+                    padding-top: 2%;
 
                     h3 {
-                        font-size: 40px;
-                        line-height: 40px;
+                        font-size: 30px;
+                        line-height: 30px;
                     }
 
                     h3:after {
                         margin: 2% auto 2% auto;
                         width: 30%;
-                    }
-
-                    .gr_wt_at-description {
-                        p {
-                            padding: 0% 1%;
-                            flex-basis: 80%;
-                            font-size: 13px;
-                        }
                     }
                 }
             }
@@ -1658,8 +1601,26 @@ $white-text: #ffffff;
     /*BLOG*/
 
     .blog {
-
         .blog-content {
+            .blog-intro {
+                .blog-title {
+                    h3 {
+                        font-size: 30px;
+                    }
+                }
+
+                .blog-description {
+                    display: flex;
+                    justify-content: center;
+                    padding: 1% 0%;
+
+                    p {
+
+                        flex-basis: 80%;
+                        font-size: 13px;
+                    }
+                }
+            }
             .blog-items {
                 li {
                     flex-basis: 80%;
@@ -1678,8 +1639,18 @@ $white-text: #ffffff;
             padding: 8% 0 10% 0;
 
             .contact-section {
-                flex-basis: 100%;
+                flex-basis: 90%;
                 padding: 8% 0 10% 0;
+
+                .contact-section-title {
+                    p {
+                        font-size: 13px;
+                    }
+
+                    h3 {
+                        font-size: 30px;
+                    }
+                }
 
                 form {
                     .contact-section-email {
@@ -1706,16 +1677,16 @@ $white-text: #ffffff;
 
     /*USEFUL LINKS*/
     .useful-links {
-       justify-content: center;
+        justify-content: center;
 
         .useful-links-content {
             flex-wrap: wrap;
             justify-content: flex-start;
-           
+
             .useful-links-section {
                 flex-basis: 50%;
                 padding: 2% 0%;
-                
+
 
                 h6 {
                     color: #808080;
@@ -1728,8 +1699,9 @@ $white-text: #ffffff;
                     text-align: left;
                     padding-left: 5%;
                 }
-            
+
             }
+
             .useful-links-section-tweet {
                 display: none;
             }
@@ -1738,5 +1710,103 @@ $white-text: #ffffff;
 
     /*USEFUL LINKS END*/
 
+
+}
+
+@media (max-width: 540px) {
+
+    /*INTRO*/
+    .intro {
+
+        .intro-content {
+            padding: 0% 2%;
+
+            h1 {
+                padding: 3px 0px;
+                font-size: 40px;
+                line-height: 37px;
+            }
+        }
+    }
+
+    /*INTRO END*/
+
+    /*WORKSPACE*/
+    .workspace {
+
+        .workspace-content {
+
+            .workspace-description {
+                flex-basis: 100%;
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    /*WORKSPACE END*/
+
+    /*PRODUCTS*/
+    .product {
+        .product-content {
+            .product-title {
+                h3 {
+                    font-size: 30px;
+                }
+
+                h3:after {
+                    margin: 4px auto;
+                }
+            }
+
+            .product-cards {
+                .p-card {
+                    flex-basis: 80%;
+                }
+            }
+        }
+    }
+
+    /*PRODUCTS END*/
+
+    /*PURCHASE*/
+    .purchase {
+        .purchase-content {
+            .purchase-title {
+                h3 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    /*PURCHASE END*/
+
+    /*USEFUL LINKS*/
+    .useful-links {
+        .useful-links-content {
+            flex-basis: 90%;
+            .useful-links-section {
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    /*USEFUL LINKS END*/
+
+    /*FOOTER*/
+    .footer {
+        .footer-content {
+            h3 {
+                font-size: 13px;
+            }
+        }
+    }
+
+    /*FOOTER END*/
 
 }
