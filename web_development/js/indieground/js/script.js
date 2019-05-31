@@ -1,8 +1,14 @@
+/*TEMPLATE RECREATED BY EMILS BISENIEKS WITH
+ HTML, CSS (FLEX and SCSS), JAVASCRIPT */
+
 //Page louder
 window.addEventListener('load', () => {
     const preload = document.querySelector('.page-loader');
-    preload.classList.add('loader-finish');
+    setTimeout( () => {
+        preload.classList.add('loader-finish');
+    }, 2000);
 })
+//Page louder end
 
 
 //Toogle navigation button 
@@ -23,6 +29,7 @@ function closeMenu() {
 
 toogleButton.addEventListener('click', toogleMenu);
 closeToogle.addEventListener('click', closeMenu);
+//Toogle navigation button end
 
 
 //Search Modal
@@ -42,9 +49,9 @@ function closeModal(e) {
 
 openModalButton.addEventListener('click', openModal);
 closeModalButton.addEventListener('click', closeModal);
+//Search Modal end
 
-
-//Parallax background efect (for one thin at the moment)
+//Parallax background efect
 const parallaxBgNodeList = document.querySelectorAll('.parallaxBg');
 const parallaxBgArray = Array.from(parallaxBgNodeList);
 
@@ -55,10 +62,10 @@ function parallaxEffect() {
         const rate = (scrolled * 0.5 - (parallaxDivTop / 2) + 300);
         parallaxBgArray[i].style.transform = 'translateY(' + rate + 'px)';
     }
-
 }
 
 window.addEventListener('scroll', parallaxEffect);
+//Parallax background efect end
 
 
 
@@ -96,3 +103,4 @@ for (let i = 0; i < sliderWrapper.length; i++) {
         carouselContainer.classList.remove('imgCarouselAnimation');
     })
 }
+//Images carousel end
