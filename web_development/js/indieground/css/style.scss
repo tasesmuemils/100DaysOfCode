@@ -1,7 +1,20 @@
+/*TEMPLATE RECREATED BY EMILS BISENIEKS WITH
+ HTML, CSS (FLEX and SCSS), JAVASCRIPT*/
+
 /*BASIC SETUP*/
 /*VARIABLES*/
+$smallPx: 15px;
+$smallerPx: 13px;
+$bigTitlePx: 40px;
+$smallTitlePx: 30px;
+$color-red: #e84b6c;
+$color-pink: #fe7570;
+$color-lightPink: #ffa57c;
 $black-background: #000000;
+$lighter-black-background: #1f1f1f;
+$color-grey: #808080;
 $white-text: #ffffff;
+
 
 * {
     padding: 0;
@@ -11,12 +24,12 @@ $white-text: #ffffff;
     list-style-type: none;
 }
 
+/*MAIN LAYOUT*/
 .main-wrapper {
     display: flex;
     flex-direction: column;
     position: relative;
 }
-
 
 .section-wrapper {
     display: flex;
@@ -31,7 +44,10 @@ $white-text: #ffffff;
     display: flex;
     justify-content: center;
 }
+/*MAIN LAYOUT END*/
 
+
+/*PAGE LOADER*/
 .page-loader {
     position: fixed;
     top: 0;
@@ -42,7 +58,7 @@ $white-text: #ffffff;
     justify-content: center;
     align-items: center;
     z-index: 3;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.7s ease-in-out;
 
     .loader,
     .loader:after {
@@ -59,7 +75,7 @@ $white-text: #ffffff;
         border-top: 1.1em solid rgba(254, 117, 112, 0.2);
         border-right: 1.1em solid rgba(254, 117, 112, 0.2);
         border-bottom: 1.1em solid rgba(254, 117, 112, 0.2);
-        border-left: 1.1em solid #fe7570;
+        border-left: 1.1em solid $color-pink;
         -webkit-transform: translateZ(0);
         -ms-transform: translateZ(0);
         transform: translateZ(0);
@@ -93,14 +109,15 @@ $white-text: #ffffff;
 
 }
 
-
 .loader-finish {
     opacity: 0;
     pointer-events: none;
 }
 
+/*PAGE LOADER END*/
 
 
+/*SEARCH MODAL*/
 #search-modal {
     width: 100%;
     min-height: 100%;
@@ -172,8 +189,9 @@ $white-text: #ffffff;
 
     }
 }
+/*SEARCH MODAL END*/
 
-
+/*PARALLAX BG EFFECT*/
 .parallaxBg {
     position: absolute;
     width: 100%;
@@ -184,12 +202,15 @@ $white-text: #ffffff;
     background-repeat: no-repeat;
     background-size: auto;
 }
+/*PARALLAX BG EFFECT END*/
 
+
+/*BUTTONS LAYOUT AND ANIMATION*/
 .button-hover {
     position: relative;
     background: none;
     padding: 7px 35px;
-    border: 3px solid #ffa57c;
+    border: 3px solid #b8b2af;
     cursor: pointer;
     transition: all 0.3s;
 
@@ -214,8 +235,8 @@ $white-text: #ffffff;
 }
 
 .button-hover:hover {
-    background-color: #fe7570;
-    border-color: #fe7570;
+    background-color: $color-pink;
+    border-color: $color-pink;
 
     i {
         opacity: 1;
@@ -227,18 +248,19 @@ $white-text: #ffffff;
     }
 
 }
+/*BUTTONS LAYOUT AND ANIMATION END*/
 
 
-
+/*NAVIGATION*/
 .navigation {
     position: fixed;
     z-index: 2;
-    background-color: #1f1f1f;
+    background-color: $lighter-black-background;
 
     .navigation-bar {
         padding: 2% 1%;
         display: flex;
-        background-color: #1f1f1f;
+        background-color: $lighter-black-background;
         color: $white-text;
         justify-content: space-between;
         flex: 1;
@@ -281,7 +303,7 @@ $white-text: #ffffff;
             li {
                 padding: 10px 15px;
                 font-weight: 700;
-                font-size: 13px;
+                font-size: $smallerPx;
                 letter-spacing: 2px;
                 transition: all 0.3s;
             }
@@ -292,7 +314,7 @@ $white-text: #ffffff;
             }
 
             a:hover {
-                color: #fe7570;
+                color: $color-pink;
             }
 
             .toogle-button {
@@ -301,7 +323,7 @@ $white-text: #ffffff;
         }
 
         .navigation-social {
-            padding-right: 15px;
+            padding-right: $smallPx;
             font-size: 12px;
 
             li {
@@ -316,14 +338,14 @@ $white-text: #ffffff;
                     }
 
                     i:hover {
-                        color: #fe7570;
+                        color: $color-pink;
                     }
                 }
             }
         }
 
         .navigation-search {
-            font-size: 15px;
+            font-size: $smallPx;
 
             i {
                 padding: 5px 7px;
@@ -332,11 +354,12 @@ $white-text: #ffffff;
             }
 
             i:hover {
-                color: #fe7570;
+                color: $color-pink;
             }
         }
     }
 }
+/*NAVIGATION END*/
 
 /*INTRO*/
 .intro {
@@ -349,7 +372,7 @@ $white-text: #ffffff;
     min-height: 90vh;
 
     .background-layer-intro {
-        background: linear-gradient(to bottom, rgba(232, 75, 108, 0.6) 0%, #fe7570 100%);
+        background: linear-gradient(to bottom, rgba(232, 75, 108, 0.6) 0%, $color-pink 100%);
         position: absolute;
         top: 0;
         left: 0;
@@ -369,7 +392,7 @@ $white-text: #ffffff;
         }
 
         h1 {
-            padding: 10px 0px;
+            padding: 10px 5px;
             font-size: 80px;
             line-height: 65px;
         }
@@ -422,7 +445,7 @@ $white-text: #ffffff;
                 content: '';
                 display: block;
                 margin: 20px auto;
-                background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+                background: linear-gradient(to right, $color-red 0%, $color-lightPink 100%);
                 height: 3px;
                 width: 15%;
             }
@@ -444,7 +467,7 @@ $white-text: #ffffff;
 
                 .ws-card-title {
                     padding: 15px 0px;
-                    font-size: 30px;
+                    font-size: $smallTitlePx;
                     line-height: 27px;
                 }
 
@@ -455,14 +478,14 @@ $white-text: #ffffff;
 
                 .ws-card-description {
                     padding: 15px 0px;
-                    font-size: 15px;
+                    font-size: $smallPx;
                     font-weight: 700;
                     letter-spacing: 2px;
                 }
             }
 
             .ws-card:hover {
-                background: linear-gradient(to bottom, #fe7570 0%, #ffa57c 100%);
+                background: linear-gradient(to bottom, $color-pink 0%, $color-lightPink 100%);
             }
         }
 
@@ -472,7 +495,7 @@ $white-text: #ffffff;
             margin: 5% 0%;
 
             p {
-                font-size: 15px;
+                font-size: $smallPx;
                 font-weight: 700;
                 padding-bottom: 20px;
             }
@@ -495,7 +518,7 @@ $white-text: #ffffff;
             text-align: center;
 
             p {
-                font-size: 15px;
+                font-size: $smallPx;
                 font-weight: 700;
                 letter-spacing: 2px;
             }
@@ -508,7 +531,7 @@ $white-text: #ffffff;
                 content: '';
                 display: block;
                 margin: 5px auto;
-                background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+                background: linear-gradient(to right, $color-red 0%, $color-lightPink 100%);
                 height: 3px;
                 width: 20%;
             }
@@ -543,7 +566,7 @@ $white-text: #ffffff;
                     padding: 20px;
 
                     p {
-                        font-size: 15px;
+                        font-size: $smallPx;
                         font-weight: 700;
                         letter-spacing: 1px;
                     }
@@ -575,7 +598,7 @@ $white-text: #ffffff;
     background-attachment: fixed;
 
     .background-layer_light_pink {
-        background: linear-gradient(to bottom, #fe7570 0%, #ffa47a 100%);
+        background: linear-gradient(to bottom, $color-pink 0%, #ffa47a 100%);
         position: absolute;
         top: 0;
         left: 0;
@@ -596,7 +619,7 @@ $white-text: #ffffff;
             padding: 10px;
 
             p {
-                font-size: 15px;
+                font-size: $smallPx;
                 font-weight: bold;
                 letter-spacing: 1px;
                 padding: 2px;
@@ -615,7 +638,7 @@ $white-text: #ffffff;
 
             p {
                 flex-basis: 70%;
-                font-size: 15px;
+                font-size: $smallPx;
                 letter-spacing: 1px;
             }
         }
@@ -668,7 +691,7 @@ $white-text: #ffffff;
                 flex-basis: 50%;
 
                 p {
-                    font-size: 15px;
+                    font-size: $smallPx;
                     font-weight: bold;
                     letter-spacing: 3px;
                     margin: 2% 0%;
@@ -685,7 +708,7 @@ $white-text: #ffffff;
                     content: '';
                     display: block;
                     margin: 2.54% auto 3% auto;
-                    background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+                    background: linear-gradient(to right, $color-red 0%, $color-lightPink 100%);
                     height: 3px;
                     width: 20%;
                 }
@@ -696,7 +719,7 @@ $white-text: #ffffff;
                     p {
                         padding: 0% 2%;
                         flex-basis: 70%;
-                        font-size: 15px;
+                        font-size: $smallPx;
                         letter-spacing: 2px;
                         font-weight: 100;
                     }
@@ -751,7 +774,7 @@ $white-text: #ffffff;
 
             .blog-title {
                 p {
-                    font-size: 15px;
+                    font-size: $smallPx;
                     font-weight: bold;
                     letter-spacing: 3px;
                 }
@@ -766,7 +789,7 @@ $white-text: #ffffff;
                     content: '';
                     display: block;
                     margin: 0.5% auto 3% auto;
-                    background: linear-gradient(to right, #e84b6c 0%, #ffa57c 100%);
+                    background: linear-gradient(to right, $color-red 0%, $color-lightPink 100%);
                     height: 3px;
                     width: 20%;
                 }
@@ -780,7 +803,7 @@ $white-text: #ffffff;
                 p {
                     padding: 1% 2%;
                     flex-basis: 70%;
-                    font-size: 15px;
+                    font-size: $smallPx;
                     letter-spacing: 2px;
                     font-weight: 100;
                 }
@@ -844,7 +867,7 @@ $white-text: #ffffff;
     background-attachment: fixed;
 
     .background-layer_light_pink {
-        background: linear-gradient(to bottom, #fe7570 0%, #ffa57c 100%);
+        background: linear-gradient(to bottom, $color-pink 0%, $color-lightPink 100%);
         position: absolute;
         top: 0;
         left: 0;
@@ -865,7 +888,7 @@ $white-text: #ffffff;
 
             .contact-section-title {
                 p {
-                    font-size: 15px;
+                    font-size: $smallPx;
                     font-weight: bold;
                     letter-spacing: 3px;
                     padding: 2% 4%;
@@ -882,12 +905,12 @@ $white-text: #ffffff;
                 .contact-section-email {
                     display: flex;
                     justify-content: space-evenly;
-                    padding-bottom: 15px;
+                    padding-bottom: $smallPx;
 
                     input {
-                        background-color: #1f1f1f;
+                        background-color: $lighter-black-background;
                         border: none;
-                        padding: 7px 15px;
+                        padding: 7px $smallPx;
                         width: 50%;
                         color: white;
                     }
@@ -905,7 +928,7 @@ $white-text: #ffffff;
                     }
 
                     button {
-                        padding: 15px;
+                        padding: $smallPx;
                         border: none;
                         width: 20%;
                         background-color: #fdf7f2;
@@ -920,7 +943,7 @@ $white-text: #ffffff;
                     align-items: center;
 
                     label {
-                        font-size: 13px;
+                        font-size: $smallerPx;
                         font-weight: bold;
                         letter-spacing: 2px;
                         padding-left: 5px;
@@ -935,7 +958,7 @@ $white-text: #ffffff;
                 }
 
                 *:hover {
-                    color: #000000;
+                    color: $black-background;
                 }
             }
         }
@@ -946,7 +969,7 @@ $white-text: #ffffff;
 
 /*USEFUL LINKS*/
 .useful-links {
-    background-color: #1f1f1f;
+    background-color: $lighter-black-background;
     z-index: 1;
 
     .useful-links-content {
@@ -960,7 +983,7 @@ $white-text: #ffffff;
             flex-basis: 22%;
 
             h6 {
-                color: #808080;
+                color: $color-grey;
                 letter-spacing: 1px;
                 text-align: left;
                 padding: 10px;
@@ -989,8 +1012,8 @@ $white-text: #ffffff;
                 }
 
                 .tweet-date {
-                    color: #808080;
-                    font-size: 13px;
+                    color: $color-grey;
+                    font-size: $smallerPx;
                     flex-basis: 100%;
                 }
             }
@@ -1008,7 +1031,7 @@ $white-text: #ffffff;
 
         h3 {
             font-weight: 100;
-            font-size: 15px;
+            font-size: $smallPx;
             padding: 2px;
         }
     }
@@ -1016,6 +1039,7 @@ $white-text: #ffffff;
 
 /*FOOTER END*/
 
+/*RESPNONSIVE LAYOUT*/
 @media (max-width: 1050px) {
 
     /*NAVIGATION*/
@@ -1088,7 +1112,7 @@ $white-text: #ffffff;
                 padding: 2px 0%;
 
                 .ws-card-description {
-                    font-size: 13px;
+                    font-size: $smallerPx;
                 }
             }
         }
@@ -1097,7 +1121,7 @@ $white-text: #ffffff;
             margin: 3% 0%;
 
             p {
-                font-size: 13px;
+                font-size: $smallerPx;
             }
         }
     }
@@ -1111,11 +1135,11 @@ $white-text: #ffffff;
                 .p-card {
                     .p-description {
                         p {
-                            font-size: 13px;
+                            font-size: $smallerPx;
                         }
 
                         .p-price-free {
-                            font-size: 13px;
+                            font-size: $smallerPx;
                         }
                     }
                 }
@@ -1133,13 +1157,13 @@ $white-text: #ffffff;
                     padding: 0% 3%;
 
                     p {
-                        font-size: 13px;
+                        font-size: $smallerPx;
                         padding: 2% 0% 0% 0%;
                     }
 
                     h3 {
-                        font-size: 40px;
-                        line-height: 40px;
+                        font-size: $bigTitlePx;
+                        line-height: $bigTitlePx;
                         padding: 2% 0%;
                     }
 
@@ -1153,7 +1177,7 @@ $white-text: #ffffff;
 
                         p {
                             flex-basis: 100%;
-                            font-size: 13px;
+                            font-size: $smallerPx;
                         }
                     }
                 }
@@ -1172,7 +1196,7 @@ $white-text: #ffffff;
 
                 .contact-section-title {
                     p {
-                        font-size: 13px;
+                        font-size: $smallerPx;
                     }
 
                     h3 {
@@ -1189,7 +1213,7 @@ $white-text: #ffffff;
                         }
 
                         button {
-                            font-size: 13px;
+                            font-size: $smallerPx;
                             padding: 5px 5px;
                             width: 25%;
                         }
@@ -1277,7 +1301,7 @@ $white-text: #ffffff;
                 }
 
                 #close-toogle:hover {
-                    color: #fe7570;
+                    color: $color-pink;
                 }
             }
 
@@ -1306,7 +1330,7 @@ $white-text: #ffffff;
                     }
 
                     a:hover {
-                        color: #fe7570;
+                        color: $color-pink;
                     }
 
                     .toogle-button {
@@ -1360,7 +1384,9 @@ $white-text: #ffffff;
     .gr-wt-at {
         .gr_wt_at-content {
             .gr_wt_at-text-img-wrapper {
+                flex-basis: 80%;
                 .gr_wt_at-text-content {
+                    flex-basis: 80%;
                     padding: 0 2%;
 
                     p {
@@ -1387,11 +1413,11 @@ $white-text: #ffffff;
             .blog-intro {
                 .blog-title {
                     p {
-                        font-size: 13px;
+                        font-size: $smallerPx;
                     }
 
                     h3 {
-                        font-size: 40px;
+                        font-size: $bigTitlePx;
                     }
 
                     h3:after {
@@ -1407,7 +1433,7 @@ $white-text: #ffffff;
                     p {
 
                         flex-basis: 80%;
-                        font-size: 13px;
+                        font-size: $smallerPx;
                     }
                 }
             }
@@ -1427,7 +1453,7 @@ $white-text: #ffffff;
 
                     .blog-items-description {
                         p {
-                            font-size: 13px;
+                            font-size: $smallerPx;
                         }
                     }
                 }
@@ -1518,11 +1544,11 @@ $white-text: #ffffff;
             .product-title {
 
                 p {
-                    font-size: 13px;
+                    font-size: $smallerPx;
                 }
 
                 h3 {
-                    font-size: 40px;
+                    font-size: $bigTitlePx;
                 }
 
                 h3:after {
@@ -1548,12 +1574,12 @@ $white-text: #ffffff;
                 padding: 5px;
 
                 p {
-                    font-size: 13px;
+                    font-size: $smallerPx;
                     padding: 0px;
                 }
 
                 h3 {
-                    font-size: 40px;
+                    font-size: $bigTitlePx;
                 }
             }
 
@@ -1562,7 +1588,7 @@ $white-text: #ffffff;
 
                 p {
                     flex-basis: 90%;
-                    font-size: 13px;
+                    font-size: $smallerPx;
                 }
             }
         }
@@ -1583,8 +1609,8 @@ $white-text: #ffffff;
                     padding-top: 2%;
 
                     h3 {
-                        font-size: 30px;
-                        line-height: 30px;
+                        font-size: $smallTitlePx;
+                        line-height: $smallTitlePx;
                     }
 
                     h3:after {
@@ -1605,7 +1631,7 @@ $white-text: #ffffff;
             .blog-intro {
                 .blog-title {
                     h3 {
-                        font-size: 30px;
+                        font-size: $smallTitlePx;
                     }
                 }
 
@@ -1617,7 +1643,7 @@ $white-text: #ffffff;
                     p {
 
                         flex-basis: 80%;
-                        font-size: 13px;
+                        font-size: $smallerPx;
                     }
                 }
             }
@@ -1644,11 +1670,11 @@ $white-text: #ffffff;
 
                 .contact-section-title {
                     p {
-                        font-size: 13px;
+                        font-size: $smallerPx;
                     }
 
                     h3 {
-                        font-size: 30px;
+                        font-size: $smallTitlePx;
                     }
                 }
 
@@ -1689,7 +1715,7 @@ $white-text: #ffffff;
 
 
                 h6 {
-                    color: #808080;
+                    color: $color-grey;
                     letter-spacing: 1px;
                     text-align: left;
                     padding: 10px;
@@ -1723,7 +1749,7 @@ $white-text: #ffffff;
 
             h1 {
                 padding: 3px 0px;
-                font-size: 40px;
+                font-size: $bigTitlePx;
                 line-height: 37px;
             }
         }
@@ -1740,7 +1766,7 @@ $white-text: #ffffff;
                 flex-basis: 100%;
 
                 p {
-                    font-size: 15px;
+                    font-size: $smallPx;
                 }
             }
         }
@@ -1753,7 +1779,7 @@ $white-text: #ffffff;
         .product-content {
             .product-title {
                 h3 {
-                    font-size: 30px;
+                    font-size: $smallTitlePx;
                 }
 
                 h3:after {
@@ -1790,7 +1816,7 @@ $white-text: #ffffff;
             flex-basis: 90%;
             .useful-links-section {
                 p {
-                    font-size: 13px;
+                    font-size: $smallerPx;
                 }
             }
         }
@@ -1802,7 +1828,7 @@ $white-text: #ffffff;
     .footer {
         .footer-content {
             h3 {
-                font-size: 13px;
+                font-size: $smallerPx;
             }
         }
     }
