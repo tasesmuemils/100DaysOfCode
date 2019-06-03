@@ -256,3 +256,6 @@ I finished my notes app. Looks cool and everything works like it supose to.
 
 # 17.04.2019 84/100
 Done with Wes Bos WHAT THE FLEX tutorials. Now - NET NINJA CSS ANIMATIONS.
+
+# 03.06.2019
+Started with basic REACT installation
