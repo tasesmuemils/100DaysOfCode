@@ -1,3 +1,16 @@
+/*TEMPLATE RECREATED BY EMILS BISENIEKS WITH
+ HTML, CSS (FLEX and SCSS), JAVASCRIPT */
+
+//Page louder
+window.addEventListener('load', () => {
+    const preload = document.querySelector('.page-loader');
+    setTimeout( () => {
+        preload.classList.add('loader-finish');
+    }, 2000);
+})
+//Page louder end
+
+
 //Toogle navigation button 
 const toogleButton = document.querySelector('.toogle-button');
 const closeToogle = document.getElementById('close-toogle');
@@ -16,24 +29,43 @@ function closeMenu() {
 
 toogleButton.addEventListener('click', toogleMenu);
 closeToogle.addEventListener('click', closeMenu);
+//Toogle navigation button end
 
 
+//Search Modal
+const searchModal = document.getElementById('search-modal');
+const openModalButton = document.getElementById('search-modal-open');
+const closeModalButton = document.getElementById('close-modal');
 
-//Parallax background efect (for one thin at the moment)
+function openModal(e) {
+    console.log(e)
+    searchModal.style.display = 'flex';
+}
+
+function closeModal(e) {
+    console.log(e)
+    searchModal.style.display = 'none';
+}
+
+openModalButton.addEventListener('click', openModal);
+closeModalButton.addEventListener('click', closeModal);
+//Search Modal end
+
+//Parallax background efect
 const parallaxBgNodeList = document.querySelectorAll('.parallaxBg');
 const parallaxBgArray = Array.from(parallaxBgNodeList);
 
-function parallaxEffect(e) {
+function parallaxEffect() {
     const scrolled = window.pageYOffset;
     for (let i = 0; i < parallaxBgArray.length; i++) {
         const parallaxDivTop = parallaxBgArray[i].parentElement.offsetTop;
         const rate = (scrolled * 0.5 - (parallaxDivTop / 2) + 300);
         parallaxBgArray[i].style.transform = 'translateY(' + rate + 'px)';
     }
-
 }
 
 window.addEventListener('scroll', parallaxEffect);
+//Parallax background efect end
 
 
 
@@ -53,7 +85,7 @@ for (let i = 0; i < sliderWrapper.length; i++) {
     sliderWrapper[i].style.width = sliderWrapperWidth;
 
     const carouselContainerWidth = carouselImagesCount * carouselImages[0].width;
-    
+
 
     carouselContainer.style.width = carouselContainerWidth + 12 + 'px';
     carouselContainer.style.marginLeft = -carouselImages[carouselImagesCount - 1].width;
@@ -71,5 +103,4 @@ for (let i = 0; i < sliderWrapper.length; i++) {
         carouselContainer.classList.remove('imgCarouselAnimation');
     })
 }
-
-
+//Images carousel end
