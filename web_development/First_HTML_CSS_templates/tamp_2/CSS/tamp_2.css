@@ -1,0 +1,120 @@
+body {
+  background-image: url("../images/Wood-Wallpaper-15.jpg");
+}
+
+header, section, aside, nav, article, figure, figcaption {
+				 display: block;
+       }
+
+.wrapper {
+  width: 960px;
+  margin: 20px auto 30px auto;
+  background-color: white;
+  overflow: auto;
+}
+
+header {
+  background-color: #544c45;
+}
+
+header h1 {
+  color: white;
+  width: 300px;
+  margin: 0px 0px 0px 100px;
+}
+
+header h3 {
+  color: white;
+  width: 350px;
+  margin: 0px 0px 10px 100px;
+}
+
+nav {
+  background-color: #968d85;
+  padding: 0px 0px 0px 0px;
+}
+
+ul {
+  padding: 15px 0px 15px 50px;
+}
+
+li {
+  display: inline;
+  margin-left: 30px;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+section.course {
+  float: left;
+  width: 659px;
+}
+
+article {
+  overflow: auto;
+  width: 100%;
+}
+
+hgroup {
+  margin-top: 40px;
+}
+
+figure {
+  float: left;
+  width: 290px;
+  height: 220px;
+  padding: 5px;
+  margin: 20px;
+}
+
+aside {
+  width: 230px;
+  float: left;
+  padding: 0px 0px 0px 20px;
+}
+
+aside section a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+aside section a:hover {
+  color: #985d6a;
+  background-color: #efefef;
+}
+
+a {
+  color: #de6581;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h2 {
+  margin: 10px 0px 5px 0px;
+  padding: 0px;
+}
+
+h3 {
+  margin: 0px 0px 10px 0px;
+  color: #de6581;
+}
+
+aside h2 {
+  padding: 30px 0px 10px 0px;
+  color: #de6581;
+}
+
+footer {
+  color: white;
+  clear: both;
+  font-size: 80%;
+	padding: 7px 0px 10px 20px;
+  background-color: #968d85;
+}
