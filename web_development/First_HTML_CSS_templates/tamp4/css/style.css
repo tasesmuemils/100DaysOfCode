@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Khula', sans-serif;
+}
+
+html {
+  background-image: url('../images/Website-Design-Background.png');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+html, body {
+  margin-bottom: 5em;
+}
+
+.container_nav {
+  position: fixed;
+  width: 5%;
+  background-color: black;
+  margin: 0;
+  height: 100%;
+}
+
+nav {
+  height: 100%;
+  width: 100%;
+}
+
+nav .fa {
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  padding: 10px 10px 10px 10px;
+}
+
+nav .fa:hover {
+  opacity: 0.9;
+  box-shadow: 0px 0px 20px white;
+}
+
+.fa-home {
+  color: white;
+}
+
+.fa-camera-retro {
+  color: white;
+}
+
+.fa-file-text {
+  color: white;
+}
+
+.container_main {
+  position: absolute;
+  width: 95%;
+  margin-left: 5%;
+}
+
+.main_header {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  padding: 17% 0% 22% 0%;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+.main_header h1 {
+  width: 100%;
+  font-size: 80px;
+  color: white;
+}
+
+.main_header h4 {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  margin-top: 50px;
+  color: white;
+}
+
+.foto {
+  overflow: hidden;
+  width: 100%;
+  background-color: silver;
+}
+
+.foto h2 {
+  margin: 80px auto 20px auto;
+}
+
+.img_box {
+  text-align: center;
+  width: 1200px;
+  overflow: auto;
+  margin: 50px auto 100px auto;
+  box-shadow: 2px 2px 20px black;
+}
+
+.img_boxes {
+  width: 300px;
+  height: 250px;
+  float: left;
+}
+
+.img_box img {
+  width: 300px;
+  height: 250px;
+}
+
+.contact_and_form {
+  overflow: hidden;
+  height: 612px;
+}
+
+.left {
+  width: 50%;
+  float: left;
+  padding-bottom: 170px;
+  margin-bottom: -170px;
+}
+
+.contact {
+  background-color: gainsboro;
+  text-align: left;
+  line-height: 1.8em;
+  padding: 0px 0px 30px 0px;
+}
+
+.contact h3 {
+  width: 80%;
+  margin: 25px 0px 25px 25px;
+}
+
+.contact p {
+  width: 90%;
+  margin: 25px 0px 25px 25px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 30px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.form {
+  background-color: lightgray;
+}
+
+.form h3 {
+  text-align: left;
+  margin: 25px 0px 25px 25px;
+  width: 80%;
+}
+
+form {
+  width: 80%;
+  margin: 50.5px auto;
+  overflow: hidden;
+}
+
+.form_1 p {
+  float: left;
+  font-size: 30px;
+  width: 250px;
+  height: 50%;
+  text-align: left;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.message {
+  padding-top: 100px;
+}
+
+textarea {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 99%;
+  box-shadow: 0px 0px 5px black;
+}
+
+.footer {
+  border: 50px solid red bottom: 0px;
+  width: 100%;
+  background-color: grey;
+}
+
+footer {
+  padding: 20px;
+}
