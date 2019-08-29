@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
     /*font-family: 'Varela Round', sans-serif;
     //font-family: 'Roboto', sans-serif;*/
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .wrapper {
@@ -143,6 +143,7 @@
 .projects {
     display: grid;
     text-align: center;
+    justify-items: center;
     padding: 9rem 1.5rem;
 }
 
@@ -157,11 +158,101 @@
 }
 
 .projects-grid {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 27%);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    justify-content: center;
 }
 
-img {
+.project-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px;
+}
+
+.project-card figure {
+    height: 100%;
+}
+
+.project-card img {
+    height: 100%;
     width: 100%;
-    height: auto;
+    object-fit: cover;
+}
+
+/*CONTACT*/
+.contact {
+    display: grid;
+    text-align: center;
+    grid-column: 1/end;
+    justify-items: center;
+}
+
+.contact-form {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 60% 20%;
+    justify-content: center;
+    background-color: #293347;
+    color: #fff;
+    //padding: 30px 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #293347;
+}
+
+.contact-inputs {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.contact-form * {
+    margin: 10px;
+}
+
+.contact-inputs * {
+    margin: 10px;
+}
+
+.contact-inputs label {
+    letter-spacing: 2px;
+}
+
+.contact-inputs input {
+    background-color: #293347;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.contact-inputs textarea {
+    background-color: #293347;
+    border: 1px solid #fff;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    resize: none;
+}
+
+.contact-inputs input:focus,
+.contact-inputs textarea:focus
+    {
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    display: grid;
+}
+
+.contact-form button {
+    border: 2px solid #8C43FF;
+    border-radius: 50px;
+    background-color: #293347;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 400;
+    align-self: center;
 }
