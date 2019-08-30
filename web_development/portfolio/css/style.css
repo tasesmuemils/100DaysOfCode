@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
     /*font-family: 'Varela Round', sans-serif;
     //font-family: 'Roboto', sans-serif;*/
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .wrapper {
@@ -145,11 +145,12 @@
     text-align: center;
     justify-items: center;
     padding: 9rem 1.5rem;
+    margin-bottom: 15rem;
 }
 
 .projects h1 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .projects h4 {
@@ -171,6 +172,7 @@
     border-radius: 12px;
     overflow: hidden;
     height: 300px;
+    box-shadow: 0 5px 5px 0 #e9f0f380, 0 0 0 1px #E6ECF8;
 }
 
 .project-card figure {
@@ -189,16 +191,28 @@
     text-align: center;
     grid-column: 1/end;
     justify-items: center;
+    margin-top: -14.5em;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #293347;
+}
+
+.contact h4 {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #293347;
 }
 
 .contact-form {
     width: 90%;
     display: grid;
-    grid-template-columns: 60% 20%;
+    grid-template-columns: 70% 20%;
     justify-content: center;
     background-color: #293347;
     color: #fff;
-    //padding: 30px 10px;
     border-radius: 20px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #293347;
 }
@@ -218,6 +232,8 @@
 
 .contact-inputs label {
     letter-spacing: 2px;
+    font-size: 20px;
+    align-self: center;
 }
 
 .contact-inputs input {
@@ -229,8 +245,8 @@
 
 .contact-inputs textarea {
     background-color: #293347;
-    border: 1px solid #fff;
-    border-bottom: 2px solid #fff;
+    border: 1px solid #E6ECF8;
+    border-bottom: 2px solid #E6ECF8;
     color: #fff;
     resize: none;
 }
@@ -252,7 +268,64 @@
     background-color: #293347;
     color: #ffffff;
     padding: 10px 15px;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 600;
     align-self: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #8C43FF;
+    transition: all 0.2s ease-in-out;
+}
+
+/*FOOTER*/
+.full-width {
+    color: #fff;
+    background-color: #8C43FF;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    width: 30%;
+    padding: 30px 0;
+}
+
+.social-links i {
+    cursor: pointer;
+    color: white;
+}
+
+.fa-github, .fa-linkedin, .fa-twitter-square {
+    transition: all 0.3s;
+}
+
+.fa-github:hover {
+    color: #24292e;
+    transition: all 0.3s;
+}
+
+.fa-linkedin:hover {
+    color: #0077b5;
+    transition: all 0.3s;
+}
+
+.fa-twitter-square:hover {
+    color: rgba(29,161,242,1.00);
+    transition: all 0.3s;
+}
+
+.footer-content h5 {
+    padding: 5px;
 }
