@@ -169,20 +169,72 @@
 
 .project-card {
     position: relative;
+    display: grid;
+    grid-template-rows: 300px;
     border-radius: 12px;
     overflow: hidden;
-    height: 300px;
     box-shadow: 0 5px 5px 0 #e9f0f380, 0 0 0 1px #E6ECF8;
 }
 
-.project-card figure {
+.project-card img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
 }
 
-.project-card img {
-    height: 100%;
+.project-card-content:hover img {
+    transform: scale(1.1);
+}
+
+.project-card-content {
+    position: relative;
+}
+
+.project-card-content .hover-content {
+    opacity: 0;
+    position: absolute;
+    display: grid;
+    align-items: center;
+    top: 0px;
+    left: 0;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    background-color: #293347;
+    color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.hover-content-wrapper h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    padding: 10px 0;
+}
+
+.hover-content-wrapper h2 {
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.hover-content-wrapper button {
+    margin: 20px 0;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.project-card-content:hover .hover-content,
+.project-card-content:active .hover-content {
+    opacity: 1;
+}
+
+.hover-content {
+    text-align: center;
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+
 }
 
 /*CONTACT*/
@@ -252,8 +304,7 @@
 }
 
 .contact-inputs input:focus,
-.contact-inputs textarea:focus
-    {
+.contact-inputs textarea:focus {
     outline: none;
 }
 
@@ -262,7 +313,7 @@
     display: grid;
 }
 
-.contact-form button {
+.button-design {
     border: 2px solid #8C43FF;
     border-radius: 50px;
     background-color: #293347;
@@ -275,7 +326,7 @@
     transition: all 0.2s;
 }
 
-.contact-form button:hover {
+.button-design:hover {
     background-color: #8C43FF;
     transition: all 0.2s ease-in-out;
 }
@@ -307,7 +358,9 @@
     color: white;
 }
 
-.fa-github, .fa-linkedin, .fa-twitter-square {
+.fa-github,
+.fa-linkedin,
+.fa-twitter-square {
     transition: all 0.3s;
 }
 
@@ -322,7 +375,7 @@
 }
 
 .fa-twitter-square:hover {
-    color: rgba(29,161,242,1.00);
+    color: rgba(29, 161, 242, 1.00);
     transition: all 0.3s;
 }
 
