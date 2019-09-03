@@ -22,11 +22,19 @@
     color: #fff;
 }
 
-
 .content-wrapper {
     display: grid;
     justify-self: center;
-    width: 90%;
+    width: 1344px;
+    max-width: 1344px;
+}
+
+.is-narrow {
+    width: 1200px;
+}
+
+.is-long {
+    padding-bottom: 18rem;
 }
 
 .header-wrapper {
@@ -37,7 +45,7 @@
 .navigation-bar {
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 20px 20px;
 }
 
 .navigation-bar h3 {
@@ -54,8 +62,26 @@
 .navigation-bar li {
     font-size: 17px;
     margin: 0 20px;
-    padding: 0px 5px;
+    padding: 5px 20px;
     text-align: center;
+}
+
+.nav-button {
+    border: 2px solid #8C43FF;
+    border-radius: 50px;
+    color: #8C43FF;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-button:hover {
+    background-color: #8C43FF;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
 }
 
 /*HEADER*/
@@ -82,7 +108,7 @@
     display: grid;
     justify-content: center;
     text-align: center;
-    padding: 7% 20% 20% 20%;
+    padding: 7% 20% 7% 20%;
 }
 
 .about-wrapper h2 {
@@ -96,13 +122,12 @@
 
 /*SKILL CARDS*/
 .skills {
-    margin-top: -12.5rem;
+    margin-top: -14.5rem;
 }
 
 .skill-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 5rem;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
@@ -115,7 +140,12 @@
 }
 
 .skill-card {
-    padding: 80px 50px;
+    padding: 80px 10%;
+}
+
+.front-end-card {
+    border-right: 1px solid #E6ECF8;
+    border-left: 1px solid #E6ECF8;
 }
 
 .skill-card h3 {
@@ -126,7 +156,8 @@
 .skill-description {
     font-size: 17px;
     margin: 1.5rem 0;
-    padding: 0 1rem;
+    line-height: 30px;
+    padding: 0 5px;
 }
 
 .skill-card h4 {
@@ -144,8 +175,8 @@
     display: grid;
     text-align: center;
     justify-items: center;
-    padding: 9rem 1.5rem;
-    margin-bottom: 15rem;
+    padding: 10rem 0;
+    margin-bottom: 20rem;
 }
 
 .projects h1 {
@@ -161,9 +192,9 @@
 .projects-grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 27%);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
-    grid-row-gap: 20px;
+    grid-row-gap: 30px;
     justify-content: center;
 }
 
@@ -209,13 +240,14 @@
     font-size: 1.5rem;
     margin: 0;
     letter-spacing: 2px;
-    padding: 10px 0;
+    padding: 10px 5px;
 }
 
 .hover-content-wrapper h2 {
     font-size: 15px;
     font-weight: 100;
     letter-spacing: 2px;
+    padding: 0 10px;
 }
 
 .hover-content-wrapper button {
@@ -239,9 +271,7 @@
 
 /*CONTACT*/
 .contact {
-    display: grid;
     text-align: center;
-    grid-column: 1/end;
     justify-items: center;
     margin-top: -14.5em;
 }
@@ -259,7 +289,6 @@
 }
 
 .contact-form {
-    width: 90%;
     display: grid;
     grid-template-columns: 70% 20%;
     justify-content: center;
@@ -381,4 +410,24 @@
 
 .footer-content h5 {
     padding: 5px;
+}
+
+/*RESPONSIVNES*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    * {
+        border: 3px solid red;
+    }
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+    * {
+        border: 3px solid yellow;
+    }
+
 }
