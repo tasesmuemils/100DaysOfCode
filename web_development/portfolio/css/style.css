@@ -107,6 +107,8 @@
     font-weight: 300;
 }
 
+/*HEADER END*/
+
 /*ABOUT*/
 .about-wrapper {
     display: grid;
@@ -123,6 +125,8 @@
 .about-wrapper p {
     font-size: 1rem;
 }
+
+/*ABOUT END*/
 
 /*SKILL CARDS*/
 .skills {
@@ -180,7 +184,7 @@
     text-align: center;
     justify-items: center;
     padding: 15rem 0 8rem 0;
-    margin-bottom: 20rem;
+    margin-bottom: 13rem;
 }
 
 .projects h1 {
@@ -277,24 +281,12 @@
 .contact {
     text-align: center;
     justify-items: center;
-    margin-top: -13.5em;
-}
-
-.contact h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #293347;
-}
-
-.contact h4 {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    color: #293347;
+    margin-top: -4.5em;
 }
 
 .contact-form {
     display: grid;
-    grid-template-columns: 70% 20%;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     background-color: #293347;
     color: #fff;
@@ -302,48 +294,43 @@
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #293347;
 }
 
-.contact-inputs {
+.contact-form {
+    padding: 30px 0;
+}
+
+.contact {
+    text-align: center;
+    justify-items: center;
+    margin-top: -4.5em;
+}
+
+.contact-form {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    background-color: #293347;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #293347;
 }
 
-.contact-form * {
-    margin: 10px;
+.contact-form {
+    padding: 30px 0;
 }
 
-.contact-inputs * {
-    margin: 10px;
+.contact-form h2,
+.contact-form p,
+.contact-form .email-button {
+    padding: 20px 0;
 }
 
-.contact-inputs label {
-    letter-spacing: 2px;
-    font-size: 20px;
+.contact-form h2 {
     align-self: center;
 }
 
-.contact-inputs input {
-    background-color: #293347;
-    border: none;
-    border-bottom: 2px solid #fff;
-    color: #fff;
-}
-
-.contact-inputs textarea {
-    background-color: #293347;
-    border: 1px solid #E6ECF8;
-    border-bottom: 2px solid #E6ECF8;
-    color: #fff;
-    resize: none;
-}
-
-.contact-inputs input:focus,
-.contact-inputs textarea:focus {
-    outline: none;
-}
-
-.submit-button {
-    width: 100%;
+.email-button {
     display: grid;
+    justify-items: center;
 }
 
 .button-design {
@@ -351,9 +338,9 @@
     border-radius: 50px;
     background-color: #293347;
     color: #ffffff;
-    padding: 10px 15px;
+    padding: 10px 30px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 300;
     align-self: center;
     cursor: pointer;
     transition: all 0.2s;
@@ -382,7 +369,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-self: center;
-    width: 30%;
+    width: 50%;
     padding: 30px 0;
 }
 
@@ -516,8 +503,6 @@
     }
 
     /*PROJECTS*/
-   
-
     .projects h1 {
         font-size: 1.7rem;
         margin-bottom: 15px;
@@ -533,17 +518,31 @@
     }
 
     .project-card {
-        grid-template-rows: 1fr;
-        
+        grid-template-rows: 300px;
+
     }
+
+    /*PROJECTS END*/
 
     /*CONTACT*/
     .contact {
-        margin-top: -12.5em;
+        text-align: center;
+        justify-items: center;
+        margin-top: -4.5em;
     }
 
-    .contact h1 {
-        font-size: 1.7rem;
+    .contact-form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-form {
+        padding: 20px 0;
+    }
+
+    .contact-form h2,
+    .contact-form p,
+    .contact-form .email-button {
+        padding: 10px 20px;
     }
 
     /*FOOTER*/
@@ -555,5 +554,57 @@
     .social-links {
         padding: 20px 0;
     }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    /*NAVIGATION BAR*/
+    .navigation-bar {
+        padding: 10px 10px;
+    }
+
+    .navigation-bar h3 {
+        font-size: 13px;
+        align-self: center;
+    }
+
+    .navigation-bar li {
+        font-size: 15px;
+    }
+
+    /*NAVIGATION BAR END*/
+
+    /*HEADER*/
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    /*HEADER END*/
+
+    /*ABOUT*/
+    .about-wrapper {
+        padding: 5%;
+    }
+
+    .about-wrapper h2 {
+        font-size: 1.6rem;
+        margin: 1.1rem;
+    }
+
+    .about-wrapper p {
+        font-size: 1rem;
+    }
+
+    /*ABOUT END*/
+
+    /*PROJECTS*/
+    .projects h1 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    /*PROJECTS END*/
+
 
 }
