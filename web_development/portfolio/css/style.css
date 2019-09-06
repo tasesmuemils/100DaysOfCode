@@ -1,3 +1,6 @@
+/*Portfolio build by Emils Bisenieks 2019*/
+/*HTML, CSS GRID*/
+
 * {
     padding: 0;
     margin: 0;
@@ -94,6 +97,7 @@ html {
     color: #ffffff;
     transition: all 0.2s ease-in-out;
 }
+/*NAVIGATION BAR END*/
 
 /*HEADER*/
 .header-intro {
@@ -185,6 +189,8 @@ html {
     margin-top: 5px;
 }
 
+/*SKILLS END*/
+
 /*PROJECTS*/
 .projects {
     display: grid;
@@ -201,6 +207,10 @@ html {
 
 .projects h4 {
     font-size: 1rem;
+}
+
+.projects p {
+    font-size: 10px;
     margin-bottom: 30px;
 }
 
@@ -255,7 +265,7 @@ html {
     font-size: 1.5rem;
     margin: 0;
     letter-spacing: 2px;
-    padding: 10px 5px;
+    padding: 10px 0px;
 }
 
 .hover-content-wrapper h2 {
@@ -283,6 +293,7 @@ html {
     position: absolute;
 
 }
+/*PROJECTS END*/
 
 /*CONTACT*/
 .contact {
@@ -358,6 +369,8 @@ html {
     transition: all 0.2s ease-in-out;
 }
 
+/*CONTACT END*/
+
 /*FOOTER*/
 .full-width {
     color: #fff;
@@ -406,6 +419,8 @@ html {
 .footer-content h5 {
     padding: 5px;
 }
+
+/**FOOTER END/
 
 /*RESPONSIVNES*/
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -517,6 +532,10 @@ html {
 
     .projects h4 {
         font-size: 1rem;
+    }
+
+    .projects p {
+        font-size: 10px;
         margin-bottom: 30px;
     }
 
@@ -612,6 +631,5 @@ html {
         margin-bottom: 15px;
     }
     /*PROJECTS END*/
-
 
 }
