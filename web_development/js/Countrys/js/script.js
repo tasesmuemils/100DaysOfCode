@@ -2,7 +2,8 @@
 
 const dropdown = document.querySelector('#coutriesList');
 const countriesAPI = 'https://restcountries.eu/rest/v2/all';
-const moreInfo = document.querySelector('#info');
+const flagImage = document.querySelector('#flagImage');
+const countryInfo = document.querySelector('#countryInfo');
 
 
 (function() {
@@ -23,8 +24,12 @@ const moreInfo = document.querySelector('#info');
                     var index = dropdown.selectedIndex - 1;
                     if(index === i) {
                         console.log(i, index);
-                        moreInfo.innerHTML = `
-                            <img src="${data[index].flag}" alt="">
+                        flagImage.innerHTML = `<img src="${data[index].flag}" alt="">`;
+                        countryInfo.innerHTML = `
+                            <p>Capital: ${data[index].capital}</p>
+                            <p>Population: ${data[index].population}</p>
+                            <p>Region: ${data[index].region}</p>
+                            <p>Native name: ${data[index].nativeName}</p>
                         `
                     }
                 })
