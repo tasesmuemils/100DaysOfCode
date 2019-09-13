@@ -11,17 +11,28 @@ function getData() {
                 return response.json();
             })
             .then(function (data) {
-                const listItem = document.createElement('div');
-                const itemName = document.createElement('li');
-                itemName.textContent = data.name;
-                listItem.appendChild(itemName);
+                const listItem = document.createElement('li');
+
+                const listItemFigure = document.createElement('figure');
+                const pokeImage = document.createElement('img');
+                const pokeImgSrc = data.sprites.front_default;
+                pokeImage.src = pokeImgSrc;
+                pokeImage.classList.add('pokemon-img');
+                listItemFigure.appendChild(pokeImage);
+                listItem.appendChild(listItemFigure);
+
+                const listItemInfo = document.createElement('div');
+                listItemInfo.innerHTML = `
+                    <h5 class="pokemon-name">${data.name}</h5>
+                `;
+                listItem.appendChild(listItemInfo);
+
                 pokemonList.appendChild(listItem);
 
-                const pokeImgSrc = data.sprites.front_default;
-                const pokeImage = document.createElement('img');
-                pokeImage.src = pokeImgSrc;
-                listItem.appendChild(pokeImage);
-
+                for (let i = 0; i < 3; i++) {
+                    console.log(data.types[i].type.name);
+                    
+                }
             })
 
     }
@@ -29,25 +40,3 @@ function getData() {
 }
 
 button.addEventListener('click', getData);
-
-
-
-// for (let i = 0; i < pokemonArray.length; i++) {
-//     const listItem = document.createElement('div');
-//     const itemName = document.createElement('li');
-//     itemName.textContent = pokemonArray[i].name;
-//     listItem.appendChild(itemName);
-//     pokemonList.appendChild(listItem);
-
-
-//     fetch(pokemonArray[i].url)
-//         .then(function(response) {
-//             return response.json()
-//         })
-//         .then(function(pokData) {
-//             const pokeImgSrc = pokData.sprites.front_default;
-//             const pokeImage = document.createElement('img');
-//             pokeImage.src = pokeImgSrc;
-//             listItem.appendChild(pokeImage);  
-//         })
-// }
