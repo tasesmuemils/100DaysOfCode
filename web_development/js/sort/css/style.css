@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     letter-spacing: 1px;
     font-family: 'Modak', cursive;
     font-family: 'Monda', sans-serif;
@@ -25,6 +25,12 @@
     justify-self: center;
 }
 
+.pokemon-list li {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+}
+
 .pokemon-img {
     width: 100%;
     height: auto;
@@ -36,6 +42,18 @@
     font-size: 20px;
     text-transform: capitalize;
     font-weight: 600;
+}
+
+.pokemon-abilities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.pokemon-abilities h6 {
+    font-size: 14px;
+    margin: 5px;
+    padding: 2px 5px;
 }
 
 
