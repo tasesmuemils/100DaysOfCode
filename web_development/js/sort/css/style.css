@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     letter-spacing: 1px;
     font-family: 'Modak', cursive;
     font-family: 'Monda', sans-serif;
@@ -18,14 +18,21 @@
     min-width: 1200px;
 }
 
-.pokemon-list {
+.header {
+    width: 60%;
+    display: grid;
+    justify-self: center;
+    text-align: center;
+}
+
+.pokemon-list, .pokemon-list-2 {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-self: center;
 }
 
-.pokemon-list li {
+.pokemon-list li, .pokemon-list-2 li {
     padding: 10px;
     margin: 10px;
     border: 1px solid grey;

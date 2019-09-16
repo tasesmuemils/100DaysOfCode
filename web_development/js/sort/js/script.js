@@ -1,11 +1,44 @@
-const button = document.getElementById('getData');
+const gen1Data = document.getElementById('gen1Data');
+const gen2Data = document.getElementById('gen2Data');
 const apiURL = 'https://pokeapi.co/api/v2/pokemon/';
 const pokemonList = document.getElementById('pokemonList');
-// const apiURL = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000';
+
+
+const searchResult = document.getElementById('searchBar');
+
+function filterNames () {
+    //Search value, list items, pokemon names
+    const filterValue = searchResult.value.toLowerCase();
+    const pokemonListLi = pokemonList.querySelectorAll('li');
+    const pokemonListNames = pokemonList.querySelectorAll('.pokemon-name');
+    
+    for (let i = 0; i < pokemonListNames.length; i++) {
+        //if value is not empty, list item is hidden
+        if (pokemonListNames[i].textContent.toLowerCase().indexOf(filterValue) > -1) {
+            pokemonListLi[i].style.display = '';
+        } else {
+            pokemonListLi[i].style.display = 'none';
+        }
+        
+    }
+    
+}
+
+searchResult.addEventListener('keyup', filterNames);
+
 
 
 function getData() {
-    for (let i = 1; i < 152; i++) {
+    console.log(event.target.id);
+    if (event.target.id === 'gen1Data') {
+        var i = 1;
+        var iCondition = 152;
+    } else if (event.target.id === 'gen2Data') {
+        var i = 153;
+        var iCondition = 252;
+    }
+ 
+    for (i; i < iCondition; i++) {
         fetch(apiURL + i)
             .then(function (response) {
                 return response.json();
@@ -122,4 +155,7 @@ function getData() {
 
 }
 
-button.addEventListener('click', getData);
+gen1Data.addEventListener('click', getData);
+gen2Data.addEventListener('click', getData);
+
+
