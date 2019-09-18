@@ -2,6 +2,8 @@ const gen1Data = document.getElementById('gen1Data');
 const apiURL = 'https://pokeapi.co/api/v2/pokemon/';
 const pokemonList = document.getElementById('pokemonList');
 
+
+//Search bar
 const searchResult = document.getElementById('searchBar');
 
 function filterNames() {
@@ -22,9 +24,58 @@ function filterNames() {
 searchResult.addEventListener('keyup', filterNames);
 
 
+//Sort
+const sortOptions = document.getElementById('sortOptions');
+
+function sorting() {
+    //Selects all li
+    const arraySortNode = document.querySelectorAll('li');
+    //convert NodeList to Array
+    arraySort = [...arraySortNode];
+
+
+    //Sort by pokemon name and #id
+    arraySort.sort(function (a, b) {
+        //A-Z
+        if (sortOptions.selectedIndex === 1) {
+            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent < b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+                return -1;
+            }
+        //Z-A
+        } else if (sortOptions.selectedIndex === 2) {
+            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent > b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+                return -1;
+            }
+        //Lowest number (first)
+        } else if (sortOptions.selectedIndex === 3) {
+            return parseInt(a.lastElementChild.firstElementChild.lastChild.textContent) - parseInt(b.lastElementChild.firstElementChild.lastChild.textContent);
+        //Highest number (first)
+        } else if (sortOptions.selectedIndex === 4) {
+            return parseInt(b.lastElementChild.firstElementChild.lastChild.textContent) - parseInt(a.lastElementChild.firstElementChild.lastChild.textContent);
+        } 
+    });
+
+    //Applays li from array to HTML ul
+    pokemonList.innerHTML = '';
+    for (let i = 0; i < arraySort.length; i++) {
+        pokemonList.appendChild(arraySort[i]);
+    }
+
+}
+
+sortOptions.addEventListener('change', sorting);
+
+
+
+
+
+//Gets data from pokemon API
+//Empty array to collect promises
 const promises = [];
 
-function getData() {
+(function () {
+
+    //Loop threw every pokemon url and get promise of it
     for (let i = 1; i < 152; i++) {
         promises.push(fetch(apiURL + i)
             .then(function (response) {
@@ -32,9 +83,11 @@ function getData() {
             }))
     }
 
+    //Gets data from API
     Promise.all(promises).then(function (data) {
+        //Loops threw every pokemon on collects information
         for (i = 0; i < data.length; i++) {
-            console.log(data[i]);
+
             const listItem = document.createElement('li');
 
             const listItemFigure = document.createElement('figure');
@@ -48,10 +101,10 @@ function getData() {
             const listItemInfo = document.createElement('div');
             listItemInfo.classList.add('pokemon-description');
             listItemInfo.innerHTML = `
-                        <h5 class="pokemon-name">#${data[i].id} ${data[i].name}</h5>
+                        <h6><span>#</span>${data[i].id}</h6>
+                        <h5 class="pokemon-name">${data[i].name}</h5>
                     `;
 
-                    
             listItem.appendChild(listItemInfo);
             pokemonList.appendChild(listItem);
 
@@ -59,6 +112,8 @@ function getData() {
             pokeAbilities.classList.add('pokemon-abilities');
             listItemInfo.appendChild(pokeAbilities);
 
+            //This loops threw types and if there is one, adds element to the page
+            //Also, checks name and givs background color to that element
             for (let z = 0; z < data[i].types.length; z++) {
                 const pokeAbility = document.createElement('h6');
                 pokeAbility.textContent = data[i].types[z].type.name;
@@ -139,13 +194,7 @@ function getData() {
                         break;
                 }
             }
-
         }
-
-
-
     })
+}());
 
-}
-
-gen1Data.addEventListener('click', getData);
