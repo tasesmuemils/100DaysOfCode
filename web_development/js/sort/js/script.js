@@ -2,73 +2,6 @@ const gen1Data = document.getElementById('gen1Data');
 const apiURL = 'https://pokeapi.co/api/v2/pokemon/';
 const pokemonList = document.getElementById('pokemonList');
 
-
-//Search bar
-const searchResult = document.getElementById('searchBar');
-
-function filterNames() {
-    //Search value, list items, pokemon names
-    const filterValue = searchResult.value.toLowerCase();
-    const pokemonListLi = pokemonList.querySelectorAll('li');
-    const pokemonListNames = pokemonList.querySelectorAll('.pokemon-name');
-
-    for (let i = 0; i < pokemonListNames.length; i++) {
-        //if value is not empty, list item is hidden
-        if (pokemonListNames[i].textContent.toLowerCase().indexOf(filterValue) > -1) {
-            pokemonListLi[i].style.display = '';
-        } else {
-            pokemonListLi[i].style.display = 'none';
-        }
-    }
-}
-searchResult.addEventListener('keyup', filterNames);
-
-
-//Sort
-const sortOptions = document.getElementById('sortOptions');
-
-function sorting() {
-    //Selects all li
-    const arraySortNode = document.querySelectorAll('li');
-    //convert NodeList to Array
-    arraySort = [...arraySortNode];
-
-
-    //Sort by pokemon name and #id
-    arraySort.sort(function (a, b) {
-        //A-Z
-        if (sortOptions.selectedIndex === 1) {
-            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent < b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
-                return -1;
-            }
-        //Z-A
-        } else if (sortOptions.selectedIndex === 2) {
-            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent > b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
-                return -1;
-            }
-        //Lowest number (first)
-        } else if (sortOptions.selectedIndex === 3) {
-            return parseInt(a.lastElementChild.firstElementChild.lastChild.textContent) - parseInt(b.lastElementChild.firstElementChild.lastChild.textContent);
-        //Highest number (first)
-        } else if (sortOptions.selectedIndex === 4) {
-            return parseInt(b.lastElementChild.firstElementChild.lastChild.textContent) - parseInt(a.lastElementChild.firstElementChild.lastChild.textContent);
-        } 
-    });
-
-    //Applays li from array to HTML ul
-    pokemonList.innerHTML = '';
-    for (let i = 0; i < arraySort.length; i++) {
-        pokemonList.appendChild(arraySort[i]);
-    }
-
-}
-
-sortOptions.addEventListener('change', sorting);
-
-
-
-
-
 //Gets data from pokemon API
 //Empty array to collect promises
 const promises = [];
@@ -116,6 +49,7 @@ const promises = [];
             //Also, checks name and givs background color to that element
             for (let z = 0; z < data[i].types.length; z++) {
                 const pokeAbility = document.createElement('h6');
+                pokeAbility.classList.add('pokemon-type');
                 pokeAbility.textContent = data[i].types[z].type.name;
                 pokeAbilities.appendChild(pokeAbility);
                 listItemInfo.appendChild(pokeAbilities);
@@ -198,3 +132,99 @@ const promises = [];
     })
 }());
 
+
+
+//SEARCH
+const searchResult = document.getElementById('searchBar');
+
+function filterNames() {
+    //Search value, list items, pokemon names
+    const filterValue = searchResult.value.toLowerCase();
+    const pokemonListLi = pokemonList.querySelectorAll('li');
+    const pokemonListNames = pokemonList.querySelectorAll('.pokemon-name');
+
+    for (let i = 0; i < pokemonListNames.length; i++) {
+        //if value is not empty, list item is hidden
+        if (pokemonListNames[i].textContent.toLowerCase().indexOf(filterValue) > -1) {
+            pokemonListLi[i].style.display = '';
+        } else {
+            pokemonListLi[i].style.display = 'none';
+        }
+    }
+}
+searchResult.addEventListener('keyup', filterNames);
+
+
+//SORT
+const sortOptions = document.getElementById('sortOptions');
+
+function sorting() {
+    //Selects all li
+    const arraySortNode = document.querySelectorAll('li');
+    //convert NodeList to Array
+    arraySort = [...arraySortNode];
+
+
+    //Sort by pokemon name and #id
+    arraySort.sort(function (a, b) {
+        //A-Z
+        if (sortOptions.selectedIndex === 1) {
+            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent < b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+                return -1;
+            }
+            //Z-A
+        } else if (sortOptions.selectedIndex === 2) {
+            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent > b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+                return -1;
+            }
+            //Lowest number (first)
+        } else if (sortOptions.selectedIndex === 3) {
+            return parseInt(a.lastElementChild.firstElementChild.lastChild.textContent) - parseInt(b.lastElementChild.firstElementChild.lastChild.textContent);
+            //Highest number (first)
+        } else if (sortOptions.selectedIndex === 4) {
+            return parseInt(b.lastElementChild.firstElementChild.lastChild.textContent) - parseInt(a.lastElementChild.firstElementChild.lastChild.textContent);
+        }
+    });
+
+    //Applays li from array to HTML ul
+    pokemonList.innerHTML = '';
+    for (let i = 0; i < arraySort.length; i++) {
+        pokemonList.appendChild(arraySort[i]);
+    }
+
+}
+
+sortOptions.addEventListener('change', sorting);
+
+//FILTER
+const filterButtonsNode = document.querySelectorAll('.filterButton');
+const filterButtonsArray = [...filterButtonsNode];
+
+
+function filterType() {
+    const filterButtonText = this.textContent.toLowerCase();
+    const liFilterNodeList = document.querySelectorAll('li');
+    const liFilterArray = [...liFilterNodeList];
+
+    function filterTypes(type) {
+        const typesNodeList = type.querySelectorAll('.pokemon-type');
+        const typesArray = [...typesNodeList];
+
+        for (let i = 0; i < typesArray.length; i++) {
+            if (typesArray[i].textContent == filterButtonText) {
+                return typesArray[i];   
+            }
+        }
+        
+    }
+
+    let results = [];
+    results = liFilterArray.filter(filterTypes);
+    console.log(results);
+    
+    
+}
+
+filterButtonsArray.forEach(function (filterButton) {
+    filterButton.addEventListener('click', filterType);
+})
