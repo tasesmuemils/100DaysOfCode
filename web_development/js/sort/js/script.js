@@ -1,9 +1,17 @@
-const gen1Data = document.getElementById('gen1Data');
-const apiURL = 'https://pokeapi.co/api/v2/pokemon/';
-const pokemonList = document.getElementById('pokemonList');
+//Page louder
+window.addEventListener('load', () => {
+    const preload = document.querySelector('.page-loader-wrapper');
+    console.log(preload);
+    preload.classList.add('loader-finish');
+})
+//Page louder end
+
 
 //Gets data from pokemon API
 //Empty array to collect promises
+const gen1Data = document.getElementById('gen1Data');
+const apiURL = 'https://pokeapi.co/api/v2/pokemon/';
+const pokemonList = document.getElementById('pokemonList');
 const promises = [];
 
 (function () {
@@ -20,6 +28,7 @@ const promises = [];
     Promise.all(promises).then(function (data) {
         //Loops threw every pokemon on collects information
         for (i = 0; i < data.length; i++) {
+            console.log(data);
 
             const listItem = document.createElement('li');
 
@@ -133,7 +142,6 @@ const promises = [];
 }());
 
 
-
 //SEARCH
 const searchResult = document.getElementById('searchBar');
 
@@ -153,6 +161,7 @@ function filterNames() {
     }
 }
 searchResult.addEventListener('keyup', filterNames);
+//SEARCH END
 
 
 //SORT
@@ -195,8 +204,11 @@ function sorting() {
 }
 
 sortOptions.addEventListener('change', sorting);
+//SORT END
+
 
 //FILTER
+//Get filter buttons array
 const filterButtonsNode = document.querySelectorAll('.filterButton');
 const filterButtonsArray = [...filterButtonsNode];
 
@@ -207,24 +219,40 @@ function filterType() {
     const liFilterArray = [...liFilterNodeList];
 
     function filterTypes(type) {
+
+        //If button text = type text then filter works
         const typesNodeList = type.querySelectorAll('.pokemon-type');
         const typesArray = [...typesNodeList];
 
+        if (filterButtonText === "all") {
+            return typesArray;
+        }
+
         for (let i = 0; i < typesArray.length; i++) {
             if (typesArray[i].textContent == filterButtonText) {
-                return typesArray[i];   
+                return typesArray[i];
             }
         }
-        
     }
 
     let results = [];
     results = liFilterArray.filter(filterTypes);
-    console.log(results);
-    
-    
+
+    function compare(arr1, arr2) {
+        arr1.forEach(function (a1) {
+            a1.style.display = 'none';
+            arr2.forEach(function (a2) {
+                if (a1 === a2) {
+                    a1.style.display = '';
+                }
+            })
+        })
+    }
+
+    compare(liFilterArray, results);
 }
 
 filterButtonsArray.forEach(function (filterButton) {
     filterButton.addEventListener('click', filterType);
 })
+//FILTER END
