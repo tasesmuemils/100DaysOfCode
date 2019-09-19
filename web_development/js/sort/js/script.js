@@ -28,10 +28,9 @@ const promises = [];
     Promise.all(promises).then(function (data) {
         //Loops threw every pokemon on collects information
         for (i = 0; i < data.length; i++) {
-            console.log(data);
 
+            //Creats pokemon card (image, pokemo description)
             const listItem = document.createElement('li');
-
             const listItemFigure = document.createElement('figure');
             const pokeImage = document.createElement('img');
             const pokeImgSrc = data[i].sprites["front_default"];
@@ -42,101 +41,148 @@ const promises = [];
 
             const listItemInfo = document.createElement('div');
             listItemInfo.classList.add('pokemon-description');
+            const pokeName = data[i].name;
             listItemInfo.innerHTML = `
                         <h6><span>#</span>${data[i].id}</h6>
-                        <h5 class="pokemon-name">${data[i].name}</h5>
+                        <h5 class="pokemon-name">${pokeName}</h5>
                     `;
 
             listItem.appendChild(listItemInfo);
             pokemonList.appendChild(listItem);
 
-            const pokeAbilities = document.createElement('div');
-            pokeAbilities.classList.add('pokemon-abilities');
-            listItemInfo.appendChild(pokeAbilities);
 
             //This loops threw types and if there is one, adds element to the page
             //Also, checks name and givs background color to that element
-            for (let z = 0; z < data[i].types.length; z++) {
-                const pokeAbility = document.createElement('h6');
-                pokeAbility.classList.add('pokemon-type');
-                pokeAbility.textContent = data[i].types[z].type.name;
-                pokeAbilities.appendChild(pokeAbility);
-                listItemInfo.appendChild(pokeAbilities);
+            const pokeTypes = document.createElement('div');
+            pokeTypes.classList.add('pokemon-types');
+            listItemInfo.appendChild(pokeTypes);
 
-                const switchValue = pokeAbility.textContent;
+            for (let z = 0; z < data[i].types.length; z++) {
+                const pokeType = document.createElement('h6');
+                pokeType.classList.add('pokemon-type');
+                pokeType.textContent = data[i].types[z].type.name;
+                pokeTypes.appendChild(pokeType);
+                listItemInfo.appendChild(pokeTypes);
+
+                const switchValue = pokeType.textContent;
                 switch (switchValue) {
                     case 'grass':
-                        pokeAbility.style.backgroundColor = '#9bcc50';
+                        pokeType.style.backgroundColor = '#9bcc50';
                         break;
 
                     case 'poison':
-                        pokeAbility.style.backgroundColor = '#b97fc9';
+                        pokeType.style.backgroundColor = '#b97fc9';
                         break;
 
                     case 'fire':
-                        pokeAbility.style.backgroundColor = '#fd7d24';
+                        pokeType.style.backgroundColor = '#fd7d24';
                         break;
 
                     case 'flying':
-                        pokeAbility.style.background = 'linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%)';
-                        pokeAbility.style.backgroundColor = '#3dc7ef';
+                        pokeType.style.background = 'linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%)';
+                        pokeType.style.backgroundColor = '#3dc7ef';
                         break;
 
                     case 'water':
-                        pokeAbility.style.backgroundColor = '#4592c4';
+                        pokeType.style.backgroundColor = '#4592c4';
                         break;
 
                     case 'ice':
-                        pokeAbility.style.backgroundColor = '#51c4e7';
+                        pokeType.style.backgroundColor = '#51c4e7';
                         break;
 
                     case 'bug':
-                        pokeAbility.style.backgroundColor = '#729f3f';
+                        pokeType.style.backgroundColor = '#729f3f';
                         break;
 
                     case 'normal':
-                        pokeAbility.style.backgroundColor = '#a4acaf';
+                        pokeType.style.backgroundColor = '#a4acaf';
                         break;
 
                     case 'electric':
-                        pokeAbility.style.backgroundColor = '#eed535';
+                        pokeType.style.backgroundColor = '#eed535';
                         break;
 
                     case 'ground':
-                        pokeAbility.style.background = 'linear-gradient(180deg, #f7de3f 50%, #ab9842 50%)';
-                        pokeAbility.style.backgroundColor = '#f7de3f';
+                        pokeType.style.background = 'linear-gradient(180deg, #f7de3f 50%, #ab9842 50%)';
+                        pokeType.style.backgroundColor = '#f7de3f';
                         break;
 
                     case 'fairy':
-                        pokeAbility.style.backgroundColor = '#fdb9e9';
+                        pokeType.style.backgroundColor = '#fdb9e9';
                         break;
 
                     case 'fighting':
-                        pokeAbility.style.backgroundColor = '#d56723';
+                        pokeType.style.backgroundColor = '#d56723';
                         break;
 
                     case 'psychic':
-                        pokeAbility.style.backgroundColor = '#f366b9';
+                        pokeType.style.backgroundColor = '#f366b9';
                         break;
 
                     case 'steel':
-                        pokeAbility.style.backgroundColor = '#9eb7b8';
+                        pokeType.style.backgroundColor = '#9eb7b8';
                         break;
 
                     case 'ghost':
-                        pokeAbility.style.backgroundColor = '#7b62a3';
+                        pokeType.style.backgroundColor = '#7b62a3';
                         break;
 
                     case 'dragon':
-                        pokeAbility.style.background = 'linear-gradient(180deg, #53a4cf 50%, #f16e57 50%)';
-                        pokeAbility.style.backgroundColor = '#53a4cf';
+                        pokeType.style.background = 'linear-gradient(180deg, #53a4cf 50%, #f16e57 50%)';
+                        pokeType.style.backgroundColor = '#53a4cf';
                         break;
 
                     case 'rock':
-                        pokeAbility.style.backgroundColor = '#a38c21';
+                        pokeType.style.backgroundColor = '#a38c21';
                         break;
                 }
             }
+
+            //Cards modal
+            const pokeExperience = data[i].base_experience;
+            const pokeHeight = data[i].height;
+            const pokeWeight = data[i].weight;
+            const modalWrapper = document.getElementById('modal');
+
+            //Content for modal
+            const pokeAbilities = document.createElement('div');
+            pokeAbilities.classList.add('pokemon-ablities');
+
+            for (let x = 0; x < data[i].abilities.length; x++) {
+                const pokeAbility = document.createElement('h6');
+                pokeAbility.classList.add('pokemon-abilities');
+                pokeAbility.textContent = data[i].abilities[x].ability.name;
+                pokeAbilities.appendChild(pokeAbility);
+            }
+            //Content for modal
+
+            function openModal() {
+                console.log(pokeTypes);
+                modalWrapper.innerHTML = `
+                    <div class="modal-content">                     
+                        <img src="${pokeImgSrc}" alt="">
+                        <h5 class="pokemon-name">${pokeName}</h5>
+                        <section class="poke-stats">
+                            <p>Base Experience: ${pokeExperience} XP</p>
+                            <p>Height: ${pokeHeight}</p>
+                            <p>Weight: ${pokeWeight}</p>
+                        </section>
+                        <section>
+                            <h5>Pokemon Type</h5>
+                            ${pokeTypes.innerHTML}
+                        </section>
+                        <section>
+                            <h5>Abilities</h5>
+                            ${pokeAbilities.innerHTML}
+                        </section>
+                    </div>
+                `;
+                modalWrapper.style.display = 'block';
+                modalWrapper.style.color = 'white'
+            }
+            pokeImage.addEventListener('click', openModal);
+            //Cards modal end
         }
     })
 }());
