@@ -59,7 +59,7 @@ const promises = [];
 
             for (let z = 0; z < data[i].types.length; z++) {
                 const pokeType = document.createElement('h6');
-                pokeType.classList.add('pokemon-type');
+                pokeType.classList.add('pokemon-type', "poke-type");
                 pokeType.textContent = data[i].types[z].type.name;
                 pokeTypes.appendChild(pokeType);
                 listItemInfo.appendChild(pokeTypes);
@@ -151,7 +151,7 @@ const promises = [];
 
             for (let x = 0; x < data[i].abilities.length; x++) {
                 const pokeAbility = document.createElement('h6');
-                pokeAbility.classList.add('pokemon-abilities');
+                pokeAbility.classList.add('poke-ability');
                 pokeAbility.textContent = data[i].abilities[x].ability.name;
                 pokeAbilities.appendChild(pokeAbility);
             }
@@ -160,26 +160,34 @@ const promises = [];
             function openModal() {
                 console.log(pokeTypes);
                 modalWrapper.innerHTML = `
-                    <div class="modal-content">                     
-                        <img src="${pokeImgSrc}" alt="">
-                        <h5 class="pokemon-name">${pokeName}</h5>
+                    <div class="modal-content">
+                        <figure>
+                            <img src="${pokeImgSrc}" alt="">
+                        </figure>                  
+                        <h5 class="poke-name">${pokeName}</h5>
                         <section class="poke-stats">
-                            <p>Base Experience: ${pokeExperience} XP</p>
-                            <p>Height: ${pokeHeight}</p>
-                            <p>Weight: ${pokeWeight}</p>
+                            <p>Base Experience: <span>${pokeExperience} XP</span></p>
+                            <p>Height: <span>${pokeHeight}</span></p>
+                            <p>Weight: <span>${pokeWeight}</span></p>
                         </section>
-                        <section>
+                        <section class="poke-types">
                             <h5>Pokemon Type</h5>
                             ${pokeTypes.innerHTML}
                         </section>
-                        <section>
+                        <section class="poke-abilities">
                             <h5>Abilities</h5>
                             ${pokeAbilities.innerHTML}
                         </section>
+                        <div class="closeModalButton">
+                            <button id="modalClose">close</button>
+                        </div>
                     </div>
                 `;
-                modalWrapper.style.display = 'block';
-                modalWrapper.style.color = 'white'
+                modalWrapper.style.display = 'grid';
+                const modalClose = document.getElementById("modalClose");
+                modalClose.addEventListener("click", function () {
+                    modalWrapper.style.display = "none";
+                })
             }
             pokeImage.addEventListener('click', openModal);
             //Cards modal end
