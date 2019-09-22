@@ -1,8 +1,21 @@
 //Page louder
 window.addEventListener('load', () => {
     const preload = document.querySelector('.page-loader-wrapper');
-    console.log(preload);
-    preload.classList.add('loader-finish');
+    const pokemonFacts = [
+        "Rhydon was the first Pokemon ever created",
+        "Hitmonchan and Hitmonlee got their names from famous fighters",
+        "Clefairy was almost the face of pokemon (instead of Pikachu)",
+        "The franchise has made more than 39 billion dollars and sold over 200 million copies"
+    ]
+
+    const pokemonFact = document.getElementById("randomFact");
+    const pokemonFactsItem = pokemonFacts[Math.floor(Math.random() * pokemonFacts.length)];
+    console.log(pokemonFactsItem);
+    pokemonFact.textContent = pokemonFactsItem;
+    setTimeout(() => {
+        preload.classList.add('loader-finish');
+    }, 2000);
+    
 })
 //Page louder end
 
@@ -143,6 +156,22 @@ const promises = [];
             const pokeExperience = data[i].base_experience;
             const pokeHeight = data[i].height;
             const pokeWeight = data[i].weight;
+
+            function numberConvert(number) {
+                if (number.toString().length === 1) {
+                    return "0." + number;
+                } else {
+                    const numberString = number.toString();
+                    const lastChar = numberString[numberString.length - 1];
+
+                    if ((numberString.length > 2) && (number % lastChar) !== 0) {
+                        return number / Math.pow(10, 1);
+                    } else {
+                        return number / 10;
+                    }
+                }
+            }
+
             const modalWrapper = document.getElementById('modal');
 
             //Content for modal
@@ -167,8 +196,8 @@ const promises = [];
                         <h5 class="poke-name">${pokeName}</h5>
                         <section class="poke-stats">
                             <p>Base Experience: <span>${pokeExperience} XP</span></p>
-                            <p>Height: <span>${pokeHeight}</span></p>
-                            <p>Weight: <span>${pokeWeight}</span></p>
+                            <p>Height: <span>${numberConvert(pokeHeight)} m</span></p>
+                            <p>Weight: <span>${numberConvert(pokeWeight)} kg</span></p>
                         </section>
                         <section class="poke-types">
                             <h5>Pokemon Type</h5>
