@@ -14,8 +14,8 @@ window.addEventListener('load', () => {
     pokemonFact.textContent = pokemonFactsItem;
     setTimeout(() => {
         preload.classList.add('loader-finish');
-    }, 2000);
-    
+    }, 3000);
+
 })
 //Page louder end
 
@@ -212,10 +212,14 @@ const promises = [];
                         </div>
                     </div>
                 `;
-                modalWrapper.style.display = 'grid';
+                modalWrapper.style.visibility = 'visible';
+                modalWrapper.style.opacity = 1;
+                modalWrapper.style.transform = "scale(1)";
                 const modalClose = document.getElementById("modalClose");
                 modalClose.addEventListener("click", function () {
-                    modalWrapper.style.display = "none";
+                    modalWrapper.style.visibility = 'hidden';
+                    modalWrapper.style.opacity = 0;
+                    modalWrapper.style.transform = "scale(2)";
                 })
             }
             pokeImage.addEventListener('click', openModal);
