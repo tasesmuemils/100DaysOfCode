@@ -1,3 +1,9 @@
+/*Pokemon app by Emils Bisesnieks 2019*/
+/*Data: PokeAPI*/
+/*First time creating filters, sorting, searching with Vanilla JS*/
+
+/*APP STYLE*/
+/*MAIN GRID*/
 * {
     padding: 0;
     margin: 0;
@@ -20,8 +26,10 @@ body {
 
 .wrapper-content {
     display: grid;
-    width: 1300px;
+    width: 1180px;
 }
+
+/*MAIN GRID END*/
 
 /*LOADER*/
 .page-loader-wrapper {
@@ -37,7 +45,8 @@ body {
     transition: opacity 0.7s ease-in-out;
 }
 
-.loader-content, .loader-wrapper {
+.loader-content,
+.loader-wrapper {
     position: relative;
     display: grid;
     justify-self: center;
@@ -54,7 +63,7 @@ body {
 }
 
 .loader-content h2 {
-    padding: 20px 0; 
+    padding: 20px 0;
 }
 
 #page-loader {
@@ -221,7 +230,7 @@ body {
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     margin: 5px;
-    padding: 5px 20px; 
+    padding: 5px 20px;
     border: 2px solid #fff;
     border-radius: 15px;
     color: #fff;
@@ -230,7 +239,7 @@ body {
     cursor: pointer;
     outline: none;
     transition: background-color 0.2s ease-out,
-    border 0.2s ease-out;
+        border 0.2s ease-out;
 }
 
 .closeModalButton button:hover {
@@ -238,8 +247,8 @@ body {
     border-color: #ed3330;
 }
 
-
 /*MODAL END*/
+
 
 /*CONTENT STYLING*/
 
@@ -269,6 +278,7 @@ body {
     font-size: 25px;
     font-family: 'Turret Road', cursive;
 }
+
 /*Header title end*/
 
 
@@ -299,7 +309,7 @@ body {
     font-size: 20px;
     padding: 5px;
     border-bottom: 2px solid #fff;
-    outline: none;  
+    outline: none;
 }
 
 /*Search bar end*/
@@ -339,7 +349,7 @@ body {
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     margin: 5px;
-    padding: 5px 0; 
+    padding: 5px 0;
     border: 2px solid #fff;
     border-radius: 15px;
     color: #fff;
@@ -353,12 +363,13 @@ body {
 .filters-wrapper button:hover {
     transform: translateY(-2px);
 }
+
 /*Filters end*/
 /*HEADER END*/
 
 /*POKEMON LIST*/
 .pokemon-list {
-    width: 80%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-self: center;
@@ -409,3 +420,84 @@ body {
     margin: 5px;
     padding: 2px 10px;
 }
+
+/*POKEMON LIST END*/
+
+/*RESPONSIVNES*/
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+    /*MAIN GRID*/
+    * {
+        /* border: 1px solid yellow; */
+    }
+
+    .wrapper-content {
+        display: grid;
+        width: 960px;
+    }
+
+    /*MAIN GRID END*/
+
+    /*HEADER*/
+    .header {
+        width: 80%;
+        display: grid;
+        justify-self: center;
+        text-align: center;
+        color: #fff;
+        margin: 1rem 0;
+    }
+
+    /*Header title end*/
+
+
+    .header-title h1 {
+        font-size: 40px;
+    }
+
+    .header-title h3 {
+        font-size: 20px;
+    }
+
+    /*Header title end*/
+
+
+    /*Search and sort section*/
+    .search-sort-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*Search bar*/
+    .search-bar label {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        width: 40%;
+        font-size: 15px;
+    }
+
+    /*Search bar end*/
+
+    /*Sort*/
+    .sort-wrapper select {
+        font-size: 15px;
+        margin: 1rem;
+    }
+    /*Sort end*/
+    /*Search and sort section*/
+
+    /*Filters*/
+    .filters-wrapper {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    /*Filters end*/
+    /*HEADER END*/
+}
+
+
+
+/*RESPONSIVNES END*/
