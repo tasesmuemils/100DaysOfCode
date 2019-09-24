@@ -272,12 +272,20 @@ function sorting() {
     arraySort.sort(function (a, b) {
         //A-Z
         if (sortOptions.selectedIndex === 1) {
-            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent < b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+            //Works on Firefox
+            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent > b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+                return 1;
+            //Works on Chrome    
+            } else if (a.lastElementChild.firstElementChild.nextElementSibling.textContent < b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
                 return -1;
             }
             //Z-A
         } else if (sortOptions.selectedIndex === 2) {
-            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent > b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+            //Works on Firefox
+            if (a.lastElementChild.firstElementChild.nextElementSibling.textContent < b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
+                return 1;
+            //Works on Chrome
+            } else if (a.lastElementChild.firstElementChild.nextElementSibling.textContent > b.lastElementChild.firstElementChild.nextElementSibling.textContent) {
                 return -1;
             }
             //Lowest number (first)
@@ -288,6 +296,8 @@ function sorting() {
             return parseInt(b.lastElementChild.firstElementChild.lastChild.textContent) - parseInt(a.lastElementChild.firstElementChild.lastChild.textContent);
         }
     });
+
+    console.log(arraySort);
 
     //Applays li from array to HTML ul
     pokemonList.innerHTML = '';
