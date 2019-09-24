@@ -229,6 +229,7 @@ const promises = [];
 }());
 
 
+
 //SEARCH
 const searchResult = document.getElementById('searchBar');
 
