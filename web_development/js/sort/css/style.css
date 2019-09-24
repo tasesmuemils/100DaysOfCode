@@ -8,7 +8,6 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    /* border: 1px solid red; */
     letter-spacing: 1px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -250,9 +249,7 @@ body {
 
 /*MODAL END*/
 
-
 /*CONTENT STYLING*/
-
 /*HEADER*/
 .header {
     width: 80%;
@@ -281,7 +278,6 @@ body {
 }
 
 /*Header title end*/
-
 
 /*Search and sort section*/
 .search-sort-wrapper {
@@ -423,9 +419,8 @@ body {
 
 /*POKEMON LIST END*/
 
+
 /*RESPONSIVNES*/
-
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
 
@@ -439,8 +434,6 @@ body {
     }
 
     /*MODAL END*/
-
-
 
     /*MAIN GRID*/
     .wrapper {
@@ -464,9 +457,7 @@ body {
         margin: 1rem 0;
     }
 
-    /*Header title end*/
-
-
+    /*Header title*/
     .header-title h1 {
         font-size: 40px;
     }
@@ -476,7 +467,6 @@ body {
     }
 
     /*Header title end*/
-
 
     /*Search and sort section*/
     .search-sort-wrapper {
@@ -518,7 +508,6 @@ body {
     }
 
     /*POKEMON LIST END*/
-
 
 }
 
@@ -577,7 +566,6 @@ body {
 
     /*MODAL END*/
 
-
     /*MAIN GRID*/
     .wrapper-content {
         width: 100%;
@@ -593,7 +581,6 @@ body {
         grid-template-columns: repeat(1, 1fr);
     }
 
-
     /*Sort*/
     .sort-wrapper select {
         margin: 0.5rem;
@@ -607,6 +594,8 @@ body {
         grid-template-columns: repeat(5, 1fr);
     }
 
+    /*Filters end*/
+
     /*POKEMON LIST*/
     .pokemon-list {
         grid-template-columns: repeat(3, 1fr);
@@ -619,14 +608,12 @@ body {
 @media only screen and (max-width: 692px) {
 
     /*LOADER*/
-
     .loader-content h2 {
         font-size: 20px;
         padding: 20px 10px;
     }
 
     /*LOADER END*/
-
 
     /*MODAL*/
     #modal {
@@ -685,6 +672,7 @@ body {
         font-size: 12px;
         padding: 5px 15px;
     }
+
     /*MODAL END*/
 
     /*HEADER*/
@@ -692,26 +680,24 @@ body {
     .filters-wrapper {
         display: none;
     }
+    /*HEADER END*/
+    /*Filters end*/
 
     /*POKEMON LIST*/
     .pokemon-list {
         grid-template-columns: repeat(2, 1fr);
     }
-
     /*POKEMON LIST END*/
 }
 
 @media only screen and (max-width: 500px) {
 
     /*LOADER*/
-
     .loader-content h2 {
         font-size: 20px;
         padding: 20px 10px;
     }
-
     /*LOADER END*/
-
 
     /*HEADER*/
     .header {
@@ -730,9 +716,8 @@ body {
     .header-title h3 {
         font-size: 17px;
     }
-
     /*Header title end*/
-
+    /*HEADER END*/
 
     /*Search and sort section*/
     .search-sort-wrapper {
@@ -752,7 +737,6 @@ body {
         width: 70%;
         font-size: 13px;
     }
-
     /*Search bar end*/
 
     /*Sort*/
@@ -792,5 +776,4 @@ body {
     /*POKEMON LIST END*/
 
 }
-
 /*RESPONSIVNES END*/

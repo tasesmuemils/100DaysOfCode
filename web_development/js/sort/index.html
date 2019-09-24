@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Pokemon app by Emils Bisesnieks 2019
+Data: PokeAPI
+First time creating filters, sorting, searching with Vanilla JS -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +17,7 @@
 </head>
 
 <body>
+    <!--MAIN WRAPPER-->
     <div class="wrapper">
 
         <!--LOADER-->
@@ -29,13 +34,17 @@
             </div>
         </div>
         <!--LOADER END-->
+
         <!--MODAL-->
         <div id="modal">
 
         </div>
         <!--MODAL END-->
 
+        <!--CONTENT WRAPPER-->
         <div class="wrapper-content">
+
+            <!--HEADER-->
             <section class="header">
                 <div class="header-title">
                     <h1>Pokedex</h1>
@@ -80,13 +89,17 @@
                 </div>
 
             </section>
+            <!--HEADER END-->
 
+            <!--POKEMON LIST-->
             <ul class="pokemon-list" id="pokemonList">
 
             </ul>
+            <!--POKEMON LIST-->
         </div>
+        <!--CONTENT WRAPPER END-->
     </div>
-
+    <!--MAIN WRAPPER-->
 
     <script src="js/script.js"></script>
 </body>

@@ -1,6 +1,13 @@
-//Page louder
+/*Pokemon app by Emils Bisesnieks 2019
+Data: PokeAPI
+First time creating filters, sorting, searching with Vanilla JS*/
+
+
+//PAGE LOUDER
 window.addEventListener('load', () => {
     const preload = document.querySelector('.page-loader-wrapper');
+
+    //Array for introduction texts
     const pokemonFacts = [
         "Rhydon was the first Pokemon ever created",
         "Hitmonchan and Hitmonlee got their names from famous fighters",
@@ -8,6 +15,7 @@ window.addEventListener('load', () => {
         "The franchise has made more than 39 billion dollars and sold over 200 million copies"
     ]
 
+    /*Takes random item from array and updates HTML*/
     const pokemonFact = document.getElementById("randomFact");
     const pokemonFactsItem = pokemonFacts[Math.floor(Math.random() * pokemonFacts.length)];
     console.log(pokemonFactsItem);
@@ -17,21 +25,21 @@ window.addEventListener('load', () => {
     }, 3000);
 
 })
-//Page louder end
+//PAGE LOUDER END
 
 
-//Gets data from pokemon API
-//Empty array to collect promises
-const gen1Data = document.getElementById('gen1Data');
-const apiURL = 'https://pokeapi.co/api/v2/pokemon/';
-const pokemonList = document.getElementById('pokemonList');
-const promises = [];
+//API DATA
+const pokemonList = document.getElementById('pokemonList'); //List Ul
+const apiURL = 'https://pokeapi.co/api/v2/pokemon/'; //API URL
+const promises = []; //Empty array to collect promises
 
+/*Gets data from API, sets data in HTML.
+IFEE */
 (function () {
 
     //Loop threw every pokemon url and get promise of it
     for (let i = 1; i < 152; i++) {
-        promises.push(fetch(apiURL + i)
+        promises.push(fetch(apiURL + i) //Puts every promise in emopty array
             .then(function (response) {
                 return response.json();
             }))
@@ -39,29 +47,29 @@ const promises = [];
 
     //Gets data from API
     Promise.all(promises).then(function (data) {
-        //Loops threw every pokemon on collects information
-        for (i = 0; i < data.length; i++) {
+        for (i = 0; i < data.length; i++) { //Loops threw every promise on collects information
 
-            //Creats pokemon card (image, pokemo description)
-            const listItem = document.createElement('li');
-            const listItemFigure = document.createElement('figure');
-            const pokeImage = document.createElement('img');
-            const pokeImgSrc = data[i].sprites["front_default"];
-            pokeImage.src = pokeImgSrc;
-            pokeImage.classList.add('pokemon-img');
-            listItemFigure.appendChild(pokeImage);
-            listItem.appendChild(listItemFigure);
+            //li image section
+            const listItem = document.createElement('li'); //Creates pokemon card (li)
+            const listItemFigure = document.createElement('figure'); //Creates pokemon cards figure element
+            const pokeImage = document.createElement('img'); //Creates pokemon cards img element
+            const pokeImgSrc = data[i].sprites["front_default"]; //Gets image from data array
+            pokeImage.src = pokeImgSrc; //Sets image to img element
+            pokeImage.classList.add('pokemon-img'); //Adds class to image
+            listItemFigure.appendChild(pokeImage); //Adds img to figure
+            listItem.appendChild(listItemFigure); //Adds figure to li
 
-            const listItemInfo = document.createElement('div');
-            listItemInfo.classList.add('pokemon-description');
-            const pokeName = data[i].name;
+            //li description section
+            const listItemInfo = document.createElement('div'); //Creates description div
+            listItemInfo.classList.add('pokemon-description'); //Adds class to div
+            const pokeName = data[i].name; //Adds name form data array
             listItemInfo.innerHTML = `
                         <h6><span>#</span>${data[i].id}</h6>
                         <h5 class="pokemon-name">${pokeName}</h5>
-                    `;
+                    `; //Applys data to HTML 
 
-            listItem.appendChild(listItemInfo);
-            pokemonList.appendChild(listItem);
+            listItem.appendChild(listItemInfo); //Adds description div to li
+            pokemonList.appendChild(listItem); //Adds description li to ul
 
 
             //This loops threw types and if there is one, adds element to the page
@@ -152,11 +160,13 @@ const promises = [];
                 }
             }
 
-            //Cards modal
+            //CARDS MODAL
+            //Gets data for modal card
             const pokeExperience = data[i].base_experience;
             const pokeHeight = data[i].height;
             const pokeWeight = data[i].weight;
 
+            //Converter for weight and height
             function numberConvert(number) {
                 if (number.toString().length === 1) {
                     return "0." + number;
@@ -172,22 +182,20 @@ const promises = [];
                 }
             }
 
-            const modalWrapper = document.getElementById('modal');
+            const modalWrapper = document.getElementById('modal'); //Gets modal from HTML
 
-            //Content for modal
-            const pokeAbilities = document.createElement('div');
-            pokeAbilities.classList.add('pokemon-ablities');
+            //Adds modal content to HTML
+            const pokeAbilities = document.createElement('div'); //Creates abilities modal div
+            pokeAbilities.classList.add('pokemon-ablities'); //Adds class to abilities div
 
             for (let x = 0; x < data[i].abilities.length; x++) {
-                const pokeAbility = document.createElement('h6');
-                pokeAbility.classList.add('poke-ability');
-                pokeAbility.textContent = data[i].abilities[x].ability.name;
-                pokeAbilities.appendChild(pokeAbility);
+                const pokeAbility = document.createElement('h6'); //Creates element h6
+                pokeAbility.classList.add('poke-ability'); //Adss class to element
+                pokeAbility.textContent = data[i].abilities[x].ability.name; //Gets ability from data array
+                pokeAbilities.appendChild(pokeAbility); //Appends h6 to abilities section
             }
-            //Content for modal
 
-            function openModal() {
-                console.log(pokeTypes);
+            function openModal() { //Function runs when user click on cards image
                 modalWrapper.innerHTML = `
                     <div class="modal-content">
                         <figure>
@@ -212,14 +220,14 @@ const promises = [];
                         </div>
                     </div>
                 `;
-                modalWrapper.style.visibility = 'visible';
-                modalWrapper.style.opacity = 1;
-                modalWrapper.style.transform = "scale(1)";
-                const modalClose = document.getElementById("modalClose");
-                modalClose.addEventListener("click", function () {
-                    modalWrapper.style.visibility = 'hidden';
-                    modalWrapper.style.opacity = 0;
-                    modalWrapper.style.transform = "scale(2)";
+                modalWrapper.style.visibility = 'visible'; //CSS changes
+                modalWrapper.style.opacity = 1; //CSS changes
+                modalWrapper.style.transform = "scale(1)"; //CSS changes
+                const modalClose = document.getElementById("modalClose"); //Close button
+                modalClose.addEventListener("click", function () { //Function runs when user click on close button
+                    modalWrapper.style.visibility = 'hidden'; //CSS changes
+                    modalWrapper.style.opacity = 0; //CSS changes
+                    modalWrapper.style.transform = "scale(2)"; //CSS changes
                 })
             }
             pokeImage.addEventListener('click', openModal);
@@ -227,20 +235,21 @@ const promises = [];
         }
     })
 }());
-
+//API DAT END
 
 
 //SEARCH
-const searchResult = document.getElementById('searchBar');
+const searchResult = document.getElementById('searchBar'); //Gets search bar form HTML
 
 function filterNames() {
     //Search value, list items, pokemon names
-    const filterValue = searchResult.value.toLowerCase();
-    const pokemonListLi = pokemonList.querySelectorAll('li');
-    const pokemonListNames = pokemonList.querySelectorAll('.pokemon-name');
+    const filterValue = searchResult.value.toLowerCase(); //Gets search value
+    const pokemonListLi = pokemonList.querySelectorAll('li'); //Gets list items
+    const pokemonListNames = pokemonList.querySelectorAll('.pokemon-name'); //Gets pokemon names
 
     for (let i = 0; i < pokemonListNames.length; i++) {
-        //if value is not empty, list item is hidden
+        /*if at least one value of search appears in name, list item stays
+        if value of search never occurs, list item is hidden*/
         if (pokemonListNames[i].textContent.toLowerCase().indexOf(filterValue) > -1) {
             pokemonListLi[i].style.display = '';
         } else {
@@ -256,11 +265,8 @@ searchResult.addEventListener('keyup', filterNames);
 const sortOptions = document.getElementById('sortOptions');
 
 function sorting() {
-    //Selects all li
-    const arraySortNode = document.querySelectorAll('li');
-    //convert NodeList to Array
-    arraySort = [...arraySortNode];
-
+    const arraySortNode = document.querySelectorAll('li'); //Selects all list items
+    arraySort = [...arraySortNode]; //convert NodeList to Array
 
     //Sort by pokemon name and #id
     arraySort.sort(function (a, b) {
@@ -288,7 +294,6 @@ function sorting() {
     for (let i = 0; i < arraySort.length; i++) {
         pokemonList.appendChild(arraySort[i]);
     }
-
 }
 
 sortOptions.addEventListener('change', sorting);
@@ -297,25 +302,25 @@ sortOptions.addEventListener('change', sorting);
 
 //FILTER
 //Get filter buttons array
-const filterButtonsNode = document.querySelectorAll('.filterButton');
-const filterButtonsArray = [...filterButtonsNode];
+const filterButtonsNode = document.querySelectorAll('.filterButton'); //Selects all filter buttons
+const filterButtonsArray = [...filterButtonsNode]; //Converts NodeList to Array
 
 
 function filterType() {
-    const filterButtonText = this.textContent.toLowerCase();
-    const liFilterNodeList = document.querySelectorAll('li');
-    const liFilterArray = [...liFilterNodeList];
+    const filterButtonText = this.textContent.toLowerCase(); //Takes text value from filter button
+    const liFilterNodeList = document.querySelectorAll('li'); //Selects all list items
+    const liFilterArray = [...liFilterNodeList]; //Converts NodeList to Array
 
     function filterTypes(type) {
-
-        //If button text = type text then filter works
         const typesNodeList = type.querySelectorAll('.pokemon-type');
         const typesArray = [...typesNodeList];
 
+        //Function stops and returns full array
         if (filterButtonText === "all") {
             return typesArray;
         }
 
+        //If button text = type text then filter works
         for (let i = 0; i < typesArray.length; i++) {
             if (typesArray[i].textContent == filterButtonText) {
                 return typesArray[i];
@@ -324,8 +329,9 @@ function filterType() {
     }
 
     let results = [];
-    results = liFilterArray.filter(filterTypes);
+    results = liFilterArray.filter(filterTypes); //Adds filtered values to empty array
 
+    //Function compares filtered items to full array and leaves items which are ===
     function compare(arr1, arr2) {
         arr1.forEach(function (a1) {
             a1.style.display = 'none';
@@ -340,7 +346,8 @@ function filterType() {
     compare(liFilterArray, results);
 }
 
-filterButtonsArray.forEach(function (filterButton) {
-    filterButton.addEventListener('click', filterType);
+filterButtonsArray.forEach(function (filterButton) { //For each button adds event listener
+    filterButton.addEventListener('click', filterType); 
 })
 //FILTER END
+
