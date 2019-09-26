@@ -1,2 +1,5 @@
-#25.09.2019
+# 25.09.2019
 Scrimba: ReactDOM & JSX Practice
+
+# 26.09.2019
+Scrimba: Styling React CSS Classes
