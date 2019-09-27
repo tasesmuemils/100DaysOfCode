@@ -3,3 +3,6 @@ Scrimba: ReactDOM & JSX Practice
 
 # 26.09.2019
 Scrimba: Styling React CSS Classes
+
+# 27.09.2019
+Scrimba: React Todo App - Phase 2
