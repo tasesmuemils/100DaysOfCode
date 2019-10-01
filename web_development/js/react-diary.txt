@@ -6,3 +6,6 @@ Scrimba: Styling React CSS Classes
 
 # 27.09.2019
 Scrimba: React Todo App - Phase 2
+
+#01.10.2019
+Scrimba: React Props and Styling Practice
