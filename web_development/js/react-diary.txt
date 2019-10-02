@@ -9,3 +9,6 @@ Scrimba: React Todo App - Phase 2
 
 #01.10.2019
 Scrimba: React Props and Styling Practice
+
+#02.10.2019
+Scrimba: ES6: Rest Operator
