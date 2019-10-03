@@ -12,3 +12,7 @@ Scrimba: React Props and Styling Practice
 
 #02.10.2019
 Scrimba: ES6: Rest Operator
+
+#02.10.2019
+Scrimba: ES6 course end.
+Next: freeCodeCamp ES6
