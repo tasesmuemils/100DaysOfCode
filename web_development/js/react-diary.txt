@@ -13,6 +13,9 @@ Scrimba: React Props and Styling Practice
 #02.10.2019
 Scrimba: ES6: Rest Operator
 
-#02.10.2019
+#03.10.2019
 Scrimba: ES6 course end.
 Next: freeCodeCamp ES6
+
+#04.10.2019
+ES6: Use Destructuring Assignment to Assign Variables from Arrays
