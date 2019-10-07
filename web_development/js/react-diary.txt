@@ -21,4 +21,4 @@ Next: freeCodeCamp ES6
 ES6: Use Destructuring Assignment to Assign Variables from Arrays
 
 #07.10.2019
-ES6: Classes
+ES6: Use getters and setters to Control Access to an Object
