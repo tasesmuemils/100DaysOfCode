@@ -19,3 +19,6 @@ Next: freeCodeCamp ES6
 
 #04.10.2019
 ES6: Use Destructuring Assignment to Assign Variables from Arrays
+
+#07.10.2019
+ES6: Classes
