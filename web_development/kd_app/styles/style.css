@@ -1,7 +1,15 @@
+/*Variables*/
+:root {
+    --nav-font-color: #7a80b4;
+    --nav-background: #0e0c28;
+    --white: #ffffff;
+}
+
 * {
     padding: 0;
     margin: 0;
-    /* border: 1px solid red; */
+    border: 1px solid red;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -24,29 +32,77 @@ body {
     height: 100vh;
 }
 
+/*HEADER*/
 .header {
     grid-area: header;
-    background-color: white;
+    background-color: var(--white);
+    display: grid;
+    padding: 0 10px;
+    align-content: center;
     position: fixed;
     top: 0;
     min-height: 50px;
     width: 100%;
 }
 
+.header h1 {
+    font-size: 20px;
+}
+/*HEADER END*/
+
+
+/*NAVIGATION*/
 .navigation-section {
     grid-area: navigation-section;
-    background-color: #0e0c28;
-    color: #7a80b4;
+    background-color: var(--nav-background);
+    color: var(--nav-font-color);
     position: fixed;
     height: 100%;
     width: 250px;
 }
 
-.content-section {
-    grid-area: content-section;
-    background-color: gainsboro;
+.navigation-bar-style {
+    margin: 20px;
+    font-size: 17px;
+    font-weight: 800;
+    list-style-type: none;
 }
 
-.content-section * {
-    padding-top: 20px;
+.navigation-bar-style li {
+    margin-top: 10px;
+    padding: 5px 0;
+}
+
+.navigation-bar-style li a {
+    text-decoration-style: none;
+    color: var(--nav-font-color);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.navigation-bar-style li a:hover {
+    color: var(--white);
+}
+/*NAVIGATION END*/
+.content-section {
+    display: grid;
+    align-items: start;
+    grid-area: content-section;
+    
+    background-color: gainsboro;
+    padding: 5%;
+    border: 1px solid red;
+}
+
+.content-card {
+    /* display: grid; */
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    border-radius: 3px;
+    margin: 3%;
+}
+
+.intro {
+    padding: 5%;
 }
