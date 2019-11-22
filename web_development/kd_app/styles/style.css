@@ -8,7 +8,7 @@
 * {
     padding: 0;
     margin: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -84,25 +84,11 @@ body {
     color: var(--white);
 }
 /*NAVIGATION END*/
+
 .content-section {
-    display: grid;
-    align-items: start;
     grid-area: content-section;
-    
     background-color: gainsboro;
-    padding: 5%;
-    border: 1px solid red;
+    padding: 3%;
 }
 
-.content-card {
-    /* display: grid; */
-    text-align: center;
-    background-color: #ffffff;
-    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
-    border-radius: 3px;
-    margin: 3%;
-}
 
-.intro {
-    padding: 5%;
-}
