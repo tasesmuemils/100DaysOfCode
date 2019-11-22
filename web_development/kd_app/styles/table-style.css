@@ -1,0 +1,30 @@
+
+.table-section {
+    background-color: #ffffff;
+    display: grid;
+    color: #3d405c;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+}
+
+.table-section h5 {
+    font-size: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #E6E6F2;
+}
+
+.table-style {
+    margin: 20px;
+    border-collapse: collapse;
+}
+
+.table-style th{
+    padding: 10px;
+    border-top: 1px solid #E6E6F2;
+    border-bottom: 2px solid #E6E6F2;
+}
+
+
+
+
+
