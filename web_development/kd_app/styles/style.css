@@ -48,6 +48,7 @@ body {
 .header h1 {
     font-size: 20px;
 }
+
 /*HEADER END*/
 
 
@@ -83,6 +84,7 @@ body {
 .navigation-bar-style li a:hover {
     color: var(--white);
 }
+
 /*NAVIGATION END*/
 
 .content-section {
@@ -90,5 +92,4 @@ body {
     background-color: gainsboro;
     padding: 3%;
 }
-
 

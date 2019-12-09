@@ -18,11 +18,16 @@
     border-collapse: collapse;
 }
 
-.table-style th{
+.table-style th, .table-style td{
     padding: 10px;
+    text-align: center;
     border-top: 1px solid #E6E6F2;
     border-bottom: 2px solid #E6E6F2;
 }
+
+
+
+
 
 
 

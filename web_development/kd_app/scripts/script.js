@@ -1,31 +1,35 @@
 const dataUrl = "https://tasesmuemils.github.io/json_test/kg_data.json";
 
 function downloadData() {
-
     fetch(dataUrl)
-        .then(response => response.json());
-        console.log(response);
+        .then(response => response.json())
+        .then(data => loadTable(data))
 }
 
 downloadData();
 
-// data.forEach(arrayItem => {
-            //     console.log(arrayItem);
-            //     // for (let i = 0; i < arrayItem.length; i++) {
-            //     //     console.log(i);
-            //     //     // const tableCell = document.createElement("td");
-            //     //     // tableCell.textContent = i;
-                    
-            //     //     // const tableBodyRow = document.createElement("tr");
-            //     //     // tableBodyRow.appendChild(tableCell);
+function loadTable(dataArray) {
+    console.log(dataArray);
+    for (let i = 0; i < dataArray.length; i++) {
+        const dataObject = dataArray[i];
+        const valuesArray = Object.values(dataObject);
 
-            //     //     // const dataTable = document.getElementById("group-table");
-            //     //     // const tableBody = document.createElement("tbody");
-                    
-        
-        
+        const tableBodyRow = document.createElement("tr");
+        const tableBody = document.createElement("tbody");
 
-            //     //     // tableBody.appendChild(tableBodyRow); 
-            //     //     // dataTable.appendChild(tableBody);
-            //     // }
-            // }) 
+        for (let i = 0; i < 5; i++) {
+            const tableCell = document.createElement("td");
+            tableCell.textContent = valuesArray[i];
+            
+            tableBodyRow.appendChild(tableCell);
+            
+        }
+       
+
+        const dataTable = document.getElementById("group-table");
+        tableBody.appendChild(tableBodyRow); 
+        dataTable.appendChild(tableBody);
+       
+      
+    }
+}
