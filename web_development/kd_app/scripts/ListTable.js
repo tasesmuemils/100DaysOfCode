@@ -1,10 +1,18 @@
-const dataTable = document.getElementById("group-table");
-const tableBody = document.createElement("tbody");
-const tableBodyRow = document.createElement("tr");
+import { ListItem } from "./ListItem.js";
 
-tableBody.appendChild(tableBodyRow);
-dataTable.appendChild(tableBody);
+export class ListTable {
+    constructor(element) {
+        this.element = element;
+    }
 
+    downloadData() {
+        const dataUrl = "https://tasesmuemils.github.io/json_test/kg_data.json";
+        fetch(dataUrl)
+            .then(response => response.json())
+            .then(data => this.downloadDone(data));
+    }
 
-
-console.log(dataTable);
+    downloadDone(responseData) {
+        const createItem = new ListItem(responseData, this.element);
+    }
+}

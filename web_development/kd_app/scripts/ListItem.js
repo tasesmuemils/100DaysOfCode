@@ -1,32 +1,35 @@
-export function downloadData() {
+export class ListItem {
+    constructor (data, table) {
+        this.data = data;
+        this.table = table;
+        this.loadTable(data);
+        this.openCard(this.table.lastChild.childNodes);
+    }
 
-    const dataUrl = "https://tasesmuemils.github.io/json_test/kg_data.json";
-    fetch(dataUrl)
-        .then(response => response.json())
-        .then(data => loadTable(data))
-
-    function loadTable(dataArray) {
-        console.log(dataArray);
+    loadTable(dataArray) {
+        const tableBody = document.createElement("tbody");
         for (let i = 0; i < dataArray.length; i++) {
             const dataObject = dataArray[i];
             const valuesArray = Object.values(dataObject);
-
+    
             const tableBodyRow = document.createElement("tr");
-            const tableBody = document.createElement("tbody");
-
+            
             for (let i = 0; i < 5; i++) {
                 const tableCell = document.createElement("td");
                 tableCell.textContent = valuesArray[i];
-
                 tableBodyRow.appendChild(tableCell);
-
             }
-
-            const dataTable = document.getElementById("group-table");
+    
             tableBody.appendChild(tableBodyRow);
-            dataTable.appendChild(tableBody);
-
-
+            this.table.appendChild(tableBody);
         }
     }
+
+    openCard(rows) {
+        rows.forEach(row => {
+            row.addEventListener("click", () => alert("hi"))
+        });
+    }
 }
+
+

@@ -1,3 +1,5 @@
-import { downloadData } from "./listItem.js";
+import { ListTable } from "./ListTable.js";
 
-downloadData();
+const listTable = new ListTable(document.getElementById("group-table"));
+
+listTable.downloadData();
