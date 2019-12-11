@@ -1,23 +1,24 @@
 export class Card {
     constructor(item, modal) {
         this.item = item;
-        console.log(modal);
         this.cardDesign(modal, item);
     }
 
     cardDesign(modalContent, itemObject) {
         const cardContentWrapper = document.createElement("form");
         cardContentWrapper.style.display = "grid";
-        Object.keys(itemObject).forEach(key => {
+        Object.entries(itemObject).forEach(pair => {
+
             const inputLabel = document.createElement("label");
-            inputLabel.textContent = key;
+            const keyString = (pair[0].replace("_", " "));
+            inputLabel.textContent = keyString.charAt(0).toUpperCase() + keyString.slice(1);
             cardContentWrapper.appendChild(inputLabel);
-        });
-        Object.values(itemObject).forEach(keyValue => {
+
             const inputField = document.createElement("input");
-            inputField.value = keyValue;
+            inputField.value = pair[1];
             cardContentWrapper.appendChild(inputField);
-        });
+        })
+    
 
         modalContent.appendChild(cardContentWrapper);
         modalContent.style.visibility = "unset";

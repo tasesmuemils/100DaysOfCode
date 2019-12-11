@@ -41,4 +41,5 @@
     align-items: center;
     transform: scale(2);
     transition: all 0.35s;
+    font-size: 10px;
 }
