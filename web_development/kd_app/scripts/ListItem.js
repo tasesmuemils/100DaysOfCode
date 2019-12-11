@@ -1,9 +1,10 @@
+import { Card } from "./cards/card.js";
+
 export class ListItem {
     constructor (data, table) {
         this.data = data;
         this.table = table;
         this.loadTable(data);
-        this.openCard(this.table.lastChild.childNodes);
     }
 
     loadTable(dataArray) {
@@ -13,7 +14,11 @@ export class ListItem {
             const valuesArray = Object.values(dataObject);
     
             const tableBodyRow = document.createElement("tr");
-            
+            tableBodyRow.addEventListener("click", () => {
+                const modalWrapper = document.getElementById("modalCard");
+                new Card(dataObject, modalWrapper);
+            });
+
             for (let i = 0; i < 5; i++) {
                 const tableCell = document.createElement("td");
                 tableCell.textContent = valuesArray[i];
@@ -23,12 +28,6 @@ export class ListItem {
             tableBody.appendChild(tableBodyRow);
             this.table.appendChild(tableBody);
         }
-    }
-
-    openCard(rows) {
-        rows.forEach(row => {
-            row.addEventListener("click", () => alert("hi"))
-        });
     }
 }
 
