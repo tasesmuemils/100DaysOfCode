@@ -1,4 +1,4 @@
-import { Card } from "./cards/card.js";
+import { Card } from "./cards/Card.js";
 
 export class ListItem {
     constructor (data, table) {
