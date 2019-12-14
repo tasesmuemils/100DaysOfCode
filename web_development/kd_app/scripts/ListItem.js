@@ -5,6 +5,8 @@ export class ListItem {
         this.data = data;
         this.table = table;
         this.loadTable(data);
+        console.log(this.data);
+
     }
 
     loadTable(dataArray) {

@@ -16,9 +16,8 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-    transform: scale(2);
-    transition: all 0.35s;
-    font-size: 10px;
+    /* transform: scale(2);
+    transition: all 1s; */
 }
 
 form {
@@ -35,13 +34,17 @@ form {
 
 .input-wrapper label {
     color: #71748d;
-    font-size: 12px;
+    /* font-size: 20px; */
 }
 
-.input-wrapper input {
-    font-size: 10px;
+.input-wrapper input, .input-wrapper textarea {
+    font-size: 20px;
     border: 1px solid #d2d2e4;
     padding: 3px;
     border-radius: 3px;
     margin-top: 3px;
+}
+
+.input-wrapper textarea {
+    /* font-size: 8px; */
 }

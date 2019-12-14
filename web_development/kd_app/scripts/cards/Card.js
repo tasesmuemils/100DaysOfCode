@@ -2,40 +2,72 @@ export class Card {
     constructor(item, modal) {
         this.item = item;
         this.modal = modal;
-        this.cardDesign(this.modal, item);
+        this.cardDesign(this.modal, this.item);
+        this.closeModal(this.modal);
     }
 
     cardDesign(modalContent, itemObject) {
-        const cardContentWrapper = document.createElement("form");
-        cardContentWrapper.style.display = "grid";
-        Object.entries(itemObject).forEach(pair => {
-
-            const inputLabel = document.createElement("label");
-            const keyString = (pair[0].replace("_", " "));
-            inputLabel.textContent = keyString.charAt(0).toUpperCase() + keyString.slice(1);
-
-            const inputField = document.createElement("input");
-            inputField.value = pair[1];
-
-            const inputLabelWrapper = document.createElement("div");
-            inputLabelWrapper.classList.add("input-wrapper");
-            inputLabelWrapper.appendChild(inputLabel);
-            inputLabelWrapper.appendChild(inputField);
-            cardContentWrapper.appendChild(inputLabelWrapper);
-        })
-    
-        const closeButton = document.createElement("button");
-        closeButton.type = "button";
-        closeButton.textContent = "Close";
-        closeButton.classList.add("close-card");
+        console.log(itemObject.id, itemObject.first_name);
+        const cardContent = document.createElement("div");
+        cardContent.classList.add("modal-content");
+        cardContent.innerHTML = `
+            <form action="">
+                <div class="input-wrapper">
+                    <label for="">ID</label>
+                    <input type="number" value=${itemObject.id}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Name</label>
+                    <input type="text" value=${itemObject.first_name}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Last name</label>
+                    <input type="text" value=${itemObject.last_name}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Birth date</label>
+                    <input type="text" value=${itemObject.birth_date}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Gender</label>
+                    <input type="text" value=${itemObject.gender}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Mothers name</label>
+                    <input type="text" value=${itemObject.mothers_name}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Mother phone number</label>
+                    <input type="text" value=${itemObject.mothers_phone}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Fathers name</label>
+                    <input type="text" value=${itemObject.fathers_name}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Fathers phone number</label>
+                    <input type="text" value=${itemObject.fathers_phone}>
+                </div>
+                <div class="input-wrapper">
+                    <label for="">Notes</label>
+                    <textarea type="text" name="notes" cols="40" rows="2">${itemObject.notes}</textarea>
+                </div>
+                <div class="forms-buttons">
+                    <button type="button" class="close-card" id="closeCard">Close</button>
+                </div>
+            </form>
+        `
+               
         modalContent.style.visibility = "unset";
-        closeButton.addEventListener("click", () => {
-            modalContent.style.visibility = "hidden";
-            modalContent.innerHTML = "";
-        });
-        cardContentWrapper.appendChild(closeButton);
+        modalContent.appendChild(cardContent);
+    }
 
-        modalContent.appendChild(cardContentWrapper);
-        
+    closeModal(modal) {
+        const closeButton = document.getElementById("closeCard");
+
+        closeButton.addEventListener("click", () => {
+            modal.style.visibility = "hidden";
+            modal.innerHTML = "";
+        });
     }
 }
