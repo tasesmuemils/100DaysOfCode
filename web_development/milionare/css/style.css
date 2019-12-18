@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    font-size: 20px;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #2D254F;
+}
+
+.hide {
+    display: none;
+}
+
+.correct {
+    background-color: greenyellow;
+}
+
+.wrong {
+    background-color: red;
+}
