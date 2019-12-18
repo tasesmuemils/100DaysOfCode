@@ -1,3 +1,4 @@
+
 const startGameButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const rulesButton = document.getElementById("rules-btn");
@@ -22,10 +23,17 @@ const wrongAnswerSound = new Audio("sound/wrong_answer.mp3");
 const finalAnswerSound = new Audio("sound/final_answer.mp3");
 const letsPlaySound = new Audio("sound/lets_play.mp3");
 const phoneAFriendSound = new Audio("sound/phone_a_friend.mp3");
+const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
 // const introSound = new Audio("sound/intro_sound.mp3");
+
 
 letsPlaySound.play();
 after1QuestionSound.play();
+
+function pauseQuestionSounds() {
+    after1QuestionSound.pause();
+    after6QuestionSound.pause();
+}
 
 rulesButton.addEventListener("click", () => {
     gameRules.classList.remove("hide");
@@ -66,12 +74,10 @@ function startGame(e) {
     for (let i = 0; i < questions.length; i++) {
         if (chooseSection.textContent == questions[i].section) {
             questionSectionArray.push(questions[i]);
-            console.log(questionSectionArray, "array");
         }
     };
 
     shuffledQuestions = questionSectionArray.sort(() => Math.random() - 0.5);
-    console.log(shuffledQuestions, "shuffled");
     currentQuestionIndex = 0;
 
     if (shuffledQuestions === undefined || shuffledQuestions.length == 0) {
@@ -103,10 +109,27 @@ function showQuestion(question) {
     }
 
     question.section = -1;
+    questionType.textContent = question.price;
     helpOptions.classList.remove("hide");
     questionType.innerText = question.price;
     questionElement.innerText = question.question;
 
+    for (let i = 0; i < question.answers.length; i++) {
+        if (i == 0) {
+            const extraText = question.answers[i].text;
+            question.answers[i].text = "A: " + extraText; 
+        } else if(i == 1) {
+            const extraText = question.answers[i].text;
+            question.answers[i].text = "B: " + extraText; 
+        } else if(i == 2) {
+            const extraText = question.answers[i].text;
+            question.answers[i].text = "C: " + extraText; 
+        } else if(i == 3) {
+            const extraText = question.answers[i].text;
+            question.answers[i].text = "D: " + extraText; 
+        } 
+    }
+    
     question.answers.forEach(answer => {
         const button = document.createElement("button");
         button.textContent = answer.text;
@@ -115,10 +138,11 @@ function showQuestion(question) {
         }
         button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
-    });
+    }); 
 }
 
 function twoOptionsCheck() {
+    twoOptionsSound.play();
     const answersArray = Array.from(answerButtonsElement.childNodes);
     const items3Array = [];
     for (let i = 0; i < answersArray.length; i++) {
@@ -127,18 +151,13 @@ function twoOptionsCheck() {
             items3Array.push(answersArray[i]);
         }
     }
-    console.log(items3Array);
     const randomWrongAnswers = items3Array.sort(() => Math.random() - 0.5);
     randomWrongAnswer = randomWrongAnswers[0];
     randomWrongAnswer.classList.remove("hide");
-    console.log(randomWrongAnswer);
 }
 
 function callFriendTime() {
-    phoneAFriendSound.play();
-    after1QuestionSound.pause();
-    after6QuestionSound.pause();
-    let timeLeft = 10;
+    let timeLeft = 30;
     const timerWrapper = document.createElement("div");
     const timer = document.createElement("h2");
     timer.textContent = timeLeft;
@@ -151,6 +170,8 @@ function callFriendTime() {
                 clearTimeout(timerId);
                 timerWrapper.classList.add("hide");
             } else {
+                phoneAFriendSound.play();
+                pauseQuestionSounds();
                 timer.textContent = timeLeft - 1;
                 timeLeft--;
             }
@@ -164,7 +185,6 @@ function callFriendTime() {
 }
 
 function resetState() {
-    console.log("reset");
     nextButton.textContent = "Nākošais jautājums";
     nextButton.classList.add("hide");
     while (answerButtonsElement.firstChild) {
@@ -178,12 +198,11 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
-    element.classList.add("final-answer");
-    after1QuestionSound.pause();
-    after6QuestionSound.pause();
     finalAnswerSound.play();
+    element.classList.add("final-answer");
+    pauseQuestionSounds();
     setTimeout(() => {
-        finalAnswerSound.pause();
+        // finalAnswerSound.pause();
         nextButton.classList.remove("hide");
         if (correct) {
             element.classList.remove("final-answer");
@@ -193,13 +212,14 @@ function setStatusClass(element, correct) {
             element.classList.remove("final-answer");
             element.classList.add("wrong");
             wrongAnswerSound.play();
+            // finalAnswerSound.pause();
             Array.from(answerButtonsElement.children).forEach(button => {
                 if (button.dataset.correct) {
                     button.classList.add("correct");
                 }
             })
         }
-    }, 3000);
+    }, 5000);
 }
 
 
@@ -419,6 +439,248 @@ const questions = [{
             },
             {
                 text: "Kurlā zarna",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 3,
+        price: "30 EUR",
+        question: "Brīvdienās cilvēki bieži dodas pie dabas",
+        answers: [{
+                text: "Krūts",
+                correct: true
+            },
+            {
+                text: "Aknām",
+                correct: false
+            },
+            {
+                text: "Padusēm",
+                correct: false
+            },
+            {
+                text: "Potītēm",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 3,
+        price: "30 EUR",
+        question: "Trani ir",
+        answers: [{
+                text: "Transporta firma",
+                correct: false
+            },
+            {
+                text: "Migranti",
+                correct: false
+            },
+            {
+                text: "Bišu tēviņi",
+                correct: true
+            },
+            {
+                text: "Kožu kāpuri",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 3,
+        price: "30 EUR",
+        question: "Ar kādu vārdu visā pasaulē pazīstams Edsons Arantišs du Nasimentu?",
+        answers: [{
+                text: "Zirnekļu cilvēks",
+                correct: false
+            },
+            {
+                text: "Betmens",
+                correct: false
+            },
+            {
+                text: "Pele",
+                correct: true
+            },
+            {
+                text: "Terminators",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 3,
+        price: "30 EUR",
+        question: "Suitu sievas īpaši izceļas ar",
+        answers: [{
+                text: "Gariem deguniem",
+                correct: false
+            },
+            {
+                text: "Lieliem zobiem",
+                correct: false
+            },
+            {
+                text: "Sarkanām ausīm",
+                correct: false
+            },
+            {
+                text: "Asu mēli",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 3,
+        price: "30 EUR",
+        question: "Balta gaļa, dzeltena āda. Kas tas ir?",
+        answers: [{
+                text: "Kontrabanda",
+                correct: false
+            },
+            {
+                text: "Ķīnietis",
+                correct: false
+            },
+            {
+                text: "Sīpols",
+                correct: true
+            },
+            {
+                text: "Botkina slimnieks",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 4,
+        price: "40 EUR",
+        question: "Čūska met ādu",
+        answers: [{
+                text: "Sekojot modei",
+                correct: false
+            },
+            {
+                text: "Pirms gulētiešanas",
+                correct: false
+            },
+            {
+                text: "Augot lielāka",
+                correct: true
+            },
+            {
+                text: "Pirms nāves",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 4,
+        price: "40 EUR",
+        question: "No kādas gaļas gatavo antrekotu?",
+        answers: [{
+                text: "Cūkas",
+                correct: false
+            },
+            {
+                text: "Vistas",
+                correct: false
+            },
+            {
+                text: "Jēra",
+                correct: false
+            },
+            {
+                text: "Lielopu",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 4,
+        price: "40 EUR",
+        question: "CIlvēka auss bungdobumā neatrodas",
+        answers: [{
+                text: "Āmuriņš",
+                correct: false
+            },
+            {
+                text: "Laktiņa",
+                correct: false
+            },
+            {
+                text: "Kāpslītis",
+                correct: false
+            },
+            {
+                text: "Skrūvīte",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 4,
+        price: "40 EUR",
+        question: "Stāvus guļ",
+        answers: [{
+                text: "Suņi",
+                correct: false
+            },
+            {
+                text: "Kaķi",
+                correct: false
+            },
+            {
+                text: "Zirgi",
+                correct: true
+            },
+            {
+                text: "Cilvēki",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 4,
+        price: "40 EUR",
+        question: "Zilonis, kurš spēja lidot, ir",
+        answers: [{
+                text: "Dambo",
+                correct: true
+            },
+            {
+                text: "Bembijs",
+                correct: false
+            },
+            {
+                text: "Ikars",
+                correct: true
+            },
+            {
+                text: "Dūpijs",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 5,
+        price: "50 EUR",
+        question: "Latvietis, kurš gandrīz 15 gadus dzīvojis Kastanjolā, ir",
+        answers: [{
+                text: "V.Vīķe-Freiberga",
+                correct: false
+            },
+            {
+                text: "Ģitārists Andris Kārkliņš",
+                correct: false
+            },
+            {
+                text: "Anšlavs Eglītis",
+                correct: false
+            },
+            {
+                text: "Rainis",
                 correct: true
             }
         ]
