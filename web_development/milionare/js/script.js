@@ -7,11 +7,25 @@ const questionsContainer = document.getElementById("question-container");
 const helpOptions = document.getElementById("help-options");
 const twoOptions = document.getElementById("two-options");
 const callFriend = document.getElementById("call-friend");
+const googleIt = document.getElementById("google-it");
 const questionType = document.getElementById("question-type");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 
 let shuffledQuestions, currentQuestionIndex;
+
+//Sound effects
+const after6QuestionSound = new Audio("sound/question_after_6_theme.mp3");
+const after1QuestionSound = new Audio("sound/question_after_1_theme.mp3");
+const correctAnswerSound = new Audio("sound/correct_answer.mp3");
+const wrongAnswerSound = new Audio("sound/wrong_answer.mp3");
+const finalAnswerSound = new Audio("sound/final_answer.mp3");
+const letsPlaySound = new Audio("sound/lets_play.mp3");
+const phoneAFriendSound = new Audio("sound/phone_a_friend.mp3");
+// const introSound = new Audio("sound/intro_sound.mp3");
+
+letsPlaySound.play();
+after1QuestionSound.play();
 
 rulesButton.addEventListener("click", () => {
     gameRules.classList.remove("hide");
@@ -28,8 +42,11 @@ nextButton.addEventListener("click", () => {
 
 twoOptions.addEventListener("click", twoOptionsCheck);
 callFriend.addEventListener("click", callFriendTime);
+googleIt.addEventListener("click", callFriendTime);
 
 function showTable() {
+    letsPlaySound.play();
+    after1QuestionSound.pause();
     gameRules.classList.add("hide");
     startGameButton.classList.add("hide");
     resultTable.classList.remove("hide");
@@ -78,6 +95,13 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
+
+    if (question.section <= 6) {
+        after1QuestionSound.play();
+    } else {
+        after6QuestionSound.play();
+    }
+
     question.section = -1;
     helpOptions.classList.remove("hide");
     questionType.innerText = question.price;
@@ -111,6 +135,9 @@ function twoOptionsCheck() {
 }
 
 function callFriendTime() {
+    phoneAFriendSound.play();
+    after1QuestionSound.pause();
+    after6QuestionSound.pause();
     let timeLeft = 10;
     const timerWrapper = document.createElement("div");
     const timer = document.createElement("h2");
@@ -147,29 +174,34 @@ function resetState() {
 
 function selectAnswer(e) {
     const selectedButton = e.target;
-    console.log(selectedButton);
     setStatusClass(selectedButton, selectedButton.dataset.correct);
-    nextButton.classList.remove("hide");
 }
 
 function setStatusClass(element, correct) {
-    // clearStatusClass(element);
-    if (correct) {
-        element.classList.add("correct");
-    } else {
-        element.classList.add("wrong");
-        Array.from(answerButtonsElement.children).forEach(button => {
-            if (button.dataset.correct) {
-                button.classList.add("correct");
-            }
-        })
-    }
+    element.classList.add("final-answer");
+    after1QuestionSound.pause();
+    after6QuestionSound.pause();
+    finalAnswerSound.play();
+    setTimeout(() => {
+        finalAnswerSound.pause();
+        nextButton.classList.remove("hide");
+        if (correct) {
+            element.classList.remove("final-answer");
+            element.classList.add("correct");
+            correctAnswerSound.play();
+        } else {
+            element.classList.remove("final-answer");
+            element.classList.add("wrong");
+            wrongAnswerSound.play();
+            Array.from(answerButtonsElement.children).forEach(button => {
+                if (button.dataset.correct) {
+                    button.classList.add("correct");
+                }
+            })
+        }
+    }, 3000);
 }
 
-// function clearStatusClass(element) {
-//     element.classList.remove("correct");
-//     element.classList.remove("wrong");
-// }
 
 const questions = [{
         section: 1,

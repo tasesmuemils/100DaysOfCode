@@ -18,7 +18,11 @@ body {
 }
 
 .correct {
-    background-color: greenyellow;
+    background-color: green;
+}
+
+.final-answer {
+    background-color: yellow;
 }
 
 .wrong {
