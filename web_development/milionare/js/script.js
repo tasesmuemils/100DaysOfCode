@@ -1,5 +1,6 @@
 const logo = document.getElementById("logo");
 const startGameButton = document.getElementById("start-btn");
+const controlsContainer = document.getElementById("controls-wrapper");
 const nextButton = document.getElementById("next-btn");
 const rulesButton = document.getElementById("rules-btn");
 const gameRules = document.getElementById("rules");
@@ -27,8 +28,8 @@ const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
 
 
 
-// letsPlaySound.play();
-// after1QuestionSound.play();
+letsPlaySound.play();
+after1QuestionSound.play();
 
 function pauseQuestionSounds() {
     after1QuestionSound.pause();
@@ -48,6 +49,7 @@ nextButton.addEventListener("click", () => {
     resultTable.classList.remove("hide");
     questionsContainer.classList.add("hide");
     nextButton.classList.add("hide");
+    controlsContainer.classList.add("hide");
 })
 
 twoOptions.addEventListener("click", twoOptionsCheck);
@@ -59,9 +61,12 @@ function showTable() {
     after1QuestionSound.pause();
     gameRules.classList.add("hide");
     startGameButton.classList.add("hide");
+    controlsContainer.classList.add("hide");
     resultTable.classList.remove("hide");
     Array.from(resultTable.firstElementChild.firstElementChild.children)
         .forEach(row => {
+            row.firstElementChild.style.cursor = "pointer";
+            row.firstElementChild.style.fontWeight = "100";
             row.firstElementChild.addEventListener("click", startGame);
         });
 }
@@ -83,6 +88,7 @@ function startGame(e) {
     currentQuestionIndex = 0;
 
     if (shuffledQuestions === undefined || shuffledQuestions.length == 0) {
+        controlsContainer.classList.remove("hide");
         nextButton.classList.remove("hide");
         questionType.classList.add("hide");
         nextButton.textContent = "Uz sākumu";
@@ -134,6 +140,7 @@ function showQuestion(question) {
     
     question.answers.forEach(answer => {
         const button = document.createElement("button");
+        button.classList.add("btn");
         button.textContent = answer.text;
         if (answer.correct) {
             button.dataset.correct = answer.correct;
@@ -161,9 +168,11 @@ function twoOptionsCheck() {
 function callFriendTime() {
     let timeLeft = 30;
     const timerWrapper = document.createElement("div");
+    timerWrapper.classList.add("timer-wrapper");
     const timer = document.createElement("h2");
     timer.textContent = timeLeft;
     const startTimer = document.createElement("button");
+    startTimer.classList.add("btn");
     startTimer.addEventListener("click", () => {
         const timerId = setInterval(countdown, 1000);
 
@@ -205,6 +214,7 @@ function setStatusClass(element, correct) {
     pauseQuestionSounds();
     setTimeout(() => {
         // finalAnswerSound.pause();
+        controlsContainer.classList.remove("hide");
         nextButton.classList.remove("hide");
         if (correct) {
             element.classList.remove("final-answer");
@@ -669,6 +679,28 @@ const questions = [{
         section: 5,
         price: "50 EUR",
         question: "Latvietis, kurš gandrīz 15 gadus dzīvojis Kastanjolā, ir",
+        answers: [{
+                text: "V.Vīķe-Freiberga",
+                correct: false
+            },
+            {
+                text: "Ģitārists Andris Kārkliņš",
+                correct: false
+            },
+            {
+                text: "Anšlavs Eglītis",
+                correct: false
+            },
+            {
+                text: "Rainis",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 5,
+        price: "50 EUR",
+        question: "",
         answers: [{
                 text: "V.Vīķe-Freiberga",
                 correct: false

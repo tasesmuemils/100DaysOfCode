@@ -1,3 +1,4 @@
+/*MAIN*/
 * {
     margin: 0;
     padding: 0;
@@ -17,17 +18,21 @@ body {
 .container {
    display: grid;
    justify-content: center;
+   color: #ffffff;
 }
 
+img {
+    height: 400px;
+    width: 400px;
+}
+
+/*MAIN END*/
+
+/*CONTROLS*/
 .controls {
     display: grid;
     justify-content: center;
     padding: 30px 0;
-}
-
-img {
-    height: 600px;
-    width: 600px;
 }
 
 .btn {
@@ -48,36 +53,57 @@ img {
     transform: translate(0, -5px);
 }
 
+#help-options .btn, .timer-wrapper .btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.timer-wrapper .btn {
+    width: 100px;
+    justify-self: center;
+}
+/*CONTROLS END*/
+
+/*RULES*/
 .rules-style {
     color: #ffffff;
 }
 
 .rules-style h2 {
     letter-spacing: 2px;
-    font-size: 50px;
+    font-size: 40px;
     padding: 15px;
 }
 
 .rules-style li {
     letter-spacing: 2px;
-    font-size: 30px;
+    font-size: 25px;
     padding: 15px 0;
 }
+/*RULES END*/
 
+/*TABLE*/
 .result-table-style {
     border: 1px solid white;
-    padding: 20px 80px;
+    padding: 10px 80px;
 }
 
-.result-table-style tbody tr:hover {
+.result-table-style table {
+    border-collapse: collapse;
+}
+
+.result-table-style tbody tr:hover td {
     background: #CE7034;
-    border-radius: 15px;
+    color: black;
 }
 
 .result-table-style table td {
     color: #CE7034;
     padding: 5px;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 1px;
     font-weight: bold;
     border: none;
@@ -87,9 +113,49 @@ img {
 .result-table-style .highlight-prize {
     color: white;
 }
+/*TABLE END*/
 
+/*QUESTION AND ANSWERS*/
 .question-container {
     display: grid;
+    text-align: center;
+}
+
+#question-type {
+    color: #ffffff;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#help-options {
+    padding: 10px 0 20px 0;
+}
+
+#question {
+    color: #ffffff;
+    font-size: 35px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#answer-buttons button {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.timer-wrapper {
+    display: grid;
+    /* justify-content: center; */
+}
+
+.timer-wrapper h2 {
+    font-size: 150px;
 }
 
 .hide {
@@ -102,6 +168,7 @@ img {
 
 .final-answer {
     background-color: yellow;
+    color: #000000;
 }
 
 .wrong {
