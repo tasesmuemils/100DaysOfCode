@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
-<body>
-    <div class="container">
+<body id="body">
+    <div id="container-id" class="container">
+        <img src="img/logo.svg" id="logo" alt="Logo">
         <div id="question-container" class="hide">
             <div id="question-type"></div>
             <div id="help-options" class="hide">
@@ -27,7 +29,7 @@
                 <button class="btn">Answer 4</button>
             </div>
         </div>
-        <div id="rules" class="hide">
+        <div id="rules" class="hide rules-style">
             <h2>Noteikumi:</h2>
             <ul>
                 <li>Atbild tikai komanda, kurai pienākas jautājums</li>
@@ -40,73 +42,75 @@
             </ul>
         </div>
         <div class="controls">
-            <button id="rules-btn">Noteikumi</button>
-            <button id="start-btn" class="hide">Sākt spēli</button>
+            <button id="rules-btn" class="btn">Noteikumi</button>
+            <button id="start-btn" class="btn hide">Sākt spēli</button>
             <button id="next-btn" class="hide">Nākošais jautājums</button>
         </div>
 
-        <div id="result-table" class="hide">
+        <div id="result-table" class="hide result-table-style">
             <table>
-                <tr>
-                    <td>15</td>
-                    <td>1000000 EUR</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>10000 EUR</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>5000 EUR</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>2500 EUR</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>1250 EUR</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>500 EUR</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>250 EUR</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>125 EUR</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>80 EUR</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>60 EUR</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>50 EUR</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>40 EUR</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>30 EUR</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>20 EUR</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>10 EUR</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td class="highlight-prize">15</td>
+                        <td class="highlight-prize">1000000 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>10000 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>5000 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>2500 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>1250 EUR</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight-prize">10</td>
+                        <td class="highlight-prize">500 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>250 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>125 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>80 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>60 EUR</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight-prize">5</td>
+                        <td class="highlight-prize">50 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>40 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>30 EUR</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>20 EUR</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight-prize">1</td>
+                        <td class="highlight-prize">10 EUR</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

@@ -1,4 +1,4 @@
-
+const logo = document.getElementById("logo");
 const startGameButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const rulesButton = document.getElementById("rules-btn");
@@ -24,11 +24,11 @@ const finalAnswerSound = new Audio("sound/final_answer.mp3");
 const letsPlaySound = new Audio("sound/lets_play.mp3");
 const phoneAFriendSound = new Audio("sound/phone_a_friend.mp3");
 const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
-// const introSound = new Audio("sound/intro_sound.mp3");
 
 
-letsPlaySound.play();
-after1QuestionSound.play();
+
+// letsPlaySound.play();
+// after1QuestionSound.play();
 
 function pauseQuestionSounds() {
     after1QuestionSound.pause();
@@ -36,6 +36,8 @@ function pauseQuestionSounds() {
 }
 
 rulesButton.addEventListener("click", () => {
+    logo.classList.add("hide");
+    document.getElementById("container-id").classList.add("container-rules");
     gameRules.classList.remove("hide");
     rulesButton.classList.add("hide");
     startGameButton.classList.remove("hide");
