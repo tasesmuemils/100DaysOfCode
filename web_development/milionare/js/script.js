@@ -13,8 +13,15 @@ const googleIt = document.getElementById("google-it");
 const questionType = document.getElementById("question-type");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
+const childQuestion = document.getElementById("child-question");
+const songLyricsElement = document.getElementById("song-lyrics");
 
 let shuffledQuestions, currentQuestionIndex;
+let childQuestion1Counter = 0;
+let childQuestion5Counter = 0;
+let childQuestion10Counter = 0;
+
+
 
 //Sound effects
 const after6QuestionSound = new Audio("sound/question_after_6_theme.mp3");
@@ -28,8 +35,8 @@ const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
 
 
 
-letsPlaySound.play();
-after1QuestionSound.play();
+// letsPlaySound.play();
+// after1QuestionSound.play();
 
 function pauseQuestionSounds() {
     after1QuestionSound.pause();
@@ -50,6 +57,7 @@ nextButton.addEventListener("click", () => {
     questionsContainer.classList.add("hide");
     nextButton.classList.add("hide");
     controlsContainer.classList.add("hide");
+    songLyricsElement.classList.add("hide");
 })
 
 twoOptions.addEventListener("click", twoOptionsCheck);
@@ -57,6 +65,7 @@ callFriend.addEventListener("click", callFriendTime);
 googleIt.addEventListener("click", callFriendTime);
 
 function showTable() {
+    // childQuestion.classList.add("hide");
     letsPlaySound.play();
     after1QuestionSound.pause();
     gameRules.classList.add("hide");
@@ -81,6 +90,21 @@ function startGame(e) {
     for (let i = 0; i < questions.length; i++) {
         if (chooseSection.textContent == questions[i].section) {
             questionSectionArray.push(questions[i]);
+        } else if (chooseSection.textContent == 5 && childQuestion5Counter == 0) {
+            childQuestion.classList.remove("hide");
+            childQuestion5Counter = 1;
+        } else if (chooseSection.textContent == 10 && childQuestion10Counter == 0) {
+            childQuestion.classList.remove("hide");
+            childQuestion10Counter = 1;
+        } else if (chooseSection.textContent == 16) {
+            if (childQuestion1Counter == 0) {
+                childQuestion1Counter = 1;
+                childQuestion.classList.add("hide");
+            } else if (childQuestion5Counter == 1) {
+                childQuestion.classList.add("hide");
+            } else if (childQuestion10Counter == 1) {
+                childQuestion.classList.add("hide");
+            }
         }
     };
 
@@ -116,28 +140,33 @@ function showQuestion(question) {
         after6QuestionSound.play();
     }
 
+    if(question.section = 15) {
+        console.log(question);
+    }
+
     question.section = -1;
     questionType.textContent = question.price;
     helpOptions.classList.remove("hide");
+    controlsContainer.classList.remove("hide");
     questionType.innerText = question.price;
     questionElement.innerText = question.question;
 
     for (let i = 0; i < question.answers.length; i++) {
         if (i == 0) {
             const extraText = question.answers[i].text;
-            question.answers[i].text = "A: " + extraText; 
-        } else if(i == 1) {
+            question.answers[i].text = "A: " + extraText;
+        } else if (i == 1) {
             const extraText = question.answers[i].text;
-            question.answers[i].text = "B: " + extraText; 
-        } else if(i == 2) {
+            question.answers[i].text = "B: " + extraText;
+        } else if (i == 2) {
             const extraText = question.answers[i].text;
-            question.answers[i].text = "C: " + extraText; 
-        } else if(i == 3) {
+            question.answers[i].text = "C: " + extraText;
+        } else if (i == 3) {
             const extraText = question.answers[i].text;
-            question.answers[i].text = "D: " + extraText; 
-        } 
+            question.answers[i].text = "D: " + extraText;
+        }
     }
-    
+
     question.answers.forEach(answer => {
         const button = document.createElement("button");
         button.classList.add("btn");
@@ -147,7 +176,11 @@ function showQuestion(question) {
         }
         button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
-    }); 
+    });
+
+    
+
+
 }
 
 function twoOptionsCheck() {
@@ -209,11 +242,11 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
+    
     finalAnswerSound.play();
     element.classList.add("final-answer");
     pauseQuestionSounds();
     setTimeout(() => {
-        // finalAnswerSound.pause();
         controlsContainer.classList.remove("hide");
         nextButton.classList.remove("hide");
         if (correct) {
@@ -224,7 +257,6 @@ function setStatusClass(element, correct) {
             element.classList.remove("final-answer");
             element.classList.add("wrong");
             wrongAnswerSound.play();
-            // finalAnswerSound.pause();
             Array.from(answerButtonsElement.children).forEach(button => {
                 if (button.dataset.correct) {
                     button.classList.add("correct");
@@ -232,7 +264,22 @@ function setStatusClass(element, correct) {
             })
         }
     }, 5000);
+    songLyrics(element);
 }
+
+function songLyrics(element) {
+    if (element.textContent == "D: Zvaniņš skan") {
+        element.addEventListener("click", () => {
+            questionsContainer.classList.add("hide");
+            songLyricsElement.classList.remove("hide");
+            document.getElementById("zvanins").classList.remove("hide");
+        })
+    }
+}
+
+
+
+
 
 
 const questions = [{
@@ -667,7 +714,7 @@ const questions = [{
             },
             {
                 text: "Ikars",
-                correct: true
+                correct: false
             },
             {
                 text: "Dūpijs",
@@ -715,6 +762,51 @@ const questions = [{
             },
             {
                 text: "Rainis",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 16,
+        price: "",
+        question: "TEST",
+        answers: [{
+                text: "V.Vīķe-Freiberga",
+                correct: false
+            },
+            {
+                text: "Ģitārists Andris Kārkliņš",
+                correct: false
+            },
+            {
+                text: "Anšlavs Eglītis",
+                correct: false
+            },
+            {
+                text: "Rainis",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 15,
+        price: "1000000 EUR",
+        question: "Kādu dziesmu mēs dziedāsim?",
+        answers: [{
+                text: "Jūs bērniņi nāciet",
+                correct: true,
+                lyrics: 'Mežus pārklāj sniegs Lāčiem ziemas miegs Gaiss tik skanīgs salts Viss tik tīrs un balts'
+            },
+            {
+                text: "Ak tu priecīga",
+                correct: false
+            },
+            {
+                text: "Klusa nakts, svēta nakts",
+                correct: true
+            },
+            {
+                text: "Zvaniņš skan",
                 correct: true
             }
         ]
