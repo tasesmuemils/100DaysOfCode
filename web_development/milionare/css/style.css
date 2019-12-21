@@ -65,8 +65,9 @@ img {
 }
 
 .timer-wrapper .btn {
-    width: 100px;
+    width: 120px;
     justify-self: center;
+    margin: 10px;
 }
 /*CONTROLS END*/
 
@@ -166,6 +167,37 @@ img {
     font-size: 150px;
 }
 
+/* #zvanins {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#klusa-nakts, #bernini {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#zvanins span, #klusa-nakts span, #bernini span {
+    font-size: 22px;
+} */
+
+.show-lyrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+#zvanins {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.show-lyrics span {
+    font-size: 22px;
+}
+
 .hide {
     display: none;
  
@@ -194,3 +226,4 @@ img {
 .wrong {
     background-color: red;
 }
+

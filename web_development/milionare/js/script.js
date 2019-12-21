@@ -35,8 +35,8 @@ const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
 
 
 
-// letsPlaySound.play();
-// after1QuestionSound.play();
+letsPlaySound.play();
+after1QuestionSound.play();
 
 function pauseQuestionSounds() {
     after1QuestionSound.pause();
@@ -58,11 +58,12 @@ nextButton.addEventListener("click", () => {
     nextButton.classList.add("hide");
     controlsContainer.classList.add("hide");
     songLyricsElement.classList.add("hide");
+    
 })
 
 twoOptions.addEventListener("click", twoOptionsCheck);
-callFriend.addEventListener("click", callFriendTime);
-googleIt.addEventListener("click", callFriendTime);
+callFriend.addEventListener("click", callTimer);
+googleIt.addEventListener("click", callTimer);
 
 function showTable() {
     // childQuestion.classList.add("hide");
@@ -134,19 +135,15 @@ function setNextQuestion() {
 
 function showQuestion(question) {
 
-    if (question.section <= 6) {
+    if (question.section <= 6 || question.section == 16) {
         after1QuestionSound.play();
     } else {
         after6QuestionSound.play();
     }
 
-    if(question.section = 15) {
-        console.log(question);
-    }
-
     question.section = -1;
     questionType.textContent = question.price;
-    helpOptions.classList.remove("hide");
+    helquestion.sectionpOptions.classList.remove("hide");
     controlsContainer.classList.remove("hide");
     questionType.innerText = question.price;
     questionElement.innerText = question.question;
@@ -177,10 +174,6 @@ function showQuestion(question) {
         button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
     });
-
-    
-
-
 }
 
 function twoOptionsCheck() {
@@ -196,16 +189,19 @@ function twoOptionsCheck() {
     const randomWrongAnswers = items3Array.sort(() => Math.random() - 0.5);
     randomWrongAnswer = randomWrongAnswers[0];
     randomWrongAnswer.classList.remove("hide");
+
 }
 
-function callFriendTime() {
+function callTimer() {
     let timeLeft = 30;
     const timerWrapper = document.createElement("div");
     timerWrapper.classList.add("timer-wrapper");
     const timer = document.createElement("h2");
     timer.textContent = timeLeft;
     const startTimer = document.createElement("button");
+    const hideTimer = document.createElement("button");
     startTimer.classList.add("btn");
+    hideTimer.classList.add("btn");
     startTimer.addEventListener("click", () => {
         const timerId = setInterval(countdown, 1000);
 
@@ -221,9 +217,16 @@ function callFriendTime() {
             }
         }
     })
-    startTimer.textContent = "Sākt!"
+
+    hideTimer.addEventListener("click", () => {
+        timerWrapper.classList.add("hide");
+    })
+
+    startTimer.textContent = "Sākt!";
+    hideTimer.textContent = "Atlikt!";
     timerWrapper.appendChild(timer);
     timerWrapper.appendChild(startTimer);
+    timerWrapper.appendChild(hideTimer);
 
     questionsContainer.insertBefore(timerWrapper, questionsContainer.firstElementChild);
 }
@@ -242,7 +245,6 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
-    
     finalAnswerSound.play();
     element.classList.add("final-answer");
     pauseQuestionSounds();
@@ -264,6 +266,7 @@ function setStatusClass(element, correct) {
             })
         }
     }, 5000);
+    element.removeEventListener("click", selectAnswer);
     songLyrics(element);
 }
 
@@ -273,6 +276,21 @@ function songLyrics(element) {
             questionsContainer.classList.add("hide");
             songLyricsElement.classList.remove("hide");
             document.getElementById("zvanins").classList.remove("hide");
+            document.getElementById("zvanins").classList.add("show-lyrics");
+        })
+    } else if(element.textContent == "C: Klusa nakts, svēta nakts") {
+        element.addEventListener("click", () => {
+            questionsContainer.classList.add("hide");
+            songLyricsElement.classList.remove("hide");
+            document.getElementById("klusa-nakts").classList.remove("hide");
+            document.getElementById("klusa-nakts").classList.add("show-lyrics");
+        })
+    } else if(element.textContent == "A: Jūs bērniņi nāciet") {
+        element.addEventListener("click", () => {
+            questionsContainer.classList.add("hide");
+            songLyricsElement.classList.remove("hide");
+            document.getElementById("bernini").classList.remove("hide");
+            document.getElementById("bernini").classList.add("show-lyrics");
         })
     }
 }
@@ -798,7 +816,7 @@ const questions = [{
                 lyrics: 'Mežus pārklāj sniegs Lāčiem ziemas miegs Gaiss tik skanīgs salts Viss tik tīrs un balts'
             },
             {
-                text: "Ak tu priecīga",
+                text: "Ak, Tu, priecīga!",
                 correct: false
             },
             {
