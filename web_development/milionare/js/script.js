@@ -135,7 +135,7 @@ function setNextQuestion() {
 
 function showQuestion(question) {
 
-    if (question.section <= 6 || question.section == 16) {
+    if (question.section <= 5 || question.section == 16) {
         after1QuestionSound.play();
     } else {
         after6QuestionSound.play();
@@ -198,6 +198,8 @@ function callTimer() {
     timerWrapper.classList.add("timer-wrapper");
     const timer = document.createElement("h2");
     timer.textContent = timeLeft;
+    const timerButtonWrapper = document.createElement("div");
+    timerButtonWrapper.classList.add("timer-button-wrapper");
     const startTimer = document.createElement("button");
     const hideTimer = document.createElement("button");
     startTimer.classList.add("btn");
@@ -225,8 +227,11 @@ function callTimer() {
     startTimer.textContent = "Sākt!";
     hideTimer.textContent = "Atlikt!";
     timerWrapper.appendChild(timer);
-    timerWrapper.appendChild(startTimer);
-    timerWrapper.appendChild(hideTimer);
+    timerButtonWrapper.appendChild(startTimer);
+    timerButtonWrapper.appendChild(hideTimer);
+    timerWrapper.appendChild(timerButtonWrapper);
+    // timerWrapper.appendChild(startTimer);
+    // timerWrapper.appendChild(hideTimer);
 
     questionsContainer.insertBefore(timerWrapper, questionsContainer.firstElementChild);
 }
@@ -765,21 +770,1165 @@ const questions = [{
     {
         section: 5,
         price: "50 EUR",
-        question: "",
+        question: "Kad Kristofers Kolumbns ieradās Amerikā, viņš vietējos iedzīvotājus nosauca par",
         answers: [{
-                text: "V.Vīķe-Freiberga",
+                text: "Kolumbiešiem",
                 correct: false
             },
             {
-                text: "Ģitārists Andris Kārkliņš",
+                text: "Amerikāņiem",
                 correct: false
             },
             {
-                text: "Anšlavs Eglītis",
+                text: "Kristoferiem",
+                correct: false
+            },
+            {
+                text: "Indiāņiem",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 5,
+        price: "50 EUR",
+        question: "Dabā nav nekā cietāka par",
+        answers: [{
+                text: "Riekstu",
+                correct: false
+            },
+            {
+                text: "Ķieģeli",
+                correct: false
+            },
+            {
+                text: "Dimantu",
+                correct: true
+            },
+            {
+                text: "Metālu",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 5,
+        price: "50 EUR",
+        question: "Viduslaiku leģendās sirēnām ir sievietes galva un ķermeņa augšdaļa, bet kāju vietā",
+        answers: [{
+                text: "Pleznas",
+                correct: false
+            },
+            {
+                text: "Zeķbikses",
+                correct: false
+            },
+            {
+                text: "Zivs aste",
+                correct: true
+            },
+            {
+                text: "Vēl diva rokas",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 5,
+        price: "50 EUR",
+        question: "Vācu inženieris Rūdolfs Dīzels 1897.gadā radīja",
+        answers: [{
+                text: "Dīzeļdzinēju",
+                correct: true
+            },
+            {
+                text: "Džinsus",
+                correct: false
+            },
+            {
+                text: "Rāvējslēdzēju",
+                correct: false
+            },
+            {
+                text: "Šujmašīnu",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 6,
+        price: "60 EUR",
+        question: "FIB aģenta Foksa Maldera uzticamā partnere seriālā 'Slepenās lietas' ir",
+        answers: [{
+                text: "Brenda Volša",
+                correct: false
+            },
+            {
+                text: "Dana Skallija",
+                correct: 14
+            },
+            {
+                text: "Alija Makbīla",
+                correct: true
+            },
+            {
+                text: "Stefānija Fostere",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 6,
+        price: "60 EUR",
+        question: "Kurš no šiem augļiem nogatavaojas tikai līdz novākšanas brīdim?",
+        answers: [{
+                text: "Banāns",
+                correct: false
+            },
+            {
+                text: "Aprikoze",
+                correct: false
+            },
+            {
+                text: "Ananass",
+                correct: true
+            },
+            {
+                text: "Nektarīns",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 6,
+        price: "60 EUR",
+        question: "Kur senos laikos valkāja togas?",
+        answers: [{
+                text: "Gīzā",
+                correct: false
+            },
+            {
+                text: "Babilonā",
+                correct: false
+            },
+            {
+                text: "Romā",
+                correct: true
+            },
+            {
+                text: "Deli",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 6,
+        price: "60 EUR",
+        question: "Melu detektora tehniskais apzīmējums ir",
+        answers: [{
+                text: "Poligons",
+                correct: false
+            },
+            {
+                text: "Polimērs",
+                correct: false
+            },
+            {
+                text: "Poligrāfs",
+                correct: true
+            },
+            {
+                text: "Poliglots",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 6,
+        price: "60 EUR",
+        question: "Pēc kā nosaka zirga vecumu?",
+        answers: [{
+                text: "Pēc nagiem",
+                correct: false
+            },
+            {
+                text: "Pēc zobiem",
+                correct: true
+            },
+            {
+                text: "Pēc astes garuma",
+                correct: false
+            },
+            {
+                text: "Pēc redzes asuma",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 7,
+        price: "80 EUR",
+        question: "Pirmā latviešu pasaku luga ir",
+        answers: [{
+                text: "Sprīdītis",
+                correct: true
+            },
+            {
+                text: "Maija un paija",
+                correct: false
+            },
+            {
+                text: "Velniņi",
+                correct: false
+            },
+            {
+                text: "Ilja Muromietis",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 7,
+        price: "80 EUR",
+        question: "Šo japāņu kompāniju sauc par 'trīs dimantiem'",
+        answers: [{
+                text: "Panasonic",
+                correct: false
+            },
+            {
+                text: "Sanyo",
+                correct: false
+            },
+            {
+                text: "Mitsubishi",
+                correct: true
+            },
+            {
+                text: "Honda",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 7,
+        price: "80 EUR",
+        question: "Cik metrus augsts ir Brīvības piemineklis Rīgā?",
+        answers: [{
+                text: "38",
+                correct: false
+            },
+            {
+                text: "42",
+                correct: true
+            },
+            {
+                text: "46",
+                correct: false
+            },
+            {
+                text: "54",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 7,
+        price: "80 EUR",
+        question: "Ar ko burvju vidū ir slavens Harijs Poters? Viņam ir ",
+        answers: [{
+                text: "Septijūdžu zābaki",
+                correct: false
+            },
+            {
+                text: "Rēta pierē",
+                correct: true
+            },
+            {
+                text: "Brīnumspogulītis",
+                correct: false
+            },
+            {
+                text: "Burvju stabulīte",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 7,
+        price: "80 EUR",
+        question: "Kādā krāsā ir tā saucamā lidmašīnu 'melnā kaste'",
+        answers: [{
+                text: "Melnā",
+                correct: false
+            },
+            {
+                text: "Zilā",
+                correct: false
+            },
+            {
+                text: "Baltā",
+                correct: true
+            },
+            {
+                text: "Oranžā",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 8,
+        price: "125 EUR",
+        question: "Tradicionālā kāršu kavā šis ir vienīgais karalis bez ūsām",
+        answers: [{
+                text: "Pīķa",
+                correct: false
+            },
+            {
+                text: "Kreica",
+                correct: false
+            },
+            {
+                text: "Ercena",
+                correct: true
+            },
+            {
+                text: "Kārava",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 8,
+        price: "125 EUR",
+        question: "Cietākā matērija cilvēka ķermenī ir",
+        answers: [{
+                text: "Pauris",
+                correct: false
+            },
+            {
+                text: "Mugurkauls",
+                correct: false
+            },
+            {
+                text: "Zobu emalja",
+                correct: true
+            },
+            {
+                text: "Sirds",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 8,
+        price: "125 EUR",
+        question: "Vecākā banka dibināta 1407. gadā",
+        answers: [{
+                text: "Ženēvā",
+                correct: false
+            },
+            {
+                text: "Dženovā",
+                correct: true
+            },
+            {
+                text: "Bagdādē",
+                correct: false
+            },
+            {
+                text: "Londonā",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 8,
+        price: "125 EUR",
+        question: "Tors nav",
+        answers: [{
+                text: "Spiediena mērvienība",
+                correct: false
+            },
+            {
+                text: "Pērkona dievs",
+                correct: false
+            },
+            {
+                text: "Cilvēka rumpis mākslā",
+                correct: true
+            },
+            {
+                text: "Figūra riņķa formā",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 8,
+        price: "125 EUR",
+        question: "Eskimosi, sasveicinoties ar draugu,",
+        answers: [{
+                text: "Paspiež roku",
+                correct: false
+            },
+            {
+                text: "Pievelk kāju",
+                correct: false
+            },
+            {
+                text: "Saberzē degunus",
+                correct: true
+            },
+            {
+                text: "Pakasa  ausi",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 8,
+        price: "125 EUR",
+        question: "Zvaigznes krāsa liecina par tās",
+        answers: [{
+                text: "Temperatūru un vecumu",
+                correct: true
+            },
+            {
+                text: "Lielumu un attālumu",
+                correct: false
+            },
+            {
+                text: "Vecumu un attālumu",
+                correct: false
+            },
+            {
+                text: "Temperatūru un attālumu",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 9,
+        price: "250 EUR",
+        question: "Pirmā krāsainā latviešu mākslas filma bija",
+        answers: [{
+                text: "Mājup ar uzvaru",
+                correct: false
+            },
+            {
+                text: "Uz jauno krastu",
+                correct: true
+            },
+            {
+                text: "Rainis",
+                correct: false
+            },
+            {
+                text: "Salna pavasarī",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 9,
+        price: "250 EUR",
+        question: "Bolero ir",
+        answers: [{
+                text: "Svīteris",
+                correct: false
+            },
+            {
+                text: "Īsa jaciņa",
+                correct: true
+            },
+            {
+                text: "Pusgaras bikses",
+                correct: false
+            },
+            {
+                text: "Krekls ar mežģīnēm",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 9,
+        price: "250 EUR",
+        question: "Kurš no šiem 'bītliem' sita sitamos instrumentus?",
+        answers: [{
+                text: "Džons Lenons",
+                correct: false
+            },
+            {
+                text: "Ringo Stārs",
+                correct: true
+            },
+            {
+                text: "Pols Makartnijs",
+                correct: false
+            },
+            {
+                text: "Džordžs Harisons",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 9,
+        price: "250 EUR",
+        question: "Sērkociņu kārbiņu un to etiķešu kolekcionārs ir",
+        answers: [{
+                text: "Filatēlists",
+                correct: false
+            },
+            {
+                text: "Filogēnists",
+                correct: false
+            },
+            {
+                text: "Filokartists",
+                correct: false
+            },
+            {
+                text: "Filumēnists",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 9,
+        price: "250 EUR",
+        question: "Kanādiešiem - kļavu lapa, indiešiem - lotosa zieds. Bet angļiem?",
+        answers: [{
+                text: "Neļķe",
+                correct: false
+            },
+            {
+                text: "Roze",
+                correct: true
+            },
+            {
+                text: "Ceriņi",
+                correct: false
+            },
+            {
+                text: "Ozola zīle",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 10,
+        price: "500 EUR",
+        question: "Motociklu izgudroja",
+        answers: [{
+                text: "Honda",
+                correct: false
+            },
+            {
+                text: "Daimler",
+                correct: true
+            },
+            {
+                text: "BMW",
+                correct: false
+            },
+            {
+                text: "Harley Davidson",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 10,
+        price: "500 EUR",
+        question: "Hitleriskās Vācijas ideologs bija",
+        answers: [{
+                text: "Jozefs Rommels",
+                correct: false
+            },
+            {
+                text: "Heinrihs Himmlers",
+                correct: false
+            },
+            {
+                text: "Hermanis Gērings",
+                correct: false
+            },
+            {
+                text: "Jozefs Gebelss",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 10,
+        price: "500 EUR",
+        question: "Kurai tautai ir raksturīgs mariači?",
+        answers: [{
+                text: "Grieķiem",
+                correct: false
+            },
+            {
+                text: "Austrāliešiem",
+                correct: false
+            },
+            {
+                text: "Tunisiešiem",
+                correct: false
+            },
+            {
+                text: "Meksikāņiem",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 10,
+        price: "500 EUR",
+        question: "Kā sauc izgaistošo kaķi no L.Kerola grāmatas 'Alise brīnumzemē'",
+        answers: [{
+                text: "Češīras kaķis",
+                correct: true
+            },
+            {
+                text: "Kašmira kaķis",
+                correct: false
+            },
+            {
+                text: "Filimūrs",
+                correct: false
+            },
+            {
+                text: "Runcis Bazilio",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 10,
+        price: "500 EUR",
+        question: "Uz kādas salas atrodas Indonēzijas galvaspilsēta Džakarta?",
+        answers: [{
+                text: "Sumatra",
+                correct: false
+            },
+            {
+                text: "Bali",
+                correct: false
+            },
+            {
+                text: "Borneo",
+                correct: false
+            },
+            {
+                text: "Java",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 11,
+        price: "1250 EUR",
+        question: "Kas ir Jupitera lielais sarkanais plankums?",
+        answers: [{
+                text: "Vētra",
+                correct: true
+            },
+            {
+                text: "Vulkāns",
+                correct: false
+            },
+            {
+                text: "Okeāns",
+                correct: false
+            },
+            {
+                text: "Krāteris",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 11,
+        price: "1250 EUR",
+        question: "Kurai no šīm valstīm ir visgarākā robeža ar Krieviju?",
+        answers: [{
+                text: "Azerbaidžanai",
+                correct: false
+            },
+            {
+                text: "Igaunijai",
+                correct: true
+            },
+            {
+                text: "Norvēģijai",
+                correct: false
+            },
+            {
+                text: "Ziemeļkorejai",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 11,
+        price: "1250 EUR",
+        question: "Liepu lapu laipu liku - tā ir",
+        answers: [{
+                text: "Aglutinācija",
+                correct: false
+            },
+            {
+                text: "Aliterācija",
+                correct: true
+            },
+            {
+                text: "Alegorija",
+                correct: false
+            },
+            {
+                text: "Alitēšana",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 11,
+        price: "1250 EUR",
+        question: "Ar banderilju cīnās ppret",
+        answers: [{
+                text: "Odiem",
+                correct: false
+            },
+            {
+                text: "Vēršiem",
+                correct: true
+            },
+            {
+                text: "Kašķi",
+                correct: false
+            },
+            {
+                text: "Badu",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 11,
+        price: "1250 EUR",
+        question: "Tiek uzskatīts, ka pa Mēnesi ir staigājuši",
+        answers: [{
+                text: "12 cilvēki",
+                correct: true
+            },
+            {
+                text: "15 cilvēki",
+                correct: false
+            },
+            {
+                text: "6 cilvēki",
+                correct: false
+            },
+            {
+                text: "2 cilvēki",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 12,
+        price: "2500 EUR",
+        question: "Pasaulē pirmais Disneja atrakciju parks izveidots",
+        answers: [{
+                text: "Anaheimā",
+                correct: true
+            },
+            {
+                text: "Losandželosā",
+                correct: false
+            },
+            {
+                text: "Orlando",
+                correct: false
+            },
+            {
+                text: "Holivudā",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 12,
+        price: "2500 EUR",
+        question: "Kurš no minētajiem ir Porsche auto modelis?",
+        answers: [{
+                text: "Cougar",
+                correct: false
+            },
+            {
+                text: "Carrera",
+                correct: true
+            },
+            {
+                text: "Corvette",
+                correct: false
+            },
+            {
+                text: "Camaro",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 12,
+        price: "2500 EUR",
+        question: "Ar nosaukumu 'Michelin' ir pazīstamas ne tikai riepas, bet arī",
+        answers: [{
+                text: "Restorānu ceļvedis",
+                correct: true
+            },
+            {
+                text: "Lielākais tankkuģis",
+                correct: false
+            },
+            {
+                text: "Bītlu dziesma",
+                correct: false
+            },
+            {
+                text: "Žaka Širaka pūdelis",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 12,
+        price: "2500 EUR",
+        question: "Itālijā F1 sacīkstes notiek",
+        answers: [{
+                text: "Moncas trasē",
+                correct: true
+            },
+            {
+                text: "Hokenheimas trasē",
+                correct: false
+            },
+            {
+                text: "Interlagosas trasē",
+                correct: false
+            },
+            {
+                text: "Alberta parkas trasē",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 12,
+        price: "2500 EUR",
+        question: "Dīvāns nav",
+        answers: [{
+                text: "Mīksta mēbele",
+                correct: false
+            },
+            {
+                text: "Dzejoļu krājums",
+                correct: false
+            },
+            {
+                text: "Turku sultānu padomdevēji",
+                correct: false
+            },
+            {
+                text: "Ezers ASV",
+                correct: true
+            }
+        ]
+    },
+    {
+        section: 13,
+        price: "5000 EUR",
+        question: "Uz kādas salas atrodas Tokija?",
+        answers: [{
+                text: "Honsju",
+                correct: true
+            },
+            {
+                text: "Hokaido",
+                correct: false
+            },
+            {
+                text: "Kjusju",
+                correct: false
+            },
+            {
+                text: "Sikoku",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 13,
+        price: "5000 EUR",
+        question: "Latvijas skatuves glezniecības pamatlicējs ir",
+        answers: [{
+                text: "Jānis Kuga",
+                correct: true
+            },
+            {
+                text: "Ģirts Vilks",
+                correct: false
+            },
+            {
+                text: "Artūrs Lapiņš",
+                correct: false
+            },
+            {
+                text: "Vilhelms Purvītis",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 13,
+        price: "5000 EUR",
+        question: "Kādam nolūkam paredzēta pudlingēšanas metode",
+        answers: [{
+                text: "Uzacu retināšanai",
+                correct: false
+            },
+            {
+                text: "Kuģu pietauvošanai ostā",
+                correct: false
+            },
+            {
+                text: "Tērauda izgatavošanai",
+                correct: true
+            },
+            {
+                text: "Stikla pūšanai",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 13,
+        price: "5000 EUR",
+        question: "Bidē sākotnēji ir bijis",
+        answers: [{
+                text: "Vijoles futlāris",
+                correct: true
+            },
+            {
+                text: "Porcelāna vāze",
+                correct: false
+            },
+            {
+                text: "Cukurtrauks",
+                correct: false
+            },
+            {
+                text: "Roku mazgājamā bļoda",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 13,
+        price: "5000 EUR",
+        question: "'Pina Colada' kokteilī neietilpst",
+        answers: [{
+                text: "Viskijs",
+                correct: true
+            },
+            {
+                text: "Ananāsu sula",
+                correct: false
+            },
+            {
+                text: "Kokosriekstu piens",
+                correct: false
+            },
+            {
+                text: "Rums",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 14,
+        price: "10000 EUR",
+        question: "Kas savā darbā mēdz izmantot atisku sāli?",
+        answers: [{
+                text: "Pavārs",
+                correct: false
+            },
+            {
+                text: "Ārsts",
+                correct: false
+            },
+            {
+                text: "Orators",
+                correct: true
+            },
+            {
+                text: "Asenizators",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 14,
+        price: "10000 EUR",
+        question: "Kas ir ginks?",
+        answers: [{
+                text: "Adiant paparde",
+                correct: false
+            },
+            {
+                text: "Briesmoņlapu koks",
+                correct: false
+            },
+            {
+                text: "Nāras lapene",
+                correct: true
+            },
+            {
+                text: "Gingantisks pūpēdis",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 14,
+        price: "10000 EUR",
+        question: "Kas vienā reizē spēj izdēt visvairāk olu?",
+        answers: [{
+                text: "Odze",
+                correct: false
+            },
+            {
+                text: "Pingvīns",
+                correct: false
+            },
+            {
+                text: "Bruņurupucis",
+                correct: true
+            },
+            {
+                text: "Lieldienu zaķus",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 14,
+        price: "10000 EUR",
+        question: "Ķīķi dēvē arī par",
+        answers: [{
+                text: "Bišu ērgli",
+                correct: false
+            },
+            {
+                text: "Kameņu vanagu",
+                correct: false
+            },
+            {
+                text: "Lapseņu klijānu",
+                correct: true
+            },
+            {
+                text: "Viršu gārni",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 14,
+        price: "10000 EUR",
+        question: "Garīgo un emocionālo procesu pašnovērošana ir",
+        answers: [{
+                text: "Inspekcija",
+                correct: false
+            },
+            {
+                text: "Introgresija",
+                correct: false
+            },
+            {
+                text: "Introspekcija",
+                correct: true
+            },
+            {
+                text: "Inspirācija",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 14,
+        price: "10000 EUR",
+        question: "Cigaretes izgudroja",
+        answers: [{
+                text: "Kubieši",
+                correct: false
+            },
+            {
+                text: "Turki",
+                correct: true
+            },
+            {
+                text: "Francūži",
+                correct: false
+            },
+            {
+                text: "Angļi",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 16,
+        price: "",
+        question: "Kas ir Latvijas himnas autors?",
+        answers: [{
+                text: "Baumaņu Kārlis",
+                correct: true
+            },
+            {
+                text: "Raimonds Pauls",
+                correct: false
+            },
+            {
+                text: "Prāta Vētra",
                 correct: false
             },
             {
                 text: "Rainis",
+                correct: false
+            }
+        ]
+    },
+    {
+        section: 16,
+        price: "",
+        question: "Kura lieta aug no lielākā uz mazāko?",
+        answers: [{
+                text: "Grāmata",
+                correct: false
+            },
+            {
+                text: "Bērns",
+                correct: false
+            },
+            {
+                text: "Diena",
+                correct: false
+            },
+            {
+                text: "Svece",
                 correct: true
             }
         ]
@@ -787,21 +1936,21 @@ const questions = [{
     {
         section: 16,
         price: "",
-        question: "TEST",
+        question: "Tu skrēji sacensībās un apskrēji to skrējēju, kas bija 2. vietā. Kurā vietā tu tagad esi?",
         answers: [{
-                text: "V.Vīķe-Freiberga",
+                text: "1.",
+                correct: true
+            },
+            {
+                text: "4.",
                 correct: false
             },
             {
-                text: "Ģitārists Andris Kārkliņš",
+                text: "3.",
                 correct: false
             },
             {
-                text: "Anšlavs Eglītis",
-                correct: false
-            },
-            {
-                text: "Rainis",
+                text: "6.",
                 correct: true
             }
         ]

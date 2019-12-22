@@ -67,7 +67,8 @@ img {
 .timer-wrapper .btn {
     width: 120px;
     justify-self: center;
-    margin: 10px;
+    margin: 10px 10px 30px 30px;
+    padding: 5px 5px;
 }
 /*CONTROLS END*/
 
@@ -159,8 +160,12 @@ img {
 }
 
 .timer-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.timer-button-wrapper{
     display: grid;
-    /* justify-content: center; */
 }
 
 .timer-wrapper h2 {
