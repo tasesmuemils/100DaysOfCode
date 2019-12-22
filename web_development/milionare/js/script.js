@@ -143,7 +143,7 @@ function showQuestion(question) {
 
     question.section = -1;
     questionType.textContent = question.price;
-    helquestion.sectionpOptions.classList.remove("hide");
+    helpOptions.classList.remove("hide");
     controlsContainer.classList.remove("hide");
     questionType.innerText = question.price;
     questionElement.innerText = question.question;
