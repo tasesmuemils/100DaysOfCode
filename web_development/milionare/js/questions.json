@@ -89,7 +89,7 @@
     {
         "section": 1,
         "price": "10 EUR",
-        "question": "Ja es kaut ko varu izdarīt labāknekā citi,tad tas ir mans",
+        "question": "Ja es kaut ko varu izdarīt labāk nekā citi,tad tas ir mans",
         "answers": [{
                 "text": "Džokers",
                 "correct": false
@@ -1585,22 +1585,22 @@
     {
         "section": 15,
         "price": "1000000 EUR",
-        "question": "Kādu dziesmu mēs dziedāsim?",
+        "question": "Jorkšīras terjeri sākotnēji radīti",
         "answers": [{
-                "text": "Jūs bērniņi nāciet",
-                "correct": true
-            },
-            {
-                "text": "Ak, Tu, priecīga!",
+                "text": "Pīļu medībām",
                 "correct": false
             },
             {
-                "text": "Klusa nakts, svēta nakts",
+                "text": "Lapsu medībām",
+                "correct": false
+            },
+            {
+                "text": "Žurku ķeršanai",
                 "correct": true
             },
             {
-                "text": "Zvaniņš skan",
-                "correct": true
+                "text": "Ganos iešanai",
+                "correct": false
             }
         ]
     }

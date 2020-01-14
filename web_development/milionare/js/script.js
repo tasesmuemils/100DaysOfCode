@@ -3,8 +3,10 @@ const startGameButton = document.getElementById("start-btn");
 const controlsContainer = document.getElementById("controls-wrapper");
 const nextButton = document.getElementById("next-btn");
 const rulesButton = document.getElementById("rules-btn");
+const repeatButton = document.getElementById("repeat-btn");
 const gameRules = document.getElementById("rules");
 const resultTable = document.getElementById("result-table");
+const resultTableItems = document.querySelectorAll(".table-item");
 const questionsContainer = document.getElementById("question-container");
 const helpOptions = document.getElementById("help-options");
 const twoOptions = document.getElementById("two-options");
@@ -14,7 +16,7 @@ const questionType = document.getElementById("question-type");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const childQuestion = document.getElementById("child-question");
-const songLyricsElement = document.getElementById("song-lyrics");
+
 
 let shuffledQuestions, currentQuestionIndex;
 let childQuestion1Counter = 0;
@@ -35,32 +37,40 @@ fetch("js/questions.json")
 
 
 
-// // Sound effects
-// const after6QuestionSound = new Audio("sound/question_after_6_theme.mp3");
-// const after1QuestionSound = new Audio("sound/question_after_1_theme.mp3");
-// const correctAnswerSound = new Audio("sound/correct_answer.mp3");
-// const wrongAnswerSound = new Audio("sound/wrong_answer.mp3");
-// const finalAnswerSound = new Audio("sound/final_answer.mp3");
-// const letsPlaySound = new Audio("sound/lets_play.mp3");
-// const phoneAFriendSound = new Audio("sound/phone_a_friend.mp3");
-// const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
+// Sound effects
+const after6QuestionSound = new Audio("sound/question_after_6_theme.mp3");
+const after1QuestionSound = new Audio("sound/question_after_1_theme.mp3");
+const correctAnswerSound = new Audio("sound/correct_answer.mp3");
+const wrongAnswerSound = new Audio("sound/wrong_answer.mp3");
+const finalAnswerSound = new Audio("sound/final_answer.mp3");
+const letsPlaySound = new Audio("sound/lets_play.mp3");
+const phoneAFriendSound = new Audio("sound/phone_a_friend.mp3");
+const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
 
 
 
-// letsPlaySound.play();
-// after1QuestionSound.play();
+letsPlaySound.play();
+after1QuestionSound.play();
 
-// function pauseQuestionSounds() {
-//     after1QuestionSound.pause();
-//     after6QuestionSound.pause();
-// }
+function pauseQuestionSounds() {
+    after1QuestionSound.pause();
+    after6QuestionSound.pause();
+}
 
-rulesButton.addEventListener("click", () => {
+function rulesScreen() {
     logo.classList.add("hide");
     document.getElementById("container-id").classList.add("container-rules");
     gameRules.classList.remove("hide");
     rulesButton.classList.add("hide");
     startGameButton.classList.remove("hide");
+}
+
+rulesButton.addEventListener("click", rulesScreen);
+
+repeatButton.addEventListener("click", () => {
+    rulesScreen();
+    questionsContainer.classList.add("hide");
+    repeatButton.classList.add("hide");
 });
 
 startGameButton.addEventListener("click", showTable);
@@ -69,22 +79,21 @@ nextButton.addEventListener("click", () => {
     questionsContainer.classList.add("hide");
     nextButton.classList.add("hide");
     controlsContainer.classList.add("hide");
-    songLyricsElement.classList.add("hide");
-
 })
+
+
 
 twoOptions.addEventListener("click", twoOptionsCheck);
 callFriend.addEventListener("click", callTimer);
 googleIt.addEventListener("click", callTimer);
 
 function showTable() {
-    // letsPlaySound.play();
-    // after1QuestionSound.pause();
+    letsPlaySound.play();
+    after1QuestionSound.pause();
     gameRules.classList.add("hide");
     startGameButton.classList.add("hide");
     controlsContainer.classList.add("hide");
     resultTable.classList.remove("hide");
-    const resultTableItems = document.querySelectorAll(".table-item");
     Array.from(resultTableItems)
         .forEach(row => {
             if (row.classList.contains("current-question")) {
@@ -96,12 +105,15 @@ function showTable() {
 }
 
 function startGame(e) {
-    // resultTable.classList.add("hide");
+    resultTable.classList.add("hide");
     questionsContainer.classList.remove("hide");
     startGameButton.classList.add("hide");
     const chooseSection = e.target.parentNode;
     console.log(e.target.parentNode);
     chooseSection.classList.remove("current-question");
+    chooseSection.style.cursor = "auto";
+    chooseSection.removeEventListener("click", startGame);
+    chooseSection.style
     const questionSectionArray = [];
 
     for (let i = 0; i < questions.length; i++) {
@@ -118,6 +130,9 @@ function startGame(e) {
         nextButton.classList.remove("hide");
         questionType.classList.add("hide");
         nextButton.textContent = "Uz sākumu";
+        nextButton.addEventListener("click", () => {
+            document.location.reload(true);
+        })
         questionElement.textContent = "Vairāk jautājumu šajā līmenī nav!";
         helpOptions.classList.add("hide");
         while (answerButtonsElement.firstChild) {
@@ -136,11 +151,14 @@ function setNextQuestion() {
 
 function showQuestion(question) {
 
-    // if (question.section <= 5 || question.section == 16) {
-    //     after1QuestionSound.play();
-    // } else {
-    //     after6QuestionSound.play();
-    // }
+    after1QuestionSound.currentTime = 0;
+    after6QuestionSound.currentTime = 0;
+
+    if (question.section <= 5 || question.section == 16) {
+        after1QuestionSound.play();
+    } else {
+        after6QuestionSound.play();
+    }
 
     question.section = -1;
     questionType.textContent = question.price;
@@ -178,7 +196,7 @@ function showQuestion(question) {
 }
 
 function twoOptionsCheck() {
-    // twoOptionsSound.play();
+    twoOptionsSound.play();
     const answersArray = Array.from(answerButtonsElement.childNodes);
     const items3Array = [];
     for (let i = 0; i < answersArray.length; i++) {
@@ -190,10 +208,12 @@ function twoOptionsCheck() {
     const randomWrongAnswers = items3Array.sort(() => Math.random() - 0.5);
     randomWrongAnswer = randomWrongAnswers[0];
     randomWrongAnswer.classList.remove("hide");
+    twoOptions.classList.add("hide");
 
 }
 
-function callTimer() {
+function callTimer(e) {
+    e.target.removeEventListener("click", callTimer);
     let timeLeft = 30;
     const timerWrapper = document.createElement("div");
     timerWrapper.classList.add("timer-wrapper");
@@ -206,15 +226,19 @@ function callTimer() {
     startTimer.classList.add("btn");
     hideTimer.classList.add("btn");
     startTimer.addEventListener("click", () => {
+        phoneAFriendSound.currentTime = 0;
+        phoneAFriendSound.play();
+        pauseQuestionSounds();
+
         const timerId = setInterval(countdown, 1000);
 
         function countdown() {
             if (timeLeft == 0) {
                 clearTimeout(timerId);
                 timerWrapper.classList.add("hide");
+                e.target.classList.add("hide");
+                e.target.classList.add("hide");
             } else {
-                phoneAFriendSound.play();
-                pauseQuestionSounds();
                 timer.textContent = timeLeft - 1;
                 timeLeft--;
             }
@@ -222,7 +246,9 @@ function callTimer() {
     })
 
     hideTimer.addEventListener("click", () => {
+        e.target.addEventListener("click", callTimer);
         timerWrapper.classList.add("hide");
+        phoneAFriendSound.pause();
     })
 
     startTimer.textContent = "Sākt!";
@@ -248,29 +274,57 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     setStatusClass(selectedButton, selectedButton.dataset.correct);
+    Array.from(selectedButton.parentNode.childNodes).forEach(button => {
+        button.style.cursor = "auto";
+        button.removeEventListener("click", selectAnswer);
+    })
+    
+    console.log(selectedButton.parentNode.childNodes);
 }
 
 function setStatusClass(element, correct) {
-    // finalAnswerSound.play();
+    finalAnswerSound.play();
     element.classList.add("final-answer");
-    // pauseQuestionSounds();
+    pauseQuestionSounds();
     setTimeout(() => {
         controlsContainer.classList.remove("hide");
-        nextButton.classList.remove("hide");
         if (correct) {
             element.classList.remove("final-answer");
             element.classList.add("correct");
-            // correctAnswerSound.play();
+            const resultTableItemsArray = Array.from(resultTableItems);
+            for (let i = 0; i < resultTableItemsArray.length; i++) {
+                if (questionType.textContent == "1000000 EUR") {
+                    controlsContainer.classList.add("hide");
+                    setTimeout(() => {
+                        logo.classList.remove("hide");
+                        document.getElementById("winner-text").classList.remove("hide");
+                        questionsContainer.classList.add("hide");
+                        nextButton.classList.add("hide");
+                        controlsContainer.classList.add("hide");
+                    }, 3000);
+                } else if (questionType.textContent == resultTableItemsArray[i].lastElementChild.textContent) {
+                    const nextTableItem = resultTableItemsArray[i].previousElementSibling;
+                    nextTableItem.classList.add("current-question");
+                    nextTableItem.style.cursor = "pointer";
+                    nextTableItem.addEventListener("click", startGame);  
+                }
+            }
+            nextButton.classList.remove("hide");
+            correctAnswerSound.play();
         } else {
             element.classList.remove("final-answer");
             element.classList.add("wrong");
-            // wrongAnswerSound.play();
+            wrongAnswerSound.play();
             Array.from(answerButtonsElement.children).forEach(button => {
                 if (button.dataset.correct) {
                     button.classList.add("correct");
+                    repeatButton.classList.remove("hide");
+                    resultTableItems[14].classList.add("current-question");
+                    resultTableItems[14].style.cursor = "pointer";
+                    resultTableItems[14].addEventListener("click", startGame);
                 }
             })
         }
-    }, 5000);
+    }, 3000);
     element.removeEventListener("click", selectAnswer);
 }

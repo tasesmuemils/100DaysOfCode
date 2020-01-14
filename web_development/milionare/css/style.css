@@ -29,6 +29,18 @@ img {
 
 /*MAIN END*/
 
+/*WINNER*/
+.winner {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.winner * {
+    font-size: 35px;
+}
+/*WINNER END*/
+
 /*CONTROLS*/
 .controls {
     display: grid;
@@ -96,24 +108,7 @@ img {
     padding: 10px 80px;
 }
 
-.result-table-style table {
-    border-collapse: collapse;
-}
 
-.current-question {
-    background: #CE7034;
-    color: black;
-}
-
-.result-table-style table td {
-    color: #CE7034;
-    padding: 5px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    border: none;
-    outline: none;
-}
 
 .result-table-style .highlight-prize {
     color: white;
@@ -132,6 +127,14 @@ img {
     font-weight: bold;
     border: none;
     outline: none;
+}
+
+.current-question {
+    background-color: #CE7034;
+}
+
+.current-question p {
+    color: white;
 }
 /*TABLE END*/
 
