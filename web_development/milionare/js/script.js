@@ -121,11 +121,14 @@ function startGame(e) {
     chooseSection.style
     const questionSectionArray = [];
 
+
     for (let i = 0; i < questions.length; i++) {
         if (chooseSection.firstElementChild.textContent == questions[i].section) {
             questionSectionArray.push(questions[i]);
         }
     };
+
+    console.log(questionSectionArray);
 
     shuffledQuestions = questionSectionArray.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
