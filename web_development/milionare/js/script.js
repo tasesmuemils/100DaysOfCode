@@ -1,3 +1,8 @@
+// Who Wants to Be a Millionaire?
+// Created by Emils Bisenieks 2020
+
+
+//Stored HTML elements
 const logo = document.getElementById("logo");
 const startGameButton = document.getElementById("start-btn");
 const controlsContainer = document.getElementById("controls-wrapper");
@@ -16,23 +21,17 @@ const questionType = document.getElementById("question-type");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const childQuestion = document.getElementById("child-question");
-
-
 let shuffledQuestions, currentQuestionIndex;
-let childQuestion1Counter = 0;
-let childQuestion5Counter = 0;
-let childQuestion10Counter = 0;
 
 
 
+//fetch data from .json file
 let questions = [];
-fetch("js/questions.json")
-    .then(response => response.json())
-    .then(data => {
-        for (let i = 0; i < data.length; i++) {
-            questions.push(data[i]);
-        }
-    });
+fetch("js/questions.json").then(response => response.json()).then(data => {
+    for (let i = 0; i < data.length; i++) {
+        questions.push(data[i]);
+    }
+});
 
 
 
@@ -52,11 +51,13 @@ const twoOptionsSound = new Audio("sound/50_50_sound.mp3");
 letsPlaySound.play();
 after1QuestionSound.play();
 
+//Pause background sound
 function pauseQuestionSounds() {
     after1QuestionSound.pause();
     after6QuestionSound.pause();
 }
 
+//Shows rules screen
 function rulesScreen() {
     logo.classList.add("hide");
     document.getElementById("container-id").classList.add("container-rules");
@@ -65,6 +66,7 @@ function rulesScreen() {
     startGameButton.classList.remove("hide");
 }
 
+//Event listeners for buttons
 rulesButton.addEventListener("click", rulesScreen);
 
 repeatButton.addEventListener("click", () => {
@@ -82,11 +84,13 @@ nextButton.addEventListener("click", () => {
 })
 
 
-
 twoOptions.addEventListener("click", twoOptionsCheck);
 callFriend.addEventListener("click", callTimer);
 googleIt.addEventListener("click", callTimer);
 
+
+
+//function to show question table
 function showTable() {
     letsPlaySound.play();
     after1QuestionSound.pause();
@@ -104,6 +108,7 @@ function showTable() {
         });
 }
 
+//Opnes question window
 function startGame(e) {
     resultTable.classList.add("hide");
     questionsContainer.classList.remove("hide");
@@ -144,11 +149,13 @@ function startGame(e) {
     setNextQuestion();
 }
 
+//Resets default question form and shows real question
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
+//Shows question
 function showQuestion(question) {
 
     after1QuestionSound.currentTime = 0;
@@ -167,6 +174,7 @@ function showQuestion(question) {
     questionType.innerText = question.price;
     questionElement.innerText = question.question;
 
+    //Ads A,B,C,D before questions
     for (let i = 0; i < question.answers.length; i++) {
         if (i == 0) {
             const extraText = question.answers[i].text;
@@ -195,6 +203,7 @@ function showQuestion(question) {
     });
 }
 
+//50:50 options
 function twoOptionsCheck() {
     twoOptionsSound.play();
     const answersArray = Array.from(answerButtonsElement.childNodes);
@@ -212,6 +221,7 @@ function twoOptionsCheck() {
 
 }
 
+//Timer for google option and call friend option
 function callTimer(e) {
     e.target.removeEventListener("click", callTimer);
     let timeLeft = 30;
@@ -257,12 +267,11 @@ function callTimer(e) {
     timerButtonWrapper.appendChild(startTimer);
     timerButtonWrapper.appendChild(hideTimer);
     timerWrapper.appendChild(timerButtonWrapper);
-    // timerWrapper.appendChild(startTimer);
-    // timerWrapper.appendChild(hideTimer);
 
     questionsContainer.insertBefore(timerWrapper, questionsContainer.firstElementChild);
 }
 
+//resets answers
 function resetState() {
     nextButton.textContent = "Nākošais jautājums";
     nextButton.classList.add("hide");
@@ -271,6 +280,7 @@ function resetState() {
     }
 }
 
+//select answer
 function selectAnswer(e) {
     const selectedButton = e.target;
     setStatusClass(selectedButton, selectedButton.dataset.correct);
@@ -282,6 +292,7 @@ function selectAnswer(e) {
     console.log(selectedButton.parentNode.childNodes);
 }
 
+//checks if answer is correct or incorrect
 function setStatusClass(element, correct) {
     finalAnswerSound.play();
     element.classList.add("final-answer");
