@@ -259,3 +259,6 @@ Done with Wes Bos WHAT THE FLEX tutorials. Now - NET NINJA CSS ANIMATIONS.
 
 # 03.06.2019
 Started with basic REACT installation
+
+# 17.01.2020
+2020 - Lets start with JS beginner course by Wes Bos
