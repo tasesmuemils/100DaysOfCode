@@ -263,5 +263,8 @@ Started with basic REACT installation
 # 17.01.2020
 2020 - Lets start with JS beginner course by Wes Bos
 
-#18.01.2020
+# 18.01.2020
 Configuration npm, Node, esLint
+
+# 19.01.2020
+Built in and custom functions. Function parameters and arguments
