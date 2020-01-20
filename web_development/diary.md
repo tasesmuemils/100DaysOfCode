@@ -268,3 +268,6 @@ Configuration npm, Node, esLint
 
 # 19.01.2020
 Built in and custom functions. Function parameters and arguments
+
+# 20.01.2020
+Different Ways to Declare Functions
