@@ -271,3 +271,6 @@ Built in and custom functions. Function parameters and arguments
 
 # 20.01.2020
 Different Ways to Declare Functions
+
+# 21.01.2020
+Debugging
