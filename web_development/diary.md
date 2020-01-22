@@ -274,3 +274,6 @@ Different Ways to Declare Functions
 
 # 21.01.2020
 Debugging
+
+# 22.01.2020
+The Tricky Bits (Scope, Hoisting, Closures)
