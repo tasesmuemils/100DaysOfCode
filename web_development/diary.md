@@ -277,3 +277,6 @@ Debugging
 
 # 22.01.2020
 The Tricky Bits (Scope, Hoisting, Closures)
+
+# 23.01.2020
+The DOM — Working with HTML and CSS (intro, selectiong elements, properties and methods, classes, build in and custom data attributes)
