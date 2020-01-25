@@ -283,3 +283,6 @@ The DOM — Working with HTML and CSS (intro, selectiong elements, properties an
 
 # 24.01.2020
 The DOM — Creating HTML
+
+# 24.01.2020
+HTML from strings and XSS
