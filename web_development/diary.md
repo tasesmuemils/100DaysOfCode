@@ -286,3 +286,6 @@ The DOM — Creating HTML
 
 # 24.01.2020
 HTML from strings and XSS
+
+# 25.01.2020
+DOM CARDIO
