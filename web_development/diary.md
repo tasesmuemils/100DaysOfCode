@@ -289,3 +289,6 @@ HTML from strings and XSS
 
 # 25.01.2020
 DOM CARDIO
+
+# 26.01.2020
+Event Listener targets, bubbling, propagation and capture
