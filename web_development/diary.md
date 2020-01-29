@@ -295,3 +295,6 @@ Event Listener targets, bubbling, propagation and capture
 
 # 28.01.2020
 Event Listener - preventDefault(), Form Events, Keyboard codes
+
+# 29.01.2020
+Etch-a-Sketch, Click outside Modal
