@@ -298,3 +298,6 @@ Event Listener - preventDefault(), Form Events, Keyboard codes
 
 # 29.01.2020
 Etch-a-Sketch, Click outside Modal
+
+# 30.01.2020
+Scroll events and Intersection Observer, Tabs
