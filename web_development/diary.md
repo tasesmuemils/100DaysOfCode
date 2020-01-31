@@ -301,3 +301,7 @@ Etch-a-Sketch, Click outside Modal
 
 # 30.01.2020
 Scroll events and Intersection Observer, Tabs
+
+# 31.01.2020
+Flow Control - If Statements, Function Returns, Truthy, Falsy
+Coercion, Ternaries and Conditional Abuse
