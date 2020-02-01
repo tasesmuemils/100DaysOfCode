@@ -305,3 +305,7 @@ Scroll events and Intersection Observer, Tabs
 # 31.01.2020
 Flow Control - If Statements, Function Returns, Truthy, Falsy
 Coercion, Ternaries and Conditional Abuse
+
+# 01.02.2020
+Case Switch and Animating a Turtle with CSS Variables
+Intervals and Timers
