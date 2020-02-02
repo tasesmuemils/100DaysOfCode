@@ -309,3 +309,6 @@ Coercion, Ternaries and Conditional Abuse
 # 01.02.2020
 Case Switch and Animating a Turtle with CSS Variables
 Intervals and Timers
+
+# 02.02.2020
+Objects
