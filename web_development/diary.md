@@ -312,3 +312,6 @@ Intervals and Timers
 
 # 02.02.2020
 Objects
+
+# 03.02.2020
+Object Reference vs Values
