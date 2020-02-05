@@ -318,3 +318,6 @@ Object Reference vs Values
 
 # 04.02.2020
 MAPS
+
+# 05.02.2020
+Arrays
