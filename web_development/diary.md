@@ -321,3 +321,7 @@ MAPS
 
 # 05.02.2020
 Arrays
+
+# 06.02.2020
+Array Cardio - Static Methods
+Array Cardio - Instance Methods
