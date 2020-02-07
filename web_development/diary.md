@@ -325,3 +325,6 @@ Arrays
 # 06.02.2020
 Array Cardio - Static Methods
 Array Cardio - Instance Methods
+
+# 07.02.2020
+Array Cardio - Callback Methods and Function Generation
