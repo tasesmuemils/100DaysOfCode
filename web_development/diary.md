@@ -328,3 +328,8 @@ Array Cardio - Instance Methods
 
 # 07.02.2020
 Array Cardio - Callback Methods and Function Generation
+
+# 08.02.2020
+Looping and Iterating - Array .forEach
+Looping and Iterating - Mapping
+Looping and Iterating - Filter, Find and Higher Order Functions
