@@ -333,3 +333,7 @@ Array Cardio - Callback Methods and Function Generation
 Looping and Iterating - Array .forEach
 Looping and Iterating - Mapping
 Looping and Iterating - Filter, Find and Higher Order Functions
+
+# 09.02.2020
+Looping and Iterating - Reduce
+Looping and Iterating - Reduce Exercise
