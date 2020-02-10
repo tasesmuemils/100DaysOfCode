@@ -340,3 +340,6 @@ Looping and Iterating - Reduce Exercise
 
 # 10.02.2020
 Looping and Iterating - for, for in, for of and while Loops
+
+# 11.02.2020
+Sarcastic Text Generator
