@@ -337,3 +337,6 @@ Looping and Iterating - Filter, Find and Higher Order Functions
 # 09.02.2020
 Looping and Iterating - Reduce
 Looping and Iterating - Reduce Exercise
+
+# 10.02.2020
+Looping and Iterating - for, for in, for of and while Loops
