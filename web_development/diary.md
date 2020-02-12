@@ -343,3 +343,7 @@ Looping and Iterating - for, for in, for of and while Loops
 
 # 11.02.2020
 Sarcastic Text Generator
+
+# 12.02.2020
+Shopping Form with Custom Events, Delegation and localstorage
+
