@@ -347,3 +347,5 @@ Sarcastic Text Generator
 # 12.02.2020
 Shopping Form with Custom Events, Delegation and localstorage
 
+# 13.02.2020
+Building a Gallery Exercise
