@@ -349,3 +349,6 @@ Shopping Form with Custom Events, Delegation and localstorage
 
 # 13.02.2020
 Building a Gallery Exercise
+
+# 14.02.2020
+Building a Slider
