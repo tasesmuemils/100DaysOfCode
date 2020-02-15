@@ -352,3 +352,7 @@ Building a Gallery Exercise
 
 # 14.02.2020
 Building a Slider
+
+# 15.02.2020
+The New Keyword
+Did my first Kata by myself on codewars.com
