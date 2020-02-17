@@ -359,3 +359,6 @@ Did my first Kata by myself on codewars.com
 
 # 16.02.2020
 Did my 2nd Kata by myself on codewars.com
+
+# 17.02.2020
+The this Keyword
