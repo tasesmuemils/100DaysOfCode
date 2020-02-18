@@ -362,3 +362,7 @@ Did my 2nd Kata by myself on codewars.com
 
 # 17.02.2020
 The this Keyword
+
+# 18.02.2020
+Prototype Refactor of the Gallery Exercise
+Prototypes and Prototypal Inheritance
