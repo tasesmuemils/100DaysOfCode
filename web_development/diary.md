@@ -369,3 +369,6 @@ Prototypes and Prototypal Inheritance
 
 # 19.02.2020
 Prototype Refactor of the Slider Exercise
+
+# 20.02.2020
+bind, call and apply
