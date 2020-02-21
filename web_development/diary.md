@@ -372,3 +372,6 @@ Prototype Refactor of the Slider Exercise
 
 # 20.02.2020
 bind, call and apply
+
+# 21.02.2020
+The Event Loop and Callback Hell
