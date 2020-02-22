@@ -375,3 +375,6 @@ bind, call and apply
 
 # 21.02.2020
 The Event Loop and Callback Hell
+
+# 22.02.2020
+Promise
