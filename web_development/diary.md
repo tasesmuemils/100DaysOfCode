@@ -378,3 +378,7 @@ The Event Loop and Callback Hell
 
 # 22.02.2020
 Promise
+
+# 23.02.2020
+Promises - Error Handling
+Refactoring Callback Hell to Promise Land
