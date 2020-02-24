@@ -382,3 +382,6 @@ Promise
 # 23.02.2020
 Promises - Error Handling
 Refactoring Callback Hell to Promise Land
+
+# 24.02.2020
+Async Await
