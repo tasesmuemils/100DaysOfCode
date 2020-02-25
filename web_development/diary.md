@@ -385,3 +385,6 @@ Refactoring Callback Hell to Promise Land
 
 # 24.02.2020
 Async Await
+
+# 25.02.2020
+Async Await Error Handling
