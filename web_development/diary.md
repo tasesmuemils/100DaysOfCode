@@ -395,3 +395,7 @@ Async Await Prompt UI
 # 27.02.2020
 Async Typer UI - two ways
 Ajax and APIs
+
+# 28.02.2020
+CORS and Recipes
+I will redo this on sunday, because I have to make notes and try uderstand this concept better
