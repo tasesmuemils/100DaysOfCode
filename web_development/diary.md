@@ -399,3 +399,7 @@ Ajax and APIs
 # 28.02.2020
 CORS and Recipes
 I will redo this on sunday, because I have to make notes and try uderstand this concept better
+
+# 29.02.2020
+CORS and Recipes
+I cant get around fetch API and all errors n stuff, but I managed to get same results as Wes, so Parcel is running and I can get data from that puppy site. Will finish this tomorrow.
