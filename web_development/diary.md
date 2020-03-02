@@ -407,3 +407,6 @@ I cant get around fetch API and all errors n stuff, but I managed to get same re
 # 01.03.2020
 CORS and Recipes
 Dad Jokes
+
+# 02.03.2020
+Currency Converter
