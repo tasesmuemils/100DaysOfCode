@@ -414,3 +414,7 @@ Currency Converter
 # 03.03.2020
 Modules
 Currency Modules Refactor
+
+# 04.03.2020
+Classes
+Dad jokes Modules Refactor
