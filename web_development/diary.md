@@ -422,3 +422,6 @@ Bundling and Building with Parcel
 
 # 05.03.2020
 using open source npm packages
+
+# 06.03.2020
+Security
