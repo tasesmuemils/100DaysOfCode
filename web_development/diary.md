@@ -425,3 +425,4 @@ using open source npm packages
 
 # 06.03.2020
 Security
+Setting up kd_app git project
