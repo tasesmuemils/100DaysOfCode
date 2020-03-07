@@ -426,3 +426,6 @@ using open source npm packages
 # 06.03.2020
 Security
 Setting up kd_app git project
+
+# 07.03.2020
+Web Speech Colours Game
