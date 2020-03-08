@@ -429,3 +429,6 @@ Setting up kd_app git project
 
 # 07.03.2020
 Web Speech Colours Game
+
+# 08.03.2020
+Audio Visualization
