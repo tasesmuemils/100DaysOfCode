@@ -432,3 +432,6 @@ Web Speech Colours Game
 
 # 08.03.2020
 Audio Visualization
+
+# 09.03.2020
+Setting up ESLint. Harder then I thought, so I will just use wesbos configs.
