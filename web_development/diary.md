@@ -435,3 +435,6 @@ Audio Visualization
 
 # 09.03.2020
 Setting up ESLint. Harder then I thought, so I will just use wesbos configs.
+
+# 10.03.2020
+Setting up HTML/CSS for my project. Learning about git branches, created new one, now I can switch and code changes in VScode witch is awesome
