@@ -441,3 +441,6 @@ Setting up HTML/CSS for my project. Learning about git branches, created new one
 
 # 11.03.2020
 Navigation bar created for kd_app
+
+# 12.03.2020
+Fetching data, slider cards
