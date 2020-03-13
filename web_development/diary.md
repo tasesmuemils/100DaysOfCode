@@ -444,3 +444,6 @@ Navigation bar created for kd_app
 
 # 12.03.2020
 Fetching data, slider cards
+
+# 13.03.2020
+Styling slider cards, creating group list
