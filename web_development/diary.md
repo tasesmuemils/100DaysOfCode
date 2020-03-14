@@ -447,3 +447,6 @@ Fetching data, slider cards
 
 # 13.03.2020
 Styling slider cards, creating group list
+
+# 14.03.2020
+Styling gender and table in general
