@@ -450,3 +450,6 @@ Styling slider cards, creating group list
 
 # 14.03.2020
 Styling gender and table in general
+
+# 15.03.2020
+Styling table in general, I will try to rebuild it with divs
