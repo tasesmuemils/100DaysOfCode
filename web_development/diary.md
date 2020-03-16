@@ -453,3 +453,6 @@ Styling gender and table in general
 
 # 15.03.2020
 Styling table in general, I will try to rebuild it with divs
+
+# 16.03.2020
+Rebuild some functions with object methods
