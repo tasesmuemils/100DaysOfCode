@@ -456,3 +456,6 @@ Styling table in general, I will try to rebuild it with divs
 
 # 16.03.2020
 Rebuild some functions with object methods
+
+# 17.03.2020
+Change table,tr,td to divs
