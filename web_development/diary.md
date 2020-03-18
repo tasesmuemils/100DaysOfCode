@@ -459,3 +459,7 @@ Rebuild some functions with object methods
 
 # 17.03.2020
 Change table,tr,td to divs
+
+# 18.03.2020
+Convert date to age
+
