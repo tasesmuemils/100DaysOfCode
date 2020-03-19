@@ -463,3 +463,5 @@ Change table,tr,td to divs
 # 18.03.2020
 Convert date to age
 
+# 19.03.2020
+Creating modal for list Items
