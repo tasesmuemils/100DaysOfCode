@@ -465,3 +465,6 @@ Convert date to age
 
 # 19.03.2020
 Creating modal for list Items
+
+# 20.03.2020
+Modal for group items done
