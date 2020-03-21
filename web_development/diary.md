@@ -468,3 +468,6 @@ Creating modal for list Items
 
 # 20.03.2020
 Modal for group items done
+
+# 21.03.2020
+Waiting list configuration and add item button
