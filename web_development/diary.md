@@ -471,3 +471,6 @@ Modal for group items done
 
 # 21.03.2020
 Waiting list configuration and add item button
+
+# 22.03.2020
+Waiting list form template
