@@ -474,3 +474,6 @@ Waiting list configuration and add item button
 
 # 22.03.2020
 Waiting list form template
+
+# 23.03.2020
+Setting up json-server
