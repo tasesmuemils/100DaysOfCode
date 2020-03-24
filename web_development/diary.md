@@ -477,3 +477,6 @@ Waiting list form template
 
 # 23.03.2020
 Setting up json-server
+
+# 24.03.2020
+Learning about POST
