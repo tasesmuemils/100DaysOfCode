@@ -479,4 +479,7 @@ Waiting list form template
 Setting up json-server
 
 # 24.03.2020
-Learning about POST
+Learning about POSTl
+
+# 25.03.2020
+Converting converting form inputs to object
