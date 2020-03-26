@@ -483,3 +483,6 @@ Learning about POSTl
 
 # 25.03.2020
 Converting converting form inputs to object
+
+# 26.03.2020
+Get objetc key/value pairs and post them on "server"
