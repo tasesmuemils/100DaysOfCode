@@ -486,3 +486,6 @@ Converting converting form inputs to object
 
 # 26.03.2020
 Get objetc key/value pairs and post them on "server"
+
+# 27.03.2020
+POST method works 
