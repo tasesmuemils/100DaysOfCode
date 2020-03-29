@@ -492,3 +492,6 @@ POST method works
 
 # 28.03.2020
 Commenting and brushing up code
+
+# 29.03.2020
+Trying to stop page reload on Fetch POST 
