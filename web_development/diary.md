@@ -495,3 +495,6 @@ Commenting and brushing up code
 
 # 29.03.2020
 Trying to stop page reload on Fetch POST 
+
+# 30.03.2020
+POST method still reloads page
