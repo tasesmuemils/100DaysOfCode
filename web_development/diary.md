@@ -498,3 +498,6 @@ Trying to stop page reload on Fetch POST
 
 # 30.03.2020
 POST method still reloads page
+
+# 31.03.2020
+Leave post at it is, checking modal form
