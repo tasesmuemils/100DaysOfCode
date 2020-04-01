@@ -501,3 +501,6 @@ POST method still reloads page
 
 # 31.03.2020
 Leave post at it is, checking modal form
+
+# 01.04.2020
+Form validation and styling
