@@ -507,3 +507,6 @@ Form validation and stylingl
 
 # 02.04.2020
 Form validation
+
+# 03.04.2020
+Form tabs
