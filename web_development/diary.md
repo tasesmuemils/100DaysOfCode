@@ -513,3 +513,6 @@ Form tabs
 
 # 04.04.2020
 Form tabs done
+
+# 05.04.2020
+Form validation (empty values) Done!
