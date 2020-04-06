@@ -516,3 +516,6 @@ Form tabs done
 
 # 05.04.2020
 Form validation (empty values) Done!
+
+# 06.04.2020
+Date input and gender select --> options
