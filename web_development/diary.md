@@ -519,3 +519,6 @@ Form validation (empty values) Done!
 
 # 06.04.2020
 Date input and gender select --> options
+
+# 07.04.2020
+Flatpicker not working
