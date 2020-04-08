@@ -522,3 +522,6 @@ Date input and gender select --> options
 
 # 07.04.2020
 Flatpicker not working
+
+# 08.04.2020
+Cant figure out how to set up flatpickr
