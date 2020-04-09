@@ -525,3 +525,6 @@ Flatpicker not working
 
 # 08.04.2020
 Cant figure out how to set up flatpickr
+
+# 09.04.2020
+Parcel server working (without links), flatpicker calendar not showing up
