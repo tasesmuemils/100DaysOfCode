@@ -528,3 +528,6 @@ Cant figure out how to set up flatpickr
 
 # 09.04.2020
 Parcel server working (without links), flatpicker calendar not showing up
+
+# 10.04.2020
+EVERYTHING WORKS (PAECEL, FLATPICKR). Styling select/options
