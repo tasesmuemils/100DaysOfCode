@@ -531,3 +531,6 @@ Parcel server working (without links), flatpicker calendar not showing up
 
 # 10.04.2020
 EVERYTHING WORKS (PAECEL, FLATPICKR). Styling select/options
+
+# 11.04.2020
+Deleting student from a waitging list
