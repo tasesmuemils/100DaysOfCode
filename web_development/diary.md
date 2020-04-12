@@ -534,3 +534,7 @@ EVERYTHING WORKS (PAECEL, FLATPICKR). Styling select/options
 
 # 11.04.2020
 Deleting student from a waitging list
+
+# 12.04.2020
+Trying to get to specific student in db
+
