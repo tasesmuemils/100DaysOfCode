@@ -538,3 +538,7 @@ Deleting student from a waitging list
 # 12.04.2020
 Trying to get to specific student in db
 
+# 13.04.2020
+json-server supports only one level nesting. Have to rebuild groups db side
+
+
