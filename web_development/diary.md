@@ -541,4 +541,5 @@ Trying to get to specific student in db
 # 13.04.2020
 json-server supports only one level nesting. Have to rebuild groups db side
 
-
+# 14.04.2020
+Rebuild db, works like before, structure change
