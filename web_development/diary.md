@@ -546,3 +546,6 @@ Rebuild db, works like before, structure change
 
 # 15.04.2020
 Delete student
+
+# 16.04.2020
+Delete works (structure change), working on table update
