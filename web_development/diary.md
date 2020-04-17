@@ -549,3 +549,6 @@ Delete student
 
 # 16.04.2020
 Delete works (structure change), working on table update
+
+# 17.04.2020
+VBA programming for work. I like it!!!
