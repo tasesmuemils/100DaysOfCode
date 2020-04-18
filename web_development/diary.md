@@ -552,3 +552,6 @@ Delete works (structure change), working on table update
 
 # 17.04.2020
 VBA programming for work. I like it!!!
+
+# 18.04.2020
+Working on table refresh after deleting item form table
