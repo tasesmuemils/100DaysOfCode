@@ -555,3 +555,6 @@ VBA programming for work. I like it!!!
 
 # 18.04.2020
 Working on table refresh after deleting item form table
+
+# 19.04.2020
+Group students counter works, add som extra fields to the form. Also, have to change modal text fields to input fields.
