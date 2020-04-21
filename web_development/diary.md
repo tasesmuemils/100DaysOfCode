@@ -561,3 +561,6 @@ Group students counter works, add som extra fields to the form. Also, have to ch
 
 # 20.04.2020
 Replacing modal field with disabled inputs. Sass livereload work in parcel if I link that scss to html file
+
+# 21.04.2020
+PUT method, editable inputs
