@@ -564,3 +564,6 @@ Replacing modal field with disabled inputs. Sass livereload work in parcel if I 
 
 # 21.04.2020
 PUT method, editable inputs
+
+# 22.04.2020
+PATCH method, hav to figure out how to GET everything updated
