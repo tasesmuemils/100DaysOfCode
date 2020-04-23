@@ -567,3 +567,7 @@ PUT method, editable inputs
 
 # 22.04.2020
 PATCH method, hav to figure out how to GET everything updated
+
+# 23.04.2020
+Working on moving items from waiting list to groups
+
