@@ -571,3 +571,5 @@ PATCH method, hav to figure out how to GET everything updated
 # 23.04.2020
 Working on moving items from waiting list to groups
 
+# 24.04.2020
+Looks like moving items works fine
