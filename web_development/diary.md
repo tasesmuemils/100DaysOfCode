@@ -576,3 +576,5 @@ Looks like moving items works fine
 
 # 26.04.2020
 Form to add student to group without waiting list. Dropdown for groups shows groups from generated slidercards (not hard coded options)
+
+# 27.04.2020
