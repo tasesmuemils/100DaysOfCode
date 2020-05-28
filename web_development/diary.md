@@ -582,3 +582,6 @@ Moving student from wl to group
 
 # 28.04.2020
 Tamplates imported from utils file
+
+# 28.05.2020
+After a hard month in main job, im back. Implemented edit option on waiting list item
