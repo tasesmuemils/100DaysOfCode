@@ -557,7 +557,7 @@ VBA programming for work. I like it!!!
 Working on table refresh after deleting item form table
 
 # 19.04.2020
-Group students counter works, add som extra fields to the form. Also, have to change modal text fields to input fields.
+Group students counter works, add som extra fields to the form. Also, uthave to change modal text fields to input fields.
 
 # 20.04.2020
 Replacing modal field with disabled inputs. Sass livereload work in parcel if I link that scss to html file
@@ -585,3 +585,6 @@ Tamplates imported from utils file
 
 # 28.05.2020
 After a hard month in main job, im back. Implemented edit option on waiting list item
+
+# 11.06.2020
+Set forms page and validation on utils
