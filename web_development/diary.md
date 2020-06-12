@@ -588,3 +588,6 @@ After a hard month in main job, im back. Implemented edit option on waiting list
 
 # 11.06.2020
 Set forms page and validation on utils
+
+# 12.06.2020
+Last HTML templates moved to template.js. CSS for group/wl page, tables, headers 
