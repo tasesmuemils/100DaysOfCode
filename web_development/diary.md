@@ -591,3 +591,6 @@ Set forms page and validation on utils
 
 # 12.06.2020
 Last HTML templates moved to template.js. CSS for group/wl page, tables, headers 
+
+# 14.06.2020
+More CSS
