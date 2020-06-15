@@ -594,3 +594,6 @@ Last HTML templates moved to template.js. CSS for group/wl page, tables, headers
 
 # 14.06.2020
 More CSS
+
+# 15.06.2020
+CSS for wl form and move to group modal
