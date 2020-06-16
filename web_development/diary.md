@@ -597,3 +597,6 @@ More CSS
 
 # 15.06.2020
 CSS for wl form and move to group modal
+
+# 16.06.2020
+Converted date to use in date-fns
