@@ -604,3 +604,5 @@ Converted date to use in date-fns
 # 17.06.2020
 Working with date-fns
 
+# 18.06.2020
+Filters. Search bar
