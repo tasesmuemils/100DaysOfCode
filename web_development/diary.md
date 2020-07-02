@@ -606,3 +606,6 @@ Working with date-fns
 
 # 18.06.2020
 Filters. Search bar
+
+# 02.07.2020
+Search and Sort CSS
